@@ -1,0 +1,1287 @@
+.modal {
+  font-size: initial;
+}
+.regressmodal .form-select,
+.bookedmodal .form-select {
+  text-align: center !important;
+  padding: 0 0.2rem;
+  width: 2rem;
+}
+.regressmodal .form-bg,
+.bookedmodal .form-bg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0.2rem;
+}
+#eventAlertModal .modal-body {
+  margin: 0 auto;
+  width: 6rem;
+  height: 5.34rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont_alert.png)
+    no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-radius: 0.28rem;
+}
+#eventAlertModal .modal-body p {
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
+}
+
+/* otherPlatform */
+.otherPlatform {
+  display: flex;
+}
+.otherPlatform a {
+  position: relative;
+  margin: 0 0.09rem;
+  width: 0.66rem;
+  height: 0.66rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/otherPlatform.png)
+    no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+}
+.otherPlatform .platform_twitter {
+  background-position-x: 0;
+}
+.otherPlatform .platform_facebook {
+  background-position-x: -0.84rem;
+}
+.otherPlatform .platform_youtube {
+  background-position-x: -1.68rem;
+}
+.otherPlatform .platform_discord {
+  background-position-x: -2.52rem;
+}
+.otherPlatform .platform_reddit {
+  background-position-x: -3.37rem;
+}
+.otherPlatform .platform_ins {
+  background-position-x: -4.2rem;
+}
+.otherPlatform .platform_tiktok {
+  background-position-x: -5.04rem;
+}
+.otherPlatform .platform_line {
+  background-position-x: -5.88rem;
+}
+.otherPlatform .platform_naver {
+  background-position-x: -6.72rem;
+}
+.otherPlatform .platform_talk {
+  background-position-x: -7.56rem;
+}
+.otherPlatform .platform_ps {
+  background-position-x: -5.04rem;
+}
+.otherPlatform a:hover {
+  background-position-y: -0.66rem;
+}
+.otherPlatform .code {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+.otherPlatform a:hover .code {
+  display: block;
+}
+.otherPlatform .code div {
+  margin-bottom: 0.1rem;
+  border-radius: 0.05rem;
+  padding: 0.1rem;
+  background: #fff;
+}
+.otherPlatform .code img {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* 敶? */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.regressmodal .pop {
+  display: block;
+}
+.popup .popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+.popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 9.19rem;
+  height: 8.24rem; */
+  width: 15rem;
+  aspect-ratio: 1734/995;
+}
+.popup .close {
+  top: 0.21rem;
+  right: 0.21rem;
+  width: 0.42rem;
+  height: 0.43rem;
+  background: url(../images/close.png) no-repeat 0 0;
+  background-size: 100%;
+  z-index: 1;
+  opacity: 1;
+}
+.popup .close:not(:disabled):not(.disabled):focus,
+.popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+.popup p {
+  margin-bottom: 0;
+}
+.popup_outer {
+  min-height: auto;
+}
+.popBtns {
+  display: flex;
+  width: 100%;
+  height: 0.69rem;
+  margin-top: 0.38rem;
+  justify-content: center;
+}
+.popBtns button,
+.popBtns a {
+  width: 2.78rem;
+  height: 0.69rem;
+  margin: 0 0.2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+.popBtns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+button.btn_confirm_job {
+  height: 0.69rem;
+  aspect-ratio: 323/90;
+  border: none;
+  background: url(../images/pop/btn_confirm_job.webp) no-repeat center top;
+  background-size: 100% 200%;
+  color: transparent;
+  cursor: pointer;
+}
+.btn_confirm_job:hover {
+  background-position: center bottom;
+}
+
+.popBtns .shareInviteLinkBtn,
+.popBtns .btn-pop-invite {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/share_invite_link_btn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.downloadSharePicBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/download_share_pic_btn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-send-data {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/send_data.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-LotteryGet {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/personal_data_btn.webp)
+    no-repeat center center;
+  background-size: contain;
+}
+.popBtns .btn-popLoginBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop_login_btn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 敶?嚗暑????*/
+.pop-bg1 {
+  background: url(../images/pop/pop-bg1.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 敶?嚗?鋆賢???*/
+.pop-bg-success {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1734 / 995;
+  background: url(../images/pop/customSuccessModal_bg.webp) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.success_modal_wrap {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: #e2c85400;
+}
+.preview_in_modal {
+  width: 100%;
+  height: 100%;
+  background-color: #a954e200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.25rem;
+}
+
+.preview_in_modal .card_portrait.preview_chara {
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 0.1rem;
+  flex-shrink: 0;
+}
+
+.preview_info_block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: #fff;
+  font-size: 0.3rem;
+}
+
+.preview_info_block span {
+  display: block;
+  font-size: 0.32rem;
+  font-weight: bold;
+}
+
+.modal_reward_hint,
+.modal_footer_hint {
+  font-size: 0.22rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.modal_action_row {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+}
+
+.social_share_row {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: center;
+}
+.popRuleTit {
+  display: block;
+  width: 7.59rem;
+  height: 0.68rem;
+  margin: 1.52rem auto 0;
+  background: url(../images/pop/pop_rule_tit.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.rule-scroll {
+  width: 7.5rem;
+  height: 4.78rem;
+  margin: 0.28rem auto 0;
+}
+.cus-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.cus-scroll::-webkit-scrollbar {
+  width: 0.14rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/line.png)
+    repeat-y center 0;
+}
+.cus-scroll::-webkit-scrollbar-thumb {
+  width: 0.14rem;
+  background-color: #ff4295;
+  border-radius: 0.07rem;
+}
+.rule-scroll p,
+.rule-scroll p a {
+  width: 7rem;
+  font-size: 0.23rem;
+  line-height: 0.38rem;
+  color: #c8c8c8;
+}
+
+/* 敶?嚗?鈭?*/
+.popShare {
+  overflow-y: hidden !important;
+}
+.pop-bg.pop-bg3 {
+  width: 15.2rem;
+  height: 8rem;
+  background-color: #ff4294bb;
+  position: relative;
+}
+.popShareCont {
+  position: relative;
+  width: 15.2rem;
+  height: 8rem;
+  margin: 0 auto 1.5rem auto;
+}
+.shareDownSourcePic {
+  top: 100vh;
+  left: 100vw;
+  width: 803px;
+  height: 453px;
+  background: #000;
+}
+.shareDownPic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/share_down_pic.jpg)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.inviteCode {
+  left: 661px;
+  top: 292px;
+  width: 116px;
+  height: 116px;
+  padding: 5px;
+  background: #fff;
+}
+.inviteCode canvas {
+  width: 100%;
+  height: 100%;
+}
+.shareDownResultPic {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.shareDownResultPic img {
+  width: 100%;
+  height: 100%;
+}
+
+#popShare .popBtns {
+  display: flex;
+  width: 1rem;
+  height: 6rem;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #73ed6300;
+  position: absolute;
+  right: -0.5rem;
+  bottom: 0;
+  gap: 0.3rem;
+}
+#popShare .popBtns button,
+#popShare .popBtns a {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ff3b8300;
+}
+#popShare .shareInviteLinkBtn,
+#popShare .btn-pop-invite {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/link.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popShare .downloadSharePicBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/dl.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popShare .fbShareBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/fb.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popShare .lineShareBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/line.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 敶?嚗?隢???*/
+.popInviteLogTit {
+  width: 5.44rem;
+  height: 0.85rem;
+  margin: 1.88rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop_invite_log_tit.png)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popInviteLogCont {
+  height: 2.66rem;
+}
+.notLog {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  line-height: 0.6rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.inviteLogList {
+  width: 7.1rem;
+  margin: 0 auto;
+  padding-top: 0.15rem;
+  color: #d5d5d5;
+}
+.inviteLogList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inviteLogList .tr p {
+  width: 50%;
+  text-align: center;
+  line-height: 1.3;
+  word-break: break-all;
+}
+#popAward .inviteLogList .tr p:nth-child(1) {
+  width: 49%;
+  padding-right: 0.15rem;
+  box-sizing: border-box;
+}
+#popAward .inviteLogList .tr p:nth-child(2) {
+  width: 18%;
+}
+#popAward .inviteLogList .tbody .tr p:nth-child(2) {
+  border-left: 0.01rem dotted #fff;
+  border-right: 0.01rem dotted #fff;
+}
+#popAward .inviteLogList .tr p:nth-child(3) {
+  width: 36%;
+  padding-left: 0.15rem;
+}
+.inviteLogList .thead {
+  height: 0.76rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  line-height: 0.76rem;
+}
+.inviteLogList .tbody {
+  width: 7.26rem;
+  height: 1.74rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+}
+.inviteLogList .tbody .tr {
+  border: 0.01rem solid #fff;
+  margin-bottom: 0.18rem;
+  padding: 0.05rem 0.1rem;
+  height: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.AwardNoneList {
+  width: 7.1rem;
+  margin: 0 auto;
+  padding-top: 0.15rem;
+  color: #d5d5d5;
+}
+.AwardNoneList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AwardNoneList .tr p {
+  width: 50%;
+  text-align: center;
+}
+.AwardNoneList .thead {
+  height: 0.76rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  line-height: 0.76rem;
+}
+.AwardNoneList .tbody {
+  width: 7.26rem;
+  height: 1.74rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+}
+.AwardNoneList .tbody .tr {
+  margin-bottom: 0.18rem;
+}
+
+.popBtnsTip {
+  width: 100%;
+  text-align: center;
+  font-size: 0.23rem;
+  line-height: 0.4rem;
+  color: #63edec;
+  margin-bottom: 0 !important;
+}
+#popInviteLog .popBtns {
+  margin-top: 0;
+}
+
+/* 敶?嚗????∩葉???? */
+.popAwardNoneTit {
+  width: 5.44rem;
+  height: 0.85rem;
+  margin: 1.88rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop_package_tit.png)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popAwardNoneCont {
+  height: 2.66rem;
+}
+#popAwardNone .popBtns {
+  margin-top: 0;
+}
+
+/* 敶?嚗??菔???*/
+.popAwardTit {
+  width: 5.44rem;
+  height: 0.85rem;
+  margin: 1.4rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop_package_tit.png)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popAwardCont {
+  height: 3.9rem;
+}
+#popAward .inviteLogList .tbody {
+  width: 7.26rem;
+  height: 3rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+}
+.notRewards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+}
+.rewardsList {
+  width: 5.9rem;
+  height: 1.9rem;
+  margin: 0.15rem 0 0 1.88rem;
+}
+.rewardsItem {
+  display: flex;
+  width: 5.38rem;
+  height: 0.62rem;
+  margin: 0.08rem 0;
+  justify-content: space-between;
+  align-items: center;
+  background: #ededed;
+  border: 0.03rem solid #585858;
+  border-radius: 0.31rem;
+}
+.rewardsItem p {
+  margin-left: 0.15rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  color: #3f3f3f;
+}
+.rewardsItem button {
+  margin-right: 0.1rem;
+  width: 2.04rem;
+  height: 0.44rem;
+  border-radius: 0.31rem;
+  background: #70e0f0;
+  font-weight: bold;
+  font-size: 0.24rem;
+  color: #262626;
+}
+.rewardsItem button.void {
+  background: #868686;
+  cursor: default;
+}
+
+#popAward .popBtns {
+  margin-top: 0;
+}
+
+/* 敶?嚗葉??撖衣 | 皜祈岫鞈嚗?*/
+.pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop-bg2.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.pop-kt-head {
+  top: 0.19rem;
+  height: 1.97rem;
+}
+.pop-kt-title {
+  height: 0.5rem;
+}
+.popLotteryCont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 5.3rem;
+}
+.popLotteryCont .content {
+  display: flex;
+  width: 7.9rem;
+  height: 2.66rem;
+  margin: 2.65rem auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.popLotteryCont h3 {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+.popLotteryCont .des {
+  line-height: 0.52rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  color: #b7b7b7;
+}
+.popLotteryCont .prizeName,
+.popAward .prizeName,
+.popLotteryWinning h3 {
+  color: #ff3b82;
+}
+.popLotteryWinning .des {
+  width: 65%;
+  margin: 0 auto;
+}
+
+#popLottery .popBtns {
+  margin-top: 0;
+}
+
+/* 敶?嚗葉??YY撠惇嚗?*/
+#popYyLottery .pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop-bg2.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popYyLottery .pop-kt-head {
+  top: 0.19rem;
+  height: 1.97rem;
+}
+#popYyLottery .pop-kt-title {
+  height: 0.5rem;
+}
+#popYyLottery .popLotteryCont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 5.3rem;
+}
+#popYyLottery .popLotteryCont .content {
+  display: flex;
+  width: 7.9rem;
+  height: 2.66rem;
+  margin: 2.65rem auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+#popYyLottery .popLotteryCont h3 {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+#popYyLottery .popLotteryCont .des {
+  margin-top: 1.2rem;
+  line-height: 0.52rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  color: #b7b7b7;
+}
+#popYyLottery .popLotteryCont .prizeName,
+#popYyLottery .popLotteryWinning h3 {
+  color: #ff3b82;
+}
+#popYyLottery .popLotteryWinning .des {
+  width: 65%;
+  margin: 0 auto;
+}
+#popYyLottery .popBtns {
+  margin-top: 0;
+}
+
+/* 敶?嚗葉??憛怠神鞈?嚗?*/
+#popLoytterGet .lotteryForm {
+  background-color: #33ffff00;
+}
+.popLotteryGetCont h3 {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+.popLotteryGetCont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 6.3rem;
+}
+.popLotteryGetCont .content {
+  background-color: #8863ed00;
+  display: flex;
+  width: 7.9rem;
+  height: 3.8rem;
+  margin: 2.65rem auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.popLotteryWinning .des_2 {
+  line-height: 0.52rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  color: #b7b7b7;
+  width: 95%;
+  margin: 0 auto;
+  background-color: #ed8f6300;
+}
+#popLotteryGet .lotteryForm .form-bg {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 0.55rem;
+  margin-bottom: 0.15rem;
+  border-radius: 0.275rem;
+  box-sizing: border-box;
+}
+#popLotteryGet .form-select {
+  padding: 0 0.2rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0% auto;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+#popLotteryGet #lottery_address_number {
+  width: 1.485rem;
+  flex: 0 0 auto;
+  padding: 0 0.1rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+#popLotteryGet .form-select option {
+  background-color: #1d1d1d;
+}
+#popLotteryGet .form-control {
+  padding: 0;
+  width: 100%;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 0% auto;
+  height: auto;
+  color: #fff;
+  transition: 0.5s;
+  vertical-align: middle;
+  text-align: left;
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 6%;
+}
+#popLotteryGet #lottery_address {
+  flex: 1;
+}
+
+.lotteryForm .column {
+  display: flex;
+  align-items: center; /* ?蝵桐葉 */
+  width: 100%;
+}
+
+/* 璅? */
+.lotteryForm .column > span {
+  flex: 0 0 20%;
+  max-width: 20%;
+  margin-bottom: 0.15rem;
+}
+
+/* 銵典? */
+.lotteryForm .column .form-bg {
+  flex: 0 0 80%;
+  max-width: 80%;
+
+  display: flex; /* 霈ㄐ?Ｙ? select + input ?臭誑銝行? */
+  gap: 8px; /* 閬死??嚗隤選? */
+}
+
+#lottery_name {
+  background-color: #63edec;
+  width: 100%;
+  height: 0.55rem;
+}
+#lottery_phone_code {
+  padding: 0 0.2rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0% auto;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+#lottery_phone_code option {
+  background-color: #1d1d1d;
+}
+#lottery_phone_number {
+  padding: 0;
+  width: auto;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 0% auto;
+  height: auto;
+  color: #fff;
+  transition: 0.5s;
+  vertical-align: middle;
+  /* text-align: left !important; */
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 4%;
+}
+
+/* 敶?嚗?蝷箄???*/
+.popMsgCont {
+  display: flex;
+  width: 8rem;
+  height: 4.9rem;
+  margin: 1.8rem auto 0;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 0.72rem;
+  color: #eae9e9;
+}
+.popLotteryAnimationCont {
+  display: flex;
+  width: 8rem;
+  height: 4.9rem;
+  margin: 1.8rem auto 0;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 0.72rem;
+  color: #eae9e9;
+  flex-direction: column;
+}
+
+/* 敶?嚗???怠摰?*/
+.popLotteryAnimationCont .loading_ani {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.popLotteryAnimationCont .loading_ani .character {
+  width: 3rem;
+}
+.popLotteryAnimationCont .loading_ani .loading {
+  width: 1.5rem;
+  filter: hue-rotate(318deg) brightness(3) blur(0.5px);
+}
+
+/* ??摰雯敶?璅??*/
+#successmodal .popCont2 {
+  height: 8rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/popCont2_v2.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+#successmodal .pop_yySuccess_tit {
+  top: 1.8rem;
+  width: 6.1rem;
+  height: 2rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop_yy_qa_success_tt.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#successmodal .urban_icon {
+  width: 50%;
+  margin: 0 6px 8px 6px;
+}
+#successmodal .urban_icon a {
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+}
+#successmodal .urban_icon a:hover {
+  transform: scale(1.1);
+}
+#successmodal .urban_icon a img {
+  width: 100%;
+}
+
+/* 0121?湔 - ?像?圈?蝝?????*/
+/* 0121?湔 - ?像?圈?蝝?????*/
+.focus_social_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 54%;
+}
+.urban_icon_ios, .urban_icon_android {
+    width: 48%;
+    margin: 0.5rem 6px 8px 6px;
+}
+.urban_icon_ios a, .urban_icon_android a {
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+.urban_icon_ios a:hover, .urban_icon_android a:hover {
+    transform: scale(1.1);
+}
+.urban_icon_ios img, .urban_icon_android img {
+    width: 100%;
+    display: block;
+}
+
+/* --- ?芸?蝢拙?蝒?(?瑟平?豢?) --- */
+/* --- ?瑟平?豢?敶? (?梁敶?璅??) --- */
+.pop_job_select_wrap {
+  width: 12rem;
+  margin: 1.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pop_job_select_wrap .pop_title {
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.job_opt_list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  height: 4.2rem;
+  overflow-y: auto;
+  padding: 0.1rem;
+}
+
+/* ?脰遘璅???郊 cus-scroll */
+.job_opt_list::-webkit-scrollbar {
+  width: 0.14rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/line.png) repeat-y center 0;
+}
+.job_opt_list::-webkit-scrollbar-thumb {
+  width: 0.14rem;
+  background-color: #ff4295;
+  border-radius: 0.07rem;
+}
+
+.job_opt_item {
+  width: 100%;
+  padding: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.15rem;
+  font-size: 0.3rem;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.job_opt_item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #31a1e0;
+}
+
+.job_opt_item.active {
+  background-color: #31a1e0;
+  border-color: #31a1e0;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0.1rem 0.3rem rgba(49, 161, 224, 0.4);
+}
+
+.pop_job_select_wrap .popBtns {
+  margin-top: 0.4rem;
+}
+
+/* ======================================================
+   #customSuccessModal 摰ˊ摰?敶? 撠惇璅??
+   ====================================================== */
+#customSuccessModal .pop-bg-success {
+  /* ?航銵耨?孵偕撖詻??臬? */
+}
+#customSuccessModal .success_modal_wrap {
+  /* ?航銵矽?游摰孵?雿蔭 */
+}
+#customSuccessModal .preview_in_modal .card_portrait.preview_chara {
+  /* ?航銵矽?渲??脣?憭批? */
+}
+#customSuccessModal .preview_info_block {
+  /* ?航銵矽?湔?摮???*/
+}
+#customSuccessModal .modal_action_row {
+  /* 銝? + ?澈????*/
+}
+#customSuccessModal .social_share_row {
+  /* FB / LINE 蝷曄黎?澈????*/
+}
+
+/* ======================================================
+   #viewCardModal ?亦?撣??∪?蝒?撠惇璅??
+   ====================================================== */
+#viewCardModal .pop-bg-viewcard {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1734 / 995;
+  background: url(../images/pop/viewCardModal_bg.webp) no-repeat center center;
+  background-size: 100% 100%;
+}
+#viewCardModal .viewcard_modal_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+#viewCardModal .viewcard_preview_area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+#viewCardModal .vc_chara_bg {
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 0.1rem;
+  flex-shrink: 0;
+}
+#viewCardModal .viewcard_info_block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: #fff;
+}
+#viewCardModal .viewcard_info_block span {
+  display: block;
+  font-size: 0.32rem;
+  font-weight: bold;
+}
+
+/* ======================================================
+   成功彈窗按鈕雪碧圖（3格：正常 / hover / disabled）
+   ====================================================== */
+
+/* 保存身分卡 */
+.btn_popup_card_save {
+  height: 0.69rem;
+  aspect-ratio: 323/90;
+  border: none;
+  background: url(../images/pop/btn_popup_card_save.webp) no-repeat center 0%;
+  background-size: 100% 300%;
+  color: transparent;
+  cursor: pointer;
+}
+.btn_popup_card_save:hover:not(:disabled) {
+  background-position: center 50%;
+}
+.btn_popup_card_save:disabled {
+  background-position: center 100%;
+  cursor: not-allowed;
+}
+
+/* 分享連結 */
+.btn_popup_share_link {
+  height: 0.69rem;
+  aspect-ratio: 323/90;
+  border: none;
+  background: url(../images/pop/btn_popup_share_link.webp) no-repeat center 0%;
+  background-size: 100% 300%;
+  color: transparent;
+  cursor: pointer;
+}
+.btn_popup_share_link:hover:not(:disabled) {
+  background-position: center 50%;
+}
+.btn_popup_share_link:disabled {
+  background-position: center 100%;
+  cursor: not-allowed;
+}
+
+/* 保存分享圖（3格：正常 / hover / disabled） */
+.btn_popup_share_save {
+  height: 0.69rem;
+  aspect-ratio: 323/90;
+  border: none;
+  background: url(../images/pop/btn_popup_share_save.webp) no-repeat center 0%;
+  background-size: 100% 300%;
+  color: transparent;
+  cursor: pointer;
+}
+.btn_popup_share_save:hover:not(:disabled) {
+  background-position: center 50%;
+}
+.btn_popup_share_save:disabled {
+  background-position: center 100%;
+  cursor: not-allowed;
+}
+/* --- 完成彈窗：操作列與社群分享 --- */
+.modal_action_row {
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  background-color: #1876f200;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  left: 0;
+}
+.save_left{
+  width: 30%;
+  background-color: #06c75600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.save_right{
+  width: 70%;
+  background-color: #b4c70600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.15rem;
+  flex-direction: column;
+}
+.saved{
+  display: flex;
+  gap: 0.8rem;
+}
+p.btn_popup_share_link_text {
+  color: #fff;
+  font-size: 0.25rem;
+  font-weight: 500;
+  letter-spacing: 0.015rem;
+}
+.btn_popup_share_link_text span{
+  color: #fff267;
+  font-size: 0.25rem;
+  padding: 0 0.05rem;
+}
+
+.btn_download_card {
+  height: 1.2rem;
+  padding: 0 0.6rem;
+  background-color: #444;
+  color: #fff;
+  border-radius: 0.2rem;
+  font-size: 0.4rem;
+  cursor: pointer;
+}
+
+.social_share_row {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+  justify-content: center;
+}
+
+.btn_social_share {
+  height: 1rem;
+  padding: 0 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 0.35rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+
+.reset_card {
+  width: 2.2rem;
+  height: 0.69rem;
+  background-color: #06c755;
+}

@@ -1,0 +1,2127 @@
+.modal {
+  font-size: initial;
+}
+.regressmodal .form-select {
+  text-align: center !important;
+  padding: 0 0.2rem;
+  width: 2rem;
+}
+.regressmodal .form-bg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0.2rem;
+}
+#eventAlertModal .modal-body {
+  margin: 0 auto;
+  width: 6rem;
+  height: 5.34rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont_alert.png)
+    no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-radius: 0.28rem;
+}
+#eventAlertModal .modal-body p {
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
+}
+
+/* otherPlatform */
+.otherPlatform {
+  display: flex;
+}
+.otherPlatform a {
+  position: relative;
+  margin: 0 0.09rem;
+  width: 0.66rem;
+  height: 0.66rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/otherPlatform.png)
+    no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+}
+.otherPlatform .platform_twitter {
+  background-position-x: 0;
+}
+.otherPlatform .platform_facebook {
+  background-position-x: -0.84rem;
+}
+.otherPlatform .platform_youtube {
+  background-position-x: -1.68rem;
+}
+.otherPlatform .platform_discord {
+  background-position-x: -2.52rem;
+}
+.otherPlatform .platform_reddit {
+  background-position-x: -3.37rem;
+}
+.otherPlatform .platform_ins {
+  background-position-x: -4.2rem;
+}
+.otherPlatform .platform_tiktok {
+  background-position-x: -5.04rem;
+}
+.otherPlatform .platform_line {
+  background-position-x: -5.88rem;
+}
+.otherPlatform .platform_naver {
+  background-position-x: -6.72rem;
+}
+.otherPlatform .platform_talk {
+  background-position-x: -7.56rem;
+}
+.otherPlatform .platform_ps {
+  background-position-x: -5.04rem;
+}
+.otherPlatform a:hover {
+  background-position-y: -0.66rem;
+}
+.otherPlatform .code {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+.otherPlatform a:hover .code {
+  display: block;
+}
+.otherPlatform .code div {
+  margin-bottom: 0.1rem;
+  border-radius: 0.05rem;
+  padding: 0.1rem;
+  background: #fff;
+}
+.otherPlatform .code img {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* 彈窗 */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.regressmodal .pop {
+  display: block;
+}
+.popup .popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+.popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 9.19rem;
+  height: 8.24rem; */
+  width: 15rem;
+  aspect-ratio: 1734/995;
+}
+.popup .close {
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 123 / 125;
+  background: url(../images/lottery/lottery_close_btn.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+}
+.popup .close:hover {
+  background-position: bottom;
+}
+.popup .close:not(:disabled):not(.disabled):focus,
+.popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+.popup p {
+  margin-bottom: 0;
+}
+.popup_outer {
+  min-height: auto;
+}
+.popBtns {
+  display: flex;
+  width: 100%;
+  height: 0.69rem;
+  margin-top: 0.38rem;
+  justify-content: center;
+}
+.popBtns button,
+.popBtns a {
+  width: 2.78rem;
+  height: 0.69rem;
+  margin: 0 0.2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+.popBtns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+button.btn_confirm_job {
+  height: .9rem;
+  aspect-ratio: 439/150;
+  border: none;
+  background: url(../images/pop/btn_confirm_job.webp) no-repeat center top;
+  background-size: 100% 200%;
+  color: transparent;
+  cursor: pointer;
+}
+button.btn-msg-confirm {
+  margin-top: 1rem;
+  width: 3.2rem;
+  height: .88rem;
+  aspect-ratio: 384/105;
+  background: url(../images/pop/btn_confirm_job2.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+.btn_confirm_job:hover, button.btn-msg-confirm:hover {
+  background-position: center bottom;
+}
+button.btn_popup_linkaccount {
+  margin-top: 1rem;
+  width: 3.2rem;
+  height: .88rem;
+  aspect-ratio: 384/105;
+  background: url(../images/pop/btn_popup_linkaccount.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+.btn_confirm_job:hover, button.btn_popup_linkaccount:hover {
+  background-position: center bottom;
+}
+
+.popBtns .shareInviteLinkBtn,
+.popBtns .btn-pop-invite {
+  margin-top: .15rem;
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: .89rem;
+  background: url(../images/pop/btn_share.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.downloadSharePicBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/download_share_pic_btn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-send-data {
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: .89rem;
+  background: url(../images/pop/btn_submit.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-LotteryGet, .inviteLogList .btn-LotteryGet {
+  margin-top: .15rem;
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: .89rem;
+  background: url(../images/pop/btn_getreward.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.inviteLogList .btn-LotteryGet {
+  width: 2.8rem;
+  height: .77rem;
+}
+.popBtns .btn-popLoginBtn {
+  margin-top: .15rem;
+  height: 0.95rem;
+  background: url(../images/pop/btn_login.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .shareInviteLinkBtn:hover,
+.popBtns .btn-pop-invite:hover,
+.popBtns .btn-send-data:hover,
+.popBtns .btn-LotteryGet:hover,
+.popBtns .btn-popLoginBtn:hover {
+  background-position: center bottom;
+}
+
+
+/* 彈窗：活動規則 */
+.pop-bg2 {
+  background: url(../images/pop/pop-bg2.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popRuleTit {
+  display: block;
+  width: 4.2rem;
+  height: 1.3rem;
+  margin: .5rem 0;
+  margin-left: .6rem;
+  background: url(../images/pop/pop_title03.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.rule-scroll {
+  width: 13.7rem;
+  height: 4.78rem;
+  margin: 0.15rem auto 0;
+  padding: 0 .65rem;
+}
+.cus-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.cus-scroll::-webkit-scrollbar {
+  width: 0.14rem;
+  background-color: #202020;
+  border-radius: 0.07rem;
+}
+.cus-scroll::-webkit-scrollbar-thumb {
+  width: 0.14rem;
+  background-color: #cbcbcb;
+  border-radius: 0.07rem;
+}
+.rule-scroll p,
+.rule-scroll p a {
+  margin-bottom: .2rem;
+  font-size: 0.23rem;
+  line-height: 0.4rem;
+  color: #eeeeee;
+}
+
+/* 彈窗：分享 */
+.popShare {
+  overflow-y: hidden !important;
+}
+.pop-bg.pop-bg3 {
+  width: 15.2rem;
+  height: 8rem;
+  background-color: #ff4294bb;
+  position: relative;
+}
+.popShareCont {
+  position: relative;
+  width: 15.2rem;
+  height: 8rem;
+  margin: 0 auto 1.5rem auto;
+}
+.shareDownSourcePic {
+  top: 100vh;
+  left: 100vw;
+  width: 803px;
+  height: 453px;
+  background: #000;
+}
+.shareDownPic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/share_down_pic.jpg)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.inviteCode {
+  left: 661px;
+  top: 292px;
+  width: 116px;
+  height: 116px;
+  padding: 5px;
+  background: #fff;
+}
+.inviteCode canvas {
+  width: 100%;
+  height: 100%;
+}
+.shareDownResultPic {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.shareDownResultPic img {
+  width: 100%;
+  height: 100%;
+}
+
+#popShare .popBtns {
+  display: flex;
+  width: 1rem;
+  height: 6rem;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #73ed6300;
+  position: absolute;
+  right: -0.5rem;
+  bottom: 0;
+  gap: 0.3rem;
+}
+#popShare .popBtns button,
+#popShare .popBtns a {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ff3b8300;
+}
+#popShare .shareInviteLinkBtn,
+#popShare .btn-pop-invite {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/link.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popShare .downloadSharePicBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/dl.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popShare .fbShareBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/fb.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popShare .lineShareBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/line.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 彈窗：邀請記錄 */
+.popInviteLogTit {
+  width: 5.44rem;
+  height: 0.85rem;
+  margin: 1.88rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop_invite_log_tit.png)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popInviteLogCont {
+  height: 2.66rem;
+}
+.notLog {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  line-height: 0.6rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.inviteLogList {
+  width: 13.8rem;
+  margin: 0 auto;
+  margin-top: .5rem;
+  padding-top: 0.15rem;
+  color: #d5d5d5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.inviteLogList_item p{
+  margin-bottom: 0;
+  line-height: .6rem;
+  color: white;
+  font-weight: bold;
+  font-size: .35rem;
+}
+.inviteLogList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inviteLogList .tr p {
+  width: 50%;
+  text-align: center;
+  line-height: 1.3;
+  word-break: break-all;
+}
+#popAward .inviteLogList .tr p:nth-child(1) {
+  width: 49%;
+  padding-right: 0.15rem;
+  box-sizing: border-box;
+  color: #eeeeee;
+  text-align: left;
+  font-size: .35rem;
+  font-weight: 600;
+}
+#popAward .inviteLogList .tr p:nth-child(2) {
+  width: 18%;
+}
+#popAward .inviteLogList .tbody .tr p:nth-child(2) {
+  border-left: 0.01rem dotted #fff;
+  border-right: 0.01rem dotted #fff;
+}
+#popAward .inviteLogList .tr p:nth-child(3) {
+  width: 36%;
+  padding-left: 0.15rem;
+}
+.inviteLogList .thead {
+  padding: 0 1rem;
+  padding-right: 1.2rem;
+  height: 0.76rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  line-height: 0.76rem;
+}
+.inviteLogList .tbody {
+  width: 7.26rem;
+  height: 1.74rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+}
+.inviteLogList .tbody .tr {
+  margin-bottom: .1rem;
+  padding: 0.05rem 0.1rem;
+  height: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.AwardNoneList {
+  width: 7.1rem;
+  margin: 0 auto;
+  padding-top: 0.15rem;
+  color: #d5d5d5;
+}
+.AwardNoneList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AwardNoneList .tr p {
+  width: 50%;
+  text-align: center;
+}
+.AwardNoneList .thead {
+  height: 0.76rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  line-height: 0.76rem;
+}
+.AwardNoneList .tbody {
+  width: 7.26rem;
+  height: 1.74rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+}
+.AwardNoneList .tbody .tr {
+  margin-bottom: 0.18rem;
+}
+
+.popBtnsTip {
+  width: 100%;
+  text-align: center;
+  font-size: 0.26rem;
+  line-height: 0.4rem;
+  color: #63edec;
+  margin-bottom: 0 !important;
+}
+#popInviteLog .popBtns {
+  margin-top: 0;
+}
+
+/* 彈窗：獎勵(無中獎紀錄) */
+.popAwardNoneTit {
+  width: 5.44rem;
+  height: 0.85rem;
+  margin: 1.88rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop_package_tit.png)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popAwardNoneCont {
+  height: 2.66rem;
+}
+#popAwardNone .popBtns {
+  margin-top: 0;
+}
+
+/* 彈窗：獎勵背包 */
+.popAwardTit {
+  width: 3.2rem;
+  height: .8rem;
+  margin: .95rem auto 0;
+  background: url(../images/pop/pop_award_title.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popAwardCont {
+  height: 3.2rem;
+}
+#popAward .inviteLogList .tbody {
+  padding: 0 1rem;
+  width: 100%;
+  /* height: 2.6rem; */
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+}
+.notRewards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+}
+.state-not-login {
+  margin: 0 auto;
+  align-self: center;
+  width: 7rem;
+  height: .6rem;
+  background: url(../images/pop/pop_not_login_text.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-no-reward {
+  margin: 0 auto;
+  align-self: center;
+  width: 7rem;
+  height: .6rem;
+  background: url(../images/pop/pop_not_reward_text.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-submit-success {
+  margin: 0 auto;
+  align-self: center;
+  width: 4rem;
+  height: .8rem;
+  background: url(../images/pop/pop_submit_success.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-receive {
+  margin: 0 auto;
+  align-self: center;
+  width: 7rem;
+  height: 1.2rem;
+  background: url(../images/pop/pop_yy_linkaccount_tt.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-bag-limit {
+  margin: 0 auto;
+  align-self: center;
+  width: 7.2rem;
+  height: 1.25rem;
+  background: url(../images/pop/pop_yy_backpack_tt.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-receive2 {
+  margin: 0 auto;
+  align-self: center;
+  width: 6rem;
+  height: 2.3rem;
+  background: url(../images/pop/pop_yy_linkaccount_tt.webp) no-repeat;
+  background-size: 100% auto;
+}
+.popBtns_receive2{
+  display: flex;
+  width: 100%;
+  height: 0.69rem;
+  margin-top: 0;
+  justify-content: center;
+}
+.rewardsList {
+  width: 5.9rem;
+  height: 1.9rem;
+  margin: 0.15rem 0 0 1.88rem;
+}
+.rewardsItem {
+  display: flex;
+  width: 5.38rem;
+  height: 0.62rem;
+  margin: 0.08rem 0;
+  justify-content: space-between;
+  align-items: center;
+  background: #ededed;
+  border: 0.03rem solid #585858;
+  border-radius: 0.31rem;
+}
+.rewardsItem p {
+  margin-left: 0.15rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  color: #3f3f3f;
+}
+.rewardsItem button {
+  margin-right: 0.1rem;
+  width: 2.04rem;
+  height: 0.44rem;
+  border-radius: 0.31rem;
+  background: #70e0f0;
+  font-weight: bold;
+  font-size: 0.24rem;
+  color: #262626;
+}
+.rewardsItem button.void {
+  background: #868686;
+  cursor: default;
+}
+
+#popAward .popBtns {
+  margin-top: 0;
+}
+
+/* 彈窗：中獎（實物 | 測試資格） */
+.pop-bg3 {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop-bg2.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.pop-kt-head {
+  top: 0.19rem;
+  height: 1.97rem;
+}
+.pop-kt-title {
+  height: 0.5rem;
+}
+.popLotteryCont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 5.3rem;
+}
+.popLotteryCont .content {
+  display: flex;
+  width: 7.9rem;
+  height: 2.66rem;
+  margin: 2.65rem auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.popLotteryCont h3 {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+.popLotteryCont .des {
+  line-height: 0.52rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  color: #b7b7b7;
+}
+.popLotteryCont .prizeName,
+.popAward .prizeName,
+.popLotteryWinning h3 {
+  color: #ff3b82;
+}
+.popLotteryWinning .des {
+  width: 65%;
+  margin: 0 auto;
+}
+
+#popLottery .popBtns {
+  margin-top: 0;
+}
+
+/* 彈窗：恭喜獲得 */
+#popGetAward .pop-bg-sm {
+  width: 10rem;
+  aspect-ratio: 1091 / 875;
+  background: url(../images/lottery/pop_bg_sm.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popGetAward .popAwardTit {
+  background: url(../images/lottery/pop_award_title2.webp) no-repeat;
+  background-size: 100% auto;
+}
+#popGetAward .popAwardCont {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 雪碧圖樣式 */
+#popGetAward .popAwardCont .pop-award-item {
+  width: 2.2rem;
+  aspect-ratio: 1/1;
+  background-size: 100% 200%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+#popGetAward .popAwardCont p {
+  margin: .05rem auto .2rem;
+  color: #ffffff;
+  font-size: .26rem;
+  font-weight: bold;
+}
+#popGetAward .btn-awardBag {
+  width: 3.2rem;
+  height: .89rem;
+  aspect-ratio: 384/106;
+  border: none;
+  background: url(../images/lottery/btn_award_bag.webp) no-repeat center top;
+  background-size: 100% 200%;
+  color: transparent;
+  cursor: pointer;
+}
+#popGetAward .btn-awardBag:hover {
+  background-position: center bottom;
+}
+
+/* 彈窗：中獎（YY專屬） */
+#popYyLottery .pop-bg2 {
+  height: 7.6rem;
+  background: url(../images/lottery/pop_bg_award.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popYyLottery .pop-kt-head {
+  top: 0.4rem;
+  height: 1.7rem;
+}
+#popYyLottery .pop-kt-title {
+  height: .9rem;
+}
+#popYyLottery .popLotteryLosing .pop-kt-title {
+  margin-top: -.25rem;
+  height: 1.4rem;
+}
+#popYyLottery .popLotteryCont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 5.3rem;
+}
+#popYyLottery .popLotteryCont .content {
+  display: flex;
+  width: 13rem;
+  height: 2.66rem;
+  margin: 2.5rem auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+#popYyLottery .popLotteryCont h3 {
+  width: 100%;
+  margin-bottom: 1.1rem;
+}
+#popYyLottery .popLotteryCont .des {
+  margin-top: 1.2rem;
+  line-height: 0.52rem;
+  font-weight: bold;
+  font-size: 0.4rem;
+  letter-spacing: .05rem;
+  color: #eeeeee;
+}
+#popYyLottery .popLotteryCont .prizeName,
+#popYyLottery .popLotteryWinning h3 {
+  color: #4fe5fb;
+}
+#popYyLottery .popLotteryWinning .des {
+  width: 100%;
+  margin: 0 auto;
+}
+#popYyLottery .popBtns {
+  margin-top: 0;
+}
+
+/* 彈窗：中獎（填寫資料） */
+#popLoytterGet .lotteryForm {
+  background-color: #33ffff00;
+}
+.popInfoTit {
+  width: 3.2rem;
+  height: .8rem;
+  margin: .95rem auto 0;
+  background: url(../images/pop/pop_info_title.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popLotteryGetCont h3 {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+.popLotteryGetCont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5.8rem;
+}
+.popLotteryGetCont .lotteryForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: .15rem;
+  width: 8rem;
+  margin-bottom: .1rem;
+}
+#popLotteryGet .lotteryForm .form-bg {
+  background-color: #ffffff;
+  width: 100%;
+  height: 0.65rem;
+  margin-bottom: 0.15rem;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 .05rem #646464;
+}
+#popLotteryGet .form-select {
+  padding: 0 0.2rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0% auto;
+  height: auto;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+#popLotteryGet #lottery_address_number {
+  width: 1.485rem;
+  flex: 0 0 auto;
+  padding: 0 0.1rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0;
+  height: auto;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+/* #popLotteryGet .form-select option {
+  background-color: #1d1d1d;
+} */
+#popLotteryGet .form-control {
+  padding: 0;
+  width: 100%;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 0% auto;
+  height: auto;
+  transition: 0.5s;
+  vertical-align: middle;
+  text-align: left;
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 6%;
+}
+#popLotteryGet #lottery_address {
+  flex: 1;
+}
+
+.lotteryForm .column {
+  display: flex;
+  align-items: center; /* 垂直置中 */
+  width: 100%;
+}
+
+/* 標題 */
+.lotteryForm .column > span {
+  color: #ffffff;
+  font-size: .25rem;
+  flex: 0 0 16%;
+  max-width: 20%;
+  margin-bottom: 0.15rem;
+}
+
+/* 表單區 */
+.lotteryForm .column .form-bg {
+  flex: 0 0 80%;
+  max-width: 80%;
+
+  display: flex; /* 讓裡面的 select + input 可以並排 */
+  gap: 8px; /* 視覺間距（可調） */
+}
+
+#lottery_name {
+  background-color: #63edec;
+  width: 100%;
+  height: 0.55rem;
+}
+#lottery_phone_code {
+  padding: 0 0.2rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0% auto;
+  height: auto;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+/* #lottery_phone_code option {
+  background-color: #1d1d1d;
+} */
+#lottery_phone_number {
+  padding: 0;
+  width: auto;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 0% auto;
+  height: auto;
+  transition: 0.5s;
+  vertical-align: middle;
+  /* text-align: left !important; */
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 4%;
+}
+
+/* 彈窗：提示訊息 */
+.popMsgCont {
+  display: flex;
+  width: 8rem;
+  height: 4.9rem;
+  margin: 1.8rem auto 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 0.72rem;
+  color: #eae9e9;
+}
+.popLotteryAnimationCont {
+  display: flex;
+  width: 8rem;
+  height: 4.9rem;
+  margin: 1.8rem auto 0;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 0.72rem;
+  color: #eae9e9;
+  flex-direction: column;
+}
+
+/* 彈窗：抽獎動畫內容 */
+.popLotteryAnimationCont .loading_ani {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.popLotteryAnimationCont .loading_ani .character {
+  width: 3rem;
+}
+.popLotteryAnimationCont .loading_ani .loading {
+  width: 1.5rem;
+  filter: hue-rotate(318deg) brightness(3) blur(0.5px);
+}
+
+/* 蓋過官網彈窗樣式*/
+#successmodal .popCont2 {
+  height: 8rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/popCont2_v2.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+#successmodal .pop_yySuccess_tit {
+  top: 1.8rem;
+  width: 6.1rem;
+  height: 2rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop_yy_qa_success_tt.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#successmodal .urban_icon {
+  width: 50%;
+  margin: 0 6px 8px 6px;
+}
+#successmodal .urban_icon a {
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+}
+#successmodal .urban_icon a:hover {
+  transform: scale(1.1);
+}
+#successmodal .urban_icon a img {
+  width: 100%;
+}
+
+/* 0121更新 - 雙平台預約成功按鈕 */
+/* 0121更新 - 雙平台預約成功按鈕 */
+.focus_social_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 54%;
+}
+.urban_icon_ios, .urban_icon_android {
+    width: 48%;
+    margin: 0.5rem 6px 8px 6px;
+}
+.urban_icon_ios a, .urban_icon_android a {
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+.urban_icon_ios a:hover, .urban_icon_android a:hover {
+    transform: scale(1.1);
+}
+.urban_icon_ios img, .urban_icon_android img {
+    width: 100%;
+    display: block;
+}
+
+/* --- 自定義彈窗 (職業選擇) --- */
+/* --- 職業選擇彈窗 (共用彈窗樣式) --- */
+.pop-bg1 {
+  background: url(../images/pop/pop-bg1.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.pop_job_select_wrap {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem .6rem;
+}
+
+.pop_job_select_wrap .pop_title {
+  margin-bottom: .5rem;
+  width: 4rem;
+  height: 1.3rem;
+  font-size: inherit;
+  background: url(../images/pop/pop_title01.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.pop_job_select_wrap .job_opt_list {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: inherit;
+  gap: 0.25rem;
+  margin: 0 auto;
+  padding: 0 1.8rem;
+  width: 13.6rem;
+  height: 4.8rem;
+  overflow-y: auto;
+}
+
+/* 捲軸樣式同步 cus-scroll */
+.pop_job_select_wrap .job_opt_list::-webkit-scrollbar {
+  width: 0.14rem;
+  background-color: #202020;
+  border-radius: 0.07rem;
+}
+.pop_job_select_wrap .job_opt_list::-webkit-scrollbar-thumb {
+  width: 0.14rem;
+  background-color: #cbcbcb;
+  border-radius: 0.07rem;
+}
+
+.pop_job_select_wrap .job_opt_item {
+  width: 100%;
+  padding: 0.1rem 0.4rem;
+  background-color: #ebebeb;
+  border: .06rem solid #ffffff;
+  box-shadow: .05rem .07rem 0rem #1f2032;
+  border-radius: 0.15rem;
+  font-size: 0.45rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pop_job_select_wrap .job_opt_item, .pop_job_select_wrap .job_opt_item.active {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-weight: 900;
+  color: #474747;
+}
+
+.pop_job_select_wrap .job_opt_item:hover {
+  border-color: #ffffff;
+  background-color: #a1fcff;
+}
+
+.pop_job_select_wrap .job_opt_item.active {
+  background-color: #a1fcff;
+  border-color: #ffffff;
+  
+}
+
+.pop_job_select_wrap .popBtns {
+  margin-top: .2rem;
+}
+
+/* 彈窗：提示訊息 */
+.popContent {
+  margin: 0 auto;
+}
+
+.popContent p {
+  margin: 3.5rem auto 1rem;
+  text-align: center;
+}
+
+.popContent p img {
+  width: 50%;
+}
+
+/* ======================================================
+   #viewCardModal - 身分卡預覽彈窗
+   ====================================================== */
+#viewCardModal .pop-bg-viewcard {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1734 / 995;
+  background: url(../images/pop/viewCardModal_bg.webp) no-repeat center center;
+  background-size: 100% 100%;
+}
+#viewCardModal .viewcard_modal_wrap {
+  padding: .25rem;
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: .45rem;
+}
+#viewCardModal .card_mockup {
+  aspect-ratio: 1197 / 621;
+  min-height: 5.6rem;
+}
+#viewCardModal .card_uid {
+  width: 2rem;
+  left: 13%;
+  bottom: 13.2%;
+}
+#viewCardModal .card_uid p {
+  font-size: .22rem;
+}
+#viewCardModal .card_info_grid {
+  column-gap: 1.6rem;
+  row-gap: .6rem;
+  left: 44%;
+  bottom: 10%;
+}
+#viewCardModal .info_item span {
+  font-size: .25rem;
+}
+#viewCardModal .right_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+#viewCardModal .right_info img {
+  max-width: 100%;
+}
+#viewCardModal .right_info .logo {
+  width: 1.5rem;
+}
+#viewCardModal .right_info .qrcode {
+  width: 1.7rem;
+}
+
+/* ======================================================
+   #customSuccessModal - 彈窗：完成訂製
+   ====================================================== */
+#customSuccessModal .pop-bg-success {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1734 / 995;
+  background: url(../images/pop/customSuccessModal_bg.webp) no-repeat center center;
+  background-size: 100% 100%;
+}
+#customSuccessModal .success_modal_wrap {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: #e2c85400;
+}
+#customSuccessModal .preview_in_modal {
+  width: 100%;
+  height: 100%;
+  background-color: #a954e200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.25rem;
+}
+#customSuccessModal .preview_in_modal .card_portrait.preview_chara {
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 0.1rem;
+  flex-shrink: 0;
+}
+#customSuccessModal .preview_info_block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: #fff;
+  font-size: 0.3rem;
+}
+#customSuccessModal .modal_reward_hint,
+#customSuccessModal .modal_footer_hint {
+  font-size: 0.22rem;
+  color: #ccc;
+  text-align: center;
+}
+#customSuccessModal .modal_action_row {
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+}
+#customSuccessModal .social_share_row {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: center;
+}
+#customSuccessModal .card_uid {
+  bottom: 11.5%;
+}
+
+/* ======================================================
+   成功彈窗按鈕雪碧圖（3格：正常 / hover / disabled）
+   ====================================================== */
+
+/* 保存身分卡 */
+.btn_popup_card_save {
+  height: 0.69rem;
+  aspect-ratio: 323/90;
+  border: none;
+  background: url(../images/pop/btn_popup_card_save.webp) no-repeat center 0%;
+  background-size: 100% 300%;
+  color: transparent;
+  cursor: pointer;
+}
+.btn_popup_card_save:hover:not(:disabled) {
+  background-position: center 50%;
+}
+.btn_popup_card_save:disabled {
+  background-position: center 100%;
+  cursor: not-allowed;
+}
+
+/* 分享連結 */
+.btn_popup_share_link {
+  height: 0.69rem;
+  aspect-ratio: 323/90;
+  border: none;
+  background: url(../images/pop/btn_popup_share_link.webp) no-repeat center 0%;
+  background-size: 100% 300%;
+  color: transparent;
+  cursor: pointer;
+}
+.btn_popup_share_link:hover:not(:disabled) {
+  background-position: center 50%;
+}
+.btn_popup_share_link:disabled {
+  background-position: center 100%;
+  cursor: not-allowed;
+}
+
+/* 保存分享圖（3格：正常 / hover / disabled） */
+.btn_popup_share_save {
+  height: 0.69rem;
+  aspect-ratio: 323/90;
+  border: none;
+  background: url(../images/pop/btn_popup_share_save.webp) no-repeat center 0%;
+  background-size: 100% 300%;
+  color: transparent;
+  cursor: pointer;
+}
+.btn_popup_share_save:hover:not(:disabled) {
+  background-position: center 50%;
+}
+.btn_popup_share_save:disabled {
+  background-position: center 100%;
+  cursor: not-allowed;
+}
+
+/* --- 完成彈窗：操作列與社群分享 --- */
+.modal_action_row {
+  display: flex;
+  gap: 0rem;
+  justify-content: center;
+  background-color: #1876f200;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  left: 0;
+}
+.save_left{
+  width: 30%;
+  background-color: #06c75600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.save_right{
+  width: 70%;
+  background-color: #b4c70600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.15rem;
+  flex-direction: column;
+}
+.saved{
+  display: flex;
+  gap: 0.8rem;
+}
+p.btn_popup_share_link_text {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.015rem;
+  font-size: 0.25rem;
+}
+.btn_popup_share_link_text span{
+  color: #fff267;
+  padding: 0 0.05rem;
+  font-size: 0.25rem;
+}
+.btn_download_card {
+  height: 1.2rem;
+  padding: 0 0.6rem;
+  background-color: #444;
+  color: #fff;
+  border-radius: 0.2rem;
+  font-size: 0.4rem;
+  cursor: pointer;
+}
+.social_share_row {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+  justify-content: center;
+}
+.btn_social_share {
+  height: 1rem;
+  padding: 0 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 0.35rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+.reset_card {
+  position: absolute;
+  height: 1.4rem;
+  aspect-ratio: 332 / 155;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: top;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  color: transparent;
+  margin: .3rem;
+  background-image: url(../images/card/btn_restart.webp);
+  z-index: 2;
+}
+.reset_card:hover {
+  background-position: bottom;
+}
+
+/* 彈窗：異環正式公測 */
+/* 彈窗：異環正式公測 */
+#popStore .popStoreCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#popStore .popStoreCont .cb, #popStore .popStoreCont .ob {
+  text-align: center;
+}
+#popStore .popStoreCont .cb {
+  margin-top: .35rem;
+}
+#popStore .pop_store_tt {
+  margin-top: 2.7rem;
+  width: 81%;
+}
+#popStore .popStoreCont .cb .pop_store_tt {
+  margin-bottom: .25rem;
+  width: 52%;
+}
+#popStore .gameInfo {
+  display: flex;
+  gap: .25rem;
+  margin: .25rem auto;
+  width: 11rem;
+  transform: translateX(.25rem);
+}
+#popStore .gameInfo img {
+  max-width: 100%;
+}
+#popStore .game_icon {
+  width: 50%;
+}
+#popStore .store {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  row-gap: 0rem;
+}
+#popStore .store a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 0 calc((100% - 0.7rem) / 3);
+  max-width: calc((100% - 0.7rem) / 3);
+}
+#popStore .store a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+#popStore .store .store-windows img,
+#popStore .store .store-google img,
+#popStore .store .store-ios img,
+#popStore .store .store-ps5 img,
+#popStore .store .store-google2 img {
+  max-width: 100%;
+}
+#popStore .store .store-ios {
+  flex: 0 0 calc((100% - 0.7rem) / 3 * .8);
+  max-width: calc((100% - 0.7rem) / 3 * .8);
+}
+#popStore .store .store-google2 {
+  flex: 0 0 calc((100% - 0.7rem) / 3 * 1.35);
+  max-width: calc((100% - 0.7rem) / 3 * 1.35);
+}
+#popStore .popStoreCont p {
+  color: #eeeeee;
+  font-size: .22rem;
+  line-height: .4rem;
+  text-align: center;
+}
+#popStore .popStoreCont .cb p {
+  margin-top: .5rem;
+  font-size: .45rem;
+  font-weight: bold;
+  letter-spacing: .05rem;
+}
+
+/* 彈窗：獎勵一覽 */
+#popAwards .popAwardsTit {
+  display: block;
+  width: 4.2rem;
+  height: 1.3rem;
+  margin: .5rem 0;
+  margin-left: .6rem;
+  background: url(../images/pop/pop_title02.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popAwards .popAwardsCont {
+  margin: 0 auto;
+  margin-top: .25rem;
+  width: 84%;
+}
+#popAwards h4 {
+  margin-bottom: .05rem;
+  color: #7aeeff;
+  font-size: .3rem;
+  font-weight: bold;
+  letter-spacing: .02rem;
+}
+#popAwards .awards {
+  display: flex;
+  gap: .2rem;
+  width: 100%;
+  margin-bottom: .35rem;
+}
+#popAwards .awards .award-item {
+  width: 1.9rem;
+}
+#popAwards .awards img {
+  max-width: 100%;
+}
+#popAwards .awards p {
+  margin-top: .05rem;
+  color: #ffffff;
+  font-size: .2rem;
+  font-weight: bold;
+  line-height: .28rem;
+  text-align: center;
+}
+
+/* ========================================================================
+ * Item Backpack Modal
+ * ======================================================================== */
+
+/* Modal card override */
+.popItemBag .modal-lg {
+  max-width: 14rem; /* 顯著放大彈窗寬度 */
+  width: 95%;
+}
+
+.bag_modal_content {
+  background: url(../images/lottery/lottery_backpack_bg.webp);
+  aspect-ratio: 1972 / 995;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0.6rem 0.8rem 0.3rem;
+  box-shadow: 0 0.08rem 0.4rem rgba(0,0,0,0.18);
+  position: relative;
+  top: 4vw;
+}
+
+.bag_header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 103.5%;
+  left: 0;
+  z-index: 10;
+}
+
+.bag_title {
+  position: relative;
+  left: 0;
+}
+.bag_title img{
+  width: 5rem; /* 顯著放大標題 */
+}
+
+.bag_close {
+  position: relative;
+  top: 0.1rem;
+  right: 0;
+  width: 1.3rem; /* 放大關閉按鈕 */
+  aspect-ratio: 123 / 125;
+  background: url(../images/lottery/lottery_close_btn.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.bag_close:hover {
+  background-position: bottom;
+}
+
+/* Body: two panels + arrow */
+.bag_body {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 0.18rem;
+}
+
+.bag_panel {
+  background: url(../images/lottery/lottery_backpack_left_get_bg.webp);
+  aspect-ratio: 781 / 721;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  flex: 1;
+  /* border: 0.02rem solid #ddd; */
+  padding: 0.14rem 0.12rem 0.5rem;
+}
+
+.bag_panel.bag_panel_right {
+  background-image: url(../images/lottery/lottery_backpack_right_receive_bg.webp);
+}
+
+.bag_panel_title {
+  font-size: 0.17rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 0 0 0.1rem 0;
+}
+
+.bag_arrow {
+  background: url(../images/lottery/lottery_backpack_arrow.webp);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 0.46rem;
+  height: 0.35rem;
+  flex-shrink: 0;
+  margin: 0 0.1rem;
+  align-self: center;
+}
+
+.bag_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 0.1rem; */
+  margin-top: 22%;
+  max-height: calc(100% - 1.1rem);
+  overflow-y: auto;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge 舊版 */
+}
+.bag_grid::-webkit-scrollbar {
+  display: none; /* Chrome / Safari / Edge 新版 */
+}
+
+/* 彈窗：幸運抽獎 */
+#popLuckyDraw .modal-lg {
+  max-width: 17rem;
+  width: 95%;
+}
+#popLuckyDraw .lucky_modal_content {
+  position: relative;
+  margin-top: 1rem;
+  height: 8.5rem;
+  background: url(../images/lottery/lottery_backpack_bg.webp);
+  aspect-ratio: 1972 / 995;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0.6rem 0.8rem 0.3rem;
+  box-shadow: 0 0.08rem 0.4rem rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+#popLuckyDraw .lucky_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.1rem;
+  position: absolute;
+  top: -17%;
+  left: 0;
+}
+
+#popLuckyDraw .lucky_title {
+  width: 3rem;
+}
+
+#popLuckyDraw .lucky_title img {
+  max-width: 100%;
+}
+
+#popLuckyDraw .lucky_close {
+  position: relative;
+  top: 0.3rem;
+  height: 1rem;
+  aspect-ratio: 123 / 125;
+  background: url(../images/lottery/lottery_close_btn.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#popLuckyDraw .lucky_close:hover {
+  background-position: bottom;
+}
+
+#popLuckyDraw .lucky_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#popLuckyDraw .lucky_prizes {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.55rem;
+  width: 72%;
+  margin: 0.3rem 0 0.2rem; /* 增加上下間距 */
+}
+
+#popLuckyDraw .lucky_prize_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+#popLuckyDraw .lucky_prize_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lucky_prize_img img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+#popLuckyDraw .lucky_prize_name {
+  font-size: 0.2rem;
+  color: #333;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+#popLuckyDraw .lucky_prize_item.losing .lucky_prize_name {
+  font-size: 0.32rem;
+  color: #333;
+  margin: auto;
+  font-weight: 900;
+}
+
+/* 抽獎按鈕區 */
+#popLuckyDraw .lucky_action {
+  text-align: center;
+  margin-bottom: 0.2rem;
+  width: 100%;
+}
+
+#popLuckyDraw .btn_click_draw {
+  margin-top: .1rem;
+  width: 3.5rem;
+  height: 1.15rem;
+  aspect-ratio: 405/133;
+  border: none;
+  background: url(../images/lottery/btn_draw_award.webp) no-repeat;
+  background-size: 100% auto;
+  color: transparent;
+  cursor: pointer;
+}
+#popLuckyDraw .btn_click_draw:hover {
+  background-position: center bottom;
+}
+#popLuckyDraw .lucky_count {
+  font-size: 0.25rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* 描述資訊框 */
+#popLuckyDraw .lucky_info_box {
+  width: 80%;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.22rem;
+  color: #ffffff;
+  margin-bottom: .4rem;
+}
+#popLuckyDraw .lucky_info_box p {
+  margin-bottom: 0.05rem;
+  font-size: .25rem;
+  font-weight: 600;
+}
+#popLuckyDraw .lucky_info_box .highlight {
+  color: #38dfdd;
+  font-weight: bold;
+}
+#popLuckyDraw .lucky_info_box .highlight2 {
+  color: #f962a4;
+  font-weight: bold;
+}
+
+/* Footer Buttons */
+#popLuckyDraw .lucky_footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* 拉大按鈕間距 */
+  width: 100%;
+}
+#popLuckyDraw .lucky_footer_lili {
+  width: 17%;
+  position: absolute;
+  bottom: .15rem;
+  right: -.5rem;
+  z-index: 6;
+}
+#popLuckyDraw .lucky_footer_lili img {
+  max-width: 100%;
+}
+#popLuckyDraw .btn_my_prizes, #popLuckyDraw .btn_share_link {
+  width: 2.8rem;
+  height: .77rem;
+  border: none;
+  cursor: pointer;
+}
+#popLuckyDraw .btn_my_prizes {
+  background: url(../images/lottery/btn_my_award.webp) no-repeat;
+  background-size: 100% auto;
+}
+
+#popLuckyDraw .btn_share_link {
+  background: url(../images/pop/btn_share.webp) no-repeat;
+  background-size: 100% auto;
+}
+#popLuckyDraw .btn_share_link:hover,
+#popLuckyDraw .btn_my_prizes:hover {
+  background-position: center bottom;
+}
+
+/* 已獲得道具格 */
+.bag_item {
+  position: relative;
+  /* padding: 0.08rem 0.04rem 0.06rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* transition: border-color 0.2s, box-shadow 0.2s; */
+  aspect-ratio: 1;
+}
+
+/* .bag_item:hover {
+  border-color: #31a1e0;
+  box-shadow: 0 0 0.08rem rgba(49,161,224,0.45);
+} */
+
+.bag_item.selected {
+  cursor: default;
+}
+.bag_item.selected .bag_item_icon {
+  background-position: bottom;
+}
+
+.bag_item img, .bag_slot.filled img {
+  display: none; 
+}
+
+.bag_item_icon {
+  width: 95%;
+  height: 95%;
+  background-size: 100% 200%;
+  background-position: top;
+  background-repeat: no-repeat;
+  transition: background-position 0s; 
+}
+
+.bag_item:hover .bag_item_icon,
+.bag_slot.filled:hover .bag_item_icon {
+  background-position: bottom;
+}
+
+.bag_item .bag_qty {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fa5396;
+  color: #fff;
+  font-size: 0.16rem;
+  font-weight: 900;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 
+    inset 0 0 0 0.04rem #fa5396, 
+    inset 0 0 0 0.06rem #000;
+  padding: 0;
+  line-height: 1;
+}
+
+.bag_item .bag_item_label {
+  font-size: 0.11rem;
+  color: #555;
+  margin-top: 0.04rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+/* 確認領取格 (6 slot) */
+.bag_slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  cursor: default;
+  position: relative;
+}
+.bag_remove_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #222;
+  color: #fff;
+  font-size: 0.22rem;
+  font-weight: 900;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+  line-height: 1;
+  border: 0.03rem solid #555;
+  pointer-events: none; /* 穿透點擊，讓底層 .bag_slot.filled 處理移除 */
+}
+
+.bag_slot.empty span {
+  font-size: 0.13rem;
+  color: #bbb;
+  font-style: italic;
+}
+
+.bag_slot.filled {
+  cursor: pointer;
+}
+
+.bag_slot.filled img {
+  width: 75%;
+  max-height: 0.6rem;
+  object-fit: contain;
+}
+
+.bag_slot .bag_item_label {
+  font-size: 0.11rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.04rem;
+}
+
+/* Footer bar */
+.bag_footer {
+  background: url(../images/lottery/lottery_backpack_middle_receive_bg.webp);
+  aspect-ratio: 1685 / 148;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0 0.8rem 0 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(-0.3rem); 
+  position: relative;
+  z-index: 5;
+}
+
+.bag_footer_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 0.15rem;
+  letter-spacing: 0.02rem;
+}
+
+.bag_footer_main {
+  font-size: 0.25rem;
+  font-weight: bold;
+  color: #222;
+  margin: 0 auto;
+}
+
+.bag_footer_sub {
+  font-size: 0.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff519d;
+  margin: 0 auto;
+  width: 7.2rem;
+}
+.bag_footer_main_span{
+  color: #ffffff;
+  background-color: #24fffc;
+}
+.btn_confirm_receive {
+  width: 1.75rem;
+  aspect-ratio: 275 / 100;
+  background: url(../images/lottery/lottery_backpack_receive_btn.webp) no-repeat;
+  background-size: 100% 300%;
+  background-position: top;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 0;
+  position: relative;
+  top: 0.08rem;
+  right: 0.5rem;
+}
+
+.btn_confirm_receive:hover {
+  background-position: 200%;
+}
+
+.bag_footer_lili{
+  width: 20%;
+  position: absolute;
+  bottom: -4%;
+  left: 85.5%;
+  z-index: 6;
+}
+.bag_footer_lili img{
+  width: 100%;
+}
+
+body.is-mobile .bag_header {
+  bottom: 102%; 
+}
+body.is-mobile .bag_title img {
+  width: 4.5rem; 
+}
+body.is-mobile .bag_close {
+  width: 1.2rem;
+  top: 0.1rem;
+}
+
+body.is-mobile .bag_footer_lili {
+  width: 20%;
+  bottom: -1%;
+  left: 86%;
+}

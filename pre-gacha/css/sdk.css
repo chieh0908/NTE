@@ -1,0 +1,564 @@
+
+/* SDK Login Modal Styles */
+/* bookedmodal copied styles */
+#bookedmodal .form-bg {
+  width: 5.86rem;
+  height: 0.55rem;
+  margin-bottom: 0.15rem;
+  border-radius: 0.275rem;
+  background: #1d1d1d;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0.2rem;
+}
+
+#bookedmodal .graphic_verification_code {
+  height: 0.6rem;
+  margin-top: 0.7rem;
+  background-color: #c21b1b00;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#bookedmodal .phone_verification_code {
+  height: 0.6rem;
+  margin-top: 0.2rem;
+  background-color: #c21b1b00;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#bookedmodal .graphic_verification_code .captcha {
+  width: 3.5rem;
+  height: 0.55rem;
+  background-color: #ffffff;
+  font-size: 0.18rem;
+  padding: 0.06rem 0.2rem;
+  border-radius: 0.5rem;
+  border: 0.036rem solid #141414;
+}
+
+#bookedmodal .phone_verification_code .smsCode {
+  width: 3.5rem;
+  height: 0.55rem;
+  background-color: #ffffff;
+  font-size: 0.18rem;
+  padding: 0.06rem 0.2rem;
+  border-radius: 0.5rem;
+  border: 0.036rem solid #141414;
+}
+
+#bookedmodal .graphic_verification_code .img_code {
+  width: 2.2rem;
+  height: 0.55rem;
+}
+#bookedmodal .graphic_verification_code .img_code .img_code_pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  vertical-align: baseline;
+  border: 0.036rem solid #141414;
+}
+
+#bookedmodal .phone_verification_code .btn_get_code {
+  width: 2.2rem;
+  height: 0.55rem;
+  background-image: url(../images/pop/sdk/btn_get_code.png);
+  background-size: 100% auto;
+  
+}
+
+#bookedmodal .phone_verification_code .btn_get_code:hover {
+  background-position: 0 -0.55rem;
+}
+#bookedmodal .form-bg .yyFormRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#bookedmodal .form-select {
+  padding: 0 0.2rem;
+  width: 2rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 2% auto;
+  height: auto;
+  color: #fff;
+  text-align: center !important;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsl(0deg 0% 0% / 0%);
+  background-image: none;
+}
+#bookedmodal .form-select:focus {
+  color: #fff;
+  border-right: 0.15em solid #c7c7c7;
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+}
+#bookedmodal .form-select option {
+  background-color: #1d1d1d;
+}
+#bookedmodal .form-control {
+  padding: 0;
+  width: 60%;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 2% auto;
+  height: auto;
+  color: #fff;
+  transition: 0.5s;
+  vertical-align: middle;
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 4%;
+}
+#bookedmodal .form-control::placeholder {
+  color: #828282;
+  letter-spacing: 0;
+  background-color: hsl(0deg 0% 0% / 0%);
+}
+#bookedmodal .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+  border: 0;
+  color: #fff;
+  background-color: hsl(0deg 0% 0% / 0%);
+}
+#bookedmodal .form-check-input:checked {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+#bookedmodal .form-check-input:focus {
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+  background-color: #ffffff;
+  border-color: #000000;
+}
+#bookedmodal .form-check-input[type="checkbox"] {
+  border-radius: 0;
+}
+#bookedmodal .form-check-label {
+  color: #000;
+  font-size: 0.18rem;
+  text-align: justify;
+  cursor: pointer;
+}
+#bookedmodal form {
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+}
+#bookedmodal .d-flex {
+  position: absolute;
+  top: 3.45rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 60;
+}
+#bookedmodal .form-check-input {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0);
+  margin-right: 0.4em;
+  border-width: 0.08em;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-image: initial;
+  width: 0.25rem;
+  height: 0.25rem;
+}
+#bookedmodal .form-check-input {
+  vertical-align: middle;
+  background-color: hsl(0deg 0% 0% / 0%);
+  border: 0.08em solid #000000;
+  margin-right: 0.4em;
+}
+#bookedmodal .form-check-input:checked[type="checkbox"] {
+  background-image: url(../images/pop/sdk/check.svg);
+}
+#bookedmodal .yy_platform_head {
+  top: 5.3rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 0.18rem;
+  color: #ddd;
+}
+#bookedmodal .yy_platform {
+  top: 5.75rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#bookedmodal .yy_platform button {
+  width: 2.75rem;
+  height: 0.7rem;
+  margin: 0.04rem;
+}
+#bookedmodal .yyFormRow .getNumerus,
+#bookedmodal .yyFormRow .etTelCode {
+  width: 35%;
+  text-align: center;
+  margin: 0.05rem;
+  border-radius: 10rem;
+  background: rgb(255, 255, 255);
+  height: 0.45rem;
+}
+#bookedmodal .yyFormRow .getNumerus img {
+  width: auto;
+  height: 0.45rem;
+}
+#bookedmodal .yyFormRow .getTelCode {
+  width: 35%;
+  height: 0.45rem;
+  color: rgb(20, 20, 20);
+  text-align: center;
+  line-height: 0.45rem;
+  background: rgb(124, 236, 252);
+  border-radius: 10rem;
+  margin: 0.05rem;
+  font-size: 0.21rem;
+  font-weight: 700;
+  letter-spacing: 0.015rem;
+}
+#bookedmodal .pop_yy_form .yy_platform .platform_pc {
+  background: url(../images/pop/sdk/btn_pc_off.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_yy_form .yy_platform .platform_pc.on {
+  background: url(../images/pop/sdk/btn_pc_on.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_yy_form .yy_platform .platform_iOS {
+  background: url(../images/pop/sdk/btn_ios_off.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_yy_form .yy_platform .platform_iOS.on {
+  background: url(../images/pop/sdk/btn_ios_on.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_yy_form .yy_platform .platform_Android {
+  background: url(../images/pop/sdk/btn_Android_off.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_yy_form .yy_platform .platform_Android.on {
+  background: url(../images/pop/sdk/btn_Android_on.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_yy_form .yy_platform .platform_host {
+  background: url(../images/pop/sdk/btn_ps_off.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_yy_form .yy_platform .platform_host.on {
+  background: url(../images/pop/sdk/btn_ps_on.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .platform_tip {
+  position: absolute;
+  top: 7.5rem;
+  font-size: 0.18rem;
+  color: #ddd;
+  width: 72%;
+  margin: 0 14%;
+}
+#bookedmodal .yySubmit {
+  top: 8.3rem;
+  width: 5.04rem;
+  height: 0.77rem;
+  background: url(../images/pop/sdk/yySubmit.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#bookedmodal .yySubmit:hover {
+  background-position: 0 -0.77rem;
+}
+
+#bookedmodal .bkSubmit {
+  top: 6.2rem;
+  width: 3.5rem;
+  height: 0.62rem;
+  background: url(../images/pop/sdk/bookedSubmit.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 2;
+}
+#bookedmodal .bkSubmit:hover {
+  background-position: 0 -0.62rem;
+}
+#bookedmodal .booked_button_bg{
+  top: 4.95rem;
+  width: 98%;
+  height: 1.7rem;
+  /* background-color: rgba(0, 255, 255, 0.39); */
+  background: url(../images/pop/sdk/building.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+} 
+#bookedmodal .Change_acc_hint {
+  top: 7.15rem;
+  color: #fff;
+  font-size: 0.25rem;
+  text-align: justify;
+  
+}
+#bookedmodal .Change_acc_box {
+  top: 7.5rem;
+  width: 5.8rem;
+  height: 1.2rem;
+  background-color: rgba(0, 255, 255, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+#bookedmodal .Change_acc_box .Change_acc_btn {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-size: 100% auto;
+  background-position: 0 -0.75rem;
+}
+
+#bookedmodal .Change_acc_box .Change_acc_btn:hover {
+  /* background-position: 0 -0.75rem; */
+  cursor: pointer;
+  
+}
+
+#bookedmodal .google{
+  background: url(../images/pop/sdk/google.svg) no-repeat 0 0;
+}
+#bookedmodal .ios{
+  background: url(../images/pop/sdk/ios.svg) no-repeat 0 0;
+}
+#bookedmodal .facebook{
+  background: url(../images/pop/sdk/facebook.svg) no-repeat 0 0;
+}
+
+#bookedmodal .qaSubmit {
+  top: 5.4rem;
+  width: 4rem;
+  height: 0.72rem;
+  background: url(../images/pop/sdk/qaSubmit.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#bookedmodal .qaSubmit:hover {
+  background-position: 0 -0.72rem;
+}
+
+/* 預約成功 */
+#bookedmodal .pop_yySuccess_tit {
+  top: 1.8rem;
+  width: 6.1rem;
+  height: 2rem;
+  background: url(../images/pop/sdk/pop_yy_qa_success_tt.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#bookedmodal .yy_otherPlatformTip {
+  top: 5.8rem;
+  width: 5.5rem;
+  height: 0.5rem;
+  background: url(../images/pop/sdk/focus_head_tt.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#bookedmodal .yy_otherPlatform {
+  top: 6.5rem;
+}
+
+/* 隱私權彈窗 */
+#bookedmodal .privacymodal .res_poptt {
+  width: 5rem;
+  margin: 0.6rem auto 0.3rem auto;
+}
+#bookedmodal .privacymodal .res_poptt img {
+  width: 100%;
+}
+#bookedmodal .privacymodal .list_con {
+  width: 116%;
+  margin-left: -8%;
+  height: 7rem;
+  overflow-y: auto;
+  padding-right: 0.05rem;
+  /* Webkit 滾動條樣式 */
+  &::-webkit-scrollbar {
+    width: 0.1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: #d5d5d5;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 1rem;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Firefox 滾動條樣式 */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #d5d5d5;
+}
+#bookedmodal .privacymodal .list_con ol {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  font-size: 0.18rem;
+  font-weight: 400;
+  padding-left: 0.24rem;
+  list-style: decimal;
+}
+#bookedmodal .privacymodal .popup_close {
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
+  padding: 0.1rem 0.6rem;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+  width: auto;
+}
+
+/* 提示彈窗 */
+#eventAlert {
+  background-color: #00000075;
+}
+#eventAlert .modal-body {
+  height: 5.34rem;
+  background: url(../images/pop/sdk/popCont_alert.png)
+    no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-radius: 0.28rem;
+}
+#eventAlert .modal-body p{
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
+}
+
+/* bookedmodal renamed styles */
+#bookedmodal .popCont1 {
+  height: 8.8rem;
+  background: url(../images/pop/sdk/popCont1_booked.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#bookedmodal .pop_booked_tit {
+  top: 1.55rem;
+  width: 3.57rem;
+  height: 0.83rem;
+  background: url(../images/pop/sdk/pop_booked_form_tt.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#bookedmodal .bookedForm {
+  top: 2.67rem;
+  z-index: 50;
+}
+#bookedmodal .pop_booked_form .yy_platform .platform_pc {
+  background: url(../images/pop/sdk/btn_pc_off.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_booked_form .yy_platform .platform_pc.on {
+  background: url(../images/pop/sdk/btn_pc_on.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_booked_form .yy_platform .platform_iOS {
+  background: url(../images/pop/sdk/btn_ios_off.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_booked_form .yy_platform .platform_iOS.on {
+  background: url(../images/pop/sdk/btn_ios_on.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_booked_form .yy_platform .platform_Android {
+  background: url(../images/pop/sdk/btn_Android_off.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_booked_form .yy_platform .platform_Android.on {
+  background: url(../images/pop/sdk/btn_Android_on.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_booked_form .yy_platform .platform_host {
+  background: url(../images/pop/sdk/btn_ps_off.png)
+    no-repeat;
+  background-size: cover;
+}
+#bookedmodal .pop_booked_form .yy_platform .platform_host.on {
+  background: url(../images/pop/sdk/btn_ps_on.png)
+    no-repeat;
+  background-size: cover;
+}
+
+/* Layout Fixes for Bootstrap Modal integration */
+#bookedmodal .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bookedmodal .modal-body {
+    padding: 0;
+    width: 7.6rem;
+    height: 8.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bookedmodal .pop {
+    display: block !important;
+    position: relative !important;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#bookedmodal .popCont {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+}

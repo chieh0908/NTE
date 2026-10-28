@@ -1,0 +1,3640 @@
+body {
+  background-color: #212121;
+}
+
+.wrap {
+  display: flex; /* Controlled by JS reset.js -> flex */
+  flex-direction: column;
+  aspect-ratio: 1920/1080;
+  /* width: auto; */
+  height: auto;
+  width: 100%;
+  max-height: 100vh;
+  /* min-height: 550px; */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* PC Specific Min-Height */
+body.is-pc {
+  min-height: 600px;
+}
+.wrap p,
+.wrap ul,
+.wrap li {
+  margin-bottom: 0;
+}
+.wrap a {
+  font-size: initial;
+  line-height: 0;
+}
+
+.display_none{
+  display: none;
+}
+
+/* 新增頁面背景 */
+.event_city_card_custom,
+.event_item_market {
+  width: 100%;
+  background: url(../images/event_card_bg.webp) no-repeat center top;
+  background-size: 100%;
+}
+
+.btn_back {
+  top: 0.8rem;
+  right: 1.5rem;
+  width: 1.2rem;
+  aspect-ratio: 148 / 150;
+  background: url(../images/card/back.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 0;
+  color: transparent;
+}
+
+.btn_back:hover {
+  background-position: bottom;
+}
+
+/* ========================================================================
+ * Item Market Layout
+ * ======================================================================== */
+
+.event_item_market .content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* padding: 1.2rem 0.6rem 0.3rem; */
+  padding: 1.2rem max(0.6rem, calc((100vw - 177.78vh) / 2 + 0.3rem)) 0.3rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+.abs.btn_back{
+  top: 1.5rem;
+  right: 2.1rem;
+  width: 1.2rem;
+  aspect-ratio: 148 / 150;
+  background: url(../images/card/back.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 0;
+  color: transparent;
+}
+
+.abs.btn_back:hover {
+  background-position: bottom;
+}
+.im_layout {
+  flex: 1;
+  display: flex;
+  gap: 0.3rem;
+  overflow: visible;
+  min-height: 0;
+  transform: scale(0.9);
+  transform-origin: top center;
+  width: 100%;
+}
+
+/* 左側 */
+.im_left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: rgba(255,255,255,0.92);
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  overflow: hidden;
+  min-height: 0;
+  background: url(../images/lottery/lottery_bg.webp);
+  aspect-ratio: 1093 / 1176;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.reward_grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.12rem;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 2% 0% 7% 1%;
+  width: 89%;
+}
+
+.reward_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.28rem;
+  color: #555;
+  font-weight: bold;
+  position: relative;
+}
+
+.reward_item_icon {
+  width: 100%;
+  aspect-ratio: 1;
+  background-size: 100% 300%;
+  background-position: top;
+  background-repeat: no-repeat;
+  transition: background-position 0s;
+}
+
+.reward_item:hover .reward_item_icon {
+  background-position: center;
+}
+
+.reward_item.is-get .reward_item_icon {
+  background-position: bottom;
+  pointer-events: none;
+}
+/* 小瑪莉跑燈高亮效果 — 使用圖片本身的 hover 狀態 */
+.reward_item.marquee-active .reward_item_icon {
+  background-position: center;
+}
+
+.reward_item span{
+  position: absolute;
+  bottom: 9%;
+}
+.reward_draw_center {
+  grid-column: span 2;
+  /* background: #fff;
+  border-radius: 0.2rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  position: relative;
+}
+.reward_draw_center .btn_draw_wrap {
+  position: relative;
+  width: 90%;
+  aspect-ratio: 948 / 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reward_draw_center .dot{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #d42a2a;
+  color: #fff;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+  box-shadow: inset 0rem 0rem 0rem 0.05rem #ffffff;
+  padding: 0;
+}
+.btn_draw_item {
+  width: 100%;
+  height: 100%;
+  background: url(../images/lottery/lottery_btn_1.webp) no-repeat center 0%;
+  background-size: 100% 300%;
+  border: none;
+  cursor: pointer;
+  z-index: 9;
+  position: relative;
+  /* transition: background-position 0.2s; */
+}
+
+.btn_draw_item:hover {
+  background-position: center 50%;
+}
+
+.draw_remain {
+  font-size: 0.3rem;
+  color: #ffffff;
+  font-weight: bold;
+  position: relative;
+}
+
+.draw_remain span{
+  position: absolute;
+  bottom: 0;
+}
+
+.im_bottom_btns {
+  display: flex;
+  align-items: center;
+  width: 72%; /* Adjust container width to provide some side padding if needed */
+  margin: 0 auto;
+  position: relative;
+  top: -6%;
+  left: 5%;
+}
+
+.im_btn_group {
+  flex: 1; /* Fill the space */
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.im_btn_group:first-child {
+  align-items: flex-start; /* Stick to left */
+}
+
+.im_btn_group:last-child {
+  align-items: center; /* Stick to right */
+}
+
+.btn_im_action {
+  width: 80%; /* Scale to 80% */
+  aspect-ratio: 484 / 260;
+  border: none;
+  cursor: pointer;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  /* transition: background-position 0.2s; */
+}
+
+.btn_im_action:hover {
+  background-position: center 100%;
+}
+
+.btn_open_bag {
+  background-image: url(../images/lottery/lottery_giftbox_btn.webp);
+}
+
+.btn_open_lucky {
+  background-image: url(../images/lottery/lottery_lucky_btn.webp);
+}
+
+.btn_pool_switch.active {
+  opacity: 1;
+  box-shadow: 0 0 0 0.08rem #fff, 0 0.05rem 0.25rem rgba(49,161,224,0.6);
+}
+
+.im_btn_group p {
+  font-size: 0.22rem;
+  color: #777;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* 右側 */
+.im_right {
+  background-image: url(../images/lottery/lottery_mission_bg.webp);
+  aspect-ratio: 1105 / 982;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  flex: 0.9;
+  /* border-radius: 0.3rem; */
+  padding: 2.3rem 0.2rem;
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  overflow: visible; /* 讓滾動條可見 */
+}
+
+.im_task_title {
+  font-size: 0.55rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin-bottom: 0.3rem;
+  flex-shrink: 0;
+}
+
+.im_task_list {
+  flex: 0.95;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  overflow-y: auto;
+  position: relative;
+  top: 26%;
+  width: 109%; 
+  padding-right: 5.8%;
+}
+
+/* 自定義任務列表滾動條 */
+.im_task_list::-webkit-scrollbar {
+  width: 0.45rem; /* 滾動條寬度 */
+}
+
+.im_task_list::-webkit-scrollbar-track {
+  background: #2f2f2f;
+  border-radius: 999px;
+  box-shadow: 
+    inset 0 0 0 0.08rem #1f1f1f;
+  cursor: pointer;
+}
+
+.im_task_list::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #dcdcdc, #b5b5b5) content-box, transparent;
+  border-radius: 999px;
+  border: 0.15rem solid transparent;
+  /* 內光暈效果 + 原本的陰影 */
+  box-shadow: 
+    inset 0 0 0.08rem rgba(255, 255, 255, 0.7), 
+    inset 0 0 0.05rem rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.im_task_list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #f2f2f2, #d6d6d6) content-box, transparent;
+  filter: brightness(1.2);
+}
+.im_task {
+  background: url(../images/lottery/lottery_mission_tt_bg.webp);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.25rem;
+  font-weight: bold;
+}
+
+.im_task:last-child {
+  border-bottom: none;
+}
+
+.im_task_num {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.im_task_num img {
+  width: 64%;
+  height: auto;
+  display: block;
+}
+
+.im_task_desc {
+  flex: 1;
+  font-size: 0.3rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.btn_im_task {
+  width: 2.5rem;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  background: none; /* Clear background */
+}
+.im_task_desc_note{
+  color: #ff2e89;
+  line-height: 1.4;
+}
+.btn_task_action {
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-size: 100% 300%;
+  aspect-ratio: 231 / 69;
+}
+
+/* 各任務獨立圖示 */
+.btn_task_booking { background-image: url(../images/lottery/lottery_mission_booking_btn.webp); }
+.btn_task_booking1 { background-image: url(../images/lottery/lottery_mission_booking_btn1.webp); }
+.btn_task_share { background-image: url(../images/lottery/lottery_mission_share_btn.webp); }
+
+/* ========================================================================
+ * Item Market Layout Mobile
+ * ======================================================================== */
+body.is-mobile .event_item_market .content {
+  /* 動態計算左右 padding：
+     - 16:9 螢幕(SE)：100vw ≈ 177.78vh，多出寬度≈0，padding = 0.6rem（原值）
+     - 19.5:9 螢幕(14 Pro)：100vw > 177.78vh，自動加大 padding ≈ 2.6rem */
+  padding: 1.2rem max(0.6rem, calc((100vw - 177.78vh) / 2 + 0.3rem)) 0.3rem;
+}
+
+body.is-mobile .btn_back {
+  top: 10.4vh;    /* 1.5rem 轉換 */
+  right: calc(10vh + max(0.6rem, calc((100vw - 177.78vh) / 2 + 0.3rem)));
+  width: 8.32vh;  /* 1.2rem 轉換 */
+}
+
+
+body.is-mobile .im_right {
+  /* 
+   * 把 padding 改用 vh (螢幕高度) 計算，而不是 rem (寬度)。
+   * 2.3rem 約等於 16vh。
+   */
+  padding: 16vh 0.2rem; 
+}
+/* 手機版不顯示滾動條，寬度調成 100% 保證不跑版 */
+body.is-mobile .im_task_list {
+  width: 100%; 
+  padding-right: 0; 
+  -ms-overflow-style: none; /* 隱藏捲軸 (IE, Edge) */
+  scrollbar-width: none; /* 隱藏捲軸 (Firefox) */
+}
+
+/* 隱藏捲軸 (Chrome, Safari, iOS, 等 WebKit 核心瀏覽器) */
+body.is-mobile .im_task_list::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.btn_task_go { background-image: url(../images/lottery/lottery_mission_done_btn.webp); }
+.btn_task_invite { background-image: url(../images/lottery/lottery_mission_invite_btn.webp); }
+
+.btn_task_action:hover {
+  background-position: center 50%;
+}
+
+.btn_task_action.done_btn {
+  background-position: center 100%;
+  pointer-events: none;
+}
+
+
+
+/* ========================================================================
+ * Lucky Draw Modal
+ * ======================================================================== */
+
+/* --- 全域彈窗層級重置 --- */
+.modal-backdrop {
+  z-index: 100 !important;
+}
+
+/* 第一層彈窗 (幸運抽獎、道具背包) */
+#popLuckyDraw, #popItemBag {
+  z-index: 105 !important;
+}
+
+/* 只有當存在疊加背景時，第二層背景才提升層級 */
+.modal-backdrop + .modal-backdrop {
+  z-index: 110 !important;
+}
+
+/* 第二層彈窗 (抽獎動畫、結果) */
+#popLotteryAnimation, #popYyLottery, #popLotteryGet {
+  z-index: 120 !important;
+}
+
+/* ========================================================================
+ * Citizen Card Customization UI
+ * ======================================================================== */
+
+.event_city_card_custom .content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+/* --- 上半部：卡片預覽區 --- */
+.card_preview_area {
+  flex: 4; /* 再次提高權重，進一步壓縮下方區域 */
+  display: flex;
+  align-items: flex-start; /* 改回頂端對齊 */
+  justify-content: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  padding-bottom: 0.35rem;
+  overflow: hidden;
+}
+
+/* 為了讓 card_mockup 水平正中央，
+   我們在左側加入一個寬度等於 (btn_box + 間距) 的偽元素來平衡內容 */
+.card_preview_area::before {
+  content: "";
+  display: block;
+  width: 2.5rem; /* 修改：與 btn_box(2.5rem) 寬度一致以維持平衡 */
+  flex-shrink: 0;
+}
+
+.card_mockup {
+  /* 改回高度驅動：大小隨 card_preview_area 高度變化 */
+  container-type: size; /* 啟用容器查詢，讓子層可用 cqw 單位 */
+  height: 100%;
+  min-height: 5rem;
+  width: auto;
+  aspect-ratio: 1593 / 943;
+  border-radius: 0.1rem;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  background-color: #21212100;
+}
+
+/* 圖層堆疊區 */
+.card_layers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 資訊疊加層 */
+.card_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none; /* 穿透點擊 */
+  color: #fff;
+}
+
+/* 視覺等比縮放層 */
+.card_scale_wrap {
+  width: 100%;
+  height: 100%;
+  /* transform: scale(var(--card-scale, 1)); */
+  transform-origin: center center;
+  position: relative;
+  background-color: #06c75600;
+}
+.card_content{
+  width: 100%;
+  height: 100%;
+}
+
+/* UID 區塊 (高度驅動) */
+.card_uid {
+  position: absolute;
+  bottom: 12%;
+  left: 22%;
+  height: 3.5%;
+  width: auto;
+  aspect-ratio: 358 / 52;
+  color: #fff;
+  z-index: 3;
+  background: rgba(0, 102, 255, 0); /* 視覺化背景：藍 */
+}
+
+.card_uid p {
+  font-size: 1.4cqw;
+  letter-spacing: 0.12cqw;
+  font-weight: 900;
+  margin: 0;
+  color: #fff;
+}
+
+.card_uid .uid_number {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+
+/* 資訊格區域 (高度驅動) */
+.card_info_grid {
+  position: absolute;
+  bottom: 8.8%; /* 依照地圖圖片定位 */
+  left: 39.2%;
+  height: 23%; 
+  width: 45%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6cqw 0;
+  z-index: 3;
+  background: rgba(0, 102, 255, 0); 
+}
+
+/* 職業佔一整列 */
+.info_job {
+  grid-column: span 2;
+  background: rgba(255, 0, 0, 0) !important; /* 視覺化背景：紅 */
+}
+.preview_job{
+  background: rgba(255, 217, 0, 0) !important;
+  margin: 3.2cqw 0 0 7.2cqw;
+}
+
+.info_item {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0); /* 背景已在圖片中，此處僅排版 */
+}
+
+.info_date {
+  background: rgba(0, 255, 0, 0) !important; /* 視覺化背景：綠 */
+}
+.preview_date{
+  background: rgba(255, 217, 0, 0) !important;
+  margin: 3cqw 0 0 7.2cqw;
+}
+
+.info_loc {
+  background: rgba(255, 0, 255, 0) !important; /* 視覺化背景：紫 */
+}
+.preview_loc{
+  background: rgba(255, 217, 0, 0) !important;
+  margin: 3cqw 0 0 7.2cqw;
+}
+
+.info_item label {
+  font-size: 1.1cqw;
+  font-weight: bold;
+  opacity: 0.8;
+  color: #333;
+  background-color: #f6c888; /* 模擬參考圖中的標籤背景 */
+  width: fit-content;
+  padding: 0 0.3cqw;
+  margin-bottom: 0.3cqw;
+}
+
+.info_item span {
+  font-size: 1.75cqw;
+  font-weight: 700;
+  color: #333;
+}
+
+/* 職業顯示區域 */
+.job_display_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.05rem 0;
+  background: rgba(98, 169, 50, 0);
+}
+
+
+
+/* 職業選擇彈窗專屬樣式 */
+.jobSelectionModal.modal {
+  padding-right: 0 !important;
+}
+
+.jobSelectionModal .modal-dialog {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.jobSelectionModal .modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+}
+
+.jobSelectionModal .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0; /* 移除 padding 以便內部 pop-bg 置中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jobSelectionModal .pop-bg {
+  position: relative !important; /* 改為 relative 並由 flex 置中，或維持 absolute 0,0,0,0 auto */
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  margin: auto;
+}
+
+.job_selection_title {
+  font-size: 0.36rem;
+  color: #f6c888;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.job_opt_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.job_opt_item {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.3rem 0.2rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.1rem;
+  transition: all 0.3s ease;
+  font-size: 0.26rem;
+}
+
+.job_opt_item:hover {
+  background: rgba(246, 200, 136, 0.2);
+  border-color: #f6c888;
+}
+
+.job_opt_item.active {
+  background: #f6c888;
+  color: #333;
+  border-color: #f6c888;
+  font-weight: bold;
+}
+
+.btn_box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  /* background-color: rgba(185, 25, 25, 0.35); */ /* 移除或註解掉調試用背景色 */
+  border-radius: 0.3rem;
+  z-index: 10;
+  /* margin-left: 0.5rem; */ /* 移除與卡片的間距 */
+  width: 2.5rem; /* 固定寬度以便計算平衡 */
+  flex-shrink: 0;
+  height: 100%;
+  justify-content: flex-end
+}
+
+.btn_box .btn_random,
+.btn_box .btn_complete {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: 100%;
+  aspect-ratio: 428 / 200;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: top;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  color: transparent;
+  padding: 0;
+}
+
+.btn_box .btn_random {
+  background-image: url(../images/card/btn_random.webp);
+}
+
+.btn_box .btn_complete {
+  background-image: url(../images/card/btn_complete.webp);
+}
+
+.btn_box .btn_random:hover,
+.btn_box .btn_complete:hover {
+  background-position: bottom;
+}
+
+
+
+/* --- 職業分頁內容 --- */
+.tab_content_job_list {
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+.select_content_area {
+  flex: 1; /* 調降權重，壓縮佔比 */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+}
+
+.select_content_area .tab_list {
+  display: flex;
+  height: 0.6rem; /* 壓縮高度：0.9 -> 0.7 */
+  padding-left: 1.8rem;
+  align-items: flex-end;
+  gap: 0.35rem;
+  background: url(../images/card/tag_bg.webp) no-repeat center bottom;
+  background-size: 100%;
+}
+
+.select_content_area .tab {
+  width: 2.5rem;
+  height: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #7f7f7f;
+  cursor: pointer;
+  border: 1px solid #7f7f7f;
+  border-bottom: none;
+  border-radius: 0.2rem 0.2rem 0 0;
+  padding: 0.1rem 0.2rem 0.1rem 0.2rem;
+}
+
+.select_content_area .tab img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.select_content_area .tab.active {
+  background-color: #f962a4;
+  color: #fff;
+  border-color: #f962a4;
+}
+
+.slider_container {
+  width: 100%;
+  /* flex: 1;  */
+  /* 自動填滿剩餘高度 */
+  height: 2.6rem; /* 進一步調降最低高度，允許更多壓縮 */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/card/list_bg.webp) no-repeat left center;
+  background-size: 100% 100%;
+  overflow: hidden; /* 防止內部元素撐高 */
+}
+
+.slider_overflow {
+  flex: 0 0 60%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0;
+  box-sizing: border-box; /* padding 不會增加總高度 */
+}
+
+.slider_overflow::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.slider_footer {
+  width: 100%;
+  aspect-ratio: 2560 / 75;
+  background: url(../images/card/list_footer_bg.webp) no-repeat center center;
+  background-size: 100%;
+}
+
+
+.tab_pane {
+  display: none !important;
+  width: 100%;
+  height: 100%; /* 隨父層高度 */
+  align-items: center;
+}
+
+.tab_pane.swiper.active {
+  display: block !important; /* Swiper 容器需要 block */
+}
+
+.tab_content_job_list.active {
+  display: flex !important; /* 職業分頁維持 flex 排列 */
+  justify-content: center;
+  align-items: center;
+}
+
+.tab_pane .item {
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 0.26rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 0;
+  font-size: 0.25rem;
+}
+.tab_content_chara_list .item{
+  aspect-ratio: 282 / 260;
+}
+.tab_content_background_list .item{
+  aspect-ratio: 181 / 240;
+}
+.tab_content_chara_list ,
+.tab_content_job_list,
+.tab_content_background_list{
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%; /* 確保 wrapper 撐滿容器高度，垂直置中才會生效 */
+}
+
+.swiper-slide {
+  height: 100%;
+}
+
+.tab_pane .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.tab_content_background_list {
+  justify-content: flex-start !important;
+}
+
+.job_display_box {
+  display: flex !important;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  /* gap: 0.2rem; */
+}
+
+.current_job_text {
+  width: 100%;
+  aspect-ratio: 1226 / 150;
+  background-image: url(../images/card/current_job_bg.webp);
+  background-size: 100% 200%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.current_job_text:hover {
+  background-position: bottom;
+}
+
+.current_job_text p {
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  font-weight: 800;
+  color: #333;
+  margin-top: 0.15rem;
+  white-space: nowrap;
+}
+
+.btn_modify_job {
+  width: 3.5rem;
+  aspect-ratio: 181 / 66;
+  background-image: url(../images/card/btn_modify_job.webp);
+  background-size: 100% 200%;
+  background-position: top;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0;
+  padding: 0;
+  margin-top: 0.15rem;
+}
+
+.btn_modify_job:hover {
+  background-position: bottom;
+}
+
+.tab_pane .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider_arrow {
+  flex: 0 0 15%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  position: relative !important; /* Override .abs class */
+  padding: 0;
+}
+
+.slider_arrow::after {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  aspect-ratio: 80 / 201;
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  transition: transform 0.2s;
+}
+
+.arrow_left {
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.arrow_left::after {
+  background-image: url(../images/card/citySlidePrev.webp);
+  background-position: 0% center;
+}
+
+.arrow_left:hover::after {
+  background-position: 100% center;
+}
+
+.arrow_right {
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+
+.arrow_right::after {
+  background-image: url(../images/card/citySlideNext.webp);
+  background-position: 0% center;
+}
+
+.arrow_right:hover::after {
+  background-position: 100% center;
+}
+
+
+
+
+.topRight {
+  position: absolute; /* Relative to .nav */
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.2rem;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  /* background-color: blue; */
+  gap: 0.6rem;
+}
+.topLeft {
+  position: absolute; /* Relative to .nav */
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.2rem;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Navigation Buttons Common Styles - 導覽列按鈕共用樣式 */
+.index,
+.event_loadingBtn,
+.event_awardBtn,
+.event_loginBtn,
+.event_timeBtn,
+.rule,
+.share,
+.music,
+.award {
+  /* width: 0.69rem; */
+  /* height: 0.69rem; */
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  border: none;
+  background-position: 0 100%;
+}
+
+/* Hover Effect: Move background to top */
+.index:hover,
+.event_mapBtn:hover,
+.event_loadingBtn:hover,
+.event_awardBtn:hover,
+.event_loginBtn:hover,
+.rule:hover,
+.share:hover,
+.award:hover {
+  background-position: 0 0%;
+}
+
+.index {
+  position: relative;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/nav/index.webp);
+  background-color: #63eded00;
+  margin: 0 0.4rem 0 0.2rem; /* 增加左右間距 */
+}
+
+.index::after {
+  content: "";
+  position: absolute;
+  right: -0.3rem; /* 讓線離按鈕更遠一點 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 0.4rem;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.event_mapBtn,
+.event_loadingBtn,
+.event_awardBtn,
+.event_timeBtn,
+.event_loginBtn {
+  background-color: #e4ec6f;
+  font-size: 0.15rem;
+  color: #000;
+  margin-left: 0.2rem;
+}
+
+.logo {
+  /* margin-left: 0.2rem; */
+  /* height: 0.69rem;  */
+  /* 自訂高度 */
+  /* width: auto; */
+  /* aspect-ratio: 967/664;  */
+  /* 比例：請填入圖片原始 寬度 / 高度 */
+  /* background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/nav/logo.webp)
+    no-repeat 0 0; */
+  /* background-size: contain; */
+}
+
+/* ----------------------------------------
+ * event_index - 首頁
+ * ---------------------------------------- 
+ */
+/* NAV BLOCK MOVED HERE */
+.nav {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 1rem;
+  z-index: 1000;
+  background: linear-gradient(to bottom, #2e3241 0%, #3b4052 100%);
+  /* background-image: url(../images/nav/nav_bg.webp); */
+  /* background-size:cover; */
+  border-bottom: #6e7693 0.03rem solid;
+}
+
+.nav_bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto; /* 保持圖片比例 */
+  z-index: -1; /* 放在最下面，才不會蓋住按鈕 */
+  pointer-events: none; /* 避免擋到點擊 */
+}
+
+.event {
+  flex: 1;
+  position: relative;
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(128, 255, 0, 0);
+}
+
+/* event_index */
+.event_index {
+  width: 100%;
+  height: 100%;
+  background: url(../images/kv_bg.webp) no-repeat center 70%;
+  background-size: 100%;
+  display: flex;
+}
+
+.nav_top {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  max-width: 60%;
+  height: 1.25rem;
+  background-color: rgba(255, 72, 0, 0); /* 拿掉背景色 */
+  z-index: 100;
+  display: flex;
+  align-items: center;  /* 高度固定，上下置中 */
+  justify-content: flex-end;
+  pointer-events: auto;
+  gap: 0.5rem; /* 給兩個區塊一點間距，您可根據需求調整 */
+}
+
+/* 剩下的寬度分配給 button_box */
+.nav_top .button_box {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.nav_top .button_box button {
+  height: 100%; /* 高度填滿容器 (1rem) */
+  aspect-ratio: 119 / 120;
+  border: none;
+  background-color: transparent;
+  background-size: 100% 200%;
+  background-position: top;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav_top .button_box button:hover {
+  background-position: bottom;
+}
+
+.nav_top .button_box .award { background-image: url(../images/nav/award.webp); }
+.nav_top .button_box .share { background-image: url(../images/nav/share.webp); }
+.nav_top .button_box .music { background-image: url(../images/nav/music.webp); }
+.nav_top .button_box .music.off { background-image: url(../images/nav/music_off.webp); }
+.nav_top .button_box .rule { background-image: url(../images/nav/rule.webp); }
+
+.nav_top .dl {
+  width: 4rem;
+  aspect-ratio: 431 / 200;
+  flex-shrink: 0; /* 讓 dl 固定維持該有的寬度與大小，不被擠壓 */
+  background-image: url(../images/dl.webp);
+  background-size: 100% 200%; /* 高度放大兩倍，填滿上下兩張圖的狀態 */
+  background-position: top; /* 預設顯示上半部 */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.nav_top .pr {
+  width: 4rem;
+  aspect-ratio: 427 / 200;
+  flex-shrink: 0; /* 讓 dl 固定維持該有的寬度與大小，不被擠壓 */
+  background-image: url(../images/pr.webp);
+  background-size: 100% 200%; /* 高度放大兩倍，填滿上下兩張圖的狀態 */
+  background-position: top; /* 預設顯示上半部 */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav_top .dl:hover,
+.nav_top .pr:hover {
+  background-position: bottom; /* 滑鼠移過去顯示下半部 */
+}
+.nav_left {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  aspect-ratio: 267 / 1440;
+  background: url(../images/nav_bg.webp) no-repeat left top;
+  background-size: 100% 100%;
+  z-index: 100;
+  pointer-events: auto; /* 恢復可點擊，因為裡面有按鈕 */
+  display: flex;
+  flex-direction: column;
+}
+
+.event_index .main {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+/* 預設子元素寬度100%，且不可被擠壓 */
+.nav_left > div {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* LOGIN BLOCK MOVED HERE */
+.rule {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/nav/rule.webp);
+  /* background-color: #d4ed63; */
+}
+
+.login {
+  position: relative;
+  width: auto; /* Flexible width */
+  height: auto; /* Flexible height */
+  min-height: 0.69rem; /* Minimum height to match other buttons */
+  background-color: transparent;
+  font-size: 0.2rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header Login Button Adaptation */
+.login .btn-login {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 1.8rem; /* Original width */
+  aspect-ratio: 240 / 100;
+  background: url(../images/btn-login.webp)
+    no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  cursor: pointer;
+}
+
+.login .btn-login:hover {
+  background-position: bottom;
+}
+
+.lotteryTask .btn-login {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/btn-login.png)
+    no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  height: 0.71rem;
+  left: 0.6rem;
+  position: absolute;
+  top: 0.35rem;
+  width: 2.1rem;
+}
+
+/* Header User Info Adaptation */
+.login .task-user-info {
+  display: flex;
+  position: relative; /* Relative positioning to take up space */
+  left: auto;
+  top: auto;
+  width: 2rem; /* Original width */
+  height: 0.75rem; /* Original height */
+  padding: 0 0.76rem 0 0.9rem; /* Original padding */
+  align-items: center;
+  border-radius: 0.2rem;
+  background-color: #262936;
+  border: 0.025rem solid #6e7693;
+  box-sizing: border-box;
+}
+
+.login .task-icon-account {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/icon-account.png)
+    no-repeat bottom;
+  background-size: 100% auto;
+  height: 0.62rem;
+  left: 0.12rem;
+  position: absolute;
+  top: 50%; /* 改為 50% */
+  transform: translateY(-50%); /* 新增這行 */
+  width: 0.62rem;
+}
+
+.login .task-user-info .btn-logout {
+  background: url(../images/btn-logout.webp)
+    no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  cursor: pointer;
+  aspect-ratio: 240 / 100;
+  position: absolute;
+  right: 0.18rem;
+  top: 0.08rem;
+  width: 0.53rem;
+}
+
+.login .task-user-info .btn-logout:hover {
+  background-position: bottom;
+}
+
+.login .task-user-info p {
+  color: #f5f5f5;
+  font-size: 0.3rem;
+  font-weight: bold;
+  height: 100%;
+  line-height: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.coin {
+  position: relative; /* 讓內部的 absolute 元素以此為基準 */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */ /* 移除這行，改用 padding 控制文字位置 */
+  padding-left: 0.9rem; /* 留位置給左邊的 Icon */
+  padding-right: 0.2rem;
+  width: 3rem; /* 縮小寬度，去除多餘空間 */
+  height: 0.75rem;
+  background-color: #262936;
+  border: 0.02rem solid #6e7693;
+  border-radius: 0.2rem;
+  box-sizing: border-box;
+  font-size: 0.3rem;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+.coin .task-icon-coin {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/nav/coin.webp)
+    no-repeat;
+  background-size: 100% auto;
+  height: 0.62rem;
+  left: 0.12rem;
+  position: absolute;
+  top: 0.12rem;
+  width: 0.62rem;
+}
+
+/* logo 區塊：不可擠壓 */
+.nav_left .logo {
+  height: 1.5rem;
+  background-color: rgba(255, 0, 0, 0); /* 紅色半透明 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.nav_left .logo img {
+  height: 100%;
+  aspect-ratio: 184 / 138; /* 維持比例 */
+  padding: 0.01rem;
+  
+}
+
+/* 裝飾區塊：唯一可被壓縮的區塊 */
+.nav_left .deco {
+  height: 8rem; /* 給定一個初始高度，空間不夠時會被自動壓縮 */
+  flex-shrink: 1; 
+  flex-grow: 1; /* 若要填滿剩餘空間可加這行 */
+  min-height: 0; /* 允許壓縮至內容預設高度以下，這是讓 Flex 彈性縮小生效的關鍵 */
+  background-color: rgba(0, 255, 0, 0); /* 綠色半透明 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem;
+}
+
+.nav_left .deco img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain; /* 確保圖片能跟著等比例縮小不變形 */
+  padding: 0.05rem;
+}
+
+/* 按鈕區塊：不可擠壓 */
+.nav_left .button_box {
+  height: auto; /* 移除固定的 3rem，讓它隨內部按鈕數量自動長高 */
+  background-color: rgba(0, 0, 255, 0); /* 透明化背景 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.2rem 0; /* 補上一點上下間距才不會跟其他元素貼緊 */
+  position: relative;
+}
+.nav_left .button_box .dot{
+  position: absolute;
+  top: 0;
+  right: 24.7%;
+  background: #d42a2a;
+  color: #fff;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: inset 0rem 0rem 0rem 0.05rem #ffffff;
+  padding: 0;
+}
+
+.nav_left .button_box button {
+  width: 1.25rem;
+  aspect-ratio: 1 / 1;
+  border: none;
+  background-color: transparent;
+  background-size: 100% 200%;
+  background-position: top;
+  cursor: pointer;
+  padding: 0;
+  background-repeat: no-repeat;
+}
+
+.nav_left .button_box button:hover {
+  background-position: bottom;
+}
+
+.nav_left .button_box .mission_guide {
+  background-image: url(../images/mission_guide.webp);
+}
+
+.nav_left .button_box .check_card {
+  background-image: url(../images/check_card.webp);
+}
+
+.nav_left .button_box .prize_bag {
+  background-image: url(../images/prize_bag.webp);
+}
+
+/* 登入區塊：不可擠壓 */
+.nav_left .nav_login {
+  height: 1.25rem;
+  background-color: rgba(255, 255, 0, 0); /* 透明化背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:0 0.25rem;
+}
+
+/* 針對側邊欄登入狀態的垂直排列 */
+.nav_left .nav_login .task-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  gap: 0.05rem;
+}
+
+.nav_left .nav_login .task-icon-account {
+  position: static;
+  transform: none;
+  margin: 0;
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+.nav_left .nav_login .task-user-info p {
+  height: auto;
+  line-height: 1.2;
+  font-size: 0.4rem;
+  text-align: center;
+}
+
+.nav_left .nav_login .task-user-info .btn-logout {
+  position: static;
+  margin: 0;
+  width: 1.8rem;
+}
+
+/* 音樂開關區塊：不可擠壓 */
+.nav_left .nav_music {
+  height: 1.05rem;
+  background-color: rgba(255, 0, 255, 0); /* 透明化背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.nav_left .nav_music img {
+  height: 100%;
+  aspect-ratio: 187 / 71; /* 維持原始比例 */
+  padding: 0.01rem;
+}
+
+.event_index .bigTitle {
+  width: 7.25rem;
+  height: auto;
+  background-color: #1da08100;
+  top: 1.5rem;
+  left: 1rem;
+  /* transform: translateX(-50%); */
+  font-size: 1rem;
+  color: #000;
+  text-align: center;
+}
+.event_index .bigTitle img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.event_index .yyBtn {
+  bottom: 2rem;
+  right: 5vw;
+  width: 4.68rem;
+  height: 1.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yyBtn.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.event_index .yyBtn:hover {
+  background-position: 0 50%;
+}
+.event_index .yyBtn.active {
+  background-position: 0 bottom;
+  cursor: default;
+}
+
+/* .event_index .double_yyBtn {
+  bottom: 1rem;
+  right: 28%;
+  width: 2.59rem;
+  height: 2.04rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/event_double_yy_btn.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  background-color: #766fb100;
+  font-size: 0.5rem;
+  color: #000;
+} */
+
+.event_index .button_box_center {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.event_index .button_box_left{
+  left: 2%;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 3rem;
+  height: 5rem;
+  background-color: #20202000;
+  gap: 0.5rem;
+}
+.event_index .button_box_left > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 0.4rem;
+  cursor: pointer;
+}
+
+
+/* .event_index .mission_guide { background-color: #ffd700aa; }
+.event_index .check_card { background-color: #87ceebaa; }
+.event_index .prize_bag { background-color: #98fbaaaa; } */
+
+.event_index .city_card_custom {
+  width: 5rem;
+  height: auto;
+}
+
+.event_index .city_card_custom .city_card_custom_btn {
+  width: 100%;
+  aspect-ratio: 644 / 200;
+  background: url(../images/city_card_custom.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: block;
+}
+
+.event_index .city_card_custom .city_card_custom_btn:hover {
+  background-position: bottom;
+}
+
+.event_index .item_market {
+  width: 5rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.event_index .item_market .item_market_btn {
+  width: 100%;
+  aspect-ratio: 644 / 200;
+  background: url(../images/item_market.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+/* 道具市集右上紅點 */
+.item_market .dot{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #d42a2a;
+  color: #fff;
+  width: 0.40rem;
+  height: 0.40rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: inset 0rem 0rem 0rem 0.05rem #ffffff;
+  padding: 0;
+}
+
+.event_index .item_market .item_market_btn:hover {
+  background-position: bottom;
+}
+.event_index .item_market p{
+  font-size: 0.28rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: -0.02rem -0.02rem 0 #2b2b2b, 0.02rem -0.02rem 0 #2b2b2b, -0.02rem 0.02rem 0 #2b2b2b, 0.02rem 0.02rem 0 #2b2b2b;
+}
+.event_index .item_market .item_market_count {
+  display: inline-block;
+  padding-top: 0.05rem;
+}
+.arrow {
+  bottom: 1.1rem;
+  left: 50%;
+  margin-left: -0.22rem;
+  width: 0.47rem;
+  height: 0.29rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/arrow.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  animation: arrowUpDown 0.5s ease-in-out infinite alternate;
+  display: none;
+}
+
+/* ----------------------------------------
+ * event_loading - loading頁
+ * ---------------------------------------- */
+
+.event_loading {
+  display: none;
+  background-color: #000000e3;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/load_bg.webp)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.event_loading .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+}
+
+.event_loading .loading_ani {
+  width: 10rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1da08100;
+}
+
+.event_loading .loading_ani img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.event_loading .loading_ani .character {
+  width: 3rem;
+}
+
+.event_loading .loading_ani .loading {
+  width: 1.5rem;
+  filter: hue-rotate(318deg) brightness(3) blur(0.5px);
+  /* mix-blend-mode: screen; */
+}
+
+.event_loading .word_box_1 {
+  width: 100%;
+  text-align: center;
+}
+
+.event_loading .word_box_1 p {
+  color: rgb(255, 255, 255);
+  font-size: 0.4rem; /* 使用 rem 單位保持一致 */
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/*
+ * ----------------------------------------
+ * event_double_yy - 雙平台預約頁
+ * ----------------------------------------
+ */
+.event_double_yy {
+  display: flex; /* 預設顯示 */
+}
+
+.event_double_yy .event_main_btn {
+  bottom: 2%;
+  right: 2%;
+  /* height: 3rem; */
+  width: 3rem;
+  aspect-ratio: 338/380;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/event_main_btn.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  background-color: #766fb100;
+  z-index: 200;
+  animation: btnUpDown 0.8s ease-in-out infinite alternate;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.event_double_yy .content {
+  width: 100%;
+  height: 100%;
+  padding: 0vw;
+  background-color: #1d40a000;
+
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/event_double_yy_bg.webp);
+  background-size: cover;
+  background-position: bottom;
+}
+.event_double_yy .board {
+  width: 55%;
+  height: 100%;
+  background-color: #1da08100;
+  top: 0;
+  left: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.event_double_yy .board .board_top {
+  width: 100%;
+  aspect-ratio: 1438 / 288;
+  height: auto;
+  margin-top: 3%;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/board_top.webp);
+  margin-bottom: -1px; /* 消除渲染接縫 */
+  position: relative;
+}
+.event_double_yy .board .board_bottom {
+  width: 100%;
+  aspect-ratio: 1438 / 81;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/board_bottom.webp);
+  margin-top: -1px; /* 消除渲染接縫 */
+  position: relative;
+}
+.event_double_yy .board .board_main {
+  width: 100%;
+  padding: 0 3%;
+  height: 0; /* 關鍵修改：強制依賴 flex-grow 分配高度 */
+  flex-grow: 1; /* 自動填滿中間 */
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/board.webp);
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  min-height: 0;
+  position: relative;
+}
+.board_main .giftbox{
+  width: 100%;
+  height: 100%;
+  background-color: #3d82c700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 2%;
+  gap: 0%;
+}
+.board_main .giftbox .gift{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* Share space */
+  height: 100%;
+  background-color: #b6151500;
+}
+.board_main .giftbox .gift img{
+  width: auto;
+  height: auto;
+  aspect-ratio: 472/600;
+  max-height: 85%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  margin-bottom: 1%;
+}
+.board_main .giftbox .gift.done img{
+  object-position: 0 100%;
+}
+.board_main .giftbox .gift span{
+  height: 0.45rem;
+  font-size: 0.45rem;
+  line-height: 0.45rem;
+  font-family:  'Arial', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  padding: 0.05rem 0.1rem;
+  border-radius: 0.1rem;
+  white-space: nowrap;
+  background-color: #4b853900;
+}
+
+.event_double_yy .board .event_double_yy_btn {
+  width: 40%;
+  aspect-ratio: 727 / 150;
+  height: auto;
+  background-color: transparent;
+  margin: 2% auto 3% auto;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/double_yybtn.webp);
+  background-size: 100% 300%; /* 3個狀態 */
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  transform: scale(1);
+  transition: transform 0.3s;
+  z-index: 50;
+  animation: btn-scale-loop 1.5s infinite ease-in-out;
+}
+
+.event_double_yy .board .event_double_yy_btn:hover {
+  animation: none;
+  transform: scale(1.2);
+}
+.event_double_yy .board .event_double_yy_btn.yy {
+  background-position: 0 0%;
+}
+.event_double_yy .board .event_double_yy_btn.lottery {
+  background-position: 0 50%;
+}
+.event_double_yy .board .event_double_yy_btn.lottery_done {
+  background-position: 0 100%;
+  animation: none;
+  filter: grayscale(100%);
+  pointer-events: none;
+  cursor: default;
+}
+
+.picBox {
+  height: 100%;
+  pointer-events: none;
+}
+
+.picBox.front_1 {
+  z-index: 2;
+  width: 42%;
+  right: 2%;
+  background-color: #4534e200;
+}
+.picBox.front_2 {
+  z-index: 2;
+  width: 20%;
+  left: 0%;
+  background-color: #4534e200;
+}
+.picBox.back {
+  z-index: 0;
+  width: 20%;
+  left: 0;
+  background-color: #e27a3400;
+}
+
+.chara img {
+  width: 100%;
+  height: 100%;
+}
+.chara_1 {
+  width: 138%;
+  top: 3.5%;
+  z-index: 3;
+}
+.chara_2 {
+  width: 110%;
+  top: 60%;
+  z-index: 2;
+}
+.chara_3 {
+  width: 130%;
+  top: 20%;
+  z-index: 0;
+}
+
+.star {
+  aspect-ratio: 94/91;
+  z-index: 3;
+}
+.star::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: star-loop 4s infinite ease-in-out;
+}
+.star_pink::after {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/star_pink.webp);
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+.star_blue::after {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/star_blue.webp);
+  animation-duration: 3.5s;
+  animation-delay: 0s;
+}
+.star_yellow::after {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/star_yellow.webp);
+  animation-duration: 5s;
+  animation-delay: 0s;
+}
+
+.star_pink_1 {
+  width: 6%;
+  bottom: 41%;
+  right: -2%;
+  transform: rotate(10deg);
+}
+.star_blue_1 {
+  width: 5%;
+  bottom: 0%;
+  left: -2.4%;
+  transform: rotate(30deg);
+}
+.star_yellow_1 {
+  width: 3%;
+  bottom: -12%;
+  left: 2%;
+  transform: rotate(20deg);
+}
+.star_pink_2 {
+  width: 4.5%;
+  bottom: 18%;
+  left: -1.5%;
+  transform: rotate(45deg);
+}
+.star_blue_2 {
+  width: 4.5%;
+  bottom: 45%;
+  right: -3%;
+  transform: rotate(10deg);
+}
+.star_yellow_2 {
+  width: 3.5%;
+  bottom: -30%;
+  right: 12%;
+  transform: rotate(45deg);
+}
+
+/*
+ * ----------------------------------------
+ * desk_double_yy - 雙平台預約活動 (Desk Version)
+ * ----------------------------------------
+ */
+.event_main .desk .desk_base.desk_double_yy {
+  width: 100%;
+  height: 100%;
+  background-color: #ca6a1c00;
+  overflow: hidden;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/event_double_yy_bg.webp);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.desk_double_yy .board {
+  width: 70%;
+  height: 100%;
+  background-color: #1da08100;
+  top: 0;
+  left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.desk_double_yy .board .board_top,
+.desk_double_yy .btn_desk .board_top {
+  width: 100%;
+  aspect-ratio: 1438 / 288;
+  height: auto;
+  margin-top: 3%;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/board_top.webp);
+  margin-bottom: -1px;
+  position: relative;
+}
+.desk_double_yy .board .board_bottom,
+.desk_double_yy .btn_desk .board_bottom {
+  width: 100%;
+  aspect-ratio: 1438 / 81;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/board_bottom.webp);
+  margin-top: -1px;
+  position: relative;
+}
+.desk_double_yy .board .board_main,
+.desk_double_yy .btn_desk .board_main {
+  width: 100%;
+  padding: 0 5%;
+  height: 0;
+  flex-grow: 1;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/board.webp);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  position: relative;
+}
+
+.desk_double_yy .board .btn_box,
+.desk_double_yy .btn_desk .event_double_yy_btn {
+  width: 65%;
+  aspect-ratio: 727 / 150;
+  height: auto;
+  margin: 7% auto 8% auto;
+  background-color: transparent;
+}
+.desk_double_yy .board .event_double_yy_btn {
+  width: 60%;
+  aspect-ratio: 727 / 150;
+  height: auto;
+  background-color: transparent;
+  margin: 5% auto 8% auto;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/double_yybtn.webp);
+  background-size: 100% 300%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  transform: scale(1);
+  transition: transform 0.3s;
+  z-index: 50;
+  animation: btn-scale-loop 1.5s infinite ease-in-out;
+}
+
+.desk_double_yy .btn_desk {
+  width: 70%;
+  height: 100%;
+  left: 5%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1da04400;
+  z-index: 50;
+}
+.desk_double_yy .btn_desk .board_top {
+  opacity: 0;
+}
+.desk_double_yy .btn_desk .board_bottom {
+  opacity: 0;
+}
+.desk_double_yy .btn_desk .board_main {
+  opacity: 0;
+}
+.desk_double_yy .btn_desk .event_double_yy_btn {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/yy/double_yybtn.webp);
+  background-size: 100% 300%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  transform: scale(1);
+  transition: transform 0.3s;
+  z-index: 50;
+  animation: btn-scale-loop 1.5s infinite ease-in-out;
+}
+
+.desk_double_yy .btn_desk .event_double_yy_btn:hover {
+  animation: none;
+  transform: scale(1.2);
+}
+/* .desk_double_yy .btn_desk .event_double_yy_btn.login{ background-position: 0 0; } */
+.desk_double_yy .btn_desk .event_double_yy_btn.yy {
+  background-position: 0 0%;
+}
+.desk_double_yy .btn_desk .event_double_yy_btn.lottery {
+  background-position: 0 50%;
+}
+.desk_double_yy .btn_desk .event_double_yy_btn.lottery_done {
+  background-position: 0 100%;
+  animation: none;
+  filter: grayscale(100%);
+  pointer-events: none;
+  cursor: default;
+}
+
+.desk_double_yy .picBox.front_1 {
+  z-index: 2;
+  width: 40%;
+  right: -35%;
+  background-color: #4534e200;
+}
+.desk_double_yy .chara_1 {
+  width: 175%;
+  top: 18%;
+  right: 28%;
+  z-index: 3;
+}
+
+/*
+ * ----------------------------------------
+ * event_main - 活動初始頁面(地圖)
+ * ----------------------------------------
+ */
+
+.event_main {
+  display: none; /* 預設隱藏，只有被點擊時才顯示 */
+}
+
+.fade_in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event_main .content {
+  width: 100%;
+  height: 100%;
+  padding: 0vw;
+  background-color: #1d40a000;
+  display: flex;
+  justify-content: flex-start; /* 改由 flex 分配 */
+  align-items: center;
+  flex-direction: row;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/event_main_bg.webp);
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+}
+
+/* 左側選單 */
+.event_main .desk {
+  position: relative;
+  flex: 0 0 47%; /* 展開時佔 47% */
+  height: 100%;
+  background-color: #a01d1d00;
+  z-index: 5;
+  transition: flex-basis 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* 當地圖收合時，商店區塊擴張 */
+.event_main:has(.map_desk.collapsed) .desk {
+  flex-basis: 95%; /* 5% 給按鈕 */
+}
+
+/* 當地圖全螢幕 (Zoom) 時，商店區塊消失 */
+.event_main.is_zoomed .desk {
+  flex-basis: 0% !important;
+  opacity: 0;
+  pointer-events: none;
+}
+/* 初始頁面容器 */
+.event_main .desk .desk_base.desk_hint {
+  display: flex;
+}
+
+/* 內容圖片 */
+.event_main .desk .desk_base .hint {
+  width: 5.5rem;
+  aspect-ratio: 550 / 343;
+  height: auto;
+
+  /* 背景框樣式 */
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/hint_base.webp);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3%; /* 預留框的邊距 */
+  box-sizing: border-box;
+
+  /* 動畫初始狀態 */
+  opacity: 0;
+  transform: translateY(-30%);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+/* 動畫進場狀態 (fade_in 或 desk_anim_in) */
+.event_main .desk .desk_base.fade_in .hint,
+.event_main .desk .desk_base.desk_anim_in .hint {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+/* 基礎選單 */
+.event_main .desk .desk_base {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 1;
+  background-color: #27ff1300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem 0.5rem;
+  display: none; /* 預設隱藏 */
+}
+
+/* 顯示初始頁面 */
+.event_main .desk .desk_base.hint {
+  display: flex;
+}
+
+/* 切換動畫 Class */
+.desk_anim_in {
+  display: flex !important;
+  animation: deskSlideIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.desk_anim_out {
+  display: flex !important;
+  animation: deskSlideOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes deskSlideIn {
+  0% {
+    transform: translate(50%, 50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(50%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes deskSlideOut {
+  0% {
+    transform: translate(50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(50%, -150%);
+    opacity: 0;
+  }
+}
+
+.event_main .desk .desk_base.desk_A2 {
+  display: none;
+}
+.event_main .desk .desk_base .desk_title {
+  width: 100%;
+  flex-shrink: 0;
+  aspect-ratio: 1301 / 191;
+  height: auto;
+  background-color: #a01d1d00;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.event_main .desk .desk_base .desk_pic {
+  width: 100%;
+  flex-shrink: 0;
+  aspect-ratio: 1286 / 377;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 0.1rem;
+}
+
+.event_main .desk .desk_base .desk_pic.show_hint {
+  background-image: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event_main .desk .desk_base .desk_pic .hint {
+  display: none;
+}
+.event_main .desk .desk_base .desk_pic.show_hint .hint {
+  display: block;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+.event_main .desk .desk_base.desk_A1 .desk_pic,
+.event_main .desk .desk_base.desk_A2 .desk_pic {
+  width: 100%;
+  flex-shrink: 0;
+  aspect-ratio: 1276 / 231;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 0.1rem;
+}
+.event_main .desk .desk_base .desk_content {
+  width: 100%;
+  flex: 1;
+  background-color: #db2c6f00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+.title_A1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_a1.webp);
+}
+.title_A2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_a2.webp);
+}
+.title_B1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_b1.webp);
+}
+.title_B2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_b2.webp);
+}
+.title_B3 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_b3.webp);
+}
+.title_B4 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_b4.webp);
+}
+.title_B5 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_b5.webp);
+}
+.title_C1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_c1.webp);
+}
+.title_C2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_c2.webp);
+}
+.title_C3 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/title_c3.webp);
+}
+
+.pic_A1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_a1.webp);
+}
+.pic_A2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_a2.webp);
+}
+
+.pic_B1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_b1.webp);
+}
+.pic_B2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_b2.webp);
+}
+.pic_B3 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_b3.webp);
+}
+.pic_B4 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_b4.webp);
+}
+.pic_B5 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_b5.webp);
+}
+.pic_C1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_c1.webp);
+}
+.pic_C2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_c2.webp);
+}
+.pic_C3 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/pic_c3.webp);
+}
+
+/* 伊波恩古董店 */
+.content_A1 .board_top {
+  width: 100%;
+  aspect-ratio: 1281 / 45;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/a1_board_top.webp);
+  margin-bottom: -1px; /* 消除渲染接縫 */
+}
+.content_A1 .board_bottom {
+  width: 100%;
+  aspect-ratio: 1281 / 50;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/a1_board_bottom.webp);
+  margin-top: -1px; /* 消除渲染接縫 */
+}
+.content_A1 .board {
+  width: 100%;
+  padding: 0 3%;
+  height: 0; /* 關鍵修改：強制依賴 flex-grow 分配高度 */
+  flex-grow: 1; /* 自動填滿中間 */
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/a1_board.webp);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+.content_A1 .time_hint {
+  width: auto;
+  aspect-ratio: 560 / 65;
+  height: 1.25em;
+  margin-bottom: 0.1rem;
+  flex-shrink: 0; /* 防止被擠壓 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.45rem;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/time_hint.webp);
+}
+.content_A1 .time_hint span {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  color: #fff45c;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  transform: translateX(-0.7rem) translateY(0.01rem);
+}
+
+/* 任務面板 */
+.content_A1 .board .tab_switch {
+  width: 100%;
+  height: auto;
+  background-color: #6251f700;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* 可以在這裡調整間距 */
+  align-items: center;
+  gap: 0.2rem; /* 按鈕間距 */
+  margin-bottom: 0.2rem;
+}
+.tab_btn {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 50;
+  flex: 1; /* 平均分佈 */
+  width: 0; /* 讓 flex grow 生效且平分 */
+  height: auto; /* 隨寬度比例縮放 */
+  aspect-ratio: 667 / 100; /* 設定按鈕單態比例 */
+
+  background-size: 100% 300%; /* 三態：300% 高度 */
+  background-repeat: no-repeat;
+  background-position: 0 0; /* 狀態1 (Normal) */
+  /* transition: background-position 0.2s; */
+}
+.content_A1 .tab_switch .tab_btn:hover {
+  background-position: 0 50%; /* 狀態2 (Hover) */
+}
+.tab_btn.active {
+  background-position: 0 100%; /* 狀態3 (Active) */
+  cursor: default;
+}
+.content_A1 .board .tab_switch .once_tab {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/once_tab.webp);
+}
+.content_A1 .board .tab_switch .daily_tab {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/daily_tab.webp);
+}
+
+.task_list {
+  width: 100%;
+  height: auto;
+  flex: 1; /* 填滿剩餘高度 */
+  min-height: 0; /* 防止被內容撐開 */
+  overflow-x: hidden;
+  overflow-y: auto; /* 內部捲動 */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #cbcbcb #202020; /* Firefox Thumb Track */
+  background-color: #1da08100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* 自訂 task_list 捲軸 */
+.task_list::-webkit-scrollbar {
+  width: 0.25rem;
+  -webkit-appearance: none; /* 強制顯示 */
+}
+.task_list::-webkit-scrollbar-track {
+  background: #202020;
+  border-radius: 0.3rem;
+  border: 0.05rem solid #414242;
+}
+.task_list::-webkit-scrollbar-thumb {
+  background: #cbcbcb;
+  border-radius: 0.3rem;
+  box-shadow: inset 0 0 0 1px #666666;
+  border: 0.03rem solid #2e2e2e;
+}
+.task_list::-webkit-scrollbar-thumb:hover {
+  background: #f74b8c;
+}
+.task_list .task {
+  width: 98.8%;
+  height: auto;
+  aspect-ratio: 1138 / 79;
+  background-color: #3222c400;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task_bg.webp);
+
+  box-sizing: border-box;
+  padding: 0 0.2rem 0 0.33rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task_list .task .task_num {
+  width: auto;
+  height: 70%;
+  aspect-ratio: 1 / 1;
+}
+.task_list .task .task_text {
+  flex: 1;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 0.2rem;
+}
+.task_list .task .task_text span {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #fff;
+  pointer-events: none;
+  text-align: left;
+  width: 100%;
+}
+.task_list .task .task_coin {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  margin-right: 0.15rem;
+}
+.task_list .task .task_coin::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/nav/coin.webp)
+    no-repeat center center;
+  background-size: contain;
+}
+.task_list .task .task_coin .coin_quantity {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #fff45c;
+  margin-left: 0.1rem;
+  pointer-events: none;
+}
+.task_list .task .list_task_btn {
+  width: auto;
+  height: 65%;
+  background-color: transparent;
+  aspect-ratio: 360 / 100;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 0.2s;
+}
+.task_list .task .list_task_btn.done {
+  background-position: 0 100%;
+  cursor: default;
+  pointer-events: none;
+}
+.task_list .task .list_task_btn_1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task1_btn.webp);
+}
+.task_list .task .list_task_btn_2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task2_btn.webp);
+}
+
+.task_num {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.task_list .task:nth-child(1) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task1.png);
+}
+.task_list .task:nth-child(2) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task2.png);
+}
+.task_list .task:nth-child(3) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task3.png);
+}
+.task_list .task:nth-child(4) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task4.png);
+}
+.task_list .task:nth-child(5) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task5.png);
+}
+.task_list .task:nth-child(6) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task6.png);
+}
+.task_list .task:nth-child(7) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task7.png);
+}
+.task_list .task:nth-child(8) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task8.png);
+}
+
+/* 獵人交易所 */
+.content_A2 .board_top {
+  width: 100%;
+  aspect-ratio: 1266 / 103;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/a2_board_top.webp);
+  margin-bottom: -1px; /* 消除渲染接縫 */
+}
+.content_A2 .board_bottom {
+  width: 100%;
+  aspect-ratio: 1266 / 26;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/a2_board_bottom.webp);
+  margin-top: -1px; /* 消除渲染接縫 */
+}
+.content_A2 .board {
+  width: 100%;
+  padding: 0 3%;
+  height: 0; /* 關鍵修改：強制依賴 flex-grow 分配高度 */
+  flex-grow: 1; /* 自動填滿中間 */
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/a2_board.webp);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+.content_A2 .board .lottery_award {
+  width: auto;
+  aspect-ratio: 9 / 1;
+  height: 98%;
+  margin: 2% auto 0 auto;
+  display: flex;
+  animation: lottery-loop 10s linear infinite;
+}
+.content_A2 .board .lottery_award:hover {
+  animation-play-state: paused;
+}
+
+.content_A2 .board .lottery_item {
+  width: 10%; /* 1/10 of container */
+  height: 100%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/a2_lottery_award.webp);
+  background-repeat: no-repeat;
+  background-size: 500% 200%; /* 5 items wide, 2 states high */
+}
+
+/* Individual Item Background X Positions (0, 25, 50, 75, 100) */
+.content_A2 .board .lottery_item.num_1 {
+  background-position-x: 0%;
+}
+.content_A2 .board .lottery_item.num_2 {
+  background-position-x: 25%;
+}
+.content_A2 .board .lottery_item.num_3 {
+  background-position-x: 50%;
+}
+.content_A2 .board .lottery_item.num_4 {
+  background-position-x: 75%;
+}
+.content_A2 .board .lottery_item.num_5 {
+  background-position-x: 100%;
+}
+
+/* None State (Slide Down) */
+.content_A2 .board .lottery_item.none {
+  background-position-y: 100%;
+}
+
+.content_A2 .board .lottery_award.none {
+  background-position: center 100%;
+}
+
+.event_lottery_btn {
+  width: 40%;
+  aspect-ratio: 948 / 200;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/lottery_btn.webp);
+
+  margin: 2% auto 4% auto;
+  transform: scale(1);
+  transition: transform 0.3s;
+  z-index: 50;
+  animation: btn-scale-loop 1.5s infinite ease-in-out;
+}
+.event_lottery_btn:hover {
+  animation: none;
+  transform: scale(1.2);
+}
+.event_lottery_btn.none {
+  background-position: center 100%;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* 異業內容 */
+
+.desk_content {
+  width: 100%;
+  height: 100%;
+  background-color: #4737d68e;
+  display: flex;
+  flex-direction: column;
+}
+
+.desk_content_top {
+  width: 98.8%;
+  height: auto;
+  aspect-ratio: 1138 / 79;
+  background-color: #3222c400;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/task_bg.webp);
+  box-sizing: border-box;
+  padding: 0 0.2rem 0 0.33rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; /* Center it if 98.8% */
+  margin-bottom: 0.15rem;
+}
+
+.desk_content_top span {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #fff;
+  pointer-events: none;
+  text-align: left;
+  flex: 1; /* like task_text */
+  padding-left: 0.25rem; /* like task_text padding */
+}
+
+.desk_content_main {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  background-color: #a81c1c00;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 自定義卷軸樣式 */
+.desk_content_main::-webkit-scrollbar {
+  width: 6px;
+}
+.desk_content_main::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.desk_content_main::-webkit-scrollbar-thumb {
+  background: #7993a5;
+  border-radius: 3px;
+}
+.desk_content_main::-webkit-scrollbar-thumb:hover {
+  background: #7993a5;
+}
+
+.desk_content_main .info_text,
+.desk_content_main .rule_text {
+  font-size: 0.35rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #000;
+  pointer-events: none;
+  text-align: left;
+}
+.desk_content_main .info_title,
+.desk_content_main .rule_title {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #dd2424;
+  pointer-events: none;
+  text-align: left;
+  text-align: left;
+  margin-bottom: 0.15rem;
+}
+
+.desk_content_main .desk_content_info,
+.desk_content_main .desk_content_rule {
+  width: 90%;
+  margin: 0 auto 0.3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align children left */
+}
+.desk_content_top .buy_coin {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  margin-right: 0.15rem;
+}
+.desk_content_top .buy_coin::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/nav/coin.webp)
+    no-repeat center center;
+  background-size: contain;
+}
+
+/* 尚未開放 */
+.desk_buy_btn {
+  width: 30%;
+  aspect-ratio: 521 / 150;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 500%;
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/desk_buy_btn.webp);
+
+  margin: 2% auto 3% auto;
+  /* transform: scale(1); */
+  /* transition: transform 0.3s; */
+  z-index: 50;
+  /* animation: btn-scale-loop 1.5s infinite ease-in-out; */
+}
+
+/* 立即兌換 */
+.desk_buy_btn.state_2 {
+  background-position: center 25%;
+}
+/* 已兌換 */
+.desk_buy_btn.state_3 {
+  background-position: center 50%;
+}
+/* 今日兌換完畢 */
+.desk_buy_btn.state_4 {
+  background-position: center 75%;
+}
+/* 全數兌換完畢 */
+.desk_buy_btn.state_5 {
+  background-position: center 100%;
+}
+
+/* 右側地圖 */
+
+.map_collapse_btn {
+  position: relative;
+  flex: 0 0 4%; /* 鎖定寬度 */
+  min-width: 40px;
+  height: 30%;
+  background-color: #21a01da9;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/desk/desk_zoom.webp)
+    no-repeat;
+  background-size: 100%;
+  background-position: center 0;
+  cursor: pointer;
+  z-index: 999 !important;
+  pointer-events: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s,
+    flex-basis 0.5s ease-in-out,
+    opacity 0.5s;
+}
+
+/* 全螢幕時按鈕也消失 */
+.event_main.is_zoomed .map_collapse_btn {
+  flex-basis: 0% !important;
+  min-width: 0 !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.map_collapse_btn.state_open {
+  transform: translateX(0);
+}
+
+.map_collapse_btn.state_close {
+  transform: translateX(0) scaleX(-1);
+}
+
+.event_main .map_desk {
+  position: relative;
+  flex: 0 0 50%; /* 展開時佔 50% */
+  height: 100%;
+  background-color: #a01d5a70;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_bg.webp);
+  background-size: cover;
+  background-position: top;
+  z-index: 10;
+  overflow: hidden;
+  transition:
+    flex-basis 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.6s ease-out;
+}
+
+.event_main .map_desk.collapsed {
+  flex-basis: 0% !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 全螢幕狀態 (Zoom) */
+.event_main.is_zoomed .map_desk {
+  flex-basis: 100% !important;
+}
+
+/* 針對 map_desk 的動畫進場與展開狀態 */
+.event_main .map_desk.fade_in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 收合狀態：向右平移 100% (即 50% 螢幕寬度) */
+.event_main .map_desk.collapsed {
+  transform: translateX(100%);
+}
+
+.event_main .map_desk .map,
+.event_main .map_desk .mapTitle,
+.event_main .map_desk .mapChara_hint {
+  transition:
+    opacity 0.5s,
+    width 0.5s ease-in-out,
+    right 0.5s ease-in-out;
+}
+
+/* 收合時文字與地圖淡出 */
+.event_main .map_desk.collapsed .map,
+.event_main .map_desk.collapsed .mapTitle,
+.event_main .map_desk.collapsed .mapChara_hint {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.event_main .map_desk .mapTitle {
+  width: 100%;
+  aspect-ratio: 1136 / 292;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_title.webp)
+    no-repeat center center;
+  background-size: 100% auto;
+  z-index: -2;
+  right: auto; /* 預設位置 */
+}
+
+/* 全螢幕時標題縮小至一半並靠右 */
+.event_main.is_zoomed .map_desk .mapTitle {
+  width: 50%;
+  right: 0;
+}
+
+.event_main .map_desk .mapChara_hint {
+  bottom: 12.5%;
+  right: 0%;
+  width: 19.21%;
+  aspect-ratio: 211 / 400;
+  z-index: 1;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_chara_hint.webp);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #d61f1f00;
+  background-position: center 0%;
+  transition: background-position 0.3s ease-in-out;
+}
+/* .event_main .map_desk .mapChara_hint:hover{
+  background-position: center 0%;
+} */
+.event_main .map_desk .mapChara_hint.none {
+  background-position: center 100%;
+}
+
+.event_main .map_desk .mapChara {
+  bottom: 0;
+  right: 0;
+  width: 98%;
+  aspect-ratio: 211 / 194;
+  z-index: 2;
+}
+.event_main .map_desk .mapChara:hover {
+  cursor: pointer;
+}
+.event_main .map_desk .mapChara.bounce-in-top,
+.event_main .map_desk .mapbtn.bounce-in-top,
+.event_main .map_desk .mapbtn_big.bounce-in-top {
+  animation: bounce-in-top 1.5s both;
+}
+
+.event_main .map_desk .mapChara.jello-vertical {
+  -webkit-animation: jello-vertical 0.9s both;
+  animation: jello-vertical 0.9s both;
+}
+
+.event_main .map_desk .mapZoom {
+  bottom: 10%;
+  left: 0%;
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  z-index: 2;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/zoom.webp);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center 0%;
+}
+
+.event_main.is_zoomed .map_desk .mapZoom {
+  background-position: center 100%;
+}
+
+.event_main .map_desk .map {
+  height: 100%;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  margin-top: 5%;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.5s ease-in-out,
+    margin-top 0.5s ease-in-out,
+    width 0.5s ease-in-out,
+    height 0.5s ease-in-out;
+
+  aspect-ratio: 1136 / 1309;
+  background-color: #a01d1d00;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_base.webp);
+  background-size: cover;
+  background-position: top;
+  z-index: -1;
+}
+
+/* 全螢幕時地圖底圖位置與縮放調整 */
+.event_main.is_zoomed .map_desk .map {
+  margin-top: 3%;
+  transform: translate(-50%, -50%) scale(1.2); /* 您可以調整 scale 或 translate */
+}
+
+/* 大顆按鈕 */
+.event_main .map_desk .mapbtn_big {
+  width: 20.65%;
+  aspect-ratio: 224 / 200;
+  z-index: 1;
+  background-color: #27ff1300;
+  background-size: 100% 200%;
+  background-position: 0 0%;
+  transition:
+    top 0.5s ease-in-out,
+    left 0.5s ease-in-out;
+}
+/* 循環抖動 */
+/* .event_main .map_desk .mapbtn_big.jello-loop{
+  animation: jello-loop 5s 0.5s infinite;
+} */
+.op-0 {
+  opacity: 0 !important;
+}
+.event_main .map_desk .mapbtn_big:hover,
+.event_main .map_desk .mapbtn_big.active,
+.event_main.is_zoomed .map_desk .mapbtn_big {
+  background-position: 0 100%;
+  animation: none !important;
+}
+
+/* 小顆按鈕 */
+.event_main .map_desk .mapbtn {
+  width: 14.41%;
+  aspect-ratio: 175 / 200;
+  z-index: 1;
+  background-color: #27ff1300;
+  background-size: 100% 200%;
+  background-position: 0 0%;
+  transition:
+    top 0.5s ease-in-out,
+    left 0.5s ease-in-out;
+}
+
+.event_main .map_desk .mapbtn:hover,
+.event_main .map_desk .mapbtn.active,
+.event_main.is_zoomed .map_desk .mapbtn {
+  background-position: 0 100%;
+  transform: scale(1.6); /* 您可以調整 scale 或 translate */
+}
+
+.mapbtn_A1 {
+  top: 60%;
+  left: 39.94%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_a1.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_A2 {
+  top: 32.42%;
+  left: 56%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_a2.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B1 {
+  top: 31.29%;
+  left: 10.5%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_b1.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B2 {
+  top: 20.42%;
+  left: 29.35%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_b2.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B3 {
+  top: 10.92%;
+  left: 52.83%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_b3.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B4 {
+  top: 52.67%;
+  left: 18.77%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_b4.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B5 {
+  top: 70.08%;
+  left: 60.42%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_b5.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_C1 {
+  top: 48%;
+  left: 67.24%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_c1.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_C2 {
+  top: 1.33%;
+  left: 33.66%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_c2.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_C3 {
+  top: 42.92%;
+  left: 44.15%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/map/map_btn_c3.webp);
+  background-repeat: no-repeat;
+}
+
+/* --- 地圖全螢幕時的按鈕座標調整 (Zoom Positions) --- */
+.event_main.is_zoomed .mapbtn_A1 {
+  top: 60%;
+  left: 37.94%;
+}
+.event_main.is_zoomed .mapbtn_A2 {
+  top: 29.42%;
+  left: 60%;
+}
+.event_main.is_zoomed .mapbtn_B1 {
+  top: 33.29%;
+  left: 10.5%;
+}
+.event_main.is_zoomed .mapbtn_B2 {
+  top: 23.42%;
+  left: 29.35%;
+}
+.event_main.is_zoomed .mapbtn_B3 {
+  top: 10.92%;
+  left: 52.83%;
+}
+.event_main.is_zoomed .mapbtn_B4 {
+  top: 52.67%;
+  left: 18.77%;
+}
+.event_main.is_zoomed .mapbtn_B5 {
+  top: 66.08%;
+  left: 60.42%;
+}
+.event_main.is_zoomed .mapbtn_C1 {
+  top: 48%;
+  left: 72.24%;
+}
+.event_main.is_zoomed .mapbtn_C2 {
+  top: 6.33%;
+  left: 33.66%;
+}
+.event_main.is_zoomed .mapbtn_C3 {
+  top: 40.92%;
+  left: 44.15%;
+}
+
+/* 全螢幕時人物位置調整 */
+.event_main.is_zoomed .mapChara_hint {
+  bottom: 17.5%;
+  right: -20%;
+}
+.event_main.is_zoomed .map_desk .mapZoom {
+  left: -25%;
+  bottom: 20%;
+  transform: scale(1.2);
+}
+
+/* ----------------------------------------
+ * footer - footer
+ * ---------------------------------------- */
+
+.footer {
+  position: relative;
+  margin-top: auto;
+  flex-shrink: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0;
+  color: #fff;
+  font-size: 0.12rem;
+  text-align: center;
+  letter-spacing: 0.02px;
+  background: #282a2c;
+  /* 更新：包含高度與內距的動效，以釋放佈局空間 */
+  transition: transform 0.5s ease, opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease, visibility 0.5s;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.footer.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  max-height: 5rem; /* 給予足夠的上限以容納內容 */
+  padding: 0.1rem 0;
+}
+.footer .container {
+  max-width: 100%;
+}
+.footer .copyright,
+.footer .grading {
+  vertical-align: middle;
+}
+.footer img {
+  vertical-align: baseline;
+  height: 0.4rem;
+  width: auto;
+}
+.footer .copyright,
+.footer .company,
+.footer p,
+.footer .grading,
+.footer .grading img,
+.footer ul {
+  display: inline-block;
+}
+.footer .company a,
+.footer .copyright p a,
+.footer .grading,
+.footer p,
+.footer ul {
+  margin-left: 0.1rem;
+  font-size: 0.12rem;
+}
+.footer a:hover {
+  color: #63edec;
+}
+.footer p,
+.footer ul {
+  text-align: left;
+  line-height: 1.2;
+  font-size: 0.12rem;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+.footer p a {
+  color: #fff;
+}
+
+/* @media screen and (max-width: 1200px) {
+  .footer {
+    padding: 35px 0;
+  }
+  .footer .copyright,
+  .footer .company {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .footer p {
+    text-align: center;
+  }
+  .footer p,
+  .footer .grading {
+    margin: 0 auto;
+  }
+} */
+
+/* uG */
+.downloadSharePicTip {
+  display: none;
+}
+
+/* Debug Menu */
+.pop_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  position: fixed;
+  bottom: 20px;
+  left: 10vw;
+  right: 10vw;
+  z-index: 9999;
+  background: rgba(173, 28, 28, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+}
+
+.pop_box .btn {
+  padding: 5px 12px !important;
+  font-size: 13px !important;
+  font-family: inherit;
+}
+
+/* Portrait Overlay - Hidden by default in this stylesheet (Landscape/PC) */
+.note_flex {
+  display: none !important;
+}
+
+/* Desk Content List Styles */
+.desk_content_info ul,
+.desk_content_rule ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.desk_content_info li,
+.desk_content_rule li {
+  list-style-type: disc;
+}
+
+/* --- 角色切換圖標雪碧圖 --- */
+.item.chara {
+  background-size: 100% 200%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+}
+
+.item.chara:hover,
+.item.chara.active {
+  background-position: bottom;
+}
+
+.chara_icon_zero_g { background-image: url(../images/card/chara_icon/zero_g_icon.webp); }
+.chara_icon_zero_b { background-image: url(../images/card/chara_icon/zero_b_icon.webp); }
+.chara_icon_mint { background-image: url(../images/card/chara_icon/mint_icon.webp); }
+.chara_icon_nanally { background-image: url(../images/card/chara_icon/nanally_icon.webp); }
+.chara_icon_baicang { background-image: url(../images/card/chara_icon/baicang_icon.webp); }
+.chara_icon_jiuyuan { background-image: url(../images/card/chara_icon/jiuyuan_icon.webp); }
+.chara_icon_daffodill { background-image: url(../images/card/chara_icon/daffodill_icon.webp); }
+.chara_icon_sakiri { background-image: url(../images/card/chara_icon/sakiri_icon.webp); }
+.chara_icon_edgar { background-image: url(../images/card/chara_icon/edgar_icon.webp); }
+.chara_icon_adler { background-image: url(../images/card/chara_icon/adler_icon.webp); }
+.chara_icon_fadia { background-image: url(../images/card/chara_icon/fadia_icon.webp); }
+.chara_icon_lacrimosa { background-image: url(../images/card/chara_icon/lacrimosa_icon.webp); }
+.chara_icon_skia { background-image: url(../images/card/chara_icon/skia_icon.webp); }
+.chara_icon_hathor { background-image: url(../images/card/chara_icon/hathor_icon.webp); }
+.chara_icon_haniel { background-image: url(../images/card/chara_icon/haniel_icon.webp); }
+.chara_icon_chiz { background-image: url(../images/card/chara_icon/chiz_icon.webp); }
+.chara_icon_hotori { background-image: url(../images/card/chara_icon/hotori_icon.webp); }
+.chara_icon_kurage { background-image: url(../images/card/chara_icon/kurage_icon.webp); }
+
+/* --- 背景切換圖標雪碧圖 --- */
+.item.background {
+  background-size: 100% 200%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  aspect-ratio: 181 / 240;
+}
+
+.item.background:hover,
+.item.background.active {
+  background-position: bottom;
+}
+
+.bg_icon_01 { background-image: url(../images/card/map_icon/card_bg01_icon.webp); }
+.bg_icon_02 { background-image: url(../images/card/map_icon/card_bg02_icon.webp); }
+.bg_icon_03 { background-image: url(../images/card/map_icon/card_bg03_icon.webp); }
+.bg_icon_04 { background-image: url(../images/card/map_icon/card_bg04_icon.webp); }
+.bg_icon_05 { background-image: url(../images/card/map_icon/card_bg05_icon.webp); }
+.bg_icon_06 { background-image: url(../images/card/map_icon/card_bg06_icon.webp); }
+.bg_icon_07 { background-image: url(../images/card/map_icon/card_bg07_icon.webp); }
+.bg_icon_08 { background-image: url(../images/card/map_icon/card_bg08_icon.webp); }
+.bg_icon_09 { background-image: url(../images/card/map_icon/card_bg09_icon.webp); }
+.bg_icon_10 { background-image: url(../images/card/map_icon/card_bg10_icon.webp); }
+.bg_icon_11 { background-image: url(../images/card/map_icon/card_bg11_icon.webp); }

@@ -1,0 +1,67 @@
+/* CSS for Portrait Mode Only */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+/* Hide Everything by Default */
+.wrap,
+.footer,
+.popup, 
+.view_box,
+.nav, 
+#eventAlertModal {
+    display: none !important;
+}
+
+/* Show Only the Portrait Overlay */
+.note_flex {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000e3;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.note_main {
+    position: relative;
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chara_im {
+    width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.chara_im img {
+    width: 100%;
+    height: auto;
+}
+
+.note_flex .word_box_1 {
+    width: 100%;
+    text-align: center;
+}
+
+.note_flex p {
+    color: rgb(255, 255, 255);
+    font-size: .4rem; /* Adjusted for mobile view */
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+}
+
+.note_flex p span {
+    font-size: 0.25rem;
+    color: #b5b5b5;
+}
