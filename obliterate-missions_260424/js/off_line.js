@@ -79,24 +79,24 @@ $(document).ready(function () {
   });
 
   // 2. 分享按鈕
-  // $(".share").on("click", function () {
-  //   openOnlyModal("#popShare");
-  // });
+  $(".share").on("click", function () {
+    openOnlyModal("#popShare");
+  });
 
   // 3. 獎勵按鈕
-  // $(".award").on("click", function () {
-  //   openOnlyModal("#popAward");
-  // });
+  $(".award").on("click", function () {
+    openOnlyModal("#popAward");
+  });
 
   // 監聽獎勵彈窗開啟時，重設分頁
-  // $("#popAward").on("show.bs.modal", function () {
-  //   $(".popTab .standard_tab")
-  //     .addClass("active")
-  //     .siblings()
-  //     .removeClass("active");
-  //   $(".standard_award").show();
-  //   $(".yy_award").hide();
-  // });
+  $("#popAward").on("show.bs.modal", function () {
+    $(".popTab .standard_tab")
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+    $(".standard_award").show();
+    $(".yy_award").hide();
+  });
 
   // 獎勵彈窗分頁切換
   $(document).on("click", ".popTab .tab_btn", function () {

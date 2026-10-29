@@ -167,28 +167,28 @@ $(document).ready(function () {
 
   // 登出行為
   // 登出行為
-  // $(".btn-logout").on("click", function () {
-  //   updateLoginStateWithSync(false);
-  //   setGlobalAwardState(false);
-  //   isParticipated = false; // 登出重置
-  // });
+  $(".btn-logout").on("click", function () {
+    updateLoginStateWithSync(false);
+    setGlobalAwardState(false);
+    isParticipated = false; // 登出重置
+  });
 
   // 預約送出按鈕 (模擬預約成功)
   // 預約送出按鈕 (模擬預約成功)
   // 預約送出按鈕 (模擬預約成功)
-  // $(document).on("click", ".yySubmit", function () {
-  //   // 1. 關閉當前彈窗
-  //   $("#regressmodal").modal("hide");
+  $(document).on("click", ".yySubmit", function () {
+    // 1. 關閉當前彈窗
+    $("#regressmodal").modal("hide");
 
-  //   // 2. 模擬登入與狀態更新
-  //   updateLoginStateWithSync(true);
-  //   setGlobalAwardState(true);
+    // 2. 模擬登入與狀態更新
+    updateLoginStateWithSync(true);
+    setGlobalAwardState(true);
 
-  //   // 3. 顯示預約成功彈窗
-  //   setTimeout(function () {
-  //     $("#successmodal").modal("show");
-  //   }, 300); // 延遲避免與前一個 Modal 動畫衝突
-  // });
+    // 3. 顯示預約成功彈窗
+    setTimeout(function () {
+      $("#successmodal").modal("show");
+    }, 300); // 延遲避免與前一個 Modal 動畫衝突
+  });
 
   function updateLoginState(login) {
     var $loginArea = $(".login");
