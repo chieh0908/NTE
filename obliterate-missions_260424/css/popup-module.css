@@ -1,0 +1,553 @@
+/* ============================================================
+   NTE Popup Module - 共用彈窗樣式
+   適用於任何使用 reset.js 的活動頁面
+   圖片路徑：./images/ (相對於此 CSS 檔案)
+   ============================================================ */
+
+/* --- 基礎 Modal 覆蓋 --- */
+.modal {
+  font-size: initial;
+}
+
+/* --- 彈窗共用結構 --- */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.popup .popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+.popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1734/995;
+}
+.popup .close {
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 123 / 125;
+  background: url(./images/lottery_close_btn.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+}
+.popup .close:hover {
+  background-position: bottom;
+}
+.popup .close:not(:disabled):not(.disabled):focus,
+.popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+.popup p {
+  margin-bottom: 0;
+}
+.popup_outer {
+  min-height: auto;
+}
+
+/* --- 按鈕列 --- */
+.popBtns {
+  display: flex;
+  width: 100%;
+  height: 0.69rem;
+  margin-top: 0.38rem;
+  justify-content: center;
+}
+.popBtns button,
+.popBtns a {
+  width: 2.78rem;
+  height: 0.69rem;
+  margin: 0 0.2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+.popBtns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- 按鈕樣式 --- */
+button.btn-msg-confirm {
+  margin-top: 1rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(./images/btn_confirm_job2.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+button.btn-msg-confirm:hover {
+  background-position: center bottom;
+}
+button.btn_popup_linkaccount {
+  margin-top: 0.9rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(./images/btn_popup_linkaccount.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+button.btn_popup_linkaccount:hover {
+  background-position: center bottom;
+}
+#popMsgSdk button.btn-sdk {
+  margin-top: 0.9rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(./images/btn-sdk.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+#popMsgSdk button.btn-sdk:hover {
+  background-position: center bottom;
+}
+.popBtns .shareInviteLinkBtn,
+.popBtns .btn-pop-invite {
+  margin-top: 0.15rem;
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: 0.89rem;
+  background: url(./images/btn_share.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-send-data {
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: 0.89rem;
+  background: url(./images/btn_submit.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-LotteryGet {
+  margin-top: 0.15rem;
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: 0.89rem;
+  background: url(./images/btn_getreward.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-popLoginBtn {
+  margin-top: 0.15rem;
+  height: 0.95rem;
+  background: url(./images/btn_login.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .shareInviteLinkBtn:hover,
+.popBtns .btn-pop-invite:hover,
+.popBtns .btn-send-data:hover,
+.popBtns .btn-LotteryGet:hover,
+.popBtns .btn-popLoginBtn:hover {
+  background-position: center bottom;
+}
+
+/* --- 提示文字 --- */
+.popBtnsTip {
+  width: 100%;
+  text-align: center;
+  font-size: 0.26rem;
+  line-height: 0.4rem;
+  color: #63edec;
+  margin-bottom: 0 !important;
+}
+
+/* --- 背景變體 --- */
+.pop-bg1 {
+  background: url(./images/pop-bg1.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.pop-bg2 {
+  background: url(./images/pop-bg2.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.pop-bg.pop-bg3 {
+  width: 15.2rem;
+  height: 8rem;
+  background-color: #ff4294bb;
+  position: relative;
+}
+
+/* --- 自訂捲動條 --- */
+.cus-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.cus-scroll::-webkit-scrollbar {
+  width: 0.14rem;
+  background-color: #202020;
+  border-radius: 0.07rem;
+}
+.cus-scroll::-webkit-scrollbar-thumb {
+  width: 0.14rem;
+  background-color: #cbcbcb;
+  border-radius: 0.07rem;
+}
+
+/* ============================================================
+   彈窗：活動規則 #popRule
+   ============================================================ */
+.popRuleTit {
+  display: block;
+  width: 4.2rem;
+  height: 1.3rem;
+  margin: 0.5rem 0;
+  margin-left: 0.6rem;
+  background: url(./images/pop_title03.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.rule-scroll {
+  width: 13.7rem;
+  height: 4.78rem;
+  margin: 0.15rem auto 0;
+  padding: 0 0.65rem;
+}
+.rule-scroll p,
+.rule-scroll p a {
+  margin-bottom: 0.2rem;
+  font-size: 0.23rem;
+  line-height: 0.4rem;
+  color: #eeeeee;
+}
+.rule-scroll span {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 0.25rem;
+  line-height: 0.4rem;
+}
+.rule-scroll .popRuleHint {
+  color: #60fffd;
+  font-weight: 500;
+}
+.rule-scroll .popRuleBigTitle {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.3rem;
+  line-height: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0rem;
+}
+.rule-scroll .popRuleSubTitle {
+  color: #60fffd;
+  font-weight: 300;
+  font-size: 0.25rem;
+  line-height: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0rem;
+}
+
+/* ============================================================
+   彈窗：提示訊息 #popMsg
+   ============================================================ */
+.popMsgCont {
+  display: flex;
+  width: 8rem;
+  height: 4.9rem;
+  margin: 1.8rem auto 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 0.72rem;
+  color: #eae9e9;
+}
+
+/* --- popMsg 狀態圖 --- */
+.state-not-login {
+  margin: 0 auto;
+  align-self: center;
+  width: 7rem;
+  height: 0.6rem;
+  background: url(./images/pop_not_login_text.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-no-reward {
+  margin: 0 auto;
+  align-self: center;
+  width: 7rem;
+  height: 0.6rem;
+  background: url(./images/pop_not_reward_text.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-submit-success {
+  margin: 0 auto;
+  align-self: center;
+  width: 4rem;
+  height: 0.8rem;
+  background: url(./images/pop_submit_success.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-receive {
+  margin: 0 auto;
+  align-self: center;
+  width: 7rem;
+  height: 1.2rem;
+  background: url(./images/pop_yy_linkaccount_tt.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-bag-limit {
+  margin: 0 auto;
+  align-self: center;
+  width: 7.2rem;
+  height: 1.25rem;
+  background: url(./images/pop_yy_backpack_tt.webp) no-repeat;
+  background-size: 100% auto;
+}
+
+/* ============================================================
+   彈窗：分享 #popShare
+   ============================================================ */
+.popShare {
+  overflow-y: hidden !important;
+}
+.popShareCont {
+  position: relative;
+  width: 15.2rem;
+  height: 8rem;
+  margin: 0 auto 1.5rem auto;
+}
+.shareDownSourcePic {
+  top: 100vh;
+  left: 100vw;
+  width: 803px;
+  height: 453px;
+  background: #000;
+}
+.shareDownPic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+}
+.inviteCode {
+  left: 661px;
+  top: 292px;
+  width: 116px;
+  height: 116px;
+  padding: 5px;
+  background: #fff;
+}
+.inviteCode canvas {
+  width: 100%;
+  height: 100%;
+}
+.shareDownResultPic {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.shareDownResultPic img {
+  width: 100%;
+  height: 100%;
+}
+#popShare .popBtns {
+  display: flex;
+  width: 1rem;
+  height: 6rem;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #73ed6300;
+  position: absolute;
+  right: -0.5rem;
+  bottom: 0;
+  gap: 0.3rem;
+}
+#popShare .popBtns button,
+#popShare .popBtns a {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ff3b8300;
+}
+#popShare .shareInviteLinkBtn,
+#popShare .btn-pop-invite {
+  background: url(./images/link.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popShare .downloadSharePicBtn {
+  background: url(./images/dl.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popShare .fbShareBtn {
+  background: url(./images/fb.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popShare .lineShareBtn {
+  background: url(./images/line.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* ============================================================
+   彈窗：預約登入 #regressmodal
+   ============================================================ */
+.regressmodal .pop {
+  display: block;
+}
+.regressmodal .form-select {
+  text-align: center !important;
+  padding: 0 0.2rem;
+  width: 2rem;
+}
+.regressmodal .form-bg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0.2rem;
+}
+
+/* ============================================================
+   彈窗：預約成功 #successmodal
+   ============================================================ */
+#successmodal .popCont2 {
+  height: 8rem;
+  background: url(./images/popCont2_v2.webp) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+#successmodal .pop_yySuccess_tit {
+  top: 1.8rem;
+  width: 6.1rem;
+  height: 2rem;
+  background: url(./images/pop_yy_qa_success_tt.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+#successmodal .urban_icon {
+  width: 50%;
+  margin: 0 6px 8px 6px;
+}
+#successmodal .urban_icon a {
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+}
+#successmodal .urban_icon a:hover {
+  transform: scale(1.1);
+}
+#successmodal .urban_icon a img {
+  width: 100%;
+}
+
+/* 雙平台預約成功按鈕 */
+.focus_social_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 54%;
+}
+.urban_icon_ios,
+.urban_icon_android {
+  width: 48%;
+  margin: 0.5rem 6px 8px 6px;
+}
+.urban_icon_ios a,
+.urban_icon_android a {
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+}
+.urban_icon_ios a:hover,
+.urban_icon_android a:hover {
+  transform: scale(1.1);
+}
+.urban_icon_ios img,
+.urban_icon_android img {
+  width: 100%;
+  display: block;
+}
+
+/* ============================================================
+   彈窗：隱私權政策 #privacymodal
+   ============================================================ */
+/* (樣式繼承自官網 yy CSS，此處僅列出覆蓋項) */
+
+/* ============================================================
+   彈窗：SDK 登入 #bookedmodal
+   ============================================================ */
+.bookedmodal .pop {
+  display: block;
+}
+
+/* ============================================================
+   彈窗：登入提示 #eventAlertModal
+   ============================================================ */
+#eventAlertModal .modal-body {
+  margin: 0 auto;
+  width: 6rem;
+  height: 5.34rem;
+  background: url(./images/popCont_alert.png) no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-radius: 0.28rem;
+}
+#eventAlertModal .modal-body p {
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
+}
+
+/* ============================================================
+   社群平台圖示 .otherPlatform
+   ============================================================ */
+.otherPlatform {
+  display: flex;
+}
+.otherPlatform a {
+  position: relative;
+  margin: 0 0.09rem;
+  width: 0.66rem;
+  height: 0.66rem;
+  background: url(./images/otherPlatform.png) no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+}
+.otherPlatform .platform_twitter { background-position-x: 0; }
+.otherPlatform .platform_facebook { background-position-x: -0.84rem; }
+.otherPlatform .platform_youtube { background-position-x: -1.68rem; }
+.otherPlatform .platform_discord { background-position-x: -2.52rem; }
+.otherPlatform .platform_reddit { background-position-x: -3.37rem; }
+.otherPlatform .platform_ins { background-position-x: -4.2rem; }
+.otherPlatform .platform_tiktok { background-position-x: -5.04rem; }
+.otherPlatform .platform_line { background-position-x: -5.88rem; }
+.otherPlatform .platform_naver { background-position-x: -6.72rem; }
+.otherPlatform .platform_talk { background-position-x: -7.56rem; }
+.otherPlatform .platform_ps { background-position-x: -5.04rem; }
+.otherPlatform a:hover { background-position-y: -0.66rem; }
+.otherPlatform .code {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+.otherPlatform a:hover .code { display: block; }
+.otherPlatform .code div {
+  margin-bottom: 0.1rem;
+  border-radius: 0.05rem;
+  padding: 0.1rem;
+  background: #fff;
+}
+.otherPlatform .code img {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}

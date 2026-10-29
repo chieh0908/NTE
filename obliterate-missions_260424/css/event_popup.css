@@ -1,0 +1,860 @@
+
+/* ============================================================
+   彈�? 5~7：popRule / popMsg / popShare / popAward
+   （�? popup-module.css ?�入�?   ============================================================ */
+/* ============================================================
+   NTE Popup Module - ?�用彈�?�??
+   ?�用?�任何使??reset.js ?�活?��???   ?��?路�?�?/images/ (?��??�此 CSS 檔�?)
+   ============================================================ */
+
+/* --- ?��? Modal 覆�? --- */
+.modal {
+  font-size: initial;
+}
+
+/* --- 彈�??�用結�? --- */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.popup .popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+.popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1734/995;
+}
+.popup .close {
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 123 / 125;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/lottery_close_btn.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+}
+#popAward .popup .close {
+  top: 0.35rem;
+  right: 0.45rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  aspect-ratio: 49 / 100;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/lottery_close_btn_m.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+}
+#popAward .popup .close:hover{
+  background-position: bottom;
+}
+.popup .close:hover {
+  background-position: bottom;
+}
+.popup .close:not(:disabled):not(.disabled):focus,
+.popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+.popup p {
+  margin-bottom: 0;
+}
+.popup_outer {
+  min-height: auto;
+}
+
+/* --- ?��???--- */
+.popBtns {
+  display: flex;
+  width: 100%;
+  height: 0.69rem;
+  margin-top: 0.38rem;
+  justify-content: center;
+}
+.popBtns button,
+.popBtns a {
+  width: 2.78rem;
+  height: 0.69rem;
+  margin: 0 0.2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+.popBtns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- ?��?�?? --- */
+button.btn-msg-confirm {
+  margin-top: 1rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popMsg/btn_confirm_job2.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+button.btn-msg-confirm:hover {
+  background-position: center bottom;
+}
+button.btn_popup_linkaccount {
+  margin-top: 0.9rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popMsg/btn_popup_linkaccount.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+button.btn_popup_linkaccount:hover {
+  background-position: center bottom;
+}
+#popMsgSdk button.btn-sdk {
+  margin-top: 0.9rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popMsg/btn-sdk.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+#popMsgSdk button.btn-sdk:hover {
+  background-position: center bottom;
+}
+.popBtns .shareInviteLinkBtn,
+.popBtns .btn-pop-invite {
+  margin-top: 0.15rem;
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: 0.89rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/btn_share.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-send-data {
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: 0.89rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/btn_submit.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-LotteryGet {
+  margin-top: 0.15rem;
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: 0.89rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/btn_getreward.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-popLoginBtn {
+  margin-top: 0.15rem;
+  height: 0.95rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/btn_login.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .shareInviteLinkBtn:hover,
+.popBtns .btn-pop-invite:hover,
+.popBtns .btn-send-data:hover,
+.popBtns .btn-LotteryGet:hover,
+.popBtns .btn-popLoginBtn:hover {
+  background-position: center bottom;
+}
+
+/* --- ?�示?��? --- */
+.popBtnsTip {
+  width: 100%;
+  text-align: center;
+  font-size: 0.26rem;
+  line-height: 0.4rem;
+  color: #63edec;
+  margin-bottom: 0 !important;
+}
+
+/* --- ?�景變�? --- */
+.pop-bg1 {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/pop-bg1.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/pop-bg2.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.pop-bg.pop-bg3 {
+  width: 15.2rem;
+  height: 8rem;
+  background-color: #ff4294bb;
+  position: relative;
+}
+
+/* --- ?��??��?�?--- */
+.cus-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.cus-scroll::-webkit-scrollbar {
+  width: 0.14rem;
+  background-color: #a1a1a1;
+  border-radius: 0.07rem;
+}
+.cus-scroll::-webkit-scrollbar-thumb {
+  width: 0.14rem;
+  background-color: #3e3e3e;
+  border-radius: 0.07rem;
+}
+
+/* ============================================================
+   彈�?：活?��???#popRule
+   ============================================================ */
+
+/* --- #popRule 彈�?結�? --- */
+#popRule .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+#popRule .popup .popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+#popRule .popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1730 / 871;
+}
+#popRule .popup .close {
+  top: 0.35rem;
+  right: 0.45rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  aspect-ratio: 49 / 100;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/lottery_close_btn_m.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+}
+#popRule .popup .close:hover {
+  background-position: bottom;
+}
+#popRule .popup .close:not(:disabled):not(.disabled):focus,
+#popRule .popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+#popRule .popup p {
+  margin-bottom: 0;
+}
+
+/* --- #popRule ?�景 --- */
+#popRule .pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/pop-bg-rule-pc.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* --- #popRule ?��?�?--- */
+#popRule .cus-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#popRule .cus-scroll::-webkit-scrollbar {
+  width: 0.14rem;
+  background-color: #202020;
+  border-radius: 0.07rem;
+}
+#popRule .cus-scroll::-webkit-scrollbar-thumb {
+  width: 0.14rem;
+  background-color: #cbcbcb;
+  border-radius: 0.07rem;
+}
+
+/* --- #popRule 標�? + ?�容 --- */
+#popRule .popRuleTit {
+  display: block;
+  height: 0.9rem;
+  width: auto;
+  aspect-ratio: 354 / 107;
+  margin: 0.15rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popRule/pop_title.webp) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#popRule .rule-scroll {
+  width: 13.7rem;
+  height:5.78rem;
+  margin: 0.5rem auto 0;
+  padding: 0 0.65rem;
+}
+#popRule .rule-scroll p,
+#popRule .rule-scroll p a {
+  margin-bottom: 0.2rem;
+  font-size: 0.23rem;
+  line-height: 0.4rem;
+  color: #eeeeee;
+}
+#popRule .rule-scroll span {
+  color: #0d0d0d;
+  font-weight: 300;
+  font-size: 0.25rem;
+  line-height: 0.4rem;
+}
+#popRule .rule-scroll .popRuleHint {
+  color: #ff53a3;
+  font-weight: 500;
+}
+#popRule .rule-scroll .popRuleBigTitle {
+  color: #0dc8d0;
+  font-weight: bold;
+  font-size: 0.3rem;
+  line-height: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0rem;
+}
+#popRule .rule-scroll .popRuleSubTitle {
+  color: #60fffd;
+  font-weight: 300;
+  font-size: 0.25rem;
+  line-height: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0rem;
+}
+
+/* ============================================================
+   彈�?：通用?�示訊息 #popMsg
+   ============================================================ */
+
+/* --- #popMsg 彈�?結�?（PC/橫�?：�?機直???1.2�?--- */
+#popMsg .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+#popMsg .popup .popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9.12rem;             /* 7.6 ? 1.2 */
+}
+#popMsg .popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.16rem;             /* 6.8 ? 1.2 */
+  aspect-ratio: 927 / 832;
+}
+#popMsg .popup .close {
+  top: 0.15rem;               /* 0.125 ? 1.2 */
+  right: 0.15rem;
+  width: 0.6rem;              /* 0.5 ? 1.2 */
+  height: 0.6rem;
+  aspect-ratio: 49 / 100;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/lottery_close_btn_m.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+}
+#popMsg .popup .close:hover {
+  background-position: bottom;
+}
+#popMsg .popup .close:not(:disabled):not(.disabled):focus,
+#popMsg .popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+#popMsg .popup p {
+  margin-bottom: 0;
+}
+
+/* --- #popMsg ?�景 --- */
+#popMsg .pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/pop-bg-mobile.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* --- #popMsg ?��???--- */
+#popMsg .popBtns {
+  display: flex;
+  width: 100%;
+  height: 0.828rem;           /* 0.69 ? 1.2 */
+  margin-top: 0.456rem;       /* 0.38 ? 1.2 */
+  justify-content: center;
+}
+#popMsg .popBtns button,
+#popMsg .popBtns a {
+  width: 3.336rem;            /* 2.78 ? 1.2 */
+  height: 0.828rem;           /* 0.69 ? 1.2 */
+  margin: 0 0.24rem;          /* 0.2 ? 1.2 */
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+#popMsg .popBtns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- #popMsg 確�??��? --- */
+#popMsg button.btn-msg-confirm {
+  margin-top: 1.2rem;         /* 1 ? 1.2 */
+  width: 3.84rem;             /* 3.2 ? 1.2 */
+  height: 1.056rem;           /* 0.88 ? 1.2 */
+  aspect-ratio: 384/105;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popMsg/btn_confirm_job2.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+#popMsg button.btn-msg-confirm:hover {
+  background-position: center bottom;
+}
+
+/* --- #popMsg ?�容?� --- */
+#popMsg .popMsgCont {
+  display: flex;
+  width: 7.8rem;              /* 6.5 ? 1.2 */
+  height: 6rem;               /* 5 ? 1.2 */
+  margin: 1.08rem auto 0;     /* 0.9 ? 1.2 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.6rem;          /* 0.5 ? 1.2 */
+  line-height: 0.864rem;      /* 0.72 ? 1.2 */
+  color: #1b1b1b;
+  background-color: rgba(9, 255, 0, 0);
+}
+
+/* ============================================================
+   彈�?：�?�?#popShare
+   （�?製自 #popMsg�?   ============================================================ */
+
+/* --- #popShare 彈�?結�? --- */
+#popShare .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+#popShare .popup .popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9.12rem;
+}
+#popShare .popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.16rem;
+  aspect-ratio: 927 / 832;
+}
+#popShare .popup .close {
+  top: 0.15rem;
+  right: 0.15rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  aspect-ratio: 49 / 100;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/lottery_close_btn_m.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+}
+#popShare .popup .close:hover {
+  background-position: bottom;
+}
+#popShare .popup .close:not(:disabled):not(.disabled):focus,
+#popShare .popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+#popShare .popup p {
+  margin-bottom: 0;
+}
+
+/* --- #popShare ?�景 --- */
+#popShare .pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/pop-bg-mobile.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* --- #popShare ?��???--- */
+#popShare .popBtns {
+  display: flex;
+  width: 100%;
+  height: 0.828rem;
+  margin-top: 0.456rem;
+  justify-content: center;
+}
+#popShare .popBtns button,
+#popShare .popBtns a {
+  width: 3.336rem;
+  height: 0.828rem;
+  margin: 0 0.24rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+#popShare .popBtns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- #popShare 確�??��? --- */
+#popShare button.btn-msg-confirm {
+  margin-top: 1.2rem;
+  width: 3.84rem;
+  height: 1.056rem;
+  aspect-ratio: 384/105;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popMsg/btn_confirm_job2.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+#popShare button.btn-msg-confirm:hover {
+  background-position: center bottom;
+}
+
+/* --- #popShare ?�容?� --- */
+#popShare .popShareCont {
+  display: flex;
+  width: 7.8rem;
+  height: 6rem;
+  margin: 1.08rem auto 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 0.864rem;
+  color: #1b1b1b;
+  background-color: rgba(9, 255, 0, 0);
+}
+
+/* ============================================================
+   彈�?：�??��???#popAward（PC ?��?
+   來�?：urban-missions_260228/css/popup.css
+   ============================================================ */
+
+/* --- ?�勵?�表 --- */
+.inviteLogList {
+  width: 14rem;
+  margin: 0 auto;
+  padding-top: 0.25rem;
+  color: #1b1b1b;
+  background-color: #2ce06200;
+}
+.inviteLogList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inviteLogList .tr p {
+  width: 50%;
+  text-align: center;
+  line-height: 3;
+  word-break: break-all;
+}
+#popAward .inviteLogList .tr p:nth-child(1) {
+  width: 43%;
+  box-sizing: border-box;
+}
+#popAward .inviteLogList .tr p:nth-child(2) {
+  width: 14%;
+}
+#popAward .inviteLogList .tbody .tr p:nth-child(2) {
+  border-left: 0.01rem dotted #1d1d1d;
+  border-right: 0.01rem dotted #1d1d1d;
+}
+#popAward .inviteLogList .tr p:nth-child(3),
+#popAward .inviteLogList .tr .serial-col {
+  width: 43%;
+}
+.inviteLogList .thead {
+  height: 0.7rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  line-height: 0.76rem;
+  padding-right: 0.29rem;     /* ?�軸�?0.14 + ?��? 0.15，�? tbody 對�? */
+}
+
+.inviteLogList .thead p {
+  color: #ff53a3; 
+}
+
+.inviteLogList .tbody {
+  width: 7.26rem;
+  height: 1.74rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+}
+.inviteLogList .tbody .tr {
+  border: 0.01rem solid #bebebe;
+  margin-bottom: 0.18rem;
+  padding: 0.08rem 0.1rem;
+  min-height: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+/* ?��?欄�?PC ?��?行顯�?YYYY/MM/DD，隱??<br> */
+.inviteLogList .tbody .tr p:nth-child(2) {
+  white-space: nowrap;
+}
+.inviteLogList .tbody .tr p:nth-child(2) br {
+  display: none;
+}
+
+/* --- ?�勵標�? --- */
+.popAwardTit {
+  height: 0.9rem;
+  width: auto;
+  aspect-ratio: 691 / 107;
+  margin: 0.15rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popAward/pop_award_tit.webp) no-repeat;
+  background-size: 100% 100%;
+}
+
+/* --- ?�勵?�容?� --- */
+.popAwardCont {
+  height: 4.5rem;
+  overflow: hidden;
+}
+.popAwardCont .type-empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popYyAwardCont {
+  height: 3.9rem;
+}
+.popYyAwardCont .type-empty {
+  height: 100%;
+  width: 100%;
+}
+#popAward .inviteLogList .tbody {
+  width: 14rem;
+  height: 4rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+  padding-right: 0.15rem;
+}
+
+/* --- ?��??��?�?--- */
+.notRewards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+}
+
+
+/* --- ?��??��? --- */
+.popTab {
+  width: 80%;
+  margin: 0 auto 0.1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+.popTab .tab_btn {
+  flex: 1;
+  width: 0;
+  height: auto;
+  aspect-ratio: 667 / 100;
+  background-color: transparent;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: transform 0.3s;
+}
+.popTab .tab_btn:hover {
+  transform: scale(1.1);
+}
+.popTab .tab_btn.active {
+  background-position: 0 0%;
+}
+.popTab .standard_tab {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popAward/standard_tab.webp);
+}
+.popTab .yy_tab {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popAward/yy_tab.webp);
+}
+
+/* --- 序�?欄�? --- */
+.serial-col {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.1rem;
+  padding: 0 0.15rem;
+  box-sizing: border-box;
+}
+.serial-code {
+  font-size: 0.2rem;
+  color: #1b1b1b;
+  word-break: break-all;
+  text-align: left;
+  line-height: 1.2;
+  flex: 1;
+}
+.serial-copy-btn {
+  padding: 0.1rem 0.2rem;
+  font-size: 0.18rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ff53a3;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.serial-copy-btn:hover {
+  background: #28e6ee;
+}
+
+/* --- ?�勵平台?��???--- */
+.popAwardPlatform {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  margin: 0.15rem auto 0;
+  width: 74%;
+}
+.popAwardPlatform .btn {
+  height: 0.6rem;
+  width: auto;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.popAwardPlatform .btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- ?�勵?�表高度?��?確�? .tbody ?�捲?��? --- */
+.popAwardCont .type-list {
+  height: 100%;
+}
+
+/* --- ?�勵平台標�? --- */
+.popAwardPlatform_tit {
+  width: 5.3rem;
+  height: 0.5rem;
+  margin: 0.45rem auto 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.popAwardPlatform_tit.yy {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popAward/pop_popAwardPlatform_yy_tit.webp);
+}
+.popAwardPlatform_tit.dl {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popAward/pop_popAwardPlatform_dl_tit.webp);
+}
+
+/* --- Demo ?��??��?（暫?��? --- */
+.popAwarddemo_btn {
+  position: absolute;
+  top: 0.15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.04rem 0.2rem;
+  font-size: 0.16rem;
+  color: #fff;
+  background: #dc3545;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  z-index: 99;
+}
+.popAwarddemo_btn:hover {
+  background: #c82333;
+}
+
+/* --- ?�勵?�景（PC ?��??��? --- */
+#popAward .pop-bg1 {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/pop-bg-award-pc.webp) no-repeat 0 0;
+  background-size: 100% auto;
+  aspect-ratio: 1743 / 883;
+}
+
+/* --- 移除 Bootstrap .btn ?��?�?--- */
+#popAward .popAwardPlatform .btn {
+  border-radius: 0;
+}
+
+/* --- ?�勵平台?��??��?（用 #popAward ?��? specificity ?�止?��? .ios 等干?��? --- */
+#popAward .popAwardPlatform.yy .btn.ps5 { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_ps5_yy.webp) !important; }
+#popAward .popAwardPlatform.yy .btn.android { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_android_yy.webp) !important; }
+#popAward .popAwardPlatform.yy .btn.ios { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_ios_yy.webp) !important; }
+#popAward .popAwardPlatform.yy .btn.windows { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_windows_yy.webp) !important; }
+#popAward .popAwardPlatform.yy .btn.googleplay { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_googleplay_yy.webp) !important; }
+
+#popAward .popAwardPlatform.dl .btn.ps5 { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_ps5_dl.webp) !important; }
+#popAward .popAwardPlatform.dl .btn.android { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_android_dl.webp) !important; }
+#popAward .popAwardPlatform.dl .btn.ios { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_ios_dl.webp) !important; }
+#popAward .popAwardPlatform.dl .btn.windows { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_windows_dl.webp) !important; }
+#popAward .popAwardPlatform.dl .btn.googleplay { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/store_googleplay_dl.webp) !important; }
+
+/* --- ?��???aspect-ratio（�?實�??��?比�?�?--- */
+.popAwardPlatform .btn.ps5 { aspect-ratio: 293 / 88; }
+.popAwardPlatform .btn.android { aspect-ratio: 305 / 90; }
+.popAwardPlatform .btn.ios { aspect-ratio: 244 / 90; }
+.popAwardPlatform .btn.windows { aspect-ratio: 301 / 89; }
+.popAwardPlatform .btn.googleplay { aspect-ratio: 389 / 89; }
+
+/* --- ?��??��???--- */
+.popAwardNone {
+  width: 8rem;
+  aspect-ratio: 792 / 144;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/pop_event/popAward/pop_award_none.webp) no-repeat center center;
+  background-size: 100% auto;
+}

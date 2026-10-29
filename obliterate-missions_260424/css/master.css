@@ -1,0 +1,3188 @@
+body {
+  background-color: #212121;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrap {
+  display: flex; /* Controlled by JS reset.js -> flex */
+  flex-direction: column;
+  height: auto;      /* ?��? 100vh 高度 */
+  width: 100%;
+  max-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  aspect-ratio: 2560 / 1284;
+}
+
+/* PC Specific Min-Height */
+body.is-pc {
+  min-height: 600px;
+}
+.wrap p,
+.wrap ul,
+.wrap li {
+  margin-bottom: 0;
+}
+.wrap a {
+  font-size: initial;
+}
+.nav {
+  position: absolute; /* ?�為絕�?定�?，�?佔用高度空�? */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  z-index: 999;      /* 確�??��?上層 */
+  background: none;   /* 移除?�景顏色/漸層 */
+  border-bottom: none; /* 移除下�?�?*/
+  pointer-events: none; /* 穿透�??��??��??�部?��??�?��? pointer-events */
+}
+
+/* Style2 Navbar (Secondary Page) */
+.nav.style2 {
+  position: relative;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/navbar_bg2.webp) no-repeat center;
+  background-size: cover;
+  pointer-events: auto;
+}
+
+/* 導覽?�內?��??��??�新?��?點�? */
+.nav .topLeft, 
+.nav .topRight {
+  pointer-events: auto;
+}
+
+.nav_bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto; 
+  z-index: -1; 
+  pointer-events: none; 
+}
+
+.event {
+  flex: 1;
+  position: relative;
+  width: auto;
+  overflow: hidden;
+  background-color: rgba(128, 255, 0, 0);
+}
+/* event_index */
+.event_index {
+  width: 100%;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/kv_bg.webp) no-repeat center;
+  background-size: 100%;
+}
+
+.index_logo_bar {
+  display: none;
+}
+
+.index_store_btns {
+  position: absolute;
+  bottom: 0.3rem; /* ?��??��? 2 調整位置 */
+  left: 0.4rem;
+  display: flex;
+  gap: 0.2rem;
+  z-index: 20;
+}
+.index_store_btns .store_btn {
+  display: block;
+  transition: transform 0.2s ease;
+}
+.index_store_btns .store_btn:hover {
+  transform: scale(1.05);
+}
+.index_store_btns .store_btn img {
+  height: 0.75rem;
+  width: auto;
+}
+
+
+
+.topRight {
+  position: absolute; /* Relative to .nav */
+  top: 50%;
+  transform: translateY(-20%);
+  right: 0.2rem;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  /* background-color: blue; */
+  gap: 0.6rem;
+}
+.topLeft {
+  position: absolute; /* Relative to .nav */
+  top: 50%;
+  transform: translateY(-20%);
+  left: 0.2rem;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+/* navbar style2 */
+
+.nav.style2 .topLeft,
+.nav.style2 .topRight {
+  transform: translateY(-50%);
+}
+
+.nav.style2 .index {
+  display: block; /* 確�???style2 下顯�?*/
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/home2.webp);
+  width: 0.625rem;
+  height: 0.61rem;
+}
+.nav.style2 .index::after{
+  background-color: #aaaaaa;
+}
+
+.nav.style2 .logo {
+  height: 0.89rem; /* ?��??�面維�??�本大�? */
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/logo_2.webp) no-repeat 0 0;
+  background-size: contain;
+}
+
+.nav.style2 .award {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/award2.webp);
+  width: 0.62rem;
+  height: 0.59rem;
+  position: relative;
+}
+.nav.style2 .award.is-new .dot {
+  position: absolute;
+  top: -0.1rem;
+  right: -0.04rem;
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: #ff0000;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.nav.style2 .share {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/share2.webp);
+  width: 0.55rem;
+  height: 0.65rem;
+}
+
+.nav.style2 .music {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/music2.webp);
+  width: 0.64rem;
+  height: 0.64rem;
+}
+
+.nav.style2 .rule {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/rules2.webp);
+  width: 0.35rem;
+  height: 0.61rem;
+}
+
+.nav.style2 .login .btn-login {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/login2.webp) no-repeat;
+  background-size: 100% auto;
+  width: 3rem;
+  height: 0.85rem;
+}
+
+.nav.style2 .login .task-user-info {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/btn_login_after2.webp) no-repeat center;
+  background-size: 100% auto;
+  width: 3rem;
+  height: 0.85rem;
+  padding: 0 0.76rem 0 0.4rem;
+}
+.nav.style2 .login .task-user-info p{
+  font-size: 0.3rem;
+  color: #434343;
+}
+
+.nav.style2 .login .task-user-info .btn-logout {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/btn_logout2.webp) no-repeat;
+  background-size: 100% auto;
+  width: 0.35rem;
+  height: 0.4rem;
+  top: 0.26rem;
+}
+/* ^^^navbar style2 end^^^^ */
+
+
+/* Navigation Buttons Common Styles - Cs@μ˦ */
+.index,
+.event_double_yyBtn,
+.event_loadingBtn,
+.event_awardBtn,
+.event_loginBtn,
+.event_timeBtn,
+.event_hintBtn,
+.rule,
+.share,
+.music,
+.award {
+  width: 0.89rem;
+  height: 0.89rem;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  border: none;
+  background-position: 0 0;
+  position: relative; 
+}
+.pre{
+  order: 0;
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 3.4rem;
+  height: 0.85rem;
+  background-size: contain;
+  background-position: center;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/pre_btn.webp) no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+.pre:hover{
+  background-position: bottom;
+}
+/* ?�勵?��??��?紅�? */
+.award.is-new .dot {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: #ff0000;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Hover Effect: Move background to top */
+.index:hover,
+.event_mapBtn:hover,
+.event_loadingBtn:hover,
+.event_awardBtn:hover,
+.event_loginBtn:hover,
+.rule:hover,
+.share:hover,
+.award:hover {
+  background-position: 0 100%;
+}
+
+.index {
+  display: none; /* ?�設?��??�隱??*/
+  position: relative;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/nav/index.webp);
+  background-color: #63eded00;
+  margin: 0 0.4rem 0 0.2rem; 
+}
+
+.index::after {
+  content: "";
+  position: absolute;
+  right: -0.3rem; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 0.4rem;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.event_mapBtn,
+.event_double_yyBtn,
+.event_loadingBtn,
+.event_awardBtn,
+.event_timeBtn,
+.event_hintBtn,
+.event_loginBtn {
+  background-color: #e4ec6f;
+  font-size: 0.15rem;
+  color: #000;
+  margin-left: 0.2rem;
+}
+
+.logo {
+  margin-left: 0.2rem;
+  height: 1.09rem; 
+  width: auto;
+  aspect-ratio: 967/664; 
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/nav/logo.webp)
+    no-repeat 0 0;
+  background-size: contain;
+}
+
+
+.login {
+  position: relative;
+  width: auto; /* Flexible width */
+  height: auto; /* Flexible height */
+  min-height: 0.69rem; /* Minimum height to match other buttons */
+  background-color: transparent;
+  font-size: 0.2rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header Login Button Adaptation */
+.login .btn-login {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 3.4rem; /* Original width */
+  height: 0.89rem; /* Original height */
+  background-size: contain;
+  background-position: center;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/btn_login.webp)
+    no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+.login .btn-login:hover{
+  background-position: 0 100%;
+}
+.lotteryTask .btn-login {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/btn-login.png)
+    no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  height: 0.71rem;
+  left: 0.6rem;
+  position: absolute;
+  top: 0.35rem;
+  width: 2.1rem;
+}
+
+/* Header User Info Adaptation */
+.login .task-user-info {
+  display: flex;
+  position: relative; /* Relative positioning to take up space */
+  left: auto;
+  top: auto;
+  width: 3.5rem; /* Original width */
+  height: 0.89rem; /* Original height */
+  padding: 0 0.76rem 0 0.5rem; /* Original padding */
+  align-items: center;
+  /* border-radius: 0.2rem; */
+  /* background-color: #262936; */
+  /* border: 0.025rem solid #6e7693; */
+  box-sizing: border-box;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/btn_login_after.webp)no-repeat center;
+  background-size: 100% auto;
+}
+
+.login .task-icon-account {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/icon-account.png)
+    no-repeat bottom;
+  background-size: 100% auto;
+  height: 0.62rem;
+  left: 0.12rem;
+  position: absolute;
+  top: 50%; /* �אּ 50% */
+  transform: translateY(-50%); 
+  width: 0.62rem;
+}
+
+.login .task-user-info .btn-logout {
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/btn_logout.webp)
+    no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  height: 0.43rem;
+  position: absolute;
+  right: 0.32rem;
+  top: 0.24rem;
+  width: 0.43rem;
+}
+
+.login .task-user-info p {
+  color: #f5f5f5;
+  font-size: 0.35rem;
+  font-weight: bold;
+  height: 100%;
+  line-height: 0.81rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.coin {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */ 
+  padding-left: 0.9rem; 
+  padding-right: 0.2rem;
+  width: 3rem; 
+  height: 0.75rem;
+  background-color: #262936;
+  border: 0.02rem solid #6e7693;
+  border-radius: 0.2rem;
+  box-sizing: border-box;
+  font-size: 0.3rem;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+.coin .task-icon-coin {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/nav/coin.webp)
+    no-repeat;
+  background-size: 100% auto;
+  height: 0.62rem;
+  left: 0.12rem;
+  position: absolute;
+  top: 0.12rem;
+  width: 0.62rem;
+}
+.rule {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/rules.webp);
+  /* background-color: #d4ed63; */
+}
+.award {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/award.webp);
+}
+.share {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/share.webp);
+}
+.music {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/nav/music.webp);
+}
+.music.off {
+  background-position: 0 100%;
+}
+.music:hover {
+  /* background-position: 0 100% !important; */
+}
+
+/* ----------------------------------------
+ * event_index
+ * ---------------------------------------- 
+ */
+
+.event_index .yyBtn {
+  bottom: 2rem;
+  right: 5vw;
+  width: 4.68rem;
+  height: 1.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/yyBtn.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.event_index .yyBtn:hover {
+  background-position: 0 50%;
+}
+.event_index .yyBtn.active {
+  background-position: 0 bottom;
+  cursor: default;
+}
+
+.event_index .double_yyBtn {
+  bottom: 0.9rem;
+  right: 28%;
+  width: 2.8rem;
+  height: auto;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  z-index: 20;
+}
+
+.event_index .double_yyBtn .urban_icon_ios,
+.event_index .double_yyBtn .urban_icon_android {
+  width: 100%;
+  margin: 0;
+}
+.event_index .double_yyBtn img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+.event_index .double_yyBtn a:hover img {
+  transform: scale(1.05);
+}
+
+.event_main_hint {
+  animation: btnUpDown 0.8s ease-in-out infinite alternate;
+  bottom: auto;
+  /* right: auto; */
+  top: 90%;
+  left: 41.5%;
+  margin-left: 0;
+  /* margin-left: -2.03rem; Centered: width 4.06rem / 2 */
+  width: 4.06rem;
+  height: 1.53rem;
+  /* background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/event_main_btn_hint.webp)
+    no-repeat 0 0; */
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/scroll_icon.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  filter: drop-shadow(0px 7px 5px rgba(0, 0, 0, 0.5));
+}
+
+.event_index .bigTitle {
+  width: 12rem;
+  height: 3.2rem;
+  background-color: #1da08100;
+  bottom: auto;
+  left: 50%;
+  top: 55%;
+  transform: translateX(-50%);
+  /* margin-left: -6rem; Centered: width 12rem / 2 */
+}
+.event_index .bigTitle img {
+  width: 100%;
+  height: 100%;
+}
+
+.event_index .event_main_btn {
+  bottom: 0.7rem;
+  right: auto;
+  left: 50%;
+  margin-left: 3.9rem;
+  width: 4.68rem;
+  height: 1.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/event_main_btn_go.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.arrow {
+  bottom: 1.1rem;
+  left: 50%;
+  margin-left: -0.22rem;
+  width: 0.47rem;
+  height: 0.29rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/arrow.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  animation: arrowUpDown 0.5s ease-in-out infinite alternate;
+  display: none;
+}
+
+/* ----------------------------------------
+ * event_index2
+ * ---------------------------------------- */
+
+.event_index2 {
+  width: 100%;
+  height: 100%;
+  position: relative; /* ?��??��?定�?，確保能?��? Footer */
+  display: flex; 
+  pointer-events: none; /* 穿透�??�層，防止�???Swiper ?��?滑�?，�??�容?�要恢復�???*/
+}
+
+
+/* ?�部標�? */
+.event_index2 .bigTitle {
+  /* position: relative; */
+  width: 100%; /* 跟隨?�層寬度，解決�??��?�?*/
+  height: auto;
+  bottom: auto;
+  left: auto;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event_index2 .bigTitle img {
+  width: 4rem;
+  height: auto;
+}
+
+/* 底部?��??��?*/
+.event_index2 .index2_bottom_ui {
+  position: absolute;
+  bottom: 0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* ?��??��?�?.5s 後�?淡入?��?*/
+.event_index2.is-active .index2_bottom_ui {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0.5s;
+}
+
+.event_index2 .event_main_hint {
+  position: relative;
+  width: 6rem;
+  height: 1.5rem;
+  margin-bottom: 0.2rem;
+  bottom: -0.5rem;
+  left: 3rem;
+  margin-left: 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/big_title_click.webp)no-repeat;
+  background-size: 100% auto;
+}
+
+.event_index2 .event_map_btn {
+  width: 4.68rem;
+  height: 1.5rem;
+  margin-left: 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map_go_btn.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  pointer-events: auto; /* 確�??�部?��??��???*/
+  animation: btnUpDown 0.8s ease-in-out infinite alternate;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.9));
+}
+
+
+/* Swiper ?�景輪播�?? */
+.index2Swiper {
+  position: relative; /* 從�?對改?�相對�?位�?使其跟隨 Flex ?��? */
+  flex: 1; /* ?��?佔滿左側?�塊剩下�??�?�空??*/
+  height: 100%;
+  z-index: 0;
+  pointer-events: auto; /* ?�復輪播?��?點�?/滑�? */
+}
+
+.index2Swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+/* ----------------------------------------
+ * event_index2 - Swiper ?�景?�banner
+ * ---------------------------------------- */
+
+/* banner?�層 */
+.swiper_art_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: auto; /* ?�改??auto 以顯�?cursor: pointer 並接?��???*/
+  width: 12rem; /* ?��??�求調?�大�?*/
+  transition: all 0.6s ease-in-out;
+  opacity: 1;
+  animation: restoreArtText 0.6s forwards ease-in-out; 
+  cursor: pointer;
+}
+
+.swiper_art_text img {
+  width: 100%;
+  height: auto;
+}
+/* ?�度?��?輪播?��??��??��?黑色?�罩 */
+.swiper-wrapper::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); 
+  transition: opacity 0.8s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ??active ?��??��?字�??��?變為 none ?��??��??��? */
+.event_index2.is-active .swiper_art_text {
+  pointer-events: none;
+}
+
+.index2Swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px); /* ?��?模�??�??*/
+  transition: filter 0.8s ease; /* 平�??�渡 */
+  pointer-events: auto;
+}
+
+/* 點�?觸發 (??JS ?��? .is-active)：�??��?清晰?��?術�?消失 (消散?�解) */
+.event_index2.is-active .index2Swiper .swiper-slide img {
+  filter: blur(0);
+}
+
+.event_index2.is-active .index2Swiper .swiper-wrapper::after {
+  opacity: 0;
+}
+
+.event_index2.is-active .index2Swiper .swiper_art_text {
+  animation: dissolveArtText 0.8s forwards ease-in-out;
+}
+/* swiper 左�?角�????��? */
+/* 左�?�?UI 容器 (?��? + ?��?) */
+.index2_ui_left {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.event_index2.is-active .index2_ui_left {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ?��?資�? */
+.swiper_info {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.9);
+  transition: opacity 0.4s ease;
+}
+.location_name{
+  font-size: 0.48rem;
+}
+.swiper_info .status_text {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+/* ?�方形�??��? */
+.index2Swiper .swiper-pagination-horizontal {
+  position: static;
+  width: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.index2Swiper .swiper-pagination-bullet {
+  width: 1.2rem;
+  height: 2px;
+  border-radius: 0;
+  background: #626262;
+  opacity: 1;
+  margin: 0 !important;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.index2Swiper .swiper-pagination-bullet-active {
+  background: #e2e2e2;
+  width: 1.2rem;
+}
+
+/* 左右?��??��? */
+.swiper_left, .swiper_right {
+  width: 3rem;
+  height: 3rem;
+  margin-top: calc(-3rem / 2);
+  z-index: 25;
+  transition: opacity 0.5s ease;
+  opacity: 0 !important; /* 強制覆�? swiper ?�設 */
+  pointer-events: none;
+}
+
+.event_index2.is-active .swiper_left,
+.event_index2.is-active .swiper_right {
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+.swiper_left::after, .swiper_right::after {
+  display: none;
+}
+
+.swiper_left {
+  background: url('https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/swiper_left.webp') no-repeat center/contain !important;
+  left: 1rem;
+}
+
+.swiper_right {
+  background: url('https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/swiper_right.webp') no-repeat center/contain !important;
+  right: 1rem;
+}
+
+/* ?��??��?淡出?�畫類�? */
+.swiper_info.is-changing {
+  opacity: 0;
+}
+/* ^^^ swiper 左�?角�????��? end ^^^ */
+
+
+/* ----------------------------------------
+ * event_loading - loading
+ * ---------------------------------------- */
+
+.event_loading {
+  display: none;
+  background-color: #000000e3;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/load_bg.webp)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.event_loading .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+}
+
+.event_loading .loading_ani {
+  width: 10rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1da08100;
+}
+
+.event_loading .loading_ani img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.event_loading .loading_ani .character {
+  width: 3rem;
+}
+
+.event_loading .loading_ani .loading {
+  width: 1.5rem;
+  filter: hue-rotate(318deg) brightness(3) blur(0.5px);
+  /* mix-blend-mode: screen; */
+}
+
+.event_loading .word_box_1 {
+  width: 100%;
+  text-align: center;
+}
+
+.event_loading .word_box_1 p {
+  color: rgb(255, 255, 255);
+  font-size: 0.4rem; /* �ϥ� rem ���O���@�P */
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+/*
+ * ----------------------------------------
+ * event_map - 活�??��???
+ * ----------------------------------------
+ */
+.event_map {
+  display: none;
+}
+
+
+.event_map img{
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.event_map .content{
+  width: 100%;
+  height: 100%;
+  padding: 0vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #07e0ae;
+}
+/* 活�??��??��? */
+.map_switch_btn{
+
+}
+.map_switch_btn.tw{
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_tw.webp)no-repeat;
+  background-size: 100% 200%;
+}
+.map_switch_btn.tw:hover{
+  background-position: 0% 100%;
+}
+.map_switch_btn.hk{
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_hk.webp)no-repeat;
+  background-size: 100% 200%;
+}
+.map_switch_btn.hk:hover{
+  background-position: 0% 100%;
+}
+
+
+/* ^^^ 活�??��??��?end ^^^ */
+
+/* 活�??��??��??��? */
+.event_map .map_switch{
+  height: 100%;
+  flex: 0 0 15%;
+  background-color: #077ee0;
+  display: flex;
+  align-items: stretch; /* 強制子�?素�?度�?�?*/
+}
+.event_map .map_switch .switch_bottom{
+  height: 100%;
+  flex: 0 0 35%;
+  background-color: #1180ff;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.event_map .map_switch .map_switch_btn {
+  flex: 0 0 50%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  background-size: 100% 200%;
+  background-position: top;
+  background-repeat: no-repeat;
+  transition: background-position 0.3s;
+}
+
+.event_map .map_switch_btn.tw {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_tw.webp);
+  background-color: transparent;
+}
+.event_map .map_switch_btn.hk {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_hk.webp);
+  background-color: transparent;
+}
+
+.event_map .map_switch_btn:hover,
+.event_map .map_switch_btn.active {
+  background-position: bottom;
+}
+/* 活�??��??�度�?*/
+.event_map .map_switch .switch_bar{
+  height: 100%;
+  flex: 0 0 65%;
+  background-color: #0052b1;
+  display: block; /* ?�為 block 減�? flex 嵌�?導致?��?�?*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*  活�??�度�? */
+.cus-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #007bff; /* ?��?保�??�景?��?對�? */
+  margin: 0;
+  padding: 0;
+}
+
+/* ?�景�?*/
+.track-bg, .track-frame {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  transform: translateY(-50%);
+  display: block;
+  object-fit: fill !important;
+}
+
+/* 填�?條容??- ?��??��??��??��? */
+.track-fill-wrap {
+  position: absolute;
+  left: 0.01%; 
+  right: 2%; /* ?�步調整?�側 */
+  top: 50%;
+  height: 1.5rem;
+  transform: translateY(-50%);
+  z-index: 2;
+  overflow: hidden; /* 確�?填�?條�??��??��?被�???*/
+}
+
+/* 填�?�?(裁剪�? */
+.track-fill {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 0%; /* JS ?�制 */
+  height: 100%;
+  overflow: hidden; /* ?��?：由?��?層�?責�???*/
+  will-change: width;
+}
+
+/* 填�?條內�?(?�景�? - 保�??��?寬度不縮??*/
+.track-fill-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 17rem; /* 設�?足�?寬度以�??��??�可?�長�?*/
+  height: 100%;
+  background-image: url('https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/track-fill.webp');
+  background-size: cover; /* 維�?比�?縮放：解決�?角�?形、解�?78% ?��??�解決平?��?�?*/
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+/* 點�?容器 */
+.steps {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 3;
+}
+
+/* 點�? */
+.step {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: not-allowed;
+}
+
+/* 點�?位置 - 依照?�考�?微調?��?�?*/
+.step[data-step="0"] { left: 24%; }
+.step[data-step="1"] { left: 47%; }
+.step[data-step="2"] { left: 70%; }
+.step[data-step="3"] { left: 92%; }
+
+/* ?��? */
+.icon {
+  position: relative;
+  width: 1.1rem;
+  height: 1.1rem;
+  background-image: url('https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/bar_dot_gray.webp');
+  background-size: cover;
+  z-index: 5;
+}
+
+/* ?�勵??*/
+.reward {
+  position: absolute;
+  width: 0.32rem;
+  height: 0.32rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ?�勾 */
+.check {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/bar_dot_done.webp');
+  background-size: cover;
+  opacity: 0;
+}
+
+/* 完�??�??*/
+.step.done .icon {
+  background-image: url('https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/bar_dot_done.webp');
+}
+
+.step.done .check {
+  opacity: 1;
+}
+
+/* ?��? */
+.label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -0.2rem;
+  font-size: 0.25rem;
+  color: #ffffff;
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 10; /* 確�???icon 之�? */
+  /* 黑�?�?+ ?�色外�???*/
+  text-shadow: 
+    -0.01rem -0.01rem 0 #000,  
+     0.01rem -0.01rem 0 #000,
+    -0.01rem  0.01rem 0 #000,
+     0.01rem  0.01rem 0 #000,
+     0 0 0.08rem #ffffff;
+}
+
+/* ?��???*/
+.step.clickable {
+  cursor: pointer;
+}
+/* ^^^ 活�??�度條end ^^^ */
+
+
+/* 活�??��??�容 */
+.event_map .map_content{
+  height: 100%;
+  flex: 0 0 85%;
+  background-color: #02428b;
+  display: flex;
+}
+/* 活�??��?任�? */
+.event_map .map_mission{
+  height: 100%;
+  flex: 0 0 35%;
+  background-color: #18f7ff;
+  display: flex;
+  flex-direction: column;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/event_map_mission_bg1.webp) no-repeat center;
+  background-size: 100% 100%;
+  position: relative; /* 確�??�部絕�?定�??��? */
+}
+.event_map .map_mission .map_banner{
+  height: 100%;
+  flex: 0 0 11%;
+  display: flex;
+  justify-content: center;
+  /* align-items: start; */
+  min-height: 0;
+  overflow: hidden;
+}
+.event_map .map_mission .map_banner picture,
+.event_map .map_mission .map_banner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.event_map .map_mission .map_site_cont{
+  height: 100%;
+  flex: 0 0 65%;
+  min-height: 0;         /* ?�止被內?�內容�??��?�?*/
+  overflow: visible;     /* 修改：�?�?Tooltip 溢出容器不被?��? */
+  position: relative;
+}
+.event_map .map_site{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: end; 
+  width: 100%;
+  height: 100%;           /* ?�滿 58% ?��?�?*/
+  gap: 0.1rem;
+  padding: 0.2rem 0;
+  box-sizing: border-box;
+}
+.event_map .map_site_item {
+  flex: 0 1 28%;          /* ?�許?��?度�?足�??��?縮�? */
+  aspect-ratio: 1 / 1.05;    /* ?��?：固定寬高�?，�?被內容�???*/
+  max-width: 3rem;        /* ?�制?�大寬度�??��??�螢幕�?變�?太大 */
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 200%;
+  min-height: 0;
+  position: relative; /* 定�??��? */
+}
+/* .event_map .map_site_item:hover {
+  transform: scale(1.05);
+  z-index: 50; 
+} */
+
+/* 任務按鈕(PC Hover) */
+.event_map .map_site_item_tip {
+  display: none; /* ?�設?��? */
+  pointer-events: none;
+  position: absolute;
+  top: 1.95rem; /* ???移 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.37rem;
+  height: 1.95rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/floating_tt.webp) no-repeat center;
+  background-size: 100% 100%;
+  z-index: 100;
+
+  
+  /* ?��??��? */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 0.24rem;
+  font-weight: bold;
+  line-height: 1.3;
+  letter-spacing: 0.03rem;
+  /* padding-top: 0.23rem;
+  padding-bottom: 0.1rem; */
+  box-sizing: border-box;
+  padding: 0.3rem 0.1rem 0.1rem;
+}
+.event_map .map_site_item.tea:hover .map_site_item_tip{
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/floating_tt_large.webp) no-repeat center;
+  background-size: 100% 100%;
+  height: 2.9rem;
+}
+.event_map .map_site_item.seven:hover .map_site_item_tip{
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/floating_tt_large.webp) no-repeat center;
+  background-size: 100% 100%;
+  height: 2.4rem;
+}
+
+.event_map .map_site_item:hover .map_site_item_tip {
+  display: flex !important;
+}
+
+/* ?�?��?字�???*/
+.map_site_item_tip .status_not {
+  color: #fb69a7;
+  font-weight: bold;
+}
+.map_site_item_tip .status_done {
+  color: #11cac8;
+  font-weight: bold;
+}
+/* ^^^ 任�??�示�?(PC Hover) end ^^^*/
+
+/* ?�個�?位�??�景?�路�?*/
+.event_map .map_site_item.tp_street { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_tp_street.webp); }
+.event_map .map_site_item.bus { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_bus.webp); }
+.event_map .map_site_item.tp_mrt { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_tp_mrt.webp); }
+.event_map .map_site_item.zx_st { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_zx_st.webp); }
+.event_map .map_site_item.ks_mrt { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_ks_mrt.webp); }
+.event_map .map_site_item.tea { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_tea.webp); }
+.event_map .map_site_item.mail { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_mail.webp); }
+.event_map .map_site_item.seven { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_711.webp); }
+.event_map .map_site_item.mrt_lightbox { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_mrt_lightbox.webp); }
+.event_map .map_site_item.bus_lightbox { background-image: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_bus_lightbox.webp); }
+
+.event_map .map_mission .map_btn{
+  height: 100%;
+  flex: 0 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event_map .map_btn .map_btn_receive{
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/task1_btn.webp) no-repeat;
+  background-size: 100% 200%;
+  height: 0.81rem;
+  width: 2.9rem;
+}
+.event_map .map_btn .map_btn_receive:hover{
+  background-position: bottom;
+}
+.event_map .map_mission .map_tt{
+  height: 100%;
+  flex: 0 0 17%;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/map_tt.webp) no-repeat center;
+  background-size: 58% auto;
+  background-position: 50% 50%;
+  position: relative;
+  z-index: 10; /* 確�?標�?層�?高於角色 */
+}
+/* PC ?��?裝飾?�件�?? (Nanally & Rat) */
+@media (min-width: 1025px) {
+  .event_map .map_mission .nanally{
+    display: block;
+    position: absolute;
+    bottom: -0.1rem;      /* 依�?求微調�?使其稍微超出底部?��?�?*/
+    z-index: 5;          /* 低於 map_tt ??10 */
+    pointer-events: none; /* 穿透�???*/
+  }
+  .event_map .map_mission .rat{
+    display: block;
+    position: absolute;
+    bottom: 0.7rem;      /* 依�?求微調�?使其稍微超出底部?��?�?*/
+    z-index: 5;          /* 低於 map_tt ??10 */
+    pointer-events: none;
+  }
+
+  .event_map .map_mission .nanally {
+    left: -0.2rem;       /* ?�左?�移 */
+    width: 3rem;         /* 請�??��?比�?調整寬度 */
+    aspect-ratio: 1 / 1; 
+    background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/nanally.webp) no-repeat center bottom;
+    background-size: contain;
+  }
+
+  .event_map .map_mission .rat {
+    right: 0.3rem;       /* ?�右?�移 */
+    width: 2rem;       /* 請�??��?比�?調整寬度 */
+    aspect-ratio: 1 / 1;
+    background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/rat.webp) no-repeat center bottom;
+    background-size: contain;
+  }
+}
+
+/* ?��??��?平板：隱?��?飾物�?*/
+@media (max-width: 1024px) {
+  .event_map .map_mission .nanally,
+  .event_map .map_mission .rat {
+    display: none !important;
+  }
+}
+/* 活�??��?泯除??(輪播?�) */
+.event_map .map_bg {
+  position: relative;
+  height: 100%;
+  flex: 0 0 65%;
+  background-color: #000000;
+  overflow: hidden;
+}
+.event_map .map_bg_item, 
+.event_map .map_bg_tw, 
+.event_map .map_bg_hk {
+  width: 100%;
+  height: 100%;
+}
+.event_map .carousel-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+.event_map .carousel-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* ?�大?��???*/
+.event_map .map_magnifier {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/event_map/btn_zoom_in.webp) no-repeat center;
+  background-size: contain;
+  z-index: 10;
+  cursor: pointer;
+  border: none;
+}
+
+/* Lightbox ?�箱 */
+.map_lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.map_lightbox .lightbox_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.map_lightbox .full_img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.map_lightbox .lightbox_close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/obliterate-missions_260424/images/close.png) no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.3s;
+}
+.map_lightbox .lightbox_close:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+
+/*
+ * ----------------------------------------
+ * event_double_yy - xw
+ * ----------------------------------------
+ */
+.event_double_yy {
+  display: none; /* �w�]���áA�u���Q�I���ɤ~���?*/
+}
+
+.event_double_yy .event_main_btn {
+  bottom: 2%;
+  right: 2%;
+  height: 3rem;
+  aspect-ratio: 338/380;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/yy/event_main_btn.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  background-color: #766fb100;
+  z-index: 50;
+  animation: btnUpDown 0.8s ease-in-out infinite alternate;
+}
+.event_double_yy .content {
+  width: 100%;
+  height: 100%;
+  padding: 0vw;
+  background-color: #1d40a000;
+
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/event_double_yy_bg.webp);
+  background-size: cover;
+  background-position: bottom;
+}
+.event_double_yy .board {
+  width: 55%;
+  height: 100%;
+  background-color: #1da08100;
+  top: 0;
+  left: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.event_double_yy .board .board_top {
+  width: 100%;
+  aspect-ratio: 1438 / 288;
+  height: auto;
+  margin-top: 3%;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/yy/board_top.webp);
+  margin-bottom: -1px; /* ������V���_ */
+  position: relative;
+}
+.event_double_yy .board .board_bottom {
+  width: 100%;
+  aspect-ratio: 1438 / 81;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/yy/board_bottom.webp);
+  margin-top: -1px; /* ������V���_ */
+  position: relative;
+}
+.event_double_yy .board .board_main {
+  width: 100%;
+  padding: 0 3%;
+  height: 0; /* ����ק�G�j��̿�?flex-grow ���t���� */
+  flex-grow: 1; /* �۰ʶ񺡤��� */
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/yy/board.webp);
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  min-height: 0;
+  position: relative;
+}
+.board_main .giftbox {
+  width: 100%;
+  height: 100%;
+  background-color: #3d82c700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 5%;
+  gap: 5%;
+}
+.board_main .giftbox .gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45%; /* Share space */
+  height: 100%;
+  background-color: #b6151500;
+}
+.board_main .giftbox .gift img {
+  width: auto;
+  height: auto;
+  aspect-ratio: 472/600;
+  max-height: 70%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  margin-bottom: 5%;
+}
+.board_main .giftbox .gift.done img {
+  object-position: 0 100%;
+}
+.board_main .giftbox .gift span {
+  height: 0.45rem;
+  font-size: 0.45rem;
+  line-height: 0.45rem;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  padding: 0.05rem 0.1rem;
+  border-radius: 0.1rem;
+  white-space: nowrap;
+}
+
+.event_double_yy .board .event_double_yy_btn {
+  width: 40%;
+  aspect-ratio: 727 / 150;
+  height: auto;
+  background-color: transparent;
+  margin: 2% auto 3% auto;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/yy/double_yybtn.webp);
+  background-size: 100% 300%; /* 3�Ӫ��A */
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  transform: scale(1);
+  transition: transform 0.3s;
+  z-index: 50;
+  animation: btn-scale-loop 1.5s infinite ease-in-out;
+}
+
+.event_double_yy .board .event_double_yy_btn:hover {
+  animation: none;
+  transform: scale(1.2);
+}
+.event_double_yy .board .event_double_yy_btn.yy {
+  background-position: 0 0%;
+}
+.event_double_yy .board .event_double_yy_btn.lottery {
+  background-position: 0 50%;
+}
+.event_double_yy .board .event_double_yy_btn.lottery_done {
+  background-position: 0 100%;
+  animation: none;
+  filter: grayscale(100%);
+  pointer-events: none;
+  cursor: default;
+}
+
+.picBox {
+  height: 100%;
+}
+
+.picBox.front_1 {
+  z-index: 2;
+  width: 42%;
+  right: 2%;
+  background-color: #4534e200;
+}
+.picBox.front_2 {
+  z-index: 2;
+  width: 20%;
+  left: 0%;
+  background-color: #4534e200;
+}
+.picBox.back {
+  z-index: 0;
+  width: 20%;
+  left: 0;
+  background-color: #e27a3400;
+}
+
+.chara img {
+  width: 100%;
+  height: 100%;
+}
+.chara_1 {
+  width: 138%;
+  top: 3.5%;
+  z-index: 3;
+}
+.chara_2 {
+  width: 110%;
+  top: 60%;
+  z-index: 2;
+}
+.chara_3 {
+  width: 130%;
+  top: 20%;
+  z-index: 0;
+}
+
+.star {
+  aspect-ratio: 94/91;
+  z-index: 3;
+}
+.star::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: star-loop 4s infinite ease-in-out;
+}
+.star_pink::after {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/yy/star_pink.webp);
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+.star_blue::after {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/yy/star_blue.webp);
+  animation-duration: 3.5s;
+  animation-delay: 0s;
+}
+.star_yellow::after {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/yy/star_yellow.webp);
+  animation-duration: 5s;
+  animation-delay: 0s;
+}
+
+.star_pink_1 {
+  width: 6%;
+  bottom: 41%;
+  right: -2%;
+  transform: rotate(10deg);
+}
+.star_blue_1 {
+  width: 5%;
+  bottom: 0%;
+  left: -2.4%;
+  transform: rotate(30deg);
+}
+.star_yellow_1 {
+  width: 3%;
+  bottom: -12%;
+  left: 2%;
+  transform: rotate(20deg);
+}
+.star_pink_2 {
+  width: 4.5%;
+  bottom: 18%;
+  left: -1.5%;
+  transform: rotate(45deg);
+}
+.star_blue_2 {
+  width: 4.5%;
+  bottom: 45%;
+  right: -3%;
+  transform: rotate(10deg);
+}
+.star_yellow_2 {
+  width: 3.5%;
+  bottom: -30%;
+  right: 12%;
+  transform: rotate(45deg);
+}
+
+/*
+ * ----------------------------------------
+ * desk_double_yy - �����x�w������ (Desk Version)
+ * ----------------------------------------
+ */
+
+
+.desk_double_yy .picBox.front_1 {
+  z-index: 2;
+  width: 40%;
+  right: -35%;
+  background-color: #4534e200;
+}
+.desk_double_yy .chara_1 {
+  width: 175%;
+  top: 18%;
+  right: 28%;
+  z-index: 3;
+}
+
+/*
+ * ----------------------------------------
+ * event_main - ���ʪ�l����(�a��)
+ * ----------------------------------------
+ */
+
+.event_main {
+  display: none; /* �w�]���áA�u���Q�I���ɤ~���?*/
+}
+
+.fade_in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event_main .content {
+  width: 100%;
+  height: 100%;
+  padding: 0vw;
+  background-color: #1d40a000;
+  display: flex;
+  justify-content: flex-start; /* ���?flex ���t */
+  align-items: center;
+  flex-direction: row;
+
+}
+
+/* �������?*/
+.event_main .desk {
+  position: relative;
+  flex: 0 0 47%; /* �i�}�ɦ� 47% */
+  height: 100%;
+  background-color: #a01d1d00;
+  z-index: 5;
+  transition: flex-basis 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* ��a�Ϧ��X�ɡA�ө��϶��X�i */
+.event_main:has(.map_desk.collapsed) .desk {
+  flex-basis: 97%; /* 5% �����s */
+}
+
+/* ��a�ϥ��ù� (Zoom) �ɡA�ө��϶����?*/
+.event_main.is_zoomed .desk {
+  flex-basis: 0% !important;
+  opacity: 0;
+  pointer-events: none;
+}
+/* ��l�����e�� */
+.event_main .desk .desk_base.desk_hint {
+  display: flex;
+}
+
+/* ���e�Ϥ� */
+.event_main .desk .desk_base .hint {
+  width: 8rem;
+  aspect-ratio: 550 / 343;
+  height: auto;
+
+  /* �I���ؼ˦� */
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/hint_base.webp);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3%; /* �w�d�ت���Z */
+  box-sizing: border-box;
+
+  /* �ʵe��l���A */
+  opacity: 0;
+  transform: translateY(-30%);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+/* �ʵe�i�����A (fade_in �� desk_anim_in) */
+.event_main .desk .desk_base.fade_in .hint,
+.event_main .desk .desk_base.desk_anim_in .hint {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+/* ��¦���?*/
+.event_main .desk .desk_base {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 1;
+  background-color: #27ff1300;
+  background-color: #27ff1300;
+  display: none; /* �w�]���� */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0.1rem 0.25rem;
+}
+.event_main .content:has(.map_collapse_btn.state_close) .desk .desk_base {
+  padding: 0.1rem 0.5rem;
+}
+
+/* ��ܪ�l���� */
+.event_main .desk .desk_base.hint {
+  display: flex;
+}
+
+/* �����ʵe Class */
+.desk_anim_in {
+  display: flex !important;
+  animation: deskSlideIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.desk_anim_out {
+  display: flex !important;
+  animation: deskSlideOut 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes deskSlideIn {
+  0% {
+    transform: translate(50%, 50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(50%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes deskSlideOut {
+  0% {
+    transform: translate(50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(50%, -150%);
+    opacity: 0;
+  }
+}
+
+.event_main .desk .desk_base.desk_A2 {
+  display: none;
+}
+.event_main .desk .desk_base .desk_title {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  height: auto;
+  max-width: 1.65rem;
+  aspect-ratio: 212 / 1074;
+  flex-shrink: 0;
+  background-color: #a01d1d00;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 2%; /* Gap */
+}
+.desk_right_col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+.event_main .desk .desk_base .desk_pic {
+  width: 90%;
+  flex-shrink: 0;
+  aspect-ratio: 1007 / 408;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto 0.1rem auto;
+}
+
+/* .event_main .desk .desk_base.desk_A1 .desk_pic,
+.event_main .desk .desk_base.desk_A2 .desk_pic{
+  width: 80%;
+  min-width: 20%;
+  flex-shrink: 0;
+  aspect-ratio: 1007 / 408;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 0.1rem;
+} */
+.event_main .content:has(.map_collapse_btn.state_close) .desk_pic {
+  display: none !important;
+}
+.event_main .content:has(.map_collapse_btn.state_close) .content_A1 .time_hint {
+  transform: scale(1.45);
+  transform-origin: center;
+}
+.event_main .content:has(.map_collapse_btn.state_close) .task_coin {
+  transform: scale(2);
+  transform-origin: left center;
+}
+.event_main
+  .content:has(.map_collapse_btn.state_close)
+  .task_list
+  .task
+  .task_text
+  span {
+  font-size: 0.6rem;
+}
+.event_main .content:has(.map_collapse_btn.state_close) .task_coin {
+  transform-origin: right center;
+}
+.event_main .content:has(.map_collapse_btn.state_close) .list_task_btn {
+  z-index: 10;
+  position: relative;
+}
+.event_main .desk .desk_base .desk_content {
+  width: 100%;
+  flex: 1;
+  height: auto; /* Allow flex to control height */
+  min-height: 0;
+  overflow: hidden;
+  background-color: #2cdb3500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+.title_A1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_a1.webp);
+}
+.title_A2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_a2.webp);
+}
+.title_B1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_b1.webp);
+}
+.title_B2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_b2.webp);
+}
+.title_B3 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_b3.webp);
+}
+.title_B4 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_b4.webp);
+}
+.title_B5 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_b5.webp);
+}
+.title_B6 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_b6.webp);
+}
+.title_C1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_c1.webp);
+}
+.title_C2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_c2.webp);
+}
+.title_C3 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/title_c3.webp);
+}
+
+.pic_A1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_a1.webp);
+}
+.pic_A2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_a2.webp);
+}
+
+.pic_B1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_b1.webp);
+}
+.pic_B2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_b2.webp);
+}
+.pic_B3 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_b3.webp);
+}
+.pic_B4 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_b4.webp);
+}
+.pic_B5 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_b5.webp);
+}
+.pic_B6 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_b6.webp);
+}
+.pic_C1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_c1.webp);
+}
+.pic_C2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_c2.webp);
+}
+.pic_C3 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/pic_c3.webp);
+}
+
+/* ��i���j���� */
+.content_A1 .board_top {
+  width: 100%;
+  aspect-ratio: 987 / 87;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a1_board_top.webp);
+  margin-bottom: -1px; /* ������V���_ */
+}
+.content_A1 .board_tab {
+  width: 100%;
+  /* aspect-ratio: 987 / 138; */
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a1_board_tab.webp);
+  margin-bottom: -1px; /* ������V���_ */
+}
+.content_A1 .board_bottom {
+  width: 100%;
+  aspect-ratio: 987 / 37;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a1_board_bottom.webp);
+  margin-top: -1px; /* ������V���_ */
+}
+.content_A1 .board {
+  width: 100%;
+  padding: 0 3%;
+  height: 0; /* ����ק�G�j��̿�?flex-grow ���t���� */
+  flex-grow: 1; /* �۰ʶ񺡤��� */
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a1_board.webp);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.event_main .content:has(.map_collapse_btn.state_close) .content_A1 .board_top {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a1_board_top_zoom.webp);
+  aspect-ratio: 2100 / 66;
+}
+.event_main .content:has(.map_collapse_btn.state_close) .content_A1 .board_tab {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a1_board_tab_zoom.webp);
+}
+.event_main
+  .content:has(.map_collapse_btn.state_close)
+  .content_A1
+  .board_bottom {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a1_board_bottom_zoom.webp);
+  aspect-ratio: 2100 / 50;
+  margin-bottom: 0.25rem;
+}
+.event_main .content:has(.map_collapse_btn.state_close) .content_A1 .board {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a1_board_zoom.webp);
+}
+.content_A1 .time_hint {
+  width: auto;
+  aspect-ratio: 560 / 65;
+  height: 1.25em;
+  margin-top: 0.1rem;
+  margin-bottom: 0.15rem;
+  flex-shrink: 0; /* ����Q���� */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.45rem;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/time_hint.webp);
+}
+.content_A1 .time_hint span {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  color: #fff45c;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  transform: translateX(-0.7rem) translateY(0.01rem);
+}
+
+/* ��ȭ��O */
+.content_A1 .tab_switch {
+  width: 100%;
+  height: auto;
+  background-color: #88c4264f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* �i�H�b�o�̽վ㶡�Z */
+  align-items: center;
+  gap: 0.2rem; /* ���s���Z */
+  /* margin: 0.rem auto; */
+  padding: 0.25rem 0.3rem;
+}
+.event_main
+  .content:has(.map_collapse_btn.state_close)
+  .content_A1
+  .tab_switch {
+  /* margin: 0.5rem auto 0rem auto; */
+  padding: 0 2rem 0.3rem 2rem;
+  gap: 1rem;
+}
+.tab_btn {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 50;
+  flex: 1; /* �������G */
+  width: 0; /* �� flex grow �ͮĥB���� */
+  height: auto; /* �H�e�פ���Y�� */
+  aspect-ratio: 667 / 100; /* �]�w���s��A���?*/
+
+  background-size: 100% 300%; /* �T�A�G300% ���� */
+  background-repeat: no-repeat;
+  background-position: 0 0; /* ���A1 (Normal) */
+  /* transition: background-position 0.2s; */
+}
+.content_A1 .tab_switch .tab_btn:hover {
+  background-position: 0 50%; /* ���A2 (Hover) */
+}
+.tab_btn.active {
+  background-position: 0 100%; /* ���A3 (Active) */
+  cursor: default;
+}
+.content_A1 .tab_switch .once_tab {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/once_tab.webp);
+}
+.content_A1 .tab_switch .daily_tab {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/daily_tab.webp);
+}
+
+.task_list {
+  width: 100%;
+  height: auto;
+  flex: 1; /* �񺡳Ѿl���� */
+  min-height: 0; /* ����Q���e���} */
+  overflow-x: hidden;
+  overflow-y: auto; /* �������� */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #cbcbcb #202020; /* Firefox Thumb Track */
+  background-color: #1da08100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.event_main .content:has(.map_collapse_btn.state_close) .task_list {
+  gap: 0.15rem;
+}
+
+/* �ۭq task_list ���b */
+.task_list::-webkit-scrollbar {
+  width: 0.25rem;
+  -webkit-appearance: none; /* �j�����?*/
+}
+.task_list::-webkit-scrollbar-track {
+  background: #202020;
+  border-radius: 0.3rem;
+  border: 0.05rem solid #414242;
+}
+.task_list::-webkit-scrollbar-thumb {
+  background: #cbcbcb;
+  border-radius: 0.3rem;
+  box-shadow: inset 0 0 0 1px #666666;
+  border: 0.03rem solid #2e2e2e;
+}
+.task_list::-webkit-scrollbar-thumb:hover {
+  background: #f74b8c;
+}
+.task_list .task {
+  width: 98.8%;
+  height: auto;
+  aspect-ratio: 1138 / 79;
+  background-color: #3222c400;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task_bg.webp);
+
+  box-sizing: border-box;
+  padding: 0 0.2rem 0 0.33rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task_list .task .task_num {
+  width: auto;
+  height: 70%;
+  aspect-ratio: 1 / 1;
+}
+.task_list .task .task_text {
+  flex: 1;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 0.2rem;
+}
+.task_list .task .task_text span {
+  font-size: 0.3rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #fff;
+  pointer-events: none;
+  text-align: left;
+  width: 100%;
+}
+.task_list .task .task_coin {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  margin-right: 0.15rem;
+}
+.task_list .task .task_coin::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/nav/coin.webp)
+    no-repeat center center;
+  background-size: contain;
+}
+.task_list .task .task_coin .coin_quantity {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #fff45c;
+  margin-left: 0.1rem;
+  pointer-events: none;
+}
+.task_list .task .list_task_btn {
+  width: auto;
+  height: 65%;
+  background-color: transparent;
+  aspect-ratio: 360 / 100;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 0.2s;
+}
+.task_list .task .list_task_btn.done {
+  background-position: 0 100%;
+  cursor: default;
+  pointer-events: none;
+}
+.task_list .task .list_task_btn_1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task1_btn.webp);
+}
+.task_list .task .list_task_btn_2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task2_btn.webp);
+}
+
+.task_num {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.task_list .task:nth-child(1) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task1.png);
+}
+.task_list .task:nth-child(2) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task2.png);
+}
+.task_list .task:nth-child(3) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task3.png);
+}
+.task_list .task:nth-child(4) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task4.png);
+}
+.task_list .task:nth-child(5) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task5.png);
+}
+.task_list .task:nth-child(6) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task6.png);
+}
+.task_list .task:nth-child(7) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task7.png);
+}
+.task_list .task:nth-child(8) .task_num {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task8.png);
+}
+
+/* �y�H�����?*/
+.content_A2 .board_top {
+  width: 100%;
+  aspect-ratio: 995 / 86;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a2_board_top.webp);
+  margin-bottom: -1px; /* ������V���_ */
+}
+.content_A2 .board_bottom {
+  width: 100%;
+  aspect-ratio: 995 / 41;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a2_board_bottom.webp);
+  margin-top: -1px; /* ������V���_ */
+}
+.content_A2 .board {
+  width: 100%;
+  padding: 0 3%;
+  height: 0; /* ����ק�G�j��̿�?flex-grow ���t���� */
+  flex-grow: 1; /* �۰ʶ񺡤��� */
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a2_board.webp);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.event_main .content:has(.map_collapse_btn.state_close) .content_A2 .board_top {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a2_board_top_zoom.webp);
+  aspect-ratio: 2103 / 118;
+}
+.event_main
+  .content:has(.map_collapse_btn.state_close)
+  .content_A2
+  .board_bottom {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a2_board_bottom_zoom.webp);
+  aspect-ratio: 2103 / 40;
+}
+.event_main .content:has(.map_collapse_btn.state_close) .content_A2 .board {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a2_board_zoom.webp);
+}
+
+.content_A2 .board .lottery_award {
+  width: auto;
+  height: 98%;
+  margin: 2% auto 0 auto;
+  display: flex;
+}
+.content_A2 .board .lottery_award:hover {
+  animation-play-state: paused;
+}
+
+.content_A2 .board .lottery_item {
+  width: auto;
+  aspect-ratio: 130 / 144;
+  height: 100%;
+  flex-shrink: 0;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/a2_lottery_award.webp);
+  background-repeat: no-repeat;
+  background-size: 500% 200%; /* 5 items wide, 2 states high */
+}
+
+/* Individual Item Background X Positions (0, 25, 50, 75, 100) */
+.content_A2 .board .lottery_item.num_1 {
+  background-position-x: 0%;
+}
+.content_A2 .board .lottery_item.num_2 {
+  background-position-x: 25%;
+}
+.content_A2 .board .lottery_item.num_3 {
+  background-position-x: 50%;
+}
+.content_A2 .board .lottery_item.num_4 {
+  background-position-x: 75%;
+}
+.content_A2 .board .lottery_item.num_5 {
+  background-position-x: 100%;
+}
+
+/* None State (Slide Down) */
+.content_A2 .board .lottery_item.none {
+  background-position-y: 100%;
+}
+
+.content_A2 .board .lottery_award.none {
+  background-position: center 100%;
+}
+
+.event_lottery_btn {
+  width: 60%;
+  aspect-ratio: 948 / 200;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/lottery_btn.webp);
+
+  margin: 1.5% auto 1.5% auto;
+  transform: scale(1);
+  transition: transform 0.3s;
+  z-index: 50;
+  animation: btn-scale-loop 1.5s infinite ease-in-out;
+}
+.event_lottery_btn:hover {
+  animation: none;
+  transform: scale(1.2);
+}
+.event_lottery_btn.none {
+  background-position: center 100%;
+  cursor: default;
+  pointer-events: none;
+}
+
+.event_main .content:has(.map_collapse_btn.state_close) .event_lottery_btn {
+  width: 25%;
+}
+
+/* ���~���e */
+
+.desk_content {
+  width: 100%;
+  height: 100%;
+  background-color: #4737d68e;
+  display: flex;
+  flex-direction: column;
+}
+
+.desk_content_top {
+  width: 98.8%;
+  height: auto;
+  aspect-ratio: 994 / 129;
+  background-color: #3222c400;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/desk_content_top_bg.webp);
+  box-sizing: border-box;
+  padding: 0 0.2rem 0 0.33rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; /* Center it if 98.8% */
+  margin-bottom: 0.15rem;
+}
+
+.event_main:has(.map_desk.collapsed) .desk_content_top {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/task_bg.webp);
+  aspect-ratio: 1138 / 79;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.desk_content_top span {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #fff;
+  pointer-events: none;
+  text-align: left;
+  flex: 1; /* like task_text */
+  padding-left: 0.25rem; /* like task_text padding */
+}
+.event_main:has(.map_desk.collapsed) .desk_content_top span {
+  font-size: 0.65rem;
+  line-height: 0.65rem;
+}
+
+.desk_content_main {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  background-color: #a81c1c00;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* �ɶ�ON�����ô��� */
+.event_main.is_time_on .desk_content_hint {
+  display: none !important;
+}
+
+/* �۩w�q���b�˦� */
+.desk_content_main::-webkit-scrollbar {
+  width: 6px;
+}
+.desk_content_main::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.desk_content_main::-webkit-scrollbar-thumb {
+  background: #7993a5;
+  border-radius: 3px;
+}
+.desk_content_main::-webkit-scrollbar-thumb:hover {
+  background: #7993a5;
+}
+
+.desk_content_main .info_text,
+.desk_content_main .rule_text {
+  font-size: 0.35rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #000;
+  pointer-events: none;
+  text-align: left;
+}
+.desk_content_main .info_text li span {
+  font-weight: 900;
+  text-decoration: underline;
+  color: #097960;
+}
+.desk_content_main .info_title,
+.desk_content_main .rule_title {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #dd2424;
+  pointer-events: none;
+  text-align: left;
+  text-align: left;
+  margin-bottom: 0.15rem;
+}
+.event_main:has(.map_desk.collapsed) .desk_content_main .info_title,
+.event_main:has(.map_desk.collapsed) .desk_content_main .rule_title {
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+.event_main:has(.map_desk.collapsed) .desk_content_main .info_text,
+.event_main:has(.map_desk.collapsed) .desk_content_main .rule_text {
+  font-size: 0.7rem;
+  line-height: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.desk_content_main .desk_content_info,
+.desk_content_main .desk_content_rule,
+.desk_content_main .desk_content_rule_2,
+.desk_content_main .desk_content_hint {
+  width: 90%;
+  margin: 0 auto 0.3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align children left */
+}
+
+.desk_content_rule_2 .rule_text ul {
+  padding-left: 0.6rem;
+  margin-top: 0.1rem;
+}
+.desk_content_rule_2 .rule_text ul li {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  display: list-item !important;
+  font-size: 0.28rem !important;
+  line-height: 0.28rem !important;
+  color: #000;
+  margin-bottom: 0.1rem;
+  padding-left: 0 !important;
+}
+
+.event_main:has(.map_desk.collapsed) .desk_content_rule_2 .rule_text ul li {
+  font-size: 0.5rem !important;
+  line-height: 1.5 !important;
+}
+.desk_content_top .buy_coin {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  margin-right: 0.15rem;
+}
+.desk_content_top .buy_coin::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/nav/coin.webp)
+    no-repeat center center;
+  background-size: contain;
+}
+.event_main:has(.map_desk.collapsed) .desk_content_top .buy_coin::before {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* �|���}�� */
+.desk_buy_btn {
+  width: 30%;
+  aspect-ratio: 521 / 150;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 500%;
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/desk_buy_btn.webp);
+
+  margin: 2% auto 3% auto;
+  /* transform: scale(1); */
+  /* transition: transform 0.3s; */
+  z-index: 50;
+  /* animation: btn-scale-loop 1.5s infinite ease-in-out; */
+}
+.event_main:has(.map_desk.collapsed) .desk_buy_btn {
+  margin: 2% auto 2% auto;
+  width: 25%;
+}
+/* �ߧY�I�� */
+.desk_buy_btn.state_2 {
+  background-position: center 25%;
+}
+/* �w�I�� */
+.desk_buy_btn.state_3 {
+  background-position: center 50%;
+}
+/* ����I������ */
+.desk_buy_btn.state_4 {
+  background-position: center 75%;
+}
+/* ���ƧI������ */
+.desk_buy_btn.state_5 {
+  background-position: center 100%;
+}
+
+/* �k���a�� */
+
+.map_collapse_btn {
+  position: relative;
+  /* flex: 0 0 4%; */
+  flex: 0 0 auto;
+  width: 1rem;
+  /* min-width: 40px; */
+  /* height: 30%; */
+  height: auto;
+  aspect-ratio: 95/300;
+  align-self: center; /* �W�U�m�� */
+  /* margin-top: 1%; */
+
+  background-color: #21a01d00;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/desk/desk_zoom.webp)
+    no-repeat;
+  background-size: 100% 200%;
+  background-position: 0 0;
+  cursor: pointer;
+  z-index: 999 !important;
+  pointer-events: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: transform 0.3s, width 0.5s ease-in-out, opacity 0.5s; */
+}
+
+/* ���ù��ɫ��s�]���� */
+.event_main.is_zoomed .map_collapse_btn {
+  flex-basis: 0% !important;
+  min-width: 0 !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.map_collapse_btn.state_open {
+  transform: translateX(0);
+  background-position: 0 0;
+}
+
+.map_collapse_btn.state_close {
+  transform: translateX(-0.35rem);
+  background-position: 0 100%;
+}
+
+/* �� desk_hint ��ܮɡA���æ����s */
+.event_main:has(.desk_hint[style*="display: flex"]) .map_collapse_btn {
+  visibility: hidden;
+}
+
+.event_main .map_desk {
+  position: relative;
+  flex: 0 0 50%; /* �i�}�ɦ� 50% */
+  height: 100%;
+  background-color: #a01d5a00;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_bg.webp);
+  background-size: cover;
+  background-position: top;
+  z-index: 10;
+  overflow: hidden;
+  transition:
+    flex-basis 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.6s ease-out;
+}
+
+.event_main .map_desk.collapsed {
+  flex-basis: 0% !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ���ù����A (Zoom) */
+.event_main.is_zoomed .map_desk {
+  flex-basis: 100% !important;
+  background-position: center;
+}
+
+/* �w�� map_desk ���ʵe�i���P�i�}���A */
+.event_main .map_desk.fade_in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ���X���A�G�V�k���� 100% (�Y 50% �ù��e��) */
+.event_main .map_desk.collapsed {
+  transform: translateX(100%);
+}
+
+.event_main .map_desk .map,
+.event_main .map_desk .mapTitle,
+.event_main .map_desk .mapChara_hint {
+  transition:
+    opacity 0.5s,
+    width 0.5s ease-in-out,
+    right 0.5s ease-in-out;
+}
+
+/* ���X�ɤ�r�P�a�ϲH�X */
+.event_main .map_desk.collapsed .map,
+.event_main .map_desk.collapsed .mapTitle,
+.event_main .map_desk.collapsed .mapChara_hint {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.event_main .map_desk .mapTitle {
+  width: 100%;
+  aspect-ratio: 1136 / 292;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_title.webp)
+    no-repeat center center;
+  background-size: 100% auto;
+  z-index: -2;
+  right: auto; /* �w�]��m */
+}
+
+/* ���ù��ɼ��D�Y�p�ܤ@�b�þa�k */
+.event_main.is_zoomed .map_desk .mapTitle {
+  width: 50%;
+  right: 0;
+}
+
+.event_main .map_desk .mapChara_hint {
+  bottom: 12.5%;
+  right: 0%;
+  width: 19.21%;
+  aspect-ratio: 211 / 400;
+  z-index: 1;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_chara_hint.webp);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #d61f1f00;
+  background-position: center 100%;
+  transition: background-position 0.3s ease-in-out;
+}
+/* .event_main .map_desk .mapChara_hint:hover{
+  background-position: center 0%;
+} */
+.event_main .map_desk .mapChara_hint.none {
+  background-position: center 100%;
+}
+
+.event_main .map_desk .mapChara {
+  bottom: 0;
+  right: 0;
+  width: 98%;
+  aspect-ratio: 211 / 194;
+  z-index: 2;
+}
+.event_main .map_desk .mapChara:hover {
+  cursor: pointer;
+}
+.event_main .map_desk .mapChara.bounce-in-top,
+.event_main .map_desk .mapbtn.bounce-in-top,
+.event_main .map_desk .mapbtn_big.bounce-in-top {
+  animation: bounce-in-top 1.5s both;
+}
+
+.event_main .map_desk .mapChara.jello-vertical {
+  -webkit-animation: jello-vertical 0.9s both;
+  animation: jello-vertical 0.9s both;
+}
+
+.event_main .map_desk .mapZoom {
+  bottom: 10%;
+  left: 0%;
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  z-index: 2;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/zoom.webp);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center 0%;
+}
+
+.event_main.is_zoomed .map_desk .mapZoom {
+  background-position: center 100%;
+}
+
+.event_main .map_desk .map {
+  height: 100%;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  margin-top: 5%;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.5s ease-in-out,
+    margin-top 0.5s ease-in-out,
+    width 0.5s ease-in-out,
+    height 0.5s ease-in-out;
+
+  aspect-ratio: 1136 / 1309;
+  background-color: #a01d1d00;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_base.webp);
+  background-size: cover;
+  background-position: top;
+  z-index: -1;
+}
+
+/* ���ù��ɦa�ϩ��Ϧ�m�P�Y��վ�?*/
+.event_main.is_zoomed .map_desk .map {
+  margin-top: 3%;
+  transform: translate(-50%, -50%) scale(1.2); /* �z�i�H�վ� scale �� translate */
+}
+
+/* �j�����s */
+/* �j�����s */
+.event_main .map_desk .mapbtn_big {
+  width: 20.65%;
+  aspect-ratio: 224 / 200;
+  z-index: 1;
+  background-color: #27ff1300;
+  background-size: 100% 200%;
+  background-position: 0 0%;
+  transition:
+    top 0.5s ease-in-out,
+    left 0.5s ease-in-out;
+  animation: jello-loop 5s 0.5s infinite;
+}
+/* �`��ݰ�?*/
+.op-0 {
+  opacity: 0 !important;
+}
+.event_main .map_desk .mapbtn_big:hover,
+.event_main .map_desk .mapbtn_big.active,
+.event_main.is_zoomed .map_desk .mapbtn_big {
+  background-position: 0 100%;
+  animation: none !important;
+}
+
+/* �p�����s */
+.event_main .map_desk .mapbtn {
+  width: 14.41%;
+  aspect-ratio: 175 / 200;
+  z-index: 1;
+  background-color: #27ff1300;
+  background-size: 100% 200%;
+  background-position: 0 0%;
+  transition:
+    top 0.5s ease-in-out,
+    left 0.5s ease-in-out;
+}
+
+.event_main .map_desk .mapbtn:hover,
+.event_main .map_desk .mapbtn.active,
+.event_main.is_zoomed .map_desk .mapbtn {
+  background-position: 0 100%;
+  transform: scale(1.6); /* �z�i�H�վ� scale �� translate */
+}
+
+.mapbtn_A1 {
+  top: 60%;
+  left: 39.94%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_a1.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_A2 {
+  top: 32.42%;
+  left: 56%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_a2.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B1 {
+  top: 35.29%;
+  left: 10.5%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_b1.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B2 {
+  top: 23.42%;
+  left: 30%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_b2.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B3 {
+  top: 10.92%;
+  left: 52.83%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_b3.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B4 {
+  top: 52.67%;
+  left: 18.77%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_b4.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B5 {
+  top: 70.08%;
+  left: 60.42%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_b5.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_B6 {
+  top: 19%;
+  left: 14%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_b6.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_C1 {
+  top: 48%;
+  left: 67.24%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_c1.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_C2 {
+  top: 1.33%;
+  left: 33.66%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_c2.webp);
+  background-repeat: no-repeat;
+}
+.mapbtn_C3 {
+  top: 42.92%;
+  left: 44.15%;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/urban-missions_260228/images/map/map_btn_c3.webp);
+  background-repeat: no-repeat;
+}
+
+/* --- �a�ϥ��ù��ɪ����s�y�нվ� (Zoom Positions) --- */
+.event_main.is_zoomed .mapbtn_A1 {
+  top: 60%;
+  left: 37.94%;
+}
+.event_main.is_zoomed .mapbtn_A2 {
+  top: 29.42%;
+  left: 60%;
+}
+.event_main.is_zoomed .mapbtn_B1 {
+  top: 33.29%;
+  left: 10.5%;
+}
+.event_main.is_zoomed .mapbtn_B2 {
+  top: 23.42%;
+  left: 29.35%;
+}
+.event_main.is_zoomed .mapbtn_B3 {
+  top: 10.92%;
+  left: 52.83%;
+}
+.event_main.is_zoomed .mapbtn_B4 {
+  top: 52.67%;
+  left: 18.77%;
+}
+.event_main.is_zoomed .mapbtn_B5 {
+  top: 66.08%;
+  left: 60.42%;
+}
+.event_main.is_zoomed .mapbtn_B6 {
+  top: 17%;
+  left: 16%;
+}
+.event_main.is_zoomed .mapbtn_C1 {
+  top: 48%;
+  left: 72.24%;
+}
+.event_main.is_zoomed .mapbtn_C2 {
+  top: 6.33%;
+  left: 33.66%;
+}
+.event_main.is_zoomed .mapbtn_C3 {
+  top: 40.92%;
+  left: 44.15%;
+}
+
+/* ���ù��ɤH����m�վ� */
+.event_main.is_zoomed .mapChara_hint {
+  bottom: 17.5%;
+  right: -20%;
+}
+.event_main.is_zoomed .map_desk .mapZoom {
+  left: -25%;
+  bottom: 20%;
+  transform: scale(1.2);
+}
+
+/* ----------------------------------------
+ * footer - footer
+ * ---------------------------------------- */
+
+.footer {
+  position: relative;
+  /* padding: 25px 0; */
+  padding: 0.1rem 0;
+  color: #fff;
+  font-size: 0.12rem;
+  text-align: center;
+  letter-spacing: 0.02px;
+  background: #282a2c;
+}
+.footer .container {
+  max-width: 100%;
+}
+.footer .copyright,
+.footer .grading {
+  vertical-align: middle;
+}
+.footer img {
+  vertical-align: baseline;
+  height: 0.4rem;
+  width: auto;
+}
+.footer .copyright,
+.footer .company,
+.footer p,
+.footer .grading,
+.footer .grading img,
+.footer ul {
+  display: inline-block;
+}
+.footer .company a,
+.footer .copyright p a,
+.footer .grading,
+.footer p,
+.footer ul {
+  margin-left: 0.1rem;
+  font-size: 0.12rem;
+}
+.footer a:hover {
+  color: #63edec;
+}
+.footer p,
+.footer ul {
+  text-align: left;
+  line-height: 1.2;
+  font-size: 0.12rem;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+.footer p a {
+  color: #fff;
+}
+
+/* @media screen and (max-width: 1200px) {
+  .footer {
+    padding: 35px 0;
+  }
+  .footer .copyright,
+  .footer .company {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .footer p {
+    text-align: center;
+  }
+  .footer p,
+  .footer .grading {
+    margin: 0 auto;
+  }
+} */
+
+/* uG */
+.downloadSharePicTip {
+  display: none;
+}
+
+/* Debug Menu */
+.pop_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  position: fixed;
+  bottom: 20px;
+  left: 10vw;
+  right: 10vw;
+  z-index: 9999;
+  background: rgba(173, 28, 28, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+}
+
+.pop_box .btn {
+  padding: 5px 12px !important;
+  font-size: 13px !important;
+  font-family: inherit;
+}
+
+/* Portrait Overlay - Hidden by default in this stylesheet (Landscape/PC) */
+.note_flex {
+  display: none !important;
+}
+
+/* Safari Mobile Fix */
+.modal {
+  height: 100dvh;
+}
+
+
+.event_main .desk .desk_base .desk_pic {
+  position: relative; /* �T�O overlay �w�� */
+}
+/* Overlay (pic_tt) */
+.desk_tt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none; /* ��z�I�� */
+  z-index: 2;
+}
+
+.modal-dialog-centered {
+  min-height: calc(100dvh - 3.5rem); /* �����W�U��Z */
+}
+#successmodal .popCont {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}

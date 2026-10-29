@@ -1,0 +1,1011 @@
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.auto {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* 彈出框 */
+.modal {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+
+.modal-dialog {
+  background: transparent;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
+}
+
+.popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+
+.popCont1 {
+  height: 9.8rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont1_ZRRPZRBDRPTJKTTJ.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.popCont2 {
+  height: 8rem;
+  background: url(../images/pop/popCont2_v2.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+.popCont3 {
+  height: 11rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont3.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+.popCont4 {
+  height: 10rem;
+  background: url(../images/pop/popCont4.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+.popCont5 {
+  height: 9rem;
+  background: url(../images/pop/popCont5.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+/* ========== 雙平台預約成功彈窗 popCont6 ========== */
+.popCont6 {
+  height: 8rem;
+  background: url(../images/pop/popCont6.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+/* 雙平台預約成功標題 */
+.pop_dual_yySuccess_tit {
+  top: 1.5rem;
+  width: 6.1rem;
+  height: 2rem;
+  background: url(../images/pop/pop_dual_pre_success.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 雙平台按鈕容器 */
+.dual_platform_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 42%;
+  gap: 0.2rem;
+}
+
+/* Android 預約按鈕 */
+.pp_btn_android_prereg {
+  display: block;
+  width: auto;
+  height: 0.82rem;
+  aspect-ratio: 231 / 68;
+  background: url(../images/pop/btn_android_prereg.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  transition: transform 0.3s;
+}
+
+
+
+/* iOS 預約按鈕 */
+.pp_btn_ios_prereg {
+  display: block;
+  width: 2.3rem;
+  height: 0.82rem;
+  aspect-ratio: 193 / 60;
+  background: url(../images/pop/btn_ios_prereg.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  transition: transform 0.3s;
+}
+
+
+
+/* ========== 雙平台預約成功彈窗 END ========== */
+
+.test_infoCont {
+  height: 10.5rem;
+  background: url(../images/pop/testInfoCont.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+
+.popClose {
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popClose.png) no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
+.formRow {
+  width: 5.86rem;
+  height: 0.55rem;
+  margin-bottom: 0.2rem;
+  border-radius: 0.275rem;
+  background: #1d1d1d;
+  box-sizing: border-box;
+  padding: 0 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formRow input,
+.formRow select {
+  height: inherit;
+  font-size: 0.24rem;
+  color: #828282;
+  border: none;
+  background: none;
+}
+
+/* 彈出框-預約 */
+.pop_yy_tit {
+  top: 1.55rem;
+  width: 3.57rem;
+  height: 0.83rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/pop_yy_form_tt.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.yyForm {
+  top: 2.67rem;
+}
+
+.regressmodal .form-bg {
+  width: 5.86rem;
+  height: 0.55rem;
+  margin-bottom: 0.15rem;
+  border-radius: 0.275rem;
+  background: #1d1d1d;
+  box-sizing: border-box;
+}
+
+.regressmodal .form-bg .yyFormRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.regressmodal .form-select {
+  padding: 0;
+  width: 30%;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 2% auto;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsl(0deg 0% 0% / 0%);
+  background-image: none;
+}
+
+.regressmodal .form-select:focus {
+  color: #fff;
+  border-right: 0.15em solid #c7c7c7;
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.regressmodal .form-select option {
+  background-color: #1d1d1d;
+}
+
+.regressmodal .form-control {
+  padding: 0;
+  width: 60%;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 2% auto;
+  height: auto;
+  color: #fff;
+  transition: 0.5s;
+  vertical-align: middle;
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 4%;
+}
+
+.regressmodal .form-control::placeholder {
+  color: #828282;
+  letter-spacing: 0;
+  background-color: hsl(0deg 0% 0% / 0%);
+}
+
+.regressmodal .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+  border: 0;
+  color: #fff;
+  background-color: hsl(0deg 0% 0% / 0%);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0) inset;
+  background-color: hsl(0deg 0% 0% / 0%) !important;
+}
+
+.regressmodal .form-check-input:checked {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.regressmodal .form-check-input:focus {
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.regressmodal .form-check-input[type="checkbox"] {
+  border-radius: 0;
+}
+
+.regressmodal .form-check-label {
+  color: #000;
+  font-size: 0.18rem;
+  text-align: justify;
+  cursor: pointer;
+}
+
+.regressmodal form {
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.regressmodal .d-flex {
+  position: absolute;
+  top: 3.45rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.regressmodal .form-check-input {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0);
+  margin-right: 0.4em;
+  border-width: 0.08em;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-image: initial;
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+.regressmodal .form-check-input {
+  vertical-align: middle;
+  background-color: hsl(0deg 0% 0% / 0%);
+  border: 0.08em solid #000000;
+  margin-right: 0.4em;
+}
+
+.regressmodal .form-check-input:checked[type="checkbox"] {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/pop/check.svg);
+}
+
+/* bookedmodal copied styles */
+.bookedmodal .form-bg {
+  width: 5.86rem;
+  height: 0.55rem;
+  margin-bottom: 0.15rem;
+  border-radius: 0.275rem;
+  background: #1d1d1d;
+  box-sizing: border-box;
+}
+
+.bookedmodal .graphic_verification_code {
+  height: 0.6rem;
+  margin-top: 0.7rem;
+  background-color: #c21b1b00;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bookedmodal .phone_verification_code {
+  height: 0.6rem;
+  margin-top: 0.2rem;
+  background-color: #c21b1b00;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bookedmodal .graphic_verification_code .captcha {
+  width: 3.5rem;
+  height: 0.55rem;
+  background-color: #ffffff;
+  font-size: 0.18rem;
+  padding: 0.06rem 0.2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #141414;
+}
+
+.bookedmodal .phone_verification_code .smsCode {
+  width: 3.5rem;
+  height: 0.55rem;
+  background-color: #ffffff;
+  font-size: 0.18rem;
+  padding: 0.06rem 0.2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #141414;
+}
+
+.bookedmodal .graphic_verification_code .img_code {
+  width: 2.2rem;
+  height: 0.55rem;
+}
+
+.bookedmodal .graphic_verification_code .img_code .img_code_pic {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #141414;
+  border-radius: 0.5rem;
+}
+
+.bookedmodal .phone_verification_code .btn_get_code {
+  width: 2.2rem;
+  height: 0.55rem;
+  background-image: url(https://res1-nte.iwplay.com.tw/images/pop/btn_get_code.png);
+  background-size: 100% auto;
+}
+
+.bookedmodal .phone_verification_code .btn_get_code:hover {
+  background-position: 0 -0.55rem;
+}
+
+.bookedmodal .form-bg .yyFormRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bookedmodal .form-select {
+  padding: 0;
+  width: 30%;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 2% auto;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsl(0deg 0% 0% / 0%);
+  background-image: none;
+}
+
+.bookedmodal .form-select:focus {
+  color: #fff;
+  border-right: 0.15em solid #c7c7c7;
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.bookedmodal .form-select option {
+  background-color: #1d1d1d;
+}
+
+.bookedmodal .form-control {
+  padding: 0;
+  width: 60%;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 2% auto;
+  height: auto;
+  color: #fff;
+  transition: 0.5s;
+  vertical-align: middle;
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 4%;
+}
+
+.bookedmodal .form-control::placeholder {
+  color: #828282;
+  letter-spacing: 0;
+  background-color: hsl(0deg 0% 0% / 0%);
+}
+
+.bookedmodal .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+  border: 0;
+  color: #fff;
+  background-color: hsl(0deg 0% 0% / 0%);
+}
+
+.bookedmodal .form-check-input:checked {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.bookedmodal .form-check-input:focus {
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.bookedmodal .form-check-input[type="checkbox"] {
+  border-radius: 0;
+}
+
+.bookedmodal .form-check-label {
+  color: #000;
+  font-size: 0.18rem;
+  text-align: justify;
+  cursor: pointer;
+}
+
+.bookedmodal form {
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.bookedmodal .d-flex {
+  position: absolute;
+  top: 3.45rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bookedmodal .form-check-input {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0);
+  margin-right: 0.4em;
+  border-width: 0.08em;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-image: initial;
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+.bookedmodal .form-check-input {
+  vertical-align: middle;
+  background-color: hsl(0deg 0% 0% / 0%);
+  border: 0.08em solid #000000;
+  margin-right: 0.4em;
+}
+
+.bookedmodal .form-check-input:checked[type="checkbox"] {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/pop/check.svg);
+}
+
+.yy_platform_head {
+  top: 5.3rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 0.18rem;
+  color: #ddd;
+}
+
+.yy_platform {
+  top: 5.75rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.yy_platform button {
+  width: 2.75rem;
+  height: 0.7rem;
+  margin: 0.04rem;
+}
+
+.yyFormRow .getNumerus,
+.yyFormRow .etTelCode {
+  width: 35%;
+  text-align: center;
+  margin: 0.05rem;
+  border-radius: 10rem;
+  background: rgb(255, 255, 255);
+  height: 0.45rem;
+}
+
+.yyFormRow .getNumerus img {
+  width: auto;
+  height: 0.45rem;
+}
+
+.yyFormRow .getTelCode {
+  width: 35%;
+  height: 0.45rem;
+  color: rgb(20, 20, 20);
+  text-align: center;
+  line-height: 0.45rem;
+  background: rgb(124, 236, 252);
+  border-radius: 10rem;
+  margin: 0.05rem;
+  font-size: 0.21rem;
+  font-weight: 700;
+  letter-spacing: 0.015rem;
+}
+
+.pop_yy_form .yy_platform .platform_pc {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_pc_off.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_yy_form .yy_platform .platform_pc.on {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_pc_on.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_yy_form .yy_platform .platform_iOS {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_ios_off.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_yy_form .yy_platform .platform_iOS.on {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_ios_on.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_yy_form .yy_platform .platform_Android {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_Android_off.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_yy_form .yy_platform .platform_Android.on {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_Android_on.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_yy_form .yy_platform .platform_host {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_ps_off.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_yy_form .yy_platform .platform_host.on {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_ps_on.png) no-repeat;
+  background-size: cover;
+}
+
+.platform_tip {
+  position: absolute;
+  top: 7.5rem;
+  font-size: 0.18rem;
+  color: #ddd;
+  width: 72%;
+  margin: 0 14%;
+}
+
+.yySubmit {
+  top: 8.3rem;
+  width: 5.04rem;
+  height: 0.77rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/yySubmit.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.yySubmit:hover {
+  background-position: 0 -0.77rem;
+}
+
+.bkSubmit {
+  top: 6.2rem;
+  width: 3.5rem;
+  height: 0.62rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/bookedSubmit.png) no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 2;
+}
+
+.bkSubmit:hover {
+  background-position: 0 -0.62rem;
+}
+
+.booked_button_bg {
+  top: 4.95rem;
+  width: 98%;
+  height: 1.7rem;
+  /* background-color: rgba(0, 255, 255, 0.39); */
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/building.webp) no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
+.Change_acc_hint {
+  top: 7.15rem;
+  color: #fff;
+  font-size: 0.25rem;
+  text-align: justify;
+
+}
+
+.Change_acc_box {
+  top: 7.5rem;
+  width: 5.8rem;
+  height: 1.2rem;
+  background-color: rgba(0, 255, 255, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.Change_acc_box .Change_acc_btn {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-size: 100% auto;
+  background-position: 0 -0.75rem;
+}
+
+.Change_acc_box .Change_acc_btn:hover {
+  /* background-position: 0 -0.75rem; */
+  cursor: pointer;
+
+}
+
+.google {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/google.svg) no-repeat 0 0;
+}
+
+.ios {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/ios.svg) no-repeat 0 0;
+}
+
+.facebook {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/facebook.svg) no-repeat 0 0;
+}
+
+.qaSubmit {
+  top: 5.4rem;
+  width: 4rem;
+  height: 0.72rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/qaSubmit.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+
+#tst_qualified .qaSubmit {
+  width: 4rem;
+  background: url(../images/pop/tst_info_btn.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+#tst_qualified .qaSubmit:hover {
+  background-position: 0 -0.72rem;
+}
+
+
+.qaSubmit:hover {
+  background-position: 0 -0.72rem;
+}
+
+/* 預約成功 */
+.pop_yySuccess_tit {
+  top: 1.8rem;
+  width: 6.1rem;
+  height: 2rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/pop_yy_qa_success_tt.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.yy_otherPlatformTip {
+  top: 5.8rem;
+  width: 5.5rem;
+  height: 0.5rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/focus_head_tt.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.yy_otherPlatform {
+  top: 6.5rem;
+}
+
+#tst_qualified .yy_otherPlatform {
+  top: 8.2rem;
+}
+
+#tst_unqualified .yy_otherPlatform {
+  top: 6.9rem;
+}
+
+
+
+
+/* 0121更新社群FB+DC */
+.pop_yy_success .focus_social_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 54%;
+}
+
+.pop_yy_success .focus_fb_icon,
+.pop_yy_success .focus_dc_icon {
+  width: 38%;
+  margin: 0 6px 8px 6px;
+}
+
+.pop_yy_success .focus_fb_icon a,
+.pop_yy_success .focus_dc_icon a {
+  display: block;
+  width: 100%;
+  transition: .3s;
+}
+
+.pop_yy_success .focus_fb_icon a:hover,
+.pop_yy_success .focus_dc_icon a:hover {
+  transform: scale(1.1);
+}
+
+.pop_yy_success .focus_fb_icon a img,
+.pop_yy_success .focus_dc_icon a img {
+  width: 100%;
+}
+
+/* 0121更新社群FB+DC 結束*/
+
+/* 0131更新測試信息*/
+
+.testinfomodal .res_poptt img {
+  width: 100%;
+}
+
+.testinfomodal .list_con {
+  font-size: 0.20rem;
+  width: 116%;
+  margin-left: -8%;
+  height: 5rem;
+  overflow-y: hidden;
+  /* 或直接刪掉這行 */
+  padding-right: 0.05rem;
+  color: #b9b9b9;
+  margin-top: 2.2rem;
+  /* 用這個取代 top */
+}
+
+.testinfomodal .list_con ol {
+  list-style: decimal;
+  padding-left: 0.3rem;
+}
+
+
+/* 0131更新測試結束信息*/
+
+
+/* 隱私權彈窗 */
+.privacymodal .res_poptt {
+  width: 5rem;
+  margin: 0.6rem auto 0.3rem auto;
+}
+
+.privacymodal .res_poptt img {
+  width: 100%;
+}
+
+.privacymodal .list_con {
+  width: 116%;
+  margin-left: -8%;
+  height: 7rem;
+  overflow-y: auto;
+  padding-right: 0.05rem;
+
+  /* Webkit 滾動條樣式 */
+  &::-webkit-scrollbar {
+    width: 0.1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #d5d5d5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Firefox 滾動條樣式 */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #d5d5d5;
+}
+
+.privacymodal .list_con ol {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  font-size: 0.18rem;
+  font-weight: 400;
+  padding-left: 0.24rem;
+  list-style: decimal;
+}
+
+.privacymodal .popup_close {
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
+  padding: 0.1rem 0.6rem;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+  width: auto;
+}
+
+/* 提示彈窗 */
+#eventAlert {
+  background-color: #00000075;
+}
+
+#eventAlert .modal-body {
+  height: 5.34rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont_alert.png) no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-radius: 0.28rem;
+}
+
+#eventAlert .modal-body p {
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
+}
+
+/* bookedmodal renamed styles */
+#bookedmodal .popCont1 {
+  height: 8.8rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont1_booked.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.pop_booked_tit {
+  top: 1.55rem;
+  width: 3.57rem;
+  height: 0.83rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/pop_booked_form_tt.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.bookedForm {
+  top: 2.67rem;
+  z-index: 50;
+}
+
+.pop_booked_form .yy_platform .platform_pc {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_pc_off.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_booked_form .yy_platform .platform_pc.on {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_pc_on.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_booked_form .yy_platform .platform_iOS {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_ios_off.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_booked_form .yy_platform .platform_iOS.on {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_ios_on.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_booked_form .yy_platform .platform_Android {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_Android_off.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_booked_form .yy_platform .platform_Android.on {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_Android_on.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_booked_form .yy_platform .platform_host {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_ps_off.png) no-repeat;
+  background-size: cover;
+}
+
+.pop_booked_form .yy_platform .platform_host.on {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/btn_ps_on.png) no-repeat;
+  background-size: cover;
+}
