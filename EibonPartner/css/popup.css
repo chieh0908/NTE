@@ -1,0 +1,1393 @@
+.modal {
+  font-size: initial;
+}
+
+#eventAlertModal .modal-body {
+  margin: 0 auto;
+  width: 6rem;
+  height: 5.34rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont_alert.png)
+    no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-radius: 0.28rem;
+}
+#eventAlertModal .modal-body p {
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
+}
+
+/* otherPlatform */
+.otherPlatform {
+  display: flex;
+}
+.otherPlatform a {
+  position: relative;
+  margin: 0 0.09rem;
+  width: 0.66rem;
+  height: 0.66rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/otherPlatform.png)
+    no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+}
+.otherPlatform .platform_twitter {
+  background-position-x: 0;
+}
+.otherPlatform .platform_facebook {
+  background-position-x: -0.84rem;
+}
+.otherPlatform .platform_youtube {
+  background-position-x: -1.68rem;
+}
+.otherPlatform .platform_discord {
+  background-position-x: -2.52rem;
+}
+.otherPlatform .platform_reddit {
+  background-position-x: -3.37rem;
+}
+.otherPlatform .platform_ins {
+  background-position-x: -4.2rem;
+}
+.otherPlatform .platform_tiktok {
+  background-position-x: -5.04rem;
+}
+.otherPlatform .platform_line {
+  background-position-x: -5.88rem;
+}
+.otherPlatform .platform_naver {
+  background-position-x: -6.72rem;
+}
+.otherPlatform .platform_talk {
+  background-position-x: -7.56rem;
+}
+.otherPlatform .platform_ps {
+  background-position-x: -5.04rem;
+}
+.otherPlatform a:hover {
+  background-position-y: -0.66rem;
+}
+.otherPlatform .code {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+.otherPlatform a:hover .code {
+  display: block;
+}
+.otherPlatform .code div {
+  margin-bottom: 0.1rem;
+  border-radius: 0.05rem;
+  padding: 0.1rem;
+  background: #fff;
+}
+.otherPlatform .code img {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* 彈窗黑色半透明遮罩 */
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+/* 彈窗 */
+.popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 9.19rem;
+  height: 8.24rem; */
+  width: 15rem;
+  /* aspect-ratio: 1734/995; */
+}
+/* 關閉按鈕 */
+.popup .close {
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 123 / 125;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/close_btn2.webp)
+    no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+}
+.popup .close:hover {
+  background-position: bottom;
+}
+.popup .close:not(:disabled):not(.disabled):focus,
+.popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+.popup p {
+  margin-bottom: 0;
+}
+.popup_outer {
+  min-height: auto;
+}
+.popBtns {
+  display: flex;
+  width: 100%;
+  height: 0.69rem;
+  margin-top: 0.38rem;
+  justify-content: center;
+}
+.popBtns button,
+.popBtns a {
+  width: 2.78rem;
+  height: 0.69rem;
+  margin: 0 0.2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+.popBtns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+button.btn-msg-confirm {
+  margin-top: 1rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/btn_confirm_job2.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+}
+.btn_confirm_job:hover,
+button.btn-msg-confirm:hover {
+  background-position: center bottom;
+}
+
+/* 通用彈窗背景小 */
+.popup .pop-bg-sm {
+  width: 10rem;
+  aspect-ratio: 1091 / 809;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop_bg_sm.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 彈窗：活動規則 */
+.pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop-bg2.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popRule .pop-rule-bg {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop_rules_bg.webp);
+  background-size: 100% auto;
+  aspect-ratio: 1816/1131;
+  width: 15rem;
+}
+.popRuleTit {
+  display: block;
+  width: 4rem;
+  height: 1.1rem;
+  margin: 0.8rem 0 0;
+  margin-left: 0.8rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop_rules_tt.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.rule-scroll {
+  width: 13.3rem;
+  height: 6.28rem;
+  margin: 0.15rem auto 0;
+  padding: 0 0.75rem 0 0;
+}
+.cus-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* 滾動條 */
+.cus-scroll::-webkit-scrollbar {
+  width: 0.45rem;
+}
+.cus-scroll::-webkit-scrollbar-track {
+  background: #2f2f2f;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 0.08rem #999999;
+}
+.cus-scroll::-webkit-scrollbar-thumb {
+  /* background: #aaa; */
+  background:
+    linear-gradient(to bottom, #c7eec7, #bcf0bc) content-box,
+    transparent;
+  border-radius: 999px;
+  border: 0.15rem solid transparent;
+  box-shadow:
+    inset 0 0 0.08rem rgba(255, 255, 255, 0.7),
+    inset 0 0 0.05rem rgba(0, 0, 0, 0.25);
+}
+.rule-scroll p,
+.rule-scroll p a {
+  margin-bottom: 0.2rem;
+  font-size: 0.23rem;
+  line-height: 0.4rem;
+  color: #000000;
+}
+
+.popBtnsTip {
+  width: 100%;
+  text-align: center;
+  font-size: 0.29rem;
+  line-height: 0.4rem;
+  color: #000000;
+  margin-bottom: 0 !important;
+  font-weight: bold;
+}
+#popInviteLog .popBtns {
+  margin-top: 0;
+}
+
+/* 彈窗：下載區 */
+.download .pop-bg4 {
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/download_bg.webp)
+    no-repeat;
+  background-size: 100% auto;
+  aspect-ratio: 1514/624;
+  width: 15rem;
+}
+.download_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.9rem;
+}
+.download_tt {
+  width: 10rem;
+  margin-bottom: 0.3rem;
+}
+.download .gameInfo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.download .gameInfo .qrcode {
+  width: 2.2rem;
+  flex-shrink: 0;
+}
+.download .gameInfo .qrcode img {
+  width: 100%;
+  display: block;
+}
+.download .gameInfo .store {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.2rem;
+  align-items: center;
+}
+.download .gameInfo .store a {
+  display: block;
+  position: relative;
+}
+.download .gameInfo .store a img {
+  width: 3rem;
+  display: block;
+}
+.download .gameInfo a.store-google-play-games img {
+  width: 3.5rem;
+}
+.store-windows {
+  grid-column: 1;
+  grid-row: 1;
+}
+.store-ps5 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.store-steam {
+  grid-column: 1;
+  grid-row: 2;
+}
+.store-epic {
+  grid-column: 2;
+  grid-row: 2;
+}
+.store-app-store {
+  grid-column: 1;
+  grid-row: 3;
+}
+.store-google-play {
+  grid-column: 2;
+  grid-row: 3;
+}
+.store-google-play-games {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.macTip {
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.8rem;
+  height: 0.3rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/app_store_tt.webp)
+    no-repeat center;
+  background-size: contain;
+}
+
+.download .popup .close {
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/close_btn.webp)
+    no-repeat center;
+  background-size: 100%;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* 彈窗：獎勵 */
+.popAwardTit {
+  width: 4.2rem;
+  height: 1.1rem;
+  margin: 0.95rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop_award_tt.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popAwardCont {
+  height: 3.2rem;
+}
+.notRewards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+}
+
+/* 彈窗：抽取成功 */
+#popGetAward .pop-bg-sm {
+  width: 10rem;
+  aspect-ratio: 1091 / 809;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop_bg_sm.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popGetAward .popAwardTit {
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop_award_tt.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+
+/* 彈窗：邀請狀態 */
+#popInviteLog .pop-bg-lg {
+  width: 15rem;
+  aspect-ratio: 1743 / 809;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop_bg_lg.webp)
+    no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#popInviteLog .popInviteTit {
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop_invit_tt.webp)
+    no-repeat center center;
+  background-size: contain;
+  width: 4rem;
+  height: 1.2rem;
+  margin: 0.5rem auto 0.05rem;
+}
+#popInviteLog .inviteTip {
+  text-align: center;
+  font-size: 0.23rem;
+  font-weight: bold;
+  color: #2b2b2b;
+}
+#popInviteLog .popInviteCont {
+  width: 88%;
+  margin: 0 auto;
+}
+#popInviteLog .invite-list-header,
+#popInviteLog .invite-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.32rem;
+  font-weight: bold;
+  color: #000;
+  padding: 0.2rem 0;
+  width: 12.7rem;
+}
+#popInviteLog .invite-list-header span,
+#popInviteLog .invite-row span {
+  flex: 1;
+  text-align: center;
+}
+#popInviteLog .invite-list-header {
+  font-size: 0.36rem;
+  margin-bottom: 0.1rem;
+}
+#popInviteLog .invite-list-body {
+  max-height: 3.3rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* 彈窗捲軸樣式 */
+
+#popInviteLog .invite-list-body::-webkit-scrollbar {
+  width: 0.45rem;
+}
+#popInviteLog .invite-list-body::-webkit-scrollbar-track {
+  background: #2f2f2f;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 0.08rem #999999;
+}
+#popInviteLog .invite-list-body::-webkit-scrollbar-thumb {
+  /* background: #aaa; */
+  background:
+    linear-gradient(to bottom, #c7eec7, #bcf0bc) content-box,
+    transparent;
+  border-radius: 999px;
+  border: 0.15rem solid transparent;
+  box-shadow:
+    inset 0 0 0.08rem rgba(255, 255, 255, 0.7),
+    inset 0 0 0.05rem rgba(0, 0, 0, 0.25);
+}
+
+#popGetAward .popAwardCont {
+  /* margin-top: 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 雪碧圖樣式 */
+#popGetAward .popAwardCont .pop-award-item {
+  width: 3.2rem;
+  aspect-ratio: 1 / 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  margin: 3% 0 6%;
+  filter: drop-shadow(0.18rem 0.18rem 1px rgba(0, 0, 0, 0.3));
+}
+#popGetAward .popAwardCont p {
+  margin: 0.05rem auto 0.2rem;
+  color: #ffffff;
+  font-size: 0.26rem;
+  font-weight: bold;
+}
+
+/* #popLotteryGet .form-select option {
+  background-color: #1d1d1d;
+} */
+
+/* #lottery_phone_code option {
+  background-color: #1d1d1d;
+} */
+
+/* 彈窗：提示訊息 */
+.popMsgCont {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 1.5;
+  color: #000000;
+  padding: 0 10%;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+.popMsgCont p {
+  margin: 0;
+}
+
+/* 彈窗：提示訊息 */
+.popContent {
+  margin: 0 auto;
+}
+
+.popContent p {
+  margin: 3.5rem auto 1rem;
+  text-align: center;
+}
+
+.popContent p img {
+  width: 50%;
+}
+
+/* ======================================================
+
+
+/* ========================================================================
+ * 回歸獎勵彈窗 (Return Award Modal)
+ * ======================================================================== */
+#popReturnAward .pop-return-bg {
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop_return_award_bg.webp)
+    no-repeat center;
+  background-size: 100% auto;
+  aspect-ratio: 1743 / 877;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#popReturnAward .popReturnAwardCont {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#popReturnAward .share_link_wapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#popReturnAward .award_tt {
+  width: 77%;
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#popReturnAward .partner_invite_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66%;
+  gap: 3%;
+  flex-direction: row;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#popReturnAward .partner_invite_box {
+  width: 50%;
+  aspect-ratio: 395 / 125;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/Invitation_btn.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5% 0 4%;
+  margin-bottom: 0%;
+  box-sizing: border-box;
+}
+
+#popReturnAward .invite_code {
+  font-size: 0.32rem;
+  font-weight: bold;
+  color: #000;
+  margin-right: 0.2rem;
+}
+
+/* 複製按鈕 */
+#popReturnAward .btn_copy {
+  width: 0.6rem;
+  height: 0.6rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/copy_btn.webp)
+    no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#popReturnAward .partner_invite_area img {
+  width: 67%;
+  height: auto;
+}
+
+#popReturnAward .btn_share_link {
+  width: 59%;
+  aspect-ratio: 924 / 147;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/Share_link_btn2.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#popReturnAward .btn_share_link:hover {
+  background-position: center bottom;
+}
+
+/* ========================================================================
+ * 初始簽署彈窗 (Initial Signing Modal)
+ * ======================================================================== */
+.initial_signing_modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.initial_signing_modal .modal_content {
+  position: relative;
+  width: 85%;
+  max-width: calc(
+    177.78vh * 0.85
+  ); /* 跟隨 .home_content 的縮放邏輯，當螢幕太寬時等比例縮小 */
+  aspect-ratio: 2170/1122; /* 690 + 1480 = 2170，確保整體比例完全符合圖片原生大小 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+.initial_signing_modal .modal_left {
+  width: calc(690 / 2170 * 100%);
+  height: 100%;
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/main_left_bg2.webp");
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.initial_signing_modal .modal_slogan {
+  width: 80%;
+  margin-bottom: 5%;
+}
+
+.initial_signing_modal .modal_invite_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 63%;
+  gap: 0.1rem;
+}
+
+.initial_signing_modal .modal_input_wrapper {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/typing_area_btn2.webp");
+  background-size: 100% 100%;
+  width: 100%;
+  aspect-ratio: 417 / 121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.initial_signing_modal #modal_invitee_code_input {
+  width: 88%;
+  height: 55%;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 0.15rem;
+  text-align: left;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #333;
+  outline: none;
+}
+/* 打字輸入區預設文字 */
+.initial_signing_modal #modal_invitee_code_input::placeholder {
+  font-size: 0.28rem;
+  text-align: center;
+}
+
+/* 利用 :placeholder-shown 專門針對「還沒打字時」微調輸入框，把文字往上推 */
+.initial_signing_modal #modal_invitee_code_input:placeholder-shown {
+  padding-bottom: 0.08rem;
+}
+
+.initial_signing_modal .btn_modal_confirm {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/confirm_btn2.webp");
+  background-size: 100% 200%;
+  background-position: center top;
+  width: 100%;
+  aspect-ratio: 417 / 122;
+  cursor: pointer;
+}
+
+.initial_signing_modal .btn_modal_confirm:hover {
+  background-position: center bottom;
+}
+
+.initial_signing_modal .btn_modal_notsign {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/not_sign_btn.webp");
+  background-size: 100% 200%;
+  background-position: center top;
+  width: 100%;
+  aspect-ratio: 417 / 122;
+  cursor: pointer;
+}
+
+.initial_signing_modal .btn_modal_notsign:hover {
+  background-position: center bottom;
+}
+
+.initial_signing_modal .modal_right {
+  width: calc(1480 / 2170 * 100%);
+  height: 100%;
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/main_bg2.webp");
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 4%;
+}
+
+.initial_signing_modal .modal_info_section {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.initial_signing_modal .info_tt {
+  width: 83%;
+  z-index: 1;
+}
+
+/* 輪播區塊底圖 */
+.initial_signing_modal .info_bg_wrapper {
+  width: 83%;
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/info_bg.webp");
+  background-size: 100% 100%;
+  aspect-ratio: 994 / 563; /* Approximate, adjust if needed */
+  margin-top: -4%; /* Pull up to overlap info_tt */
+  z-index: 2;
+  position: relative;
+}
+
+.initial_signing_modal .modal_swiper {
+  position: absolute;
+  top: 0.6%;
+  bottom: 0.8%;
+  left: 0.4%;
+  right: 0.4%;
+  width: auto;
+  height: auto;
+  border-radius: 0.1rem;
+  overflow: hidden;
+}
+
+.initial_signing_modal .placeholder_slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+.initial_signing_modal .placeholder_slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.initial_signing_modal .swiper-pagination {
+  bottom: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 2%;
+}
+
+/* 輪播分頁圓點樣式修改 */
+.initial_signing_modal .swiper-pagination-bullet {
+  flex: 1 1 0;
+  width: auto;
+  height: 0.09rem;
+  margin: 0 !important;
+  background: #313131;
+  border: 1px solid #aaaaaa;
+  box-sizing: border-box;
+  border-radius: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.initial_signing_modal .swiper-pagination-bullet-active {
+  background-color: #95fa95;
+  border-color: #95fa95; /* active 時外框也變同色 */
+}
+
+.initial_signing_modal .btn_modal_download {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/download_btn2.webp");
+  background-size: 100% 100%;
+  background-position: center top;
+  width: 47%;
+  aspect-ratio: 605 / 112; /* Approximate */
+  margin-top: 3%;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.initial_signing_modal .btn_modal_download:hover {
+  background-position: center bottom;
+}
+
+/* ----------------------------------------- */
+
+.nte-pop.modal {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- 共用容器 & 工具 --- */
+.nte-pop .rel {
+  position: relative;
+}
+.nte-pop .abs {
+  position: absolute;
+}
+.nte-pop .auto {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --- 大容器 --- */
+.nte-pop .pop {
+  display: block;
+  position: relative;
+}
+.nte-pop .popCont {
+  width: 96%;
+  max-width: 570px;
+  margin: 0 auto;
+  position: relative;
+}
+.nte-pop .popCont1 {
+  width: 100%;
+  height: 735px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.nte-pop .popClose {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 25px;
+  height: 25px;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popClose.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+}
+
+.nte-pop.modal .modal-dialog {
+  width: 96%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nte-pop.modal .modal-content {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.nte-pop.modal .modal-body {
+  padding: 0;
+}
+.nte-pop.regressmodal.modal .modal-dialog,
+.nte-pop.bookedmodal_old.modal .modal-dialog,
+.nte-pop.bookedmodal.modal .modal-dialog,
+.nte-pop.successmodal.modal .modal-dialog,
+.nte-pop.loginMsg.modal .modal-dialog {
+  max-width: 500px;
+}
+.nte-pop.bookedmodal.modal .modal-dialog {
+  max-width: 500px;
+}
+
+.nte-pop.modal .modal-body .popCont {
+  position: relative !important;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+
+/* --- #bookedmodal（新版 SDK 登入） --- */
+
+#bookedmodal .popCont1 {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 760 / 1000;
+  background: url(https://res1-nte.iwplay.com.tw/images/sdk/popCont1_booked_sdk.webp)
+    no-repeat 0 0;
+  background-size: 100% 100%;
+  position: relative;
+}
+.nte-pop.bookedmodal .popClose {
+  top: 11px;
+  right: 11px;
+  width: 31px;
+  height: 31px;
+}
+#bookedmodal .demo-state-btns {
+  position: absolute;
+  top: 1.8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 99;
+}
+#bookedmodal .demo-state-btns .btn {
+  padding: 3px 8px;
+  font-size: 9px;
+  line-height: 1;
+  min-width: 0;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+#bookedmodal .pop_booked_tit {
+  position: absolute;
+  top: 13.9%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 7%;
+  aspect-ratio: 430 / 65;
+  background: url(https://res1-nte.iwplay.com.tw/images/sdk/pop_sdk_login_tt.png)
+    no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#bookedmodal .bookedForm {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 86%;
+  max-width: 451px;
+  height: 33%;
+  z-index: 50;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+#bookedmodal .form-bg {
+  width: 100%;
+  max-width: 387px;
+  height: 37px;
+  margin-bottom: 0;
+  border-radius: 19px;
+  background: #1d1d1d;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+}
+#bookedmodal .graphic_verification_code,
+#bookedmodal .phone_verification_code,
+#bookedmodal .phone_password {
+  width: 100%;
+  max-width: 387px; /* 與 form-bg 同寬 */
+  height: 32px;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#bookedmodal .graphic_verification_code .captcha,
+#bookedmodal .phone_verification_code .smsCode {
+  width: 230px;
+  height: 37px;
+  font-size: 13px;
+  padding: 3px 11px;
+  border-radius: 32px;
+  border: 2px solid #141414;
+  background: #fff;
+}
+
+/* 針對手機橫式 (Landscape) 或高度過低的螢幕，使用等比縮放 (Scale) 以維持 PC 版排版 */
+@media (max-height: 750px) and (orientation: landscape) {
+  #bookedmodal.modal {
+    overflow-y: hidden !important;
+  }
+  #bookedmodal .modal-dialog {
+    width: 500px;
+    max-width: 500px;
+    margin: 5vh auto 0;
+    transform-origin: top center;
+    scale: 0.55;
+  }
+}
+@media (max-height: 450px) and (orientation: landscape) {
+  #bookedmodal .modal-dialog {
+    scale: 0.58;
+  }
+}
+@media (max-height: 400px) and (orientation: landscape) {
+  #bookedmodal .modal-dialog {
+    scale: 0.53;
+  }
+}
+/* 專為 (高度 320px) 準備 */
+@media (max-height: 350px) and (orientation: landscape) {
+  #bookedmodal .modal-dialog {
+    scale: 0.43;
+  }
+}
+
+/* 針對 2K 螢幕  */
+@media (min-width: 2560px) {
+  #bookedmodal .modal-dialog {
+    transform: scale(1.5);
+    transform-origin: center center;
+  }
+}
+/* 針對 4K 螢幕  */
+@media (min-width: 3840px) {
+  #bookedmodal .modal-dialog {
+    transform: scale(2);
+    transform-origin: center center;
+  }
+}
+
+#bookedmodal .graphic_verification_code .img_code {
+  width: 146px;
+  height: 37px;
+}
+#bookedmodal .graphic_verification_code .img_code .img_code_pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  border: 2px solid #141414;
+}
+#bookedmodal .phone_verification_code .btn_get_code {
+  width: 146px;
+  height: auto;
+  aspect-ratio: 400 / 100;
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/btn_get_code.png);
+  background-size: 100% 200%;
+  background-position: 0 0;
+}
+#bookedmodal .phone_verification_code .btn_get_code:hover {
+  background-position: 0 100%;
+}
+#bookedmodal .phone_password .phone_password_input {
+  width: 100%;
+  height: 37px;
+  background: #fff;
+  font-size: 10px;
+  padding: 3px 11px;
+  border-radius: 32px;
+  border: 2px solid #141414;
+  box-sizing: border-box;
+}
+#bookedmodal .form-select {
+  padding: 0 11px;
+  width: 131px;
+  font-size: 13px;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 2px solid #c7c7c7;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  background-color: transparent;
+  background-image: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+#bookedmodal .form-select:focus {
+  color: #fff;
+  border-right: 2px solid #c7c7c7;
+  outline: none;
+  box-shadow: none;
+}
+#bookedmodal .form-select option {
+  background-color: #1d1d1d;
+  text-align: center;
+}
+#bookedmodal .form-control {
+  padding: 0 0 0 4%;
+  width: 60%;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+#bookedmodal .form-control::placeholder {
+  color: #828282;
+}
+#bookedmodal .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  color: #fff;
+  background-color: transparent;
+}
+#bookedmodal .privacy-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+#bookedmodal .form-check-input {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid #000;
+  appearance: none;
+  -webkit-appearance: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#bookedmodal .form-check-input:checked {
+  background-color: #fff;
+  border-color: #000;
+}
+#bookedmodal .form-check-input:checked[type="checkbox"] {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/check.svg);
+}
+#bookedmodal .form-check-input[type="checkbox"] {
+  border-radius: 0;
+}
+#bookedmodal .form-check-label {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 3cqw;
+  line-height: 17px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+#bookedmodal .button_box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 61%;
+  width: 86%;
+  max-width: 451px;
+  height: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+}
+#bookedmodal .button_box .row {
+  display: contents;
+}
+
+#bookedmodal .button_box .row .btn {
+  width: 90%;
+  max-width: 226px;
+  height: auto;
+  aspect-ratio: 504 / 77;
+  flex: none;
+  margin: 0;
+}
+#bookedmodal .button_box .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 200%;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+}
+#bookedmodal .button_box .btn:hover {
+  background-position: 0 100%;
+}
+#booked_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/booked_button.png);
+}
+#back_sms_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/back_sms_button.png);
+}
+#phoneNextBtn {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/phoneNextBtn.png);
+}
+#back_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/back_button.png);
+}
+#select_role_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/booked_button.png);
+}
+#back_role_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/back_button.png);
+}
+#bookedmodal .Change_acc_box {
+  position: absolute;
+  top: 82.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: auto;
+  max-width: 381px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+}
+#bookedmodal .Change_acc_hint {
+  position: static;
+  color: #fff;
+  font-size: 17px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+}
+#bookedmodal #other_login > .Change_acc_box {
+  position: static;
+  width: 100%;
+  height: auto;
+  transform: none;
+  left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5%;
+}
+#bookedmodal .Change_acc_box .Change_acc_btn {
+  width: 20%;
+  max-width: 49px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-size: 100% auto;
+  background-position: 0 -49px;
+  cursor: pointer;
+}
+#bookedmodal .google {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/google.svg);
+}
+#bookedmodal .ios {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/ios.svg);
+}
+#bookedmodal .facebook {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/facebook.svg);
+}
+#bookedmodal .ps {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/ps5.png);
+}
+
+/* 角色選擇區 */
+#bookedmodal #select_role {
+  position: absolute;
+  top: 24.6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 451px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+#bookedmodal #select_role > div:first-child {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #000;
+  font-size: 15px;
+}
+#bookedmodal #select_role .bookedForm {
+  position: static;
+  transform: none;
+  left: auto;
+  margin: 0 auto;
+  height: auto;
+}
+#bookedmodal #select_role .form-bg {
+  padding: 0;
+}
+#bookedmodal #role_select {
+  width: 100%;
+  padding: 0 11px;
+  border-right: 0;
+  text-align: center;
+}
+
+.privacymodal .list_con {
+  height: 6.7rem;
+}
+@media (max-height: 550px) and (orientation: landscape) {
+  .privacymodal .list_con {
+    height: 6.5rem;
+  }
+}
+/* --- .otherPlatform 社群圖示 --- */
+.nte-pop .otherPlatform {
+  display: flex;
+  justify-content: center;
+}
+.nte-pop .otherPlatform a {
+  position: relative;
+  margin: 0 5px;
+  width: 34px;
+  height: 34px;
+  background: url(../../images/otherPlatform.png) no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+}
+.nte-pop .otherPlatform a:hover {
+  background-position-y: -34px;
+}

@@ -1,0 +1,1264 @@
+body {
+  background-color: #212121;
+}
+
+.wrap {
+  display: flex; /* Controlled by JS reset.js -> flex */
+  flex-direction: column;
+  aspect-ratio: 1920/1080;
+  /* width: auto; */
+  height: auto;
+  width: 100%;
+  max-height: 100vh;
+  /* min-height: 550px; */
+  margin: 0 auto;
+  overflow: hidden;
+  align-items: center;
+}
+
+/* PC Specific Min-Height */
+body.is-pc {
+  min-height: 600px;
+}
+.wrap p,
+.wrap ul,
+.wrap li {
+  margin-bottom: 0;
+}
+.wrap a {
+  font-size: initial;
+  line-height: 0;
+}
+
+.display_none {
+  display: none;
+}
+
+.note_flex {
+  display: none;
+}
+
+/* ========================================================================
+ * Footer
+ * ======================================================================== */
+.footer {
+  position: relative;
+  margin-top: auto;
+  flex-shrink: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0;
+  color: #fff;
+  font-size: 0.12rem;
+  text-align: center;
+  letter-spacing: 0.02px;
+  background: #282a2c;
+  /* 更新：包含高度與內距的動效，以釋放佈局空間 */
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    max-height 0.5s ease,
+    padding 0.5s ease,
+    visibility 0.5s;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.footer.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  max-height: 5rem; /* 給予足夠的上限以容納內容 */
+  padding: 0.1rem 0;
+}
+.footer .container {
+  max-width: 100%;
+}
+.footer .copyright,
+.footer .grading {
+  vertical-align: middle;
+}
+.footer img {
+  vertical-align: baseline;
+  height: 0.4rem;
+  width: auto;
+}
+.footer .copyright,
+.footer .company,
+.footer p,
+.footer .grading,
+.footer .grading img,
+.footer ul {
+  display: inline-block;
+}
+.footer .company a,
+.footer .copyright p a,
+.footer .grading,
+.footer p,
+.footer ul {
+  margin-left: 0.1rem;
+  font-size: 0.12rem;
+}
+.footer a:hover {
+  color: #63edec;
+}
+.footer p,
+.footer ul {
+  text-align: left;
+  line-height: 1.2;
+  font-size: 0.12rem;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+.footer p a {
+  color: #fff;
+}
+
+/* ========================================================================
+ * Lucky Draw Modal
+ * ======================================================================== */
+
+/* 第一層彈窗 (幸運抽獎、道具背包) */
+#popLuckyDraw,
+#popItemBag {
+  z-index: 105 !important;
+}
+
+/* 只有當存在疊加背景時，第二層背景才提升層級 */
+.modal-backdrop + .modal-backdrop {
+  z-index: 110 !important;
+}
+
+/* 第二層彈窗 (抽獎動畫、結果) */
+#popLotteryAnimation,
+#popYyLottery,
+#popLotteryGet {
+  z-index: 120 !important;
+}
+
+/* ========================================================================
+ * Home Page Demo Layout
+ * ======================================================================== */
+
+.event_home,
+.event_partner_action {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/home_bg1.webp")
+    no-repeat center center;
+  background-size: 100% 100%;
+  max-width: 177.78vh;
+}
+
+.home_content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 177.78vh; /* 確保超寬螢幕下高度不會超過 100vh，左右留白 */
+  /* aspect-ratio: 1920/1080; */
+  aspect-ratio: 1042/587;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 左邊登入區塊 */
+.home_left {
+  flex: 0 0 23.2%;
+  height: auto;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/main_left_bg.webp")
+    no-repeat center center;
+  background-size: 100% 100%;
+  aspect-ratio: 591/1176;
+  padding: 5% 0;
+  margin-top: 3%;
+  z-index: 3;
+  position: relative;
+}
+.left_content_wrapper {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_login_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 48%;
+}
+
+.home_login_tt {
+  width: 61%;
+  margin-bottom: 2%;
+}
+
+.home_login_btn {
+  width: 60%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.home_login_btn:hover {
+  /* transform: scale(1.05); */
+}
+
+/* 右邊文字區塊 */
+.home_right {
+  flex: 0 0 64%;
+  height: auto;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/main_bg.webp")
+    no-repeat center center;
+  background-size: 100% 100%;
+  aspect-ratio: 1630/1180;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 3%;
+  margin-left: -1%;
+  -webkit-mask-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/main_bg.webp");
+  mask-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/main_bg.webp");
+
+  /* 設定大小與對齊方式，讓它跟外層背景完全重合 */
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+}
+
+.home_tt1 {
+  position: absolute;
+  top: 11%;
+  left: 12%;
+  width: 60%;
+}
+.home_slogan {
+  position: absolute;
+  top: 13%;
+  width: 70%;
+}
+
+.home_logo {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  width: 10%;
+}
+/* 雪碧圖小按鈕群組 */
+.home_btn_group {
+  position: absolute;
+  top: 34%;
+  width: 64%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+/* 會員資訊區塊 */
+.member_info_block {
+  position: absolute;
+  top: 120%;
+  left: 105%; /* 顯示在最後一顆按鈕的右側 */
+  transform: translateY(-50%);
+  width: 4.5rem;
+  height: 2.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/member_info_bg.webp)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2%;
+}
+.member_uid {
+  font-size: 0.31rem;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02rem;
+}
+.btn_switch_account {
+  width: 2.6rem;
+  /* height: 0.6rem; */
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/switch_account_btn.webp)
+    no-repeat top center;
+  background-size: 100% 200%;
+  aspect-ratio: 197/42;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0.12rem;
+}
+.btn_switch_account:hover {
+  background-position: bottom center;
+}
+.btn_quit_account {
+  width: 2.6rem;
+  /* height: 0.6rem; */
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/quit_btn.webp)
+    no-repeat center;
+  background-size: contain;
+  aspect-ratio: 197/42;
+  border: none;
+  cursor: pointer;
+}
+
+.home_icon_btn {
+  width: 28%;
+  aspect-ratio: 101/101;
+  cursor: pointer;
+  background-size: 100% 200%;
+  background-position: center top;
+  transition: transform 0.2s;
+}
+
+.home_icon_btn:hover {
+  /* transform: scale(1.05); */
+  background-position: center bottom;
+}
+
+.btn_rule {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/rule.webp");
+}
+.btn_download {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/download.webp");
+}
+.btn_member {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/member.webp");
+}
+.home_open_btn {
+  width: 27%;
+  cursor: pointer;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/open_btn.webp")
+    no-repeat center top;
+  background-size: 100% 200%;
+  aspect-ratio: 506/165;
+  transition: transform 0.2s;
+  position: absolute;
+  top: 53%;
+  left: 18%;
+}
+.home_open_btn:hover {
+  background-position: center bottom;
+}
+
+/* 右邊底部圖 */
+.home_bottom {
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  width: 78%;
+  height: auto;
+  z-index: 0;
+}
+.home_bottom img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.home_infront {
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+.home_infront img {
+  width: 100%;
+  display: block;
+}
+
+.demo_switch_btn {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background: rgba(255, 105, 180, 0.8);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  font-size: 0.3rem;
+}
+.demo_switch_btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* ========================================================================
+ * Partner Invite Area (Left Panel)
+ * ======================================================================== */
+/* 合夥人行動頁 */
+.event_partner_action .left_content_wrapper,
+.event_invitee_signing .left_content_wrapper {
+  top: -3%;
+}
+.partner_tabs_header {
+  display: flex;
+  position: absolute;
+  top: 4.9%;
+  left: 31%;
+  width: 61%;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.partner_tabs {
+  display: flex;
+  width: 67%;
+  justify-content: flex-start;
+  gap: 2%;
+  margin-left: 5%;
+}
+
+.partner_tab {
+  width: 32%;
+  height: auto;
+  cursor: pointer;
+  filter: grayscale(1); /* 預設灰階 */
+  transition: filter 0.2s;
+}
+
+.partner_tab.active {
+  filter: grayscale(0); /* active 時取消灰階 */
+}
+
+.btn_refresh {
+  width: 8%;
+  aspect-ratio: 136/125;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/refresh1.webp")
+    no-repeat center top;
+  background-size: 100% 200%;
+  cursor: pointer;
+}
+.btn_refresh:hover {
+  background-position: center bottom;
+}
+
+/* ========================================================================
+ * Partner Invite Area (Left Panel)
+ * ======================================================================== */
+/* 針對合夥人行動頁覆蓋原本首頁的 left 內部位置 */
+.event_partner_action .home_slogan,
+.event_invitee_signing .home_slogan {
+  top: 11%;
+  width: 75%;
+}
+
+.partner_invite_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 84%;
+  position: absolute;
+  top: 53%;
+  left: 8%;
+}
+.event_partner_action .home_btn_group,
+.event_invitee_signing .home_btn_group {
+  top: 33%;
+}
+.partner_tt2 {
+  position: absolute;
+  top: 45%;
+  width: 61%;
+}
+
+.partner_invite_box {
+  width: 80%;
+  aspect-ratio: 395 / 125;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/Invitation_btn.webp")
+    no-repeat center top;
+  background-size: 100% 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5% 0 6%;
+  margin-bottom: 2%;
+  box-sizing: border-box;
+}
+
+.partner_invite_box:hover {
+  background-position: center bottom;
+}
+
+.invite_code {
+  color: #333;
+  font-weight: bold;
+  font-size: 0.3rem;
+  letter-spacing: 0.01rem;
+}
+
+.btn_copy {
+  width: 18%;
+  aspect-ratio: 71 / 71;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/copy_btn.webp")
+    no-repeat center top;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.btn_share_link {
+  width: 80%;
+  aspect-ratio: 395 / 134;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/Share_link_btn.webp")
+    no-repeat center top;
+  background-size: 100% 200%;
+  cursor: pointer;
+}
+.btn_share_link:hover {
+  background-position: center bottom;
+}
+
+/* ========================================================================
+ * Partner Task Area (Right Panel)
+ * ======================================================================== */
+.partner_task_list {
+  position: absolute;
+  top: 9%; /* 避開上方的頁籤 */
+  left: 11%;
+  width: 85%;
+  height: 59%; /* 限制在白紙高度內 */
+}
+
+/* 任務備註文字（右半部右上角） */
+.task_note {
+  position: absolute;
+  top: 4%;
+  right: 10.5%;
+  width: 6.2rem;
+  height: auto;
+  margin: 0;
+  z-index: 2;
+}
+
+/* 手機橫式微調 */
+body.is-mobile .task_note {
+  right: 8%;
+}
+
+.tab_content {
+  width: 100%;
+  height: 100%;
+}
+
+/* 任務列表 */
+.im_task_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 4%;
+}
+
+.im_task_list::-webkit-scrollbar {
+  width: 0.45rem;
+}
+.im_task_list::-webkit-scrollbar-track {
+  background: #2f2f2f;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 0.08rem #999999;
+}
+.im_task_list::-webkit-scrollbar-thumb {
+  /* background: #aaa; */
+  background:
+    linear-gradient(to bottom, #c7eec7, #bcf0bc) content-box,
+    transparent;
+  border-radius: 999px;
+  border: 0.15rem solid transparent;
+  box-shadow:
+    inset 0 0 0.08rem rgba(255, 255, 255, 0.7),
+    inset 0 0 0.05rem rgba(0, 0, 0, 0.25);
+}
+
+.im_task {
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/mission_tt_bg.webp")
+    no-repeat center center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  padding: 1% 3%;
+}
+
+.im_task_num {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.im_task_num img {
+  width: 100%;
+  height: auto;
+}
+
+.im_task_desc {
+  flex: 1;
+  font-size: 0.35rem;
+  font-weight: bold;
+  color: #fff;
+  padding-left: 3%;
+}
+
+.task_reward {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding-right: 4%;
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.task_reward img {
+  width: 0.6rem;
+  height: auto;
+}
+
+.btn_im_task {
+  width: 8%;
+  aspect-ratio: 112 / 86;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 300%;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 3%;
+  cursor: pointer;
+
+  transition: filter 0.2s;
+}
+
+.partner_tab.active {
+  filter: grayscale(0); /* active 時取消灰階 */
+}
+
+.btn_refresh {
+  width: 8%;
+  aspect-ratio: 136/125;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/refresh1.webp")
+    no-repeat center top;
+  background-size: 100% 200%;
+  cursor: pointer;
+}
+.btn_refresh:hover {
+  background-position: center bottom;
+}
+
+/* ========================================================================
+ * Partner Invite Area (Left Panel)
+ * ======================================================================== */
+/* 針對合夥人行動頁覆蓋原本首頁的 left 內部位置 */
+.event_partner_action .home_slogan,
+.event_invitee_signing .home_slogan {
+  top: 11%;
+  width: 75%;
+}
+
+.partner_invite_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 84%;
+  position: absolute;
+  top: 53%;
+  left: 8%;
+}
+.event_partner_action .home_btn_group,
+.event_invitee_signing .home_btn_group {
+  top: 33%;
+}
+.partner_tt2 {
+  position: absolute;
+  top: 45%;
+  width: 61%;
+}
+
+.partner_invite_box {
+  width: 80%;
+  aspect-ratio: 395 / 125;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/Invitation_btn.webp")
+    no-repeat center top;
+  background-size: 100% 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5% 0 6%;
+  margin-bottom: 2%;
+  box-sizing: border-box;
+}
+
+.partner_invite_box:hover {
+  background-position: center bottom;
+}
+
+.invite_code {
+  color: #333;
+  font-weight: bold;
+  font-size: 0.3rem;
+  letter-spacing: 0.01rem;
+}
+
+.btn_copy {
+  width: 18%;
+  aspect-ratio: 71 / 71;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/copy_btn.webp")
+    no-repeat center top;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.btn_share_link {
+  width: 80%;
+  aspect-ratio: 395 / 134;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/Share_link_btn.webp")
+    no-repeat center top;
+  background-size: 100% 200%;
+  cursor: pointer;
+}
+.btn_share_link:hover {
+  background-position: center bottom;
+}
+
+/* ========================================================================
+ * Partner Task Area (Right Panel) 合夥人任務
+ * ======================================================================== */
+.partner_task_list {
+  position: absolute;
+  top: 9%; /* 避開上方的頁籤 */
+  left: 11%;
+  width: 85%;
+  height: 59%; /* 限制在白紙高度內 */
+}
+
+.tab_content {
+  width: 100%;
+  height: 100%;
+}
+
+/* 任務列表 */
+.im_task_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 4%;
+}
+
+/* 任務列表滾動條 */
+.im_task_list::-webkit-scrollbar {
+  width: 0.45rem;
+}
+.im_task_list::-webkit-scrollbar-track {
+  background: #2f2f2f;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 0.08rem #999999;
+}
+.im_task_list::-webkit-scrollbar-thumb {
+  /* background: #aaa; */
+  background:
+    linear-gradient(to bottom, #c7eec7, #bcf0bc) content-box,
+    transparent;
+  border-radius: 999px;
+  border: 0.15rem solid transparent;
+  box-shadow:
+    inset 0 0 0.08rem rgba(255, 255, 255, 0.7),
+    inset 0 0 0.05rem rgba(0, 0, 0, 0.25);
+}
+
+.im_task {
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/mission_tt_bg.webp")
+    no-repeat center center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  padding: 1% 3%;
+}
+
+.im_task_num {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.im_task_num img {
+  width: 100%;
+  height: auto;
+}
+
+.im_task_desc {
+  flex: 1;
+  font-size: 0.35rem;
+  font-weight: bold;
+  color: #fff;
+  padding-left: 3%;
+}
+
+.task_reward {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding-right: 4%;
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.task_reward img {
+  width: 0.6rem;
+  height: auto;
+}
+
+/* 合夥人任務按鈕 */
+.btn_im_task {
+  width: 8%;
+  aspect-ratio: 112 / 86;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 300%;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 3%;
+}
+
+/* 合夥人任務按鈕1*/
+.im_task_list .im_task:nth-child(1) .btn_im_task {
+  background-position: center bottom;
+}
+/* 合夥人任務按鈕3*/
+.im_task_list .im_task:nth-child(3) .btn_im_task {
+  background-position: center center;
+}
+
+.btn_task_share {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/share_btn1.webp");
+}
+.btn_task_get {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/get_btn.webp");
+}
+
+/* ========================================================================
+ * Lucky Draw Area (Right Panel Tab 2) 幸運抽獎
+ * ======================================================================== */
+#content_lucky,
+#content_lucky_signing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lucky_draw_container {
+  width: 84%;
+  height: auto;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_partner_action/lucky_draw_bg.webp")
+    no-repeat center center;
+  background-size: 100% 100%; /* 填滿右側框框 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%; /* 調整上下內距避開邊緣 */
+  box-sizing: border-box;
+}
+
+/* 頂部標題 */
+.lucky_draw_header {
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.lucky_draw_tt {
+  width: 65%;
+  height: auto;
+}
+
+.invitation_status {
+  position: absolute;
+  right: -5%;
+  top: 34%;
+  transform: translateY(-50%);
+  width: 13%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.invitation_status:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* 抽獎卡片區 (3D 動畫結構) */
+.lucky_draw_cards {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 2%;
+  perspective: 1000px;
+  position: relative;
+}
+
+.card {
+  width: 18%;
+  aspect-ratio: 280 / 380; /* 卡片比例 */
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  /* 洗牌平移動畫 */
+  transition:
+    transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    z-index 0s;
+  border: 0;
+}
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* 翻轉動畫 */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px; /* 模擬卡片圓角 */
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.card-front {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 資訊列 */
+.lucky_draw_info_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.lucky_draw_hint {
+  font-size: 0.2rem;
+  color: #000000;
+  font-weight: bold;
+  background-color: rgb(168, 168, 168);
+  border-radius: 50px;
+  padding: 0.5% 1.5%;
+  margin-left: 33%;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.lucky_info_row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6%;
+  margin-top: 1%;
+}
+
+.btn_lucky_refresh,
+.btn_lucky_info {
+  width: 0.4rem;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+/* .btn_lucky_refresh:hover,
+.btn_lucky_info:hover {
+  transform: scale(1.1);
+} */
+
+.lucky_count_text {
+  font-size: 0.28rem;
+  color: #333;
+  font-weight: bold;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* 底部按鈕 */
+.lucky_draw_bottom_btns {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  width: 67%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+.sprite_img {
+  width: 100%;
+  height: auto;
+}
+
+.btn_lucky_draw {
+  width: 38%;
+  height: 0;
+  padding-bottom: 12.6%; /* 根據按鈕比例推估，約 35:12 */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn_lucky_share {
+  width: 48%;
+  height: 0;
+  padding-bottom: 12.3%; /* 根據按鈕比例推估 */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn_lucky_draw:hover .sprite_img,
+.btn_lucky_share:hover .sprite_img {
+  transform: translateY(-50%);
+}
+
+/* ========================================================================
+ * Lucky Draw Modal (幸運抽取彈窗 - 分離式架構)
+ * ======================================================================== */
+.modal_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.modal_content_wrapper {
+  position: absolute;
+  top: 10%; /* 偏上方 */
+  left: 50%; /* 居中 */
+  transform: translateX(-50%);
+  width: 26%; /* 原為寬度的一半 */
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_content_wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ========================================================================
+ * 受邀人簽署頁面 (event_invitee_signing) 專屬樣式
+ * ======================================================================== */
+.event_invitee_signing .im_task_list .im_task:nth-child(n) .btn_im_task {
+  background-position: center top;
+}
+
+.event_invitee_signing .partner_invite_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 84%;
+  position: absolute;
+  top: 56%;
+  left: 8%;
+}
+.event_invitee_signing .invite_input_wrapper {
+  width: 80%;
+  aspect-ratio: 395 / 116;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/typing_area_btn.webp")
+    no-repeat center top;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.1rem auto;
+}
+.partner_tt3 {
+  position: absolute;
+  top: 45%;
+  width: 54%;
+}
+
+#invitee_code_input {
+  width: 88%;
+  height: 55%;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 0.15rem;
+  text-align: left;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.33rem;
+  font-weight: bold;
+  color: #333;
+  outline: none;
+}
+#invitee_code_input::placeholder {
+  font-size: 0.25rem;
+  text-align: center;
+}
+#invitee_code_input:placeholder-shown {
+  padding-bottom: 0.08rem;
+}
+
+#invitee_code_display {
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#btn_confirm_signing {
+  width: 80%;
+  aspect-ratio: 395 / 115;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/confirm_btn.webp")
+    no-repeat center top;
+  background-size: 100% 200%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#btn_confirm_signing.confirmed {
+  background-position: center bottom;
+  cursor: default;
+}
+
+/* 簽署頁面專屬遮罩 */
+.signing_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signing_content_wrapper {
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 37%;
+  left: 0;
+  width: 100%;
+}
+
+.signing_tt4 {
+  width: 64%;
+  margin-bottom: 0.6rem;
+}
+
+.signing_btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 74%;
+}
+
+.btn_signing_refresh,
+.btn_signing_download {
+  width: 35%;
+  aspect-ratio: 416 / 122;
+  cursor: pointer;
+  background-size: 100% 200%;
+  background-position: center top;
+}
+
+.btn_signing_refresh {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/refresh_btn.webp");
+}
+.btn_signing_download {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_invitee_signing/download_btn.webp");
+}
+
+.btn_signing_refresh:hover,
+.btn_signing_download:hover {
+  background-position: center bottom;
+}
+
+.event_invitee_signing {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url("https://rests-nte.iwplay.com.tw/events/EibonPartner/images/event_home/home_bg1.webp")
+    no-repeat center center;
+  background-size: 100% 100%;
+  max-width: 177.78vh;
+}
