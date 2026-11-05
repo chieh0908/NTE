@@ -1,0 +1,446 @@
+.regressmodal .modal-dialog,
+.successmodal .modal-dialog,
+.privacymodal .modal-dialog {
+  width: 96%;
+  max-width: 600px;
+}
+.regressmodal .modal-dialog .modal-content,
+.successmodal .modal-dialog .modal-content,
+.privacymodal .modal-dialog .modal-content {
+  background: #4568ff;
+  border: 5px solid #4568ff;
+  height: auto;
+  overflow: hidden;
+}
+.regressmodal .modal-dialog .modal-content .btn-close,
+.successmodal .modal-dialog .modal-content .btn-close,
+.privacymodal .modal-dialog .modal-content .btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  width: 30px;
+  height: 31px;
+  aspect-ratio: 30/31;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/popup_close.webp) no-repeat;
+  background-size: 100%;
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s;
+}
+.regressmodal .modal-dialog .modal-content .btn-close:hover,
+.successmodal .modal-dialog .modal-content .btn-close:hover,
+.privacymodal .modal-dialog .modal-content .btn-close:hover {
+  transform: rotate(180deg);
+}
+.regressmodal .modal-dialog .modal-content .modal-body,
+.successmodal .modal-dialog .modal-content .modal-body,
+.privacymodal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+  border-radius: 20px;
+}
+.regressmodal .modal-dialog .modal-content .modal-body::before,
+.successmodal .modal-dialog .modal-content .modal-body::before,
+.privacymodal .modal-dialog .modal-content .modal-body::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/txt_bg_notice.webp) center bottom no-repeat;
+  background-size: 100%;
+}
+
+.regressmodal .modal-dialog .modal-content .modal-body .inner {
+  width: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner input:-webkit-autofill {
+  background-color: #282828 !important;
+  color: #fff !important;
+  box-shadow: 0 0 0px 1000px #fff inset !important;
+  border-radius: 999px;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner input {
+  color: #fff;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner input:focus {
+  outline: none;
+  border: 0;
+  box-shadow: none;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .res_poptt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 15px 0;
+  background: #4568ff url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/tt_bg_notice.webp);
+  background-size: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-bottom: 25px;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .res_poptt img {
+  width: 214px;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg {
+  width: 92%;
+  background: #282828;
+  border-radius: 30px;
+  margin: 2% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .form-select {
+  padding: 0;
+  width: 30%;
+  font-size: 1rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 0%, 0%, 0);
+  background-image: none;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .form-select option {
+  background: #282828;
+  color: #fff;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .form-select:focus {
+  border-right: 0.15em solid #c7c7c7;
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .form-control {
+  background: transparent;
+  border: 0;
+  width: 70%;
+  outline: none;
+  border-radius: 20px;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .yyFormRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .yyFormRow .form-control {
+  width: 70%;
+  text-align: center;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .yyFormRow a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #ffd562;
+  width: 30%;
+  height: 30px;
+  border-radius: 20px;
+  margin-right: 3px;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .yyFormRow a:hover {
+  transform: none;
+  color: #282828;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .yyFormRow .getNumerus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #ffffff;
+  width: 30%;
+  height: 30px;
+  border-radius: 20px;
+  margin-right: 3px;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .form-bg .yyFormRow .getNumerus img {
+  height: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .d-flex {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .d-flex input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #242426;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin-right: 0.3rem;
+  border-radius: 0;
+  background-color: white;
+  margin-top: 0;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .d-flex input[type=checkbox]:checked {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .d-flex label {
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 92%;
+  margin: 15px auto;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .platform_head_tt {
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  color: #f65886;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div {
+  cursor: pointer;
+  margin: 4px;
+  width: 210px;
+  aspect-ratio: 505/119;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div.t_btn_ios {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/t_btn_ios.webp) no-repeat;
+  background-size: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div.t_btn_android {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/t_btn_android.webp) no-repeat;
+  background-size: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div.t_btn_pc {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/t_btn_pc.webp) no-repeat;
+  background-size: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div.t_btn_ps {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/t_btn_ps.webp) no-repeat;
+  background-size: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div.t_btn_ios.active {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/t_btn_ios_r.webp) no-repeat;
+  background-size: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div.t_btn_android.active {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/t_btn_android_r.webp) no-repeat;
+  background-size: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div.t_btn_pc.active {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/t_btn_pc_r.webp) no-repeat;
+  background-size: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div.t_btn_ps.active {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/t_btn_ps_r.webp) no-repeat;
+  background-size: 100%;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .platform .platform_tip {
+  width: 78%;
+  margin: 0 auto;
+  font-size: 0.8rem;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.regressmodal .modal-dialog .modal-content .modal-body .inner .submit a {
+  display: block;
+  width: 220px;
+  aspect-ratio: 650/210;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/btn.webp) center no-repeat;
+  background-size: 100%;
+  color: #242426;
+  font-weight: 700;
+  font-size: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.successmodal .modal-dialog .modal-content .modal-body .inner .res_poptt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .res_poptt img {
+  width: 80%;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus {
+  width: 100%;
+  aspect-ratio: 1200/596;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/pop_success_bg.webp) bottom center no-repeat;
+  background-size: cover;
+  padding-top: 160px;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .focus_head_tt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .focus_head_tt img {
+  width: 80%;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .otherPlatform {
+  display: flex;
+  justify-content: center;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .otherPlatform a {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url(https://rests-nte.iwplay.com.tw/images/otherPlatform.png) no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+  margin: 5px;
+  filter: brightness(2);
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .otherPlatform a.platform_fb {
+  background-position-x: 0;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .otherPlatform a.platform_yt {
+  background-position-x: -50px;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .otherPlatform a.platform_dc {
+  background-position-x: -255px;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .otherPlatform a.platform_ig {
+  background-position-x: -102px;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .otherPlatform a.platform_tw {
+  background-position-x: -153px;
+}
+.successmodal .modal-dialog .modal-content .modal-body .inner .focus .otherPlatform aa:hover {
+  background-position-y: -0.66rem;
+}
+
+.privacymodal .modal-dialog .modal-content .modal-body {
+  overflow: visible;
+}
+.privacymodal .modal-dialog .modal-content .modal-body::before {
+  display: none;
+}
+.privacymodal .modal-dialog .modal-content .modal-body .res_poptt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 15px 0;
+  background: #4568ff url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/tt_bg_notice.webp);
+  background-size: cover;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  margin-bottom: 25px;
+}
+.privacymodal .modal-dialog .modal-content .modal-body .res_poptt img {
+  width: 214px;
+}
+.privacymodal .modal-dialog .modal-content .modal-body ol {
+  width: 94%;
+  height: 450px;
+  padding-right: 2%;
+  overflow-y: auto;
+  margin: 0 4% 0 2%;
+  font-size: 0.85rem;
+}
+.privacymodal .modal-dialog .modal-content .modal-body .modal-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.privacymodal .modal-dialog .modal-content .modal-body .modal-footer a {
+  padding: 5px 20px;
+  background: #4568ff;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 820px) {
+  .regressmodal .modal-dialog .modal-content .modal-body .inner .res_poptt img {
+    width: 30vw;
+  }
+  .regressmodal .modal-dialog .modal-content .modal-body .inner .d-flex {
+    margin-top: 15px;
+  }
+  .regressmodal .modal-dialog .modal-content .modal-body .inner .d-flex input[type=checkbox] {
+    width: 2.65vw;
+    height: 2.65vw;
+  }
+  .regressmodal .modal-dialog .modal-content .modal-body .inner .d-flex label {
+    font-size: clamp(0.5rem, 2.65vw, 1rem);
+    line-height: 2.65vw;
+  }
+  .regressmodal .modal-dialog .modal-content .modal-body .inner .platform {
+    width: 100%;
+  }
+  .regressmodal .modal-dialog .modal-content .modal-body .inner .platform .platform_head_tt {
+    font-size: 0.8rem;
+  }
+  .regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box {
+    width: 100%;
+  }
+  .regressmodal .modal-dialog .modal-content .modal-body .inner .platform .tool_box .t_btn > div {
+    width: 36vw;
+  }
+  .regressmodal .modal-dialog .modal-content .modal-body .inner .platform .platform_tip {
+    width: 90%;
+  }
+  .successmodal .modal-dialog .modal-content .modal-body .inner .res_poptt img {
+    width: 80%;
+  }
+  .successmodal .modal-dialog .modal-content .modal-body .inner .focus {
+    padding-top: 30vw;
+    padding-bottom: 5vw;
+  }
+  .successmodal .modal-dialog .modal-content .modal-body .inner .focus .focus_head_tt img {
+    width: 80%;
+  }
+  .privacymodal .modal-dialog .modal-content .modal-body .res_poptt img {
+    width: 30vw;
+  }
+}/*# sourceMappingURL=login.css.map */

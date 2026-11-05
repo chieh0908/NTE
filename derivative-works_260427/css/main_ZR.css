@@ -1,0 +1,2973 @@
+@charset "UTF-8";
+/*---- common ----*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap");
+@import url("https://ids.iwplay.com.tw/includ/footer/footer.css");
+*,
+a,
+span {
+  font-family: "Noto Sans TC", Arial, Helvetica, sans-serif;
+}
+
+a,
+.sns_btn,
+.btn_hover {
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+a:hover,
+.notice_btn:hover {
+  transform: scale(1.05) rotate(-6deg);
+}
+
+/*====卷軸===*/
+/* 細捲軸開始 */
+::-webkit-scrollbar {
+  height: 5px;
+  overflow: visible;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6f88f6;
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 0px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  border-radius: 50px;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0), inset 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6f88f6;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #6f88f6;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(34, 34, 36, 0.1);
+  border-radius: 50px;
+}
+
+/* 細捲軸結束 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: #140a18;
+}
+
+.display_none {
+  display: none;
+}
+
+/* 選單---------------------------------------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/nav_bg.webp);
+  background-size: cover;
+  padding: 0 2vw;
+  z-index: 10;
+}
+nav .logo {
+  width: 92px;
+}
+nav .logo img {
+  width: 100%;
+}
+nav .Menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  margin-bottom: 0;
+}
+nav .Menu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  color: #fff;
+  opacity: 0.7;
+  cursor: pointer;
+  margin: 0 0.7vw;
+  font-size: 1.375rem;
+  letter-spacing: 0.05rem;
+  position: relative;
+}
+nav .Menu li::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: #5cfffe;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s;
+}
+nav .Menu li:hover {
+  opacity: 1;
+}
+nav .Menu li:hover::after {
+  width: 100%;
+}
+nav .nav_btn .mobile_menu {
+  display: none;
+}
+nav .nav_btn .home {
+  display: block;
+  width: 3.5rem;
+  transition: all 0.3s;
+}
+nav .nav_btn .home img {
+  width: 100%;
+}
+nav .nav_btn .home:hover {
+  filter: brightness(1.2);
+}
+
+.fullpage {
+  padding-top: 80px;
+  width: 100%;
+  position: relative;
+}
+.fullpage .section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  /* header---------------------------------------------------- */
+  /* 活動時間---------------------------------------------------- */
+  /* 活動獎勵---------------------------------------------------- */
+  /* 參與方式---------------------------------------------------- */
+  /* 鑒定師投票---------------------------------------------------- */
+}
+.fullpage .section .title_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section .title_box img {
+  width: 36.71vw;
+}
+.fullpage .section.header {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/header/header_bg.webp) center;
+  background-size: cover;
+  position: relative;
+  height: 47vw;
+  animation: kv_ani 1s;
+}
+.fullpage .section.header .title_box {
+  width: 100%;
+  position: absolute;
+  top: 23.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.fullpage .section.header .title_box .header_title {
+  width: 43.54vw;
+}
+.fullpage .section.header .title_box a {
+  margin-top: 0.52vw;
+  width: 17.7vw;
+}
+.fullpage .section.header .title_box a img {
+  width: 100%;
+}
+.fullpage .section.time {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/time_bg.webp) center bottom;
+  background-size: cover;
+}
+.fullpage .section.time .title_box {
+  width: 100%;
+  height: calc(10vw + 80px);
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/time_title_bg.webp) center bottom no-repeat;
+  background-size: cover;
+}
+.fullpage .section.time .title_box img {
+  padding-top: 80px;
+}
+.fullpage .section.time .timebox {
+  width: 100%;
+  padding: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.fullpage .section.time .timebox .time_pic {
+  width: 28.43vw;
+  margin-left: 1.45vw;
+  position: relative;
+}
+.fullpage .section.time .timebox .time_pic img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fullpage .section.time .timebox .time_pic img.time_pic_2 {
+  position: relative;
+  animation: round 12s infinite forwards 1s linear;
+}
+.fullpage .section.time .timebox .time_txt .time_item {
+  width: 35.7vw;
+  height: 7.7vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/time_date_bg.webp) center left no-repeat;
+  background-size: auto 100%;
+  margin: 1.56vw 0;
+}
+.fullpage .section.time .timebox .time_txt .time_item:nth-child(2) {
+  margin-left: -3.125vw;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-direction: row;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt img {
+  margin-top: 0.2vw;
+  height: 3.52vw;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  color: #242426;
+  padding-left: 2.5vw;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date p {
+  font-size: 2vw;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date p span {
+  display: inline-block;
+  width: 0.83vw;
+  height: 0.98vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/arrow_blue.webp) center no-repeat;
+  background-size: 100% 100%;
+  text-indent: -99999px;
+  margin: 0 0.7vw;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date small {
+  font-weight: 900;
+  margin-left: 0.7vw;
+  margin-top: 0.5vw;
+  font-size: 1vw;
+  line-height: 1vw;
+  text-align: center;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date small span {
+  display: block;
+  font-size: 0.7vw;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn {
+  width: 11.25vw;
+  height: 7.76vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/time_btn.webp) center;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn.comingsoon {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/time_btn_comingsoon.webp) center;
+  background-size: 100% 100%;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn img.time_btn_1 {
+  width: 5.41vw;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn img.time_btn_2 {
+  width: 6.57vw;
+}
+.fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn img.time_btn_3 {
+  width: 5.15vw;
+}
+.fullpage .section.rewards {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/rewards/rewards_bg.webp) center top no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: -2px;
+}
+.fullpage .section.rewards .title_box {
+  width: 100%;
+  height: calc(10vw + 80px);
+}
+.fullpage .section.rewards .title_box img {
+  padding-top: 80px;
+}
+.fullpage .section.rewards .rewardsbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #474747;
+}
+.fullpage .section.rewards .rewardsbox .rewards_pic {
+  position: absolute;
+  width: 11.8vw;
+  top: -10.2vw;
+  left: 12.5vw;
+  pointer-events: none;
+}
+.fullpage .section.rewards .rewardsbox .rewards_pic img {
+  width: 100%;
+}
+.fullpage .section.rewards .rewardsbox > h3 {
+  width: 24.16vw;
+  aspect-ratio: 464/29;
+  margin-top: -1.5vw;
+  margin-bottom: 2.5vw;
+}
+.fullpage .section.rewards .rewardsbox > h3 img {
+  width: 100%;
+}
+.fullpage .section.rewards .rewardsbox .award_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.rewards .rewardsbox .award_title h6 {
+  margin-bottom: 0;
+}
+.fullpage .section.rewards .rewardsbox .award_title h6 img {
+  width: auto;
+  height: 1.77vw;
+}
+.fullpage .section.rewards .rewardsbox .award_title p {
+  margin-bottom: 0;
+  color: #ffcc43;
+  margin-left: 0.5vw;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  font-size: clamp(1rem, 0.9vw, 1.5rem);
+}
+.fullpage .section.rewards .rewardsbox .award_top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 67.7vw;
+  aspect-ratio: 1300/272;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/rewards/award_top_bg.webp) center bottom no-repeat;
+  background-size: 100%;
+}
+.fullpage .section.rewards .rewardsbox .award_top .award_title {
+  aspect-ratio: 440/60;
+  width: 22.91vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/rewards/title_s_blue_bg.webp) center no-repeat;
+  background-size: 100%;
+  margin-top: -0.8vw;
+}
+.fullpage .section.rewards .rewardsbox .award_top .award_title p {
+  color: #59f5f4;
+}
+.fullpage .section.rewards .rewardsbox .award_top .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 0.8vw;
+}
+.fullpage .section.rewards .rewardsbox .award_top .list .item {
+  width: 21.61vw;
+  margin: 0.25vw;
+}
+.fullpage .section.rewards .rewardsbox .award_top .list .item img {
+  width: 100%;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 3.6vw;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom > div {
+  width: 38.54vw;
+  aspect-ratio: 740/307;
+  margin: 0 0.25vw;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom .popularity {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/rewards/award_bottom_bg.webp) center bottom no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom .popularity .award_title {
+  aspect-ratio: 476/101;
+  width: 22.91vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/rewards/title_s_yellow_bg.webp) center no-repeat;
+  background-size: 100%;
+  margin-top: -2.4vw;
+  padding-top: 0.52vw;
+  padding-left: 2.8vw;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom .popularity .item {
+  width: 36.66vw;
+  margin-top: 0.25vw;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom .popularity .item img {
+  width: 100%;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom .lucky {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/rewards/award_bottom_bg2.webp) center bottom no-repeat;
+  background-size: 100%;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom .lucky .award_title {
+  aspect-ratio: 538/109;
+  width: 28.02vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/rewards/title_s_yellow_bg2.webp) center no-repeat;
+  background-size: 100%;
+  margin-top: -3vw;
+  padding-top: 0.6vw;
+  padding-left: 2.3vw;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom .lucky .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom .lucky .list .item {
+  aspect-ratio: 350/234;
+  width: 18.22vw;
+  margin: 0 0.2vw;
+}
+.fullpage .section.rewards .rewardsbox .award_bottom .lucky .list .item img {
+  width: 100%;
+}
+.fullpage .section.info {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/info/info_bg.webp) center bottom;
+  background-size: cover;
+  overflow: hidden;
+  margin-top: -2px;
+}
+.fullpage .section.info .title_box {
+  width: 100%;
+  height: calc(21vw - 80px);
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/info/info_title_bg.webp) center bottom no-repeat;
+  background-size: cover;
+}
+.fullpage .section.info .title_box img {
+  padding-top: 0;
+}
+.fullpage .section.info .infobox {
+  width: 100%;
+  height: 33.5vw;
+  position: relative;
+}
+.fullpage .section.info .picbox {
+  width: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: 1;
+}
+.fullpage .section.info .picbox .info_pic {
+  position: absolute;
+  width: 41.25vw;
+  top: 0.8vw;
+  left: 4vw;
+  animation: char 1.8s infinite alternate-reverse linear;
+}
+.fullpage .section.info .info_txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  left: 4.5vw;
+  margin-top: -3.125vw;
+  position: relative;
+  width: 49.47vw;
+}
+.fullpage .section.info .info_txt .info_icon {
+  position: absolute;
+  pointer-events: none;
+  width: 8.43vw;
+  top: -6.2vw;
+  right: 0vw;
+}
+.fullpage .section.info .info_txt .step_box {
+  padding-left: 14vw;
+  height: 22.55vw;
+  aspect-ratio: 950/433;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/info/info_con_bg.webp);
+  background-size: 100%;
+}
+.fullpage .section.info .info_txt .step_box .step .step_tt {
+  width: 13.43vw;
+}
+.fullpage .section.info .info_txt .step_box .step .step_tt img {
+  margin-top: 0.93vw;
+  width: 100%;
+}
+.fullpage .section.info .info_txt .step_box .step p {
+  color: #242426;
+  font-size: 1.1vw;
+  line-height: 1.8vw;
+  margin-bottom: 0;
+  margin-top: 0.5vw;
+  padding-left: 1.6vw;
+  font-weight: 500;
+  letter-spacing: 0.03vw;
+}
+.fullpage .section.info .info_txt .step_box .step p span {
+  color: #1b7edb;
+}
+.fullpage .section.info .info_txt .step_box .step p span.red {
+  color: #f65886;
+}
+.fullpage .section.info .info_txt .btn_box {
+  width: 100%;
+  height: 8.75vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 3vw;
+  position: relative;
+  margin-bottom: 3vw;
+}
+.fullpage .section.info .info_txt .btn_box a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 14.79vw;
+  aspect-ratio: 284/94;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/info/step_btn_bg.webp) no-repeat;
+  background-size: 100%;
+  color: #242426;
+  font-weight: 700;
+  font-size: 1.5vw;
+  margin: 0 0.4vw;
+}
+.fullpage .section.info .info_txt .btn_box a::after {
+  content: "";
+  display: block;
+  width: 1.3vw;
+  aspect-ratio: 25/24;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/arrow.webp) center no-repeat;
+  background-size: 100%;
+  margin-left: 0.9vw;
+}
+.fullpage .section.info .info_txt .btn_box .notice_btn {
+  position: absolute;
+  width: 11.61vw;
+  aspect-ratio: 223/242;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/info/info_rule_btn.webp) center no-repeat;
+  background-size: 100%;
+  bottom: 3vw;
+  right: -4vw;
+  color: #242426;
+  font-weight: 700;
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.fullpage .section.info .info_txt .btn_box .notice_btn p {
+  display: block;
+  width: 3vw;
+  line-height: 1.8vw;
+  margin-top: 3.5vw;
+  margin-left: 2.95vw;
+}
+.fullpage .section.vote {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/vote_bg.webp) center bottom no-repeat;
+  background-size: cover;
+}
+.fullpage .section.vote .title_box {
+  width: 100%;
+  height: 17.5vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/vote_title_bg.webp) center bottom no-repeat;
+  background-size: cover;
+}
+.fullpage .section.vote .title_box img {
+  margin-top: -0.5vw;
+}
+.fullpage .section.vote .votebox {
+  width: 75%;
+  margin: 0 auto;
+}
+.fullpage .section.vote .votebox .pic_con {
+  display: block;
+}
+.fullpage .section.vote .votebox .video_con {
+  display: none;
+}
+.fullpage .section.vote .votebox .type_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.vote .votebox .type_btn > div {
+  width: 18.125vw;
+  aspect-ratio: 348/140;
+  text-indent: -9999px;
+  cursor: pointer;
+  margin: 0 0.5vw;
+  margin-top: -5.46vw;
+  transition: all 0.3s;
+}
+.fullpage .section.vote .votebox .type_btn > div.pic_btn {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/pic_btn.webp) center no-repeat;
+  background-size: 100%;
+}
+.fullpage .section.vote .votebox .type_btn > div.pic_btn.active {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/pic_btn_on.webp) center no-repeat;
+  background-size: 100%;
+}
+.fullpage .section.vote .votebox .type_btn > div.video_btn {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/video_btn.webp) center no-repeat;
+  background-size: 100%;
+}
+.fullpage .section.vote .votebox .type_btn > div.video_btn.active {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/video_btn_on.webp) center no-repeat;
+  background-size: 100%;
+}
+.fullpage .section.vote .votebox .type_btn > div:hover {
+  transform: translateY(-8px);
+  filter: brightness(1.1);
+}
+.fullpage .section.vote .votebox .sub_btn_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.vote .votebox .sub_btn_box .left_btn ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.fullpage .section.vote .votebox .sub_btn_box .left_btn ul li {
+  color: #ededed;
+  opacity: 0.6;
+  border: 0.14vw solid #ededed;
+  border-radius: 50px;
+  padding: 0.2vw 1.4vw;
+  margin: 0 0.3vw;
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.05vw;
+  transition: all 0.3s;
+}
+.fullpage .section.vote .votebox .sub_btn_box .left_btn ul li:hover {
+  opacity: 0.9;
+}
+.fullpage .section.vote .votebox .sub_btn_box .left_btn ul li.active {
+  background: #ff5995;
+  opacity: 1;
+  border: 0.14vw solid #ff5995;
+}
+.fullpage .section.vote .votebox .sub_btn_box .right_btn {
+  background: #f1f1f1;
+  border-radius: 50px;
+  padding: 0.25vw 1vw;
+  padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  position: relative;
+  font-size: clamp(1rem, 0.9vw, 1.5rem);
+  margin-right: 0.65vw;
+}
+.fullpage .section.vote .votebox .sub_btn_box .right_btn label {
+  color: #242426;
+  opacity: 0.9;
+  font-weight: 600;
+  padding-right: 0.32vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.vote .votebox .sub_btn_box .right_btn label::after {
+  content: "|";
+  font-size: clamp(0.9rem, 0.7vw, 1.3rem);
+  margin-top: -0.15vw;
+  margin-left: 0.5vw;
+  color: #242426;
+  opacity: 0.5;
+}
+.fullpage .section.vote .votebox .sub_btn_box .right_btn input {
+  border: 0;
+  background: transparent;
+  margin-right: 2.5vw;
+  padding-top: 0.15vw;
+}
+.fullpage .section.vote .votebox .sub_btn_box .right_btn input:focus {
+  outline: none;
+  border: 0;
+}
+.fullpage .section.vote .votebox .sub_btn_box .right_btn button {
+  position: absolute;
+  background: #ff5995;
+  border: 0;
+  border-radius: 50px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 100%;
+  padding: 0.22rem 0.8rem;
+  top: 0;
+  right: -1px;
+}
+.fullpage .section.vote .votebox .sub_btn_box .right_btn button img {
+  width: 1vw;
+  margin-right: 0.2vw;
+}
+.fullpage .section.vote .votebox .list_con {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 103%;
+  margin-left: -1%;
+}
+.fullpage .section.vote .votebox .list_con .item {
+  margin: 15px 1.2%;
+  width: 23.54vw;
+  aspect-ratio: 452/365;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/item_bg.webp) center center no-repeat;
+  background-size: 100%;
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic {
+  position: relative;
+  aspect-ratio: 826/502;
+  width: 21.51vw;
+  margin: 1.04vw 0 0 0.885vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/pic_bg.webp) center no-repeat;
+  background-size: 100%;
+  padding-top: 1.55%;
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic .workbox {
+  width: 97.2%;
+  margin: 0 auto;
+  aspect-ratio: 1920/1080;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic .workbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn {
+  z-index: 2;
+  position: absolute;
+  right: 0.625vw;
+  bottom: 1.458vw;
+  cursor: pointer;
+  aspect-ratio: 100/30;
+  width: 5.2vw;
+  background: #ffcc43;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 50px;
+  color: #242426;
+  font-weight: 700;
+  letter-spacing: 0.1vw;
+  padding: 0 1vw 0 0.65vw;
+  font-size: clamp(0.8rem, 0.85vw, 1.25rem);
+  transition: background-color, transform 0.2s;
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn::before {
+  content: "";
+  display: block;
+  width: 0.9vw;
+  height: 0.85vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/like_icon.webp) center no-repeat;
+  background-size: 100% auto;
+  aspect-ratio: 19/16;
+  margin-top: 0.05vw;
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn:hover {
+  transform: rotate(-7deg) scale(1.15);
+  background: #ff5995;
+  color: #fff;
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn:hover::before {
+  filter: brightness(100);
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn.vote_off {
+  padding: 0 0.65vw 0 0.65vw;
+  letter-spacing: 0.05vw;
+  color: #fff;
+  background: #8e8ea2;
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn.vote_off::before {
+  width: 0.85vw;
+  height: 0.8vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/vote_off.webp) center no-repeat;
+  background-size: 100% auto;
+}
+.fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn.vote_off:hover {
+  transform: none;
+}
+.fullpage .section.vote .votebox .list_con .item .info_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  padding: 0 1.2vw;
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .left_info > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .left_info > div h6 {
+  background: #242426;
+  color: #fff;
+  border-radius: 500px;
+  margin-bottom: 0;
+  padding: 0.15vw 0.5vw;
+  font-size: clamp(0.7rem, 0.65vw, 1.5rem);
+  margin-right: 0.3vw;
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .left_info > div p {
+  color: #242426;
+  margin-bottom: 0;
+  font-weight: 500;
+  width: 10vw;
+  font-size: clamp(0.8rem, 0.8vw, 1.5rem);
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .left_info > div.work_name {
+  margin: 0.18vw 0;
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .left_info > div.work_name p {
+  line-height: 1.8vw;
+  border-bottom: 1px dashed rgba(131, 131, 131, 0.5);
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .right_info {
+  color: #242426;
+  padding-top: 0.4vw;
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number::before {
+  content: "";
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/arrow3.webp) center no-repeat;
+  background-size: 100%;
+  display: block;
+  aspect-ratio: 32/10;
+  width: 1.66vw;
+  margin-bottom: 0.25vw;
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number h6 {
+  font-size: clamp(0.55rem, 0.3vw, 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 0.11rem solid rgba(131, 131, 131, 0.7);
+  margin-bottom: 0;
+  padding: 0.1vw 0.2vw;
+}
+.fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number p {
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: clamp(0.8rem, 0.9vw, 1.2rem);
+}
+.fullpage .section.vote .votebox .page_con {
+  margin-bottom: 5vw;
+  margin-top: 0.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.vote .votebox .page_con > div {
+  background: #313131;
+  border-radius: 50px;
+  aspect-ratio: 82/61;
+  width: 4vw;
+  height: 3.1vw;
+  margin: 0 0.18vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section.vote .votebox .page_con > div img {
+  cursor: pointer;
+  width: 1.3vw;
+  transition: all 0.3s;
+}
+.fullpage .section.vote .votebox .page_con > div.previous {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.fullpage .section.vote .votebox .page_con > div.next {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.fullpage .section.vote .votebox .page_con > div.next img {
+  transform: scale(-1);
+}
+.fullpage .section.vote .votebox .page_con > div:hover img {
+  filter: hue-rotate(-80deg);
+}
+.fullpage .section.vote .votebox .page_con ul {
+  height: 3.1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  padding: 0 0.5vw;
+  background: rgba(49, 49, 49, 0.5);
+}
+.fullpage .section.vote .votebox .page_con ul li {
+  cursor: pointer;
+  width: 1.6vw;
+  height: 1.6vw;
+  margin: 0 0.4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: clamp(0.8rem, 1vw, 1.25rem);
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.fullpage .section.vote .votebox .page_con ul li:hover {
+  color: #8c89ff;
+}
+.fullpage .section.vote .votebox .page_con ul li.active {
+  background: rgba(237, 237, 237, 0.6);
+  color: #242426;
+  border-radius: 50px;
+}
+.fullpage .footer_box {
+  height: 5vw;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  bottom: 0vw;
+}
+.fullpage .footer_box .copy_btn {
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+  z-index: 2;
+  font-size: 0.9vw;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #f3ede9;
+  color: #f3ede9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .footer_box .copy_btn:hover {
+  color: #f3ede9;
+}
+.fullpage .footer_box .copy_btn::after {
+  content: "";
+  display: block;
+  aspect-ratio: 14/12;
+  width: 0.6vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/info/arrow_copy.png) center no-repeat;
+  background-size: 100%;
+  margin-left: 0.5vw;
+  transition: all 0.3s;
+}
+.fullpage .footer_box .copy_btn.act::after {
+  transform: scaleY(-1);
+}
+.fullpage .footer_box .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 5vw;
+  position: absolute;
+  bottom: 0;
+  color: #f3ede9;
+  left: 0;
+  transition: all 0.3s;
+  transform: translateY(500%);
+  text-align: center;
+  background: #140a18;
+  z-index: 1;
+}
+.fullpage .footer_box .footer.show_copy {
+  transform: translateY(0%);
+  text-align: center;
+  background: #140a18;
+  z-index: 1;
+}
+.fullpage .footer_box .footer .com_logo {
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: initial;
+}
+.fullpage .footer_box .footer .com_logo .c_logo_1 {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.1rem;
+  width: 6.5625rem;
+  height: 1.875rem;
+  background: url(https://ids.iwplay.com.tw/includ/footer/hotta_b.png) no-repeat;
+  background-size: 100%;
+}
+.fullpage .footer_box .footer .com_logo a {
+  position: relative;
+  display: inline-block;
+  width: 6.5625rem;
+  height: 1.875rem;
+  background: url(https://ids.iwplay.com.tw/includ/footer/iwplay_world_b.png) no-repeat;
+  background-size: 100%;
+  margin: 0 1rem;
+}
+.fullpage .footer_box .footer .copyright {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.8rem;
+  text-align: left;
+  line-height: 1.4rem;
+  letter-spacing: 0.01rem;
+}
+.fullpage .footer_box .footer .copyright p {
+  margin-bottom: 0;
+}
+.fullpage .footer_box .footer .copyright p a {
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.fullpage .footer_box .footer .copyright p a:hover {
+  color: #e51737;
+  transition: 0.3s ease;
+}
+
+/* 跳窗---------------------------------------------------- */
+.modal-dialog {
+  width: 96%;
+  max-width: 800px;
+}
+.modal-dialog .modal-content {
+  height: 700px;
+  border-radius: 20px;
+}
+.modal-dialog .modal-content .modal-header {
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-header .modal-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-header .modal-title img {
+  width: 214px;
+}
+.modal-dialog .modal-content .modal-header .btn-close {
+  width: 30px;
+  height: 31px;
+  aspect-ratio: 30/31;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/popup_close.webp) no-repeat;
+  background-size: 100%;
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s;
+}
+.modal-dialog .modal-content .modal-header .btn-close:hover {
+  transform: rotate(180deg);
+}
+.modal-dialog .modal-content .modal-body {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/bg_line.webp) center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+.modal-dialog .modal-content .modal-body::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.modal-dialog .modal-content .modal-body .error_box {
+  width: 100%;
+  min-height: 0.875rem;
+  margin: 3px;
+}
+.modal-dialog .modal-content .modal-body .error_box p {
+  color: #ee3d70;
+  font-size: 0.875rem;
+}
+.modal-dialog .modal-content .modal-body .topbox {
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+.modal-dialog .modal-content .modal-body .topbox::after {
+  position: absolute;
+  pointer-events: none;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  aspect-ratio: 1425/27;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/popup_line.webp);
+  background-size: 100%;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .realFileInput {
+  display: none;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .upload-label {
+  border: 2px solid #140a18;
+  padding: 0.2rem 30px;
+  border-radius: 50px;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .upload-label::after {
+  content: "";
+  display: block;
+  width: 14px;
+  aspect-ratio: 25/24;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/arrow.webp) center no-repeat;
+  background-size: 100%;
+  margin-left: 10px;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .upload-label:hover {
+  background-color: #ffd052;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .imgbox {
+  width: 182px;
+  height: 96px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .imgbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #f4efea;
+  border: 2px dotted #c5c2bf;
+  border-radius: 10px;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right {
+  margin-left: 15px;
+  flex: 2 0 auto;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right .linkbox {
+  background: #282828;
+  border-radius: 50px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right .linkbox label {
+  color: #e7e2dd;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right .linkbox label::after {
+  content: "|";
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right .linkbox input {
+  color: #e7e2dd;
+  background: transparent;
+  border: 0;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right .linkbox input:focus {
+  outline: 0;
+}
+.modal-dialog .modal-content .modal-body .botbox {
+  width: 96%;
+  margin: 0 auto;
+}
+.modal-dialog .modal-content .modal-body .botbox .error_box {
+  padding-left: 92px;
+}
+.modal-dialog .modal-content .modal-body .botbox input,
+.modal-dialog .modal-content .modal-body .botbox textarea {
+  background: #c5c2bf;
+  border: 0;
+  outline: 0;
+  border-radius: 25px;
+  padding: 5px 15px;
+  margin-left: 5px;
+}
+.modal-dialog .modal-content .modal-body .botbox label {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+.modal-dialog .modal-content .modal-body .botbox label span {
+  font-size: 0.8rem;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_1 > div {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_1 > div .error_box {
+  width: 100%;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_1 > div input {
+  width: 260px;
+  height: 44px;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_2 textarea {
+  width: 630px;
+  height: 85px;
+}
+.modal-dialog .modal-content .modal-body .botbox .txtbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-body .botbox .txtbox input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #242426;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin-right: 0.3rem;
+  border-radius: 0;
+  background-color: white;
+}
+.modal-dialog .modal-content .modal-body .botbox .txtbox input[type=checkbox]:checked {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.modal-dialog .modal-content .modal-body .botbox .txtbox label {
+  font-size: 1rem;
+}
+.modal-dialog .modal-content .modal-body .botbox .txtbox label a {
+  color: #1b7edb;
+}
+.modal-dialog .modal-content .modal-body .popup_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 25px;
+}
+.modal-dialog .modal-content .modal-body .popup_btn a {
+  display: block;
+  width: 260px;
+  aspect-ratio: 650/210;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/btn.webp) center no-repeat;
+  background-size: 100%;
+  color: #242426;
+  font-weight: 700;
+  font-size: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-body .popup_btn a::after {
+  content: "";
+  display: block;
+  width: 1.3vw;
+  aspect-ratio: 25/24;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/arrow.webp) center no-repeat;
+  background-size: 100%;
+  margin-left: 0.9vw;
+}
+
+/* 圖片上傳 */
+#pic_modal .modal-dialog .modal-content {
+  background: #f65886;
+  border: 5px solid #f65886;
+}
+#pic_modal .modal-dialog .modal-content .modal-header {
+  background: #f65886 url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/tt_bg_pic.webp);
+  background-size: cover;
+}
+#pic_modal .modal-dialog .modal-content .modal-body::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/txt_bg_pic.webp) center bottom no-repeat;
+  background-size: 100%;
+}
+
+/* 影片上傳 */
+#video_modal .modal-dialog .modal-content {
+  background: #3cc4cf;
+  border: 5px solid #3cc4cf;
+}
+#video_modal .modal-dialog .modal-content .modal-header {
+  background: #3cc4cf url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/tt_bg_video.webp);
+  background-size: cover;
+}
+#video_modal .modal-dialog .modal-content .modal-body::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/txt_bg_video.webp) center bottom no-repeat;
+  background-size: 100%;
+}
+
+/* 活動規則 */
+#notice_modal .modal-dialog .modal-content {
+  background: #4568ff;
+  border: 5px solid #4568ff;
+}
+#notice_modal .modal-dialog .modal-content .modal-header {
+  background: #4568ff url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/tt_bg_notice.webp);
+  background-size: cover;
+}
+#notice_modal .modal-dialog .modal-content .modal-body::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/txt_bg_notice.webp) center bottom no-repeat;
+  background-size: 100%;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con {
+  width: 98%;
+  height: 550px;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box h3 {
+  width: 99%;
+  background: #4568ff;
+  color: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div {
+  margin-bottom: 20px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h4 {
+  color: #f65886;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h4 span {
+  font-size: 1rem;
+  margin-left: 5px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h4::before {
+  content: "";
+  margin: 0 16px;
+  display: block;
+  width: 6px;
+  height: 1.5rem;
+  background: #e7b83b;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div span {
+  color: #f65886;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div span.color_blue {
+  color: #4568ff;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div p,
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 {
+  padding: 0 10px 0 38px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 {
+  margin: 11px 0;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 span {
+  border: 1px solid #282a2c;
+  color: #282a2c;
+  margin-right: 8px;
+  padding: 0ch 8px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h5 {
+  color: #29b8c4;
+  padding-left: 38px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h5::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #29b8c4;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h5 span {
+  color: #29b8c4;
+  font-size: 1rem;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div ul {
+  padding: 0 10px 0 55px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div ul li {
+  list-style: decimal;
+}
+
+/* 通用 */
+#eventAlertModal .modal-dialog {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#eventAlertModal .modal-dialog .modal-content {
+  width: 300px;
+  height: 200px;
+  background: #4568ff;
+  border: 5px solid #4568ff;
+}
+#eventAlertModal .modal-dialog .modal-content .modal-header {
+  justify-content: flex-end;
+  background: #4568ff url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/tt_bg_notice.webp);
+  background-size: cover;
+}
+#eventAlertModal .modal-dialog .modal-content .modal-body .txt_con {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.25rem;
+}
+
+/* 繪圖展示 */
+.vote_modal .modal-dialog .modal-content {
+  background: #f65886;
+  border: 5px solid #f65886;
+}
+.vote_modal .modal-dialog .modal-content .modal-header {
+  background: #f65886 url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/tt_bg_pic.webp);
+  background-size: cover;
+  justify-content: flex-end;
+}
+.vote_modal .modal-dialog .modal-content .modal-body::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/popup_bg.webp) center bottom no-repeat;
+  background-size: 100%;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .work_box {
+  width: 98%;
+  margin: 1.2% auto;
+  aspect-ratio: 760/452;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/pic_bg.webp) center no-repeat;
+  background-size: 100%;
+  padding-top: 1%;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .work_box .pic_box {
+  width: 97.4%;
+  margin: 0 auto;
+  aspect-ratio: 1920/1080;
+  position: relative;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .work_box .pic_box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .work_box .pic_box .play {
+  position: absolute;
+  width: 80px;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/play_icon.webp) center no-repeat;
+  background-size: 100%;
+  aspect-ratio: 124/128;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .work_box .pic_box:hover .play {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box {
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  color: #242426;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div h6 {
+  background: #242426;
+  color: #fff;
+  border-radius: 500px;
+  margin-bottom: 0;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8125rem;
+  margin-right: 0.6rem;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div p {
+  color: #242426;
+  margin-bottom: 0;
+  font-weight: 500;
+  width: 440px;
+  line-height: 2.25rem;
+  border-bottom: 1px dashed rgba(131, 131, 131, 0.5);
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div.work_name {
+  margin: 0.18vw 0;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div.work_description p {
+  border-bottom: 0;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn {
+  z-index: 2;
+  cursor: pointer;
+  aspect-ratio: 100/30;
+  width: 110px;
+  background: #ffcc43;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 50px;
+  color: #242426;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  padding: 0 20px 0 15px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  transition: background-color, transform 0.2s;
+  margin-bottom: 1.3rem;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 18px;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/like_icon.webp) center no-repeat;
+  background-size: 100% auto;
+  aspect-ratio: 19/16;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn:hover {
+  transform: rotate(-7deg) scale(1.15);
+  background: #ff5995;
+  color: #fff;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn:hover::before {
+  filter: brightness(100);
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn.vote_off {
+  padding: 0 15px 0 15px;
+  letter-spacing: 0.05vw;
+  color: #fff;
+  background: #8e8ea2;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn.vote_off::before {
+  width: 18px;
+  height: 16px;
+  background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/vote_off.webp) center no-repeat;
+  background-size: 100% auto;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn.vote_off:hover {
+  transform: none;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .work_number {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-right: 0.4rem;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .work_number h6 {
+  font-size: 0.9375rem;
+  border: 1px solid #242426;
+  margin-bottom: 0;
+  padding: 0.2rem 0.35rem;
+}
+.vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .work_number p {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1350px) {
+  .fullpage .section {
+    /* 鑒定師投票---------------------------------------------------- */
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn {
+    width: 5.8vw;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  /* 選單---------------------------------------------------- */
+  nav {
+    height: 70px;
+  }
+  nav .logo {
+    width: 80px;
+  }
+  nav .nav_btn .home {
+    width: 3rem;
+  }
+  .fullpage {
+    padding-top: 70px;
+  }
+  .fullpage .section {
+    /* header---------------------------------------------------- */
+    /* 活動時間---------------------------------------------------- */
+    /* 活動獎勵---------------------------------------------------- */
+    /* 參與方式---------------------------------------------------- */
+    /* 鑒定師投票---------------------------------------------------- */
+  }
+  .fullpage .section .title_box img {
+    width: 44.06vw;
+  }
+  .fullpage .section.header {
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/header/header_bg.webp) center;
+    background-size: 120% auto;
+    height: 55vw;
+  }
+  .fullpage .section.header .title_box {
+    top: 27vw;
+  }
+  .fullpage .section.header .title_box .header_title {
+    width: 52vw;
+  }
+  .fullpage .section.header .title_box a {
+    margin-top: 1vw;
+    width: 22vw;
+  }
+  .fullpage .section.time .title_box {
+    height: 19vw;
+  }
+  .fullpage .section.time .title_box img {
+    padding-top: 70px;
+  }
+  .fullpage .section.time .timebox {
+    padding: 4.4vw;
+    padding-left: 8vw;
+  }
+  .fullpage .section.time .timebox .time_pic {
+    width: 34.12vw;
+    margin-left: 1.75vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item {
+    width: 42vw;
+    height: 9.56vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt img {
+    height: 4.06vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date {
+    padding-left: 3vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date p {
+    font-size: 2.65vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date p span {
+    width: 1vw;
+    height: 1.18vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date small {
+    margin-top: 1vw;
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date small span {
+    font-size: 0.85vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn {
+    width: 13.5vw;
+    height: 9.31vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn img.time_btn_1 {
+    width: 7vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn img.time_btn_2 {
+    width: 8.1vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn img.time_btn_3 {
+    width: 6.7vw;
+  }
+  .fullpage .section.rewards .title_box {
+    height: 17vw;
+  }
+  .fullpage .section.rewards .title_box img {
+    padding-top: 5.5vw;
+  }
+  .fullpage .section.rewards .rewardsbox .rewards_pic {
+    width: 14.93vw;
+    top: -11.1vw;
+    left: 14vw;
+  }
+  .fullpage .section.rewards .rewardsbox > h3 {
+    width: 29vw;
+    margin-top: -1.5vw;
+    margin-bottom: 3vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_title h6 img {
+    height: 2.125vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_title p {
+    margin-left: 0.5vw;
+    letter-spacing: 0.1vw;
+    font-size: clamp(1rem, 0.9vw, 1.5rem);
+  }
+  .fullpage .section.rewards .rewardsbox .award_top {
+    width: 81.25vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_top .award_title {
+    width: 27.5vw;
+    margin-top: -1.2vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_top .list {
+    padding-top: 1.2vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_top .list .item {
+    width: 25.93vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom {
+    margin-top: 3.6vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom > div {
+    width: 46.25vw;
+    margin: 0.8vw 0.4vw 0;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom .popularity .award_title {
+    width: 29.75vw;
+    margin-top: -3.6vw;
+    padding-top: 0.7vw;
+    padding-left: 3vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom .popularity .item {
+    width: 43.8vw;
+    margin-top: 0.2vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom .lucky .award_title {
+    width: 33.62vw;
+    margin-top: -4vw;
+    padding-top: 0.7vw;
+    padding-left: 3.2vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom .lucky .list .item {
+    width: 21.6vw;
+    margin: 0 0.5vw;
+  }
+  .fullpage .section.info .title_box {
+    height: 24vw;
+    padding-left: 11vw;
+  }
+  .fullpage .section.info .title_box img {
+    padding-top: 5.5vw;
+  }
+  .fullpage .section.info .infobox {
+    height: 39vw;
+  }
+  .fullpage .section.info .picbox .info_pic {
+    animation: none;
+    transform: rotate(11deg);
+    width: 49.5vw;
+    top: 7.5vw;
+    left: 1vw;
+  }
+  .fullpage .section.info .info_txt {
+    left: 11.5vw;
+    margin-top: -4vw;
+    width: 65.12vw;
+  }
+  .fullpage .section.info .info_txt .info_icon {
+    width: 10.125vw;
+    top: -7.4vw;
+  }
+  .fullpage .section.info .info_txt .step_box {
+    padding-left: 17.5vw;
+    height: 29.68vw;
+  }
+  .fullpage .section.info .info_txt .step_box .step .step_tt {
+    width: 16.12vw;
+  }
+  .fullpage .section.info .info_txt .step_box .step p {
+    margin-top: 0.8vw;
+    font-size: 1.75vw;
+    line-height: 2.7vw;
+  }
+  .fullpage .section.info .info_txt .btn_box {
+    height: 8.75vw;
+    padding-left: 3vw;
+    margin-bottom: 3vw;
+  }
+  .fullpage .section.info .info_txt .btn_box a {
+    width: 17.75vw;
+    font-size: 2vw;
+  }
+  .fullpage .section.info .info_txt .btn_box .notice_btn {
+    width: 13.93vw;
+    bottom: 1vw;
+    right: -5vw;
+    font-size: 1.8vw;
+  }
+  .fullpage .section.info .info_txt .btn_box .notice_btn p {
+    width: 4vw;
+    line-height: 2.2vw;
+    margin-top: 4.15vw;
+    margin-left: 3.45vw;
+  }
+  .fullpage .section.vote .title_box {
+    height: 21vw;
+  }
+  .fullpage .section.vote .title_box img {
+    width: 49.5vw;
+    padding-top: 5.5vw;
+    margin-top: -4vw;
+  }
+  .fullpage .section.vote .votebox {
+    width: 90%;
+  }
+  .fullpage .section.vote .votebox .type_btn > div {
+    width: 21.87vw;
+    margin: 0 0.8vw;
+    margin-top: -5.46vw;
+  }
+  .fullpage .section.vote .votebox .type_btn > div:hover {
+    transform: translateY(0);
+    filter: brightness(1);
+  }
+  .fullpage .section.vote .votebox .sub_btn_box {
+    margin-bottom: 1vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .left_btn ul li {
+    padding: 0.4vw 1.8vw;
+    margin: 0 0.5vw;
+    font-size: 1.6vw;
+    letter-spacing: 0.1vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn {
+    padding: 0.7vw 1.5vw;
+    padding-right: 0;
+    font-size: 1.4vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn label::after {
+    font-size: 1.4vw;
+    margin-top: -0.15vw;
+    margin-left: 0.5vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn input {
+    margin-right: 5vw;
+    padding-top: 0.15vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn button {
+    padding: 0.7vw 1.4vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn button img {
+    width: 1.7vw;
+    margin-right: 0.5vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item {
+    margin: 1vw;
+    width: 28.25vw;
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/item_bg_m.webp) center center no-repeat;
+    background-size: 100%;
+    aspect-ratio: 1391/1171;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic {
+    width: 26vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn {
+    right: 0.8vw;
+    bottom: 1.8vw;
+    width: 8vw;
+    letter-spacing: 0.3vw;
+    padding: 0 1.2vw 0 0.8vw;
+    font-size: 1.5vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn::before {
+    width: 1.4vw;
+    height: 1.25vw;
+    margin-top: 0.05vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn:hover:not(.vote_off) {
+    transform: none;
+    background: #ffcc43;
+    color: #242426;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn:hover:not(.vote_off)::before {
+    filter: brightness(1);
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn.vote_off {
+    padding: 0 0.8vw 0 0.8vw;
+    letter-spacing: 0.05vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn.vote_off::before {
+    width: 1.2vw;
+    height: 1vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con {
+    padding: 0 1.2vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .left_info > div h6 {
+    padding: 0.25vw 0.7vw;
+    font-size: 1.1vw;
+    margin-right: 0.5vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .left_info > div p {
+    width: 11vw;
+    font-size: 1.25vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .left_info > div.work_name p {
+    line-height: 3vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .right_info {
+    padding-top: 0.4vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number::before {
+    width: 2.5vw;
+    margin-bottom: 0.4vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number h6 {
+    font-size: 0.9vw;
+    padding: 0.15vw 0.4vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number p {
+    font-size: 1.5vw;
+  }
+  .fullpage .section.vote .votebox .page_con {
+    margin-bottom: 7vw;
+    margin-top: 0.8vw;
+  }
+  .fullpage .section.vote .votebox .page_con > div {
+    width: 6vw;
+    height: 5vw;
+    margin: 0 0.3vw;
+  }
+  .fullpage .section.vote .votebox .page_con > div img {
+    width: 1.3vw;
+  }
+  .fullpage .section.vote .votebox .page_con ul {
+    height: 5vw;
+    padding: 0 0.5vw;
+  }
+  .fullpage .section.vote .votebox .page_con ul li {
+    width: 3vw;
+    height: 3vw;
+    margin: 0 0.6vw;
+    font-size: 1.8vw;
+  }
+  .fullpage .footer_box {
+    height: 6vw;
+  }
+  .fullpage .footer_box .copy_btn {
+    bottom: 1.5vw;
+    left: 2vw;
+    font-size: 1.3vw;
+  }
+  .fullpage .footer_box .copy_btn::after {
+    width: 1vw;
+    margin-left: 1vw;
+  }
+  .fullpage .footer_box .footer {
+    height: 6vw;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .fullpage .footer_box {
+    height: auto;
+    position: relative;
+    bottom: 0vw;
+  }
+  .fullpage .footer_box .copy_btn {
+    display: none;
+  }
+  .fullpage .footer_box .footer {
+    height: auto;
+    position: relative;
+    transform: translateY(0%);
+    padding: 5vw 1vw;
+  }
+  .fullpage .footer_box .footer .com_logo {
+    display: block;
+  }
+  .fullpage .footer_box .footer .com_logo .c_logo_1 {
+    width: 112px;
+    height: 30px;
+  }
+  .fullpage .footer_box .footer .com_logo a {
+    width: 112px;
+    height: 35px;
+  }
+  .fullpage .footer_box .footer .copyright p {
+    text-align: center;
+    display: block;
+  }
+  /* 跳窗---------------------------------------------------- */
+  .modal-dialog .modal-content .modal-header .modal-title img {
+    width: 30vw;
+  }
+  .modal-dialog .modal-content .modal-body::before {
+    display: none;
+  }
+  .modal-dialog .modal-content .modal-body .error_box {
+    width: 100%;
+    min-height: 0.875rem;
+    margin: 3px;
+  }
+  .modal-dialog .modal-content .modal-body .topbox {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left {
+    width: 100%;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left .error_box {
+    padding-left: 0;
+    text-align: center;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left .error_box p {
+    margin-bottom: 0;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left .realFileInput {
+    display: none;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left .upload-label {
+    order: 2;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right {
+    width: 100%;
+    margin-left: 0;
+    flex: 2 0 auto;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right .error_box {
+    padding-left: 0;
+    text-align: right;
+    padding-right: 5vw;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right .error_box p {
+    margin-bottom: 0;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right .linkbox {
+    border-radius: 50px;
+    padding: 0.5rem;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right .linkbox label {
+    font-size: 3.5vw;
+    padding: 0 1.5vw;
+  }
+  .modal-dialog .modal-content .modal-body .botbox {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .error_box {
+    padding-left: 0;
+    text-align: right;
+    position: absolute;
+    right: 5vw;
+    top: 3vw;
+  }
+  .modal-dialog .modal-content .modal-body .botbox input,
+  .modal-dialog .modal-content .modal-body .botbox textarea {
+    border: 0;
+    outline: 0;
+    border-radius: 25px;
+    padding: 5px 15px;
+    margin-left: 5px;
+  }
+  .modal-dialog .modal-content .modal-body .botbox label {
+    margin: 3vw 2vw 1vw;
+  }
+  .modal-dialog .modal-content .modal-body .botbox label span {
+    display: inline-block;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_1 {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_1 > div {
+    position: relative;
+    width: 100%;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_1 > div .error_box {
+    width: 100%;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_1 > div input {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_2 {
+    justify-content: flex-start;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: -2vw;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_2 textarea {
+    width: 100%;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .txtbox input[type=checkbox] {
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    margin-right: 0.3rem;
+    border-radius: 0;
+    background-color: white;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .txtbox input[type=checkbox]:checked {
+    background-image: url(https://rests-nte.iwplay.com.tw/events/fanart/images/popup/check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .txtbox label {
+    margin: 0;
+    font-size: 3.5vw;
+  }
+  .modal-dialog .modal-content .modal-body .popup_btn {
+    margin-top: 3vw;
+  }
+  .modal-dialog .modal-content .modal-body .popup_btn a {
+    width: 43vw;
+    font-size: 4.5vw;
+    margin-bottom: 3vw;
+  }
+  .modal-dialog .modal-content .modal-body .popup_btn a::after {
+    width: 2.6vw;
+    margin-left: 2.5vw;
+  }
+  /* 活動規則 */
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box h3 {
+    padding: 8px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div {
+    margin-bottom: 4vw;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h4 {
+    font-size: clamp(1rem, 6vw, 1.5rem);
+    flex-wrap: wrap;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h4 span {
+    width: 100%;
+    margin: 1vw;
+    margin-left: 4vw;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h4::before {
+    margin: 0 2vw 0 0;
+    width: 1.2vw;
+    height: 4.8vw;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div p,
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 {
+    padding: 0 0 0 3vw;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 {
+    margin: 5px 0;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 span {
+    border: 0;
+    margin-right: 0;
+    padding: 2px;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 span::before {
+    content: "【";
+    margin-left: -4vw;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 span::after {
+    content: "】";
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h5 {
+    padding-left: 0px;
+    flex-wrap: wrap;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h5::before {
+    width: 15px;
+    height: 15px;
+    background: #29b8c4;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h5 span {
+    width: 100%;
+    display: block;
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div ul {
+    padding: 0 0 0 3.5vw;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div ul li {
+    list-style: decimal;
+  }
+  /* 繪圖展示 */
+  .vote_modal .modal-dialog .modal-content {
+    height: auto;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body {
+    padding: 1vw;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body::before {
+    display: block;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .work_box {
+    aspect-ratio: 760/460;
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/pic_bg.webp) center top no-repeat;
+    background-size: 100% 100.03%;
+    padding-top: 1.55%;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .work_box .pic_box .play {
+    width: 16vw;
+    margin-left: -8vw;
+    margin-top: -8vw;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box {
+    width: 92%;
+    margin-top: 1.5vw;
+    flex-direction: column;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con {
+    order: 2;
+    margin-bottom: 4vw;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div {
+    align-items: center;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div h6 {
+    padding: 1.2vw 2.5vw;
+    font-size: 3vw;
+    margin-right: 1.5vw;
+    width: 22%;
+    text-align: center;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div p {
+    width: 78%;
+    font-size: 3.8vw;
+    line-height: 9vw;
+    border-bottom: 1px dashed rgba(131, 131, 131, 0.5);
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div.work_name {
+    margin: 0;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div.work_description {
+    align-items: self-start;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div.work_description h6 {
+    margin-top: 2vw;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .left_con > div.work_description p {
+    padding: 2vw 0;
+    line-height: 5.5vw;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con {
+    width: 100%;
+    order: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn {
+    order: 2;
+    right: 3.5vw;
+    bottom: 5.55vw;
+    width: 25vw;
+    letter-spacing: 1vw;
+    padding: 0 4vw 0 3vw;
+    font-size: 4.2vw;
+    margin: 0;
+    margin: 2vw 0;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn::before {
+    width: 4.35vw;
+    height: 3.79vw;
+    margin-top: 0.45vw;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn.vote_off {
+    padding: 0 3vw 0 3vw;
+    letter-spacing: 0.2vw;
+    color: #fff;
+    background: #8e8ea2;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .vote_btn.vote_off::before {
+    width: 4vw;
+    height: 3.2vw;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .work_number {
+    order: 1;
+    flex-direction: row;
+    margin-right: 0.4rem;
+    align-items: center;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .work_number h6 {
+    font-size: 2.7vw;
+    padding: 0.2rem 0.35rem;
+    margin-right: 2vw;
+  }
+  .vote_modal .modal-dialog .modal-content .modal-body .txt_box .right_con .work_number p {
+    font-size: 5.5vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+  /* 選單---------------------------------------------------- */
+  nav {
+    top: -5px;
+    width: 100%;
+    height: calc(14vw + 5px);
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/nav_bg.webp) center right;
+    background-size: cover;
+    padding: 0 4vw;
+  }
+  nav .logo {
+    width: 13.5vw;
+    padding-top: 5px;
+  }
+  nav .Menu {
+    position: absolute;
+    left: 0;
+    top: 13.8vw;
+    height: calc(100vh - 13.8vw);
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/menu_bottom.png) center bottom no-repeat rgba(29, 29, 29, 0.92);
+    background-size: 100%;
+    padding-left: 0;
+    padding-top: 5vw;
+    transition: all 0.3s;
+    transform: translateX(100%);
+  }
+  nav .Menu.open_menu {
+    transform: translateX(0%);
+  }
+  nav .Menu li {
+    width: 70%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    height: 15vw;
+    opacity: 1;
+    margin: 0 auto;
+    font-size: 5vw;
+  }
+  nav .Menu li a:hover, nav .Menu li a:hover.active {
+    color: #6f88f6;
+    opacity: 1;
+  }
+  nav .nav_btn {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  nav .nav_btn .mobile_menu {
+    display: block;
+    width: 10.5vw;
+    height: 10.5vw;
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/header_menu.png) top center;
+    background-size: 100% auto;
+    margin-left: 2vw;
+    transition: none;
+  }
+  nav .nav_btn .mobile_menu.open_btn {
+    background-position: bottom;
+  }
+  nav .nav_btn .home {
+    width: 10vw;
+  }
+  .fullpage {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .fullpage .section {
+    /* header---------------------------------------------------- */
+    /* 活動時間---------------------------------------------------- */
+    /* 活動獎勵---------------------------------------------------- */
+    /* 參與方式---------------------------------------------------- */
+    /* 鑒定師投票---------------------------------------------------- */
+  }
+  .fullpage .section .title_box img {
+    width: 78.51vw;
+  }
+  .fullpage .section.header {
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/header/header_bg_m.webp) center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 150vw;
+  }
+  .fullpage .section.header .title_box {
+    top: 64vh;
+  }
+  .fullpage .section.header .title_box .header_title {
+    width: 90vw;
+  }
+  .fullpage .section.header .title_box a {
+    margin-top: 2vw;
+    width: 45vw;
+  }
+  .fullpage .section.time {
+    margin-top: -5vw;
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/time/time_bg_m.webp) center bottom;
+    background-size: cover;
+  }
+  .fullpage .section.time .title_box {
+    padding-top: 7.5vw;
+    height: 31.5vw;
+  }
+  .fullpage .section.time .title_box img {
+    padding-top: 0;
+  }
+  .fullpage .section.time .timebox {
+    padding: 5vw;
+    padding-bottom: 10vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fullpage .section.time .timebox .time_pic {
+    order: 1;
+    width: 50.55vw;
+    margin-left: 50%;
+    margin: 0 auto;
+    margin-bottom: 2vw;
+  }
+  .fullpage .section.time .timebox .time_txt {
+    order: 2;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item {
+    width: 85.18vw;
+    height: 19.72vw;
+    margin: 2.5vw 0;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item:nth-child(2) {
+    margin-left: 0vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt img {
+    height: 8.33vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date {
+    padding-left: 5.5vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date p {
+    font-size: 5.2vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date p span {
+    width: 2.12vw;
+    height: 2.5vw;
+    margin: 0 1.2vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date small {
+    margin-left: 1.5vw;
+    margin-top: 1.5vw;
+    font-size: 2.8vw;
+    line-height: 2.8vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .item_tt .item_date small span {
+    font-size: 1.8vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn {
+    width: 28.79vw;
+    height: 19.72vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn img.time_btn_1 {
+    width: 15vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn img.time_btn_2 {
+    width: 17.05vw;
+  }
+  .fullpage .section.time .timebox .time_txt .time_item .time_btn .date_btn img.time_btn_3 {
+    width: 14.04vw;
+  }
+  .fullpage .section.rewards {
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/rewards/rewards_bg_m.webp) center top no-repeat;
+    background-size: cover;
+  }
+  .fullpage .section.rewards .title_box {
+    padding-top: 7.5vw;
+    height: 31.5vw;
+  }
+  .fullpage .section.rewards .title_box img {
+    padding-top: 0;
+  }
+  .fullpage .section.rewards .rewardsbox .rewards_pic {
+    width: 19vw;
+    top: -3.4vw;
+    left: -2.5vw;
+  }
+  .fullpage .section.rewards .rewardsbox > h3 {
+    width: 64.25vw;
+    margin-top: -4vw;
+    margin-bottom: 9.5vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_title h6 img {
+    height: 4.9vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_title p {
+    margin-left: 1vw;
+    font-size: 3vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_top {
+    width: 87.4vw;
+    aspect-ratio: 1415/772;
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/rewards/award_top_bg_m.webp) center bottom no-repeat;
+    background-size: 100%;
+    margin-bottom: 5vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_top .award_title {
+    width: 62.59vw;
+    margin-top: -5.5vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_top .list {
+    padding-top: 2vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_top .list .item {
+    width: 26.94vw;
+    margin: 0 0.51vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom > div {
+    width: 87.4vw;
+    margin: 5.2vw 0;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom .popularity .award_title {
+    width: 66.11vw;
+    margin-top: -8vw;
+    padding-top: 1.05vw;
+    padding-left: 5.5vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom .popularity .item {
+    width: 83.24vw;
+    margin-top: 0vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom .lucky {
+    margin-bottom: 0;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom .lucky .award_title {
+    width: 74.53vw;
+    margin-top: -9vw;
+    padding-top: 1.05vw;
+    padding-left: 7vw;
+  }
+  .fullpage .section.rewards .rewardsbox .award_bottom .lucky .list .item {
+    width: 41.29vw;
+    margin: 0 0.4vw;
+  }
+  .fullpage .section.info {
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/info/info_bg_m.webp) center bottom;
+    background-size: cover;
+    overflow: visible;
+    margin-top: -2px;
+    z-index: 1;
+  }
+  .fullpage .section.info .title_box {
+    width: 100%;
+    height: 46vw;
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/info/info_title_bg.webp) center bottom no-repeat;
+    background-size: cover;
+    padding-left: 0;
+  }
+  .fullpage .section.info .title_box img {
+    margin-top: -12vw;
+  }
+  .fullpage .section.info .infobox {
+    height: auto;
+  }
+  .fullpage .section.info .picbox {
+    order: 2;
+    width: 100%;
+    height: 73.42vw;
+    overflow: hidden;
+    margin-top: -10vw;
+    z-index: 0;
+  }
+  .fullpage .section.info .picbox .info_pic {
+    transform: rotate(0deg);
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .fullpage .section.info .info_txt {
+    order: 1px;
+    left: 0vw;
+    margin-top: -18vw;
+    width: 100%;
+    z-index: 1;
+  }
+  .fullpage .section.info .info_txt .info_icon {
+    width: 19.35vw;
+    top: -15vw;
+    right: 3.14vw;
+  }
+  .fullpage .section.info .info_txt .step_box {
+    padding-left: 0;
+    width: 93.14vw;
+    height: 60.09vw;
+    aspect-ratio: 1006/649;
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/info/info_con_bg_m.webp);
+    background-size: 100%;
+  }
+  .fullpage .section.info .info_txt .step_box .step .step_tt {
+    width: 31.94vw;
+  }
+  .fullpage .section.info .info_txt .step_box .step .step_tt img {
+    margin-top: 0.93vw;
+    width: 100%;
+  }
+  .fullpage .section.info .info_txt .step_box .step p {
+    font-size: 3.7vw;
+    line-height: 5.1vw;
+    padding-left: 11vw;
+    letter-spacing: 0;
+  }
+  .fullpage .section.info .info_txt .step_box .step p span span {
+    display: block;
+  }
+  .fullpage .section.info .info_txt .step_box .step:last-child {
+    margin-top: 2vw;
+  }
+  .fullpage .section.info .info_txt .btn_box {
+    height: 20.37vw;
+    padding-left: 3vw;
+    margin-bottom: 3vw;
+  }
+  .fullpage .section.info .info_txt .btn_box a {
+    width: 39.62vw;
+    font-size: 4vw;
+    margin: 0 0.8vw;
+  }
+  .fullpage .section.info .info_txt .btn_box a::after {
+    width: 2.6vw;
+    margin-left: 2vw;
+  }
+  .fullpage .section.info .info_txt .btn_box .notice_btn {
+    width: 29.81vw;
+    bottom: -32vw;
+    right: auto;
+    left: 6vw;
+    font-size: 3.8vw;
+  }
+  .fullpage .section.info .info_txt .btn_box .notice_btn p {
+    width: 8vw;
+    line-height: 4.5vw;
+    margin-top: 9.2vw;
+    margin-left: 7.35vw;
+  }
+  .fullpage .section.vote {
+    background: url(https://rests-nte.iwplay.com.tw/events/fanart/images/vote/vote_bg_m.webp) center bottom repeat-y;
+    background-size: 110% auto;
+  }
+  .fullpage .section.vote .title_box {
+    padding-top: 7.5vw;
+    height: 38vw;
+  }
+  .fullpage .section.vote .title_box img {
+    width: 78.51vw;
+    margin-top: -6vw;
+    padding-top: 0vw;
+  }
+  .fullpage .section.vote .votebox {
+    width: 90%;
+  }
+  .fullpage .section.vote .votebox .type_btn > div {
+    width: 44.5vw;
+    margin: 0 1vw;
+    margin-top: -11vw;
+  }
+  .fullpage .section.vote .votebox .type_btn > div:hover {
+    transform: translateY(0);
+    filter: brightness(1);
+  }
+  .fullpage .section.vote .votebox .sub_btn_box {
+    flex-direction: column;
+    margin-bottom: 2vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .left_btn ul {
+    margin-bottom: 4vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .left_btn ul li {
+    padding: 0.8vw 5vw;
+    margin: 0 1.3vw;
+    font-size: clamp(1rem, 4.5vw, 1.5rem);
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn {
+    width: 92%;
+    padding: 1.5vw 3.5vw;
+    font-size: 4vw;
+    margin-right: 0vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn label {
+    flex: 1 0 35%;
+    padding-right: 2vw;
+    justify-content: flex-end;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn label::after {
+    font-size: 3.5vw;
+    margin-top: -0.15vw;
+    margin-left: 1.5vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn input {
+    flex: 2 0 53%;
+    margin-right: 13vw;
+    padding-top: 0.15vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn button {
+    flex: 1 0 12%;
+    padding: 1.5vw 3vw;
+  }
+  .fullpage .section.vote .votebox .sub_btn_box .right_btn button img {
+    width: 4.72vw;
+    margin-right: 0.5vw;
+  }
+  .fullpage .section.vote .votebox .list_con {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .fullpage .section.vote .votebox .list_con .item {
+    margin: 1.5vw auto;
+    width: 85.83vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic {
+    width: 80.18vw;
+    margin: 2.8vw 0 0 2.1vw;
+    padding-top: 1.62%;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn {
+    right: 3.5vw;
+    bottom: 5.55vw;
+    width: 25vw;
+    letter-spacing: 1vw;
+    padding: 0 4vw 0 3vw;
+    font-size: 4.2vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn::before {
+    width: 4.35vw;
+    height: 3.79vw;
+    margin-top: 0.45vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn:hover {
+    transform: rotate(0deg) scale(1);
+    background: #ffcc43;
+    color: #242426;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn:hover::before {
+    filter: brightness(1);
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn.vote_off {
+    padding: 0 3vw 0 3vw;
+    letter-spacing: 0.2vw;
+    color: #fff;
+    background: #8e8ea2;
+  }
+  .fullpage .section.vote .votebox .list_con .item .work_pic .vote_btn.vote_off::before {
+    width: 4vw;
+    height: 3.2vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con {
+    padding: 0 4vw;
+    margin-top: 0.7vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .left_info > div h6 {
+    padding: 0.7vw 1.8vw;
+    font-size: 2.9vw;
+    margin-right: 1.5vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .left_info > div p {
+    width: 34vw;
+    font-size: 3.5vw;
+    line-height: 8vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .left_info > div.work_name {
+    margin: 0.18vw 0;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .left_info > div.work_name p {
+    line-height: 8vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .right_info {
+    padding-top: 0.4vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number::before {
+    width: 5.92vw;
+    margin-bottom: 1.7vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number h6 {
+    font-size: 2.7vw;
+    padding: 0.3vw 0.8vw;
+  }
+  .fullpage .section.vote .votebox .list_con .item .info_con .right_info .work_number p {
+    font-size: 4.2vw;
+  }
+  .fullpage .section.vote .votebox .page_con {
+    margin-bottom: 8vw;
+    margin-top: 5vw;
+  }
+  .fullpage .section.vote .votebox .page_con > div {
+    width: 11.5vw;
+    height: 10vw;
+    margin: 0 0.6vw;
+  }
+  .fullpage .section.vote .votebox .page_con > div img {
+    width: 4vw;
+  }
+  .fullpage .section.vote .votebox .page_con ul {
+    height: 10vw;
+    padding: 0 2vw;
+  }
+  .fullpage .section.vote .votebox .page_con ul li {
+    width: 7vw;
+    height: 7vw;
+    margin: 0 1vw;
+    font-size: 4vw;
+  }
+}
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .fullpage .section.header .title_box {
+    top: 100vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .fullpage .footer_box .footer .com_logo .c_logo_1 {
+    width: 22vw;
+    aspect-ratio: 112/30;
+  }
+  .fullpage .footer_box .footer .com_logo a {
+    width: 22vw;
+    aspect-ratio: 112/35;
+  }
+}/*# sourceMappingURL=main_ZR.css.map */

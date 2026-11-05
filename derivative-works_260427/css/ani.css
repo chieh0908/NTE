@@ -1,0 +1,37 @@
+@keyframes kv_ani {
+  0% {
+    filter: brightness(0.3);
+    transform: scale(1.15);
+  }
+  100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes char {
+  0% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes round {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes comingsoon {
+  0% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+}
