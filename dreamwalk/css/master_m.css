@@ -1,0 +1,1132 @@
+@import "./master.css";
+
+body {
+  background-color: #212121;
+}
+.wrap {
+  display: none;
+  width: 7.5rem;
+}
+.wrap p,
+.wrap ul,
+.wrap li {
+  margin-bottom: 0;
+}
+.wrap a {
+  font-size: initial;
+  line-height: 0;
+}
+
+/* header */
+.header {
+  height: 13.75rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/header.jpg)
+    no-repeat center top;
+  background-size: 100% auto;
+}
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  width: 100vw !important;
+  position: fixed !important;
+  left: 0 !important;
+}
+
+.nav {
+  display: none; /* 預設隱藏防止未載入完成時抖動 */
+  position: fixed; /* 改為固定定位，滾動時保持在螢幕上方 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.2rem;
+  z-index: 999;
+  background: none;
+  border-bottom: none;
+  pointer-events: none; /* 穿透不擋點擊，內部元素需加回 pointer-events */
+  /* background-color: rgba(0, 0, 0, 0.9); */
+}
+body.is-mobile .nav {
+  display: block; /* 載入完成且為行動端時顯示 */
+}
+.nav.menu-open,
+.nav.menu-closing {
+  z-index: 9999 !important; /* 選單開啟時升至最頂層 */
+}
+.nav.style2 {
+  background: url(../images/nav/navbar_bg2.webp) no-repeat center;
+  background-size: cover;
+  pointer-events: auto;
+  z-index: 2000;
+  position: fixed; /* 修正為固定定位 */
+  top: 0;
+  left: 0;
+}
+.nav.style2 .index {
+  display: block;
+}
+/* Style2 專屬素材色系替換 */
+.nav.style2 .logo {
+  background-image: url(../images/nav/logo_2.webp);
+  height: 0.69rem;
+}
+
+.nav.style2 .topRight .login {
+  background: url(../images/nav/btn_login_after2.webp) no-repeat center;
+  background-size: 100% 100%;
+}
+.nav.style2.menu-open .topRight .login,
+.nav.style2.menu-closing .topRight .login {
+  position: fixed; /* Stay in Nav bar visually */
+  top: 0.5rem; /* Center of 1rem Nav */
+  right: 1.2rem;
+  transform: translateY(-50%) scale(0.8); /* Match default state */
+  transform-origin: right center; /* Match default state */
+  margin-bottom: 0;
+  z-index: 2100; /* Above overlay */
+  animation: none !important; /* No slide annimation */
+  opacity: 1 !important;
+}
+.nav.style2 .topRight .login .task-user-info p {
+  color: #333; /* 改為深色文字 */
+  font-size: 0.3rem;
+  line-height: 0.79rem;
+}
+
+.nav.style2 .topRight .login .btn-logout {
+  background-image: url(../images/nav/btn_logout2.webp);
+  top: 0.19rem;
+}
+.nav.style2 .login .task-user-info {
+  width: 3.4rem;
+  height: 0.86rem;
+  background: url(../images/nav/btn_login_after2_m.webp);
+  background-size: 100% 100%;
+}
+
+.nav.style2 .menu_toggle {
+  background: none;
+  width: 0.5rem;
+  height: 0.4rem;
+  justify-content: space-between;
+  right: 0.3rem;
+}
+
+.nav.style2 .menu_toggle span {
+  width: 100%;
+  height: 0.06rem;
+  background-color: #333; /* 漢堡選單改為深色 */
+  border-radius: 0.03rem;
+}
+.nav.style2.menu-open .menu_toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(0.12rem, 0.12rem);
+}
+.nav.style2.menu-open .menu_toggle span:nth-child(2) {
+  opacity: 0;
+}
+.nav.style2.menu-open .menu_toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(0.12rem, -0.12rem);
+}
+.nav.style2.menu-open .topRight,
+.nav.style2.menu-closing .topRight {
+  top: 1rem;
+  height: calc(100vh - 1rem); /* Full height minus Nav */
+  height: calc(100dvh - 1rem);
+}
+
+/* 手機版導覽列內容加回點擊 */
+.nav .topLeft,
+.nav .topRight,
+.nav .menu_toggle {
+  pointer-events: auto;
+}
+
+.nav_bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto; /* 保持圖片比例 */
+  z-index: -1; /* 放在最下面，才不會蓋住按鈕 */
+  pointer-events: none; /* 避免擋到點擊 */
+}
+
+.menu_toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url(../images/nav/btn_toggle_bg.webp) no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 2001;
+  padding: 0;
+  right: 0.2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: auto; /* Ensure clickable */
+}
+.menu_toggle span {
+  display: block;
+  width: 0.45rem;
+  height: 0.04rem;
+  background-color: #363a72;
+  border-radius: 0.02rem;
+  transition: all 0.3s ease;
+}
+.nav.menu-open .menu_toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(0.1rem, 0.08rem);
+}
+.nav.menu-open .menu_toggle span:nth-child(2) {
+  opacity: 0;
+}
+.nav.menu-open .menu_toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(0.12rem, -0.1rem);
+}
+
+/* [Vertical Style] TopRight as Container (Not hidden by default) */
+.topRight {
+  position: absolute; /* Keep absolute relative to nav */
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end; /* Align login to right */
+  pointer-events: none; /* Let clicks pass through empty space */
+}
+
+/* Default state: Hide menu items, show Login */
+.topRight > *:not(.login) {
+  display: none !important;
+}
+.topRight .login {
+  display: flex !important;
+  pointer-events: auto;
+  position: absolute;
+  right: 1.2rem; /* Left of hamburger */
+  top: 50%;
+  transform: translateY(-50%) scale(0.8); /* Added scale(0.8) */
+  transform-origin: right center; /* Ensure scaling doesn't shift position awkwardly */
+  margin-right: 0;
+  z-index: 20;
+}
+
+/* Menu Open State: Overlay */
+.nav.menu-open .topRight,
+.nav.menu-closing .topRight {
+  position: fixed;
+  top: 50%; /* Start below the Nav bar */
+  left: 0;
+  transform: translateY(-50%);
+  width: 100vw;
+  height: 150dvh; /* 改為 150dvh 超大邊界，徹底解決手機瀏覽器 100vh/100dvh 與動態網址列縮放造成的底部透光 bug */
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  flex-direction: column;
+  justify-content: center; /* Center menu items */
+  align-items: center;
+  gap: 0.6rem;
+  pointer-events: auto;
+
+  animation: menuFadeIn 0.3s ease-out forwards;
+}
+
+.nav.menu-closing .topRight {
+  animation: menuFadeOut 0.3s ease-out forwards;
+}
+
+/* Menu Open/Closing: Show menu items */
+.nav.menu-open .topRight > *:not(.login),
+.nav.menu-closing .topRight > *:not(.login) {
+  display: flex !important;
+}
+
+.nav.menu-open .topRight .login,
+.nav.menu-closing .topRight .login {
+  position: fixed; /* Stay in Nav bar visually */
+  top: 0.7rem; /* Center of 1rem Nav */
+  right: 1.2rem;
+  transform: translateY(-50%) scale(0.8); /* Match default state */
+  transform-origin: right center; /* Match default state */
+  margin-bottom: 0;
+  z-index: 2100; /* Above overlay */
+  animation: none !important; /* No slide annimation */
+  opacity: 1 !important;
+}
+
+/* Button Animations */
+.nav.menu-open .topRight > * {
+  animation: menuBtnSlideIn 0.4s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+/* Stagger delays for opening */
+.nav.menu-open .topRight > *:nth-child(1) {
+  animation-delay: 0.05s;
+} /* Menu toggle? No, menu_toggle is outside */
+.nav.menu-open .topRight > *:nth-child(2) {
+  animation-delay: 0.1s;
+} /* Login */
+.nav.menu-open .topRight > *:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.nav.menu-open .topRight > *:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.nav.menu-open .topRight > *:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.nav.menu-open .topRight > *:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.nav.menu-open .topRight > *:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.nav.menu-closing .topRight > * {
+  animation: menuBtnSlideOut 0.3s ease-in forwards;
+}
+
+@keyframes menuFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes menuFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes menuBtnSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes menuBtnSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+.topLeft {
+  position: absolute; /* Relative to .nav */
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.2rem;
+  display: flex;
+  align-items: center;
+  z-index: 2001;
+}
+
+/* Navigation Buttons Common Styles */
+.index,
+.rule,
+.share,
+.music,
+.award {
+  width: 0.69rem;
+  height: 0.67rem;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  border: none;
+  background-position: 0 100%;
+  position: relative;
+}
+/* 獎勵按鈕右上紅點 */
+.award.is-new .dot {
+  position: absolute;
+  top: 0rem;
+  right: -0.4rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: #ff0000;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Menu Text Label Style */
+.topRight_m_font {
+  display: none; /* Hide by default (PC/Header) */
+  color: #fff; /* White */
+  font-size: 0.3rem;
+  font-weight: bold; /* Bold */
+  margin-left: 0.2rem;
+  white-space: nowrap;
+}
+
+/* Adjust Buttons in Open Menu */
+.nav.menu-open .topRight .rule,
+.nav.menu-open .topRight .share,
+.nav.menu-open .topRight .music,
+.nav.menu-open .topRight .award {
+  width: 3rem;
+  min-height: 0.75rem; /* Allow height to grow */
+  height: auto;
+
+  /* Disable background on the button itself to prevent distortion */
+  background: none !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 !important; /* Reset padding */
+
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  text-indent: 0 !important;
+  overflow: visible !important;
+  margin-bottom: 0px;
+}
+
+/* Create Icon using Pseudo-element to maintain original ratio */
+.nav.menu-open .topRight .rule::before,
+.nav.menu-open .topRight .share::before,
+.nav.menu-open .topRight .music::before,
+.nav.menu-open .topRight .award::before {
+  content: "";
+  display: block;
+  width: 0.69rem; /* Original width */
+  height: 0.69rem; /* Original height */
+  flex-shrink: 0;
+
+  background-size: 100% auto !important; /* Original scaling */
+  background-position: 0 0 !important; /* Normal state (bottom) */
+  background-repeat: no-repeat;
+  margin-right: 0.2rem; /* Gap between icon and text */
+}
+.nav.menu-open .topRight .music::before {
+  background-position: 0 100% !important; /* Normal state (bottom) */
+}
+
+/* Assign images to pseudo-elements based on parent class */
+.nav.menu-open .topRight .rule::before {
+  background-image: url(../images/nav/rules.webp);
+}
+.nav.menu-open .topRight .share::before {
+  background-image: url(../images/nav/share.webp);
+}
+.nav.menu-open .topRight .music::before {
+  background-image: url(../images/nav/music_m.webp);
+}
+.nav.menu-open .topRight .award::before {
+  background-image: url(../images/nav/award.webp);
+}
+
+/* Hover State for Pseudo-element */
+.nav.menu-open .topRight .rule:hover::before,
+.nav.menu-open .topRight .share:hover::before,
+.nav.menu-open .topRight .award:hover::before {
+  background-position: 0 0% !important; /* Hover state (top) */
+}
+
+/* Show Text in Menu using ::after (CSS Content) */
+.nav.menu-open .topRight .rule::after,
+.nav.menu-open .topRight .share::after,
+.nav.menu-open .topRight .music::after,
+.nav.menu-open .topRight .award::after {
+  display: block;
+  margin: 0;
+  line-height: 0.69rem;
+  text-align: center; /* Centered as requested */
+  flex: 1;
+  color: #fff;
+  font-size: 0.35rem;
+  font-weight: 800;
+  white-space: nowrap;
+  letter-spacing: 0.1rem;
+  text-indent: 0.1rem; /* Balance the letter-spacing for centering */
+  -webkit-text-stroke: 0.08rem #343626; /* Slightly thinner inner stroke */
+  paint-order: stroke fill;
+}
+
+/* Dynamic Music Icon based on .off class */
+.nav.menu-open .topRight .music.off::before {
+  background-position: 0 0% !important; /* OFF state (Top sprite) */
+}
+
+/* Define Text Content */
+.nav.menu-open .topRight .rule::after {
+  content: "活動說明";
+}
+.nav.menu-open .topRight .share::after {
+  content: "分享連結";
+}
+.nav.menu-open .topRight .award::after {
+  content: "已獲得獎勵";
+}
+
+/* Dynamic Music Text based on .off class */
+.nav.menu-open .topRight .music::after {
+  content: "音樂開啟";
+}
+.nav.menu-open .topRight .music.off::after {
+  content: "音樂關閉";
+}
+
+/* Disable default hover effect on the button itself in menu mode */
+.nav.menu-open .topRight .rule:hover,
+.nav.menu-open .topRight .share:hover,
+.nav.menu-open .topRight .music:hover,
+.nav.menu-open .topRight .award:hover {
+  background: none !important;
+}
+
+.index {
+  display: none;
+  position: relative;
+  background-image: url(../images/nav/home_m.webp);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin: 0 0.4rem 0 0.2rem; /* 增加左右間距 */
+  height: 0.55rem;
+  aspect-ratio: 1 / 1;
+  background-size: contain;
+  background-position: center;
+  border: none;
+}
+
+.index::after {
+  content: "";
+  position: absolute;
+  right: -0.2rem; /* 讓線離按鈕更遠一點 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 0.35rem;
+  background-color: #aaaaaa;
+  opacity: 0.8;
+}
+
+.logo {
+  margin-left: 0.1rem;
+  height: 1rem; /* 修正：高度必須小於導覽列 1rem */
+  width: auto;
+  aspect-ratio: 967 / 664; /* 比例：請填入圖片原始 寬度 / 高度 */
+  background: url(../images/nav/logo.webp) no-repeat 0 0;
+  background-size: contain;
+}
+
+.login {
+  position: relative;
+  width: auto; /* Flexible width */
+  height: auto; /* Flexible height */
+  min-height: 0.69rem; /* Minimum height to match other buttons */
+  background-color: transparent;
+  font-size: 0.2rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  transform-origin: center right; /* Align to right side */
+}
+
+/* Header Login Button Adaptation */
+.login .btn-login {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 4.01rem; /* Original width */
+  height: 0.97rem; /* Original height */
+  background-size: contain;
+  background-position: center;
+  background: url(../images/nav/btn_login.webp) no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+.nav.style2 .login .btn-login {
+  background: url(../images/nav/login2.webp) no-repeat;
+  background-size: 100% auto;
+  width: 2.6rem;
+  height: 0.71rem;
+}
+
+/* Header User Info Adaptation */
+.login .task-user-info {
+  display: flex;
+  position: relative; /* Relative positioning to take up space */
+  left: auto;
+  top: auto;
+  width: 4.01rem; /* Original width */
+  height: 0.97rem; /* Original height */
+  padding: 0 0.76rem 0 0.65rem; /* Original padding */
+  align-items: center;
+  box-sizing: border-box;
+  background: url(../images/nav/btn_login_after.webp);
+  background-size: 100% auto;
+}
+
+.login .task-user-info .btn-logout {
+  background: url(../images/nav/btn_logout.webp) no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  height: 0.48rem;
+  position: absolute;
+  right: 0.23rem;
+  top: 0.29rem;
+  width: 0.48rem;
+}
+
+.login .task-user-info p {
+  color: #f5f5f5;
+  font-size: 0.4rem;
+  font-weight: bold;
+  height: 100%;
+  line-height: 0.99rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.music.off {
+  background-position: 0 0%; /* OFF state (Top) */
+}
+.music:not(.off) {
+  background-position: 0 100%; /* ON state (Bottom) */
+}
+.header-restored {
+  /* Dummy tag to keep position */
+}
+.header .yyBtn {
+  bottom: 2.38rem;
+  width: 3.45rem;
+  height: 1.29rem;
+  background: url(../images/kv_go_btn.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.header .yyBtn.active {
+  background-position: 0 bottom;
+  cursor: default;
+}
+.arrow {
+  bottom: 0.6rem;
+  left: 50%;
+  margin-left: -0.22rem;
+  width: 0.47rem;
+  height: 0.29rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/arrow.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  animation: arrowUpDown 0.5s ease-in-out infinite alternate;
+}
+@keyframes arrowUpDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* 抽獎 */
+.lottery {
+  height: 26.96rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/lottery-bg.jpg)
+    no-repeat center top;
+  background-size: 100% auto;
+}
+.lotteryBox {
+  left: 1.71rem;
+  top: 5.33rem;
+  width: 4.24rem;
+  height: 4.24rem;
+}
+#laohuji {
+  position: relative;
+  overflow: hidden;
+  width: 4.24rem;
+  height: 2.96rem;
+}
+.lottery-view-list li {
+  width: 4.24rem;
+  height: 0.98rem;
+  margin-bottom: 0.01rem;
+}
+.lottery-view-list li img {
+  display: block;
+  width: 100%;
+}
+.lotteryStart {
+  right: 0;
+  bottom: 0;
+  width: 2.33rem;
+  height: 0.8rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/btn-lottery.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.lotteryNum {
+  bottom: 0.15rem;
+  width: 100%;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.14rem;
+  color: #fff;
+  text-shadow:
+    1px 1px 0 #eb5080,
+    -1px 1px 0 #eb5080,
+    1px -1px 0 #eb5080,
+    -1px -1px 0 #eb5080;
+}
+.lotteryTask {
+  left: 0.19rem;
+  top: 12.87rem;
+  width: 7.13rem;
+  height: 11.22rem;
+}
+.lotteryTask .head {
+  position: relative;
+  width: 7.13rem;
+  height: 1.07rem;
+  box-sizing: border-box;
+  padding: 0 0.36rem 0 1.16rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lotteryTask .btn-login {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/btn-login.png)
+    no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  height: 0.71rem;
+  left: 0.3rem;
+  position: absolute;
+  top: 0.2rem;
+  width: 2.1rem;
+}
+.task-user-info {
+  background-color: #242424;
+  border-radius: 0.2rem;
+  box-sizing: border-box;
+  height: 0.75rem;
+  left: 0.3rem;
+  padding: 0 0.76rem 0 0.9rem;
+  position: absolute;
+  top: 0.16rem;
+  width: 4.32rem;
+}
+.task-icon-account {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/icon-account.png)
+    no-repeat bottom;
+  background-size: 100% auto;
+  height: 0.62rem;
+  left: 0.12rem;
+  position: absolute;
+  top: 0.06rem;
+  width: 0.62rem;
+}
+.task-user-info .btn-logout {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/btn-logout.png)
+    no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  height: 0.53rem;
+  position: absolute;
+  right: 0.18rem;
+  top: 0.11rem;
+  width: 0.53rem;
+}
+.task-user-info p {
+  color: #f5f5f5;
+  font-size: 0.3rem;
+  font-weight: bold;
+  height: 100%;
+  line-height: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.ruleBtn {
+  position: absolute;
+  right: 0.2rem;
+  width: 2.51rem;
+  height: 0.69rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/ruleBtn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.ruleBtn {
+  width: 1.48rem;
+  height: 0.52rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/ruleBtn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.lotteryTaskCont {
+  width: 6.84rem;
+  margin: 0.5rem auto 0;
+}
+.lotteryTaskList {
+  width: 6.84rem;
+  height: 10.24rem;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.24rem;
+  width: 6.84rem;
+  height: 0.84rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/task.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  box-sizing: border-box;
+  padding: 0 0.09rem 0 0.19rem;
+}
+.task3 {
+  height: 1.13rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/task3.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task .left {
+  font-size: 0.2rem;
+  color: #969696;
+  display: flex;
+  align-items: center;
+}
+.task3 .left {
+  font-size: 0.18rem;
+  line-height: 0.2rem;
+}
+.task-tip {
+  font-weight: normal;
+  color: #ff7aa9;
+}
+.task .left::before {
+  content: "";
+  width: 0.36rem;
+  height: 0.53rem;
+  margin-right: 0.16rem;
+  flex-shrink: 0;
+}
+.task1 .left::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/task1.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task2 .left::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/task2.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task3 .left::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/task3.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task4 .left::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/task4.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task5 .left::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/task5.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task6 .left::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/task6.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task7 .left::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/task7.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task8 .left::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/task8.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task .left .txt {
+  width: 4.4rem;
+}
+.task .left .num {
+  margin-top: 0rem;
+  color: #fff;
+}
+.task button {
+  width: 1.57rem;
+  height: 0.66rem;
+}
+.task1 button {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/task1Btn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task2 button {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/task2Btn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task3 button {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/task3Btn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task4 button,
+.task5 button,
+.task6 button,
+.task7 button,
+.task8 button {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/task4Btn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.task button.active {
+  cursor: default;
+}
+.task .active {
+  cursor: default;
+  pointer-events: none;
+}
+.task1 button.active {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/yy-done.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task2 button.active,
+.task3 button.active {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/guanzhu-done.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.task4 .active button,
+.task5 .active button,
+.task6 .active button,
+.task7 .active button,
+.task8 .active button {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/guanzhu-done.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.lotteryTaskBtns {
+  height: 0.77rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lotteryTaskBtns button {
+  width: 2.42rem;
+  height: 0.77rem;
+  margin: 0 0.45rem;
+}
+.inviteLogBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/inviteLogBtn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.packageBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/packageBtn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  padding: 25px 0;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.02px;
+  background: #282a2c;
+}
+.footer .copyright,
+.footer .grading {
+  vertical-align: middle;
+}
+
+/* ==========================================
+   行動端直式佈局樣式表 (Mobile Portrait CSS)
+   設計寬度基準: 750px (1rem = 100px)
+   ========================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
+}
+
+/* 顯示整體包裝並限制為 7.5rem (100% 寬度) */
+.wrap {
+  display: block !important;
+  width: 7.5rem !important;
+  margin: 0 auto !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  background-color: #212121 !important;
+}
+
+/* 行動端頭部佈局，使用直式背景圖片 */
+.header {
+  width: 7.5rem !important;
+  height: 11.35rem !important;
+  background: url(../images/m/KV_bg_m.webp) no-repeat center top !important;
+  background-size: 100% 100% !important;
+  aspect-ratio: 1080/1629;
+}
+.header .header_tt {
+  width: 73%;
+  top: 67%;
+}
+
+/* 行動端右上角按鈕組定位 */
+.topRight {
+  top: 50%;
+  right: 0.2rem !important;
+}
+
+/* 預約按鈕居中與微調 */
+.header .yyBtn {
+  bottom: 1.4rem !important;
+  width: 3.18rem !important;
+  height: 1.01rem !important;
+}
+
+/* 道具市集背景，改用行動端直式背景圖 */
+.event_item_market {
+  width: 7.5rem !important;
+  background: url(../images/m/main_bg_m.webp) no-repeat center !important;
+  background-size: 100% auto !important;
+  padding-bottom: 1rem !important;
+  min-height: 20rem !important;
+}
+
+.event_item_market .content {
+  width: 7.5rem !important;
+  height: auto !important;
+  padding: 0.7rem 0.3rem 0.5rem 0.3rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* 將原本左右並排 (Row) 改為上下直排 (Column) */
+.im_layout {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.4rem !important;
+  transform: none !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  z-index: 5;
+}
+
+/* 左側：小瑪莉跑燈網格 */
+.im_left {
+  flex: none !important;
+  width: 6.6rem !important;
+  aspect-ratio: 1093 / 1176 !important;
+  margin: 0 auto !important;
+  background-size: 100% 100% !important;
+}
+.reward_draw_center {
+  gap: 0.05rem;
+}
+.draw_remain {
+  font-size: 0.2rem;
+}
+.reward_draw_center .dot {
+  width: 0.3rem;
+  height: 0.3rem;
+  box-shadow: inset 0rem 0rem 0rem 0.04rem #ffffff;
+}
+
+/* 右側：任務列表容器 */
+body.is-mobile .im_right {
+  position: relative !important;
+  width: 6.5rem !important;
+  height: 7.8rem;
+  aspect-ratio: 959 / 1229 !important;
+  margin: 0.2rem auto 0 auto !important;
+  padding: 0 !important; /* 重設 padding，子元素改用絕對定位 */
+  flex: none !important;
+  background-image: url(../images/m/lottery_mission_bg_m.webp);
+}
+
+/* 任務清單列表滾動區域 */
+body.is-mobile .im_task_list {
+  position: absolute !important;
+  top: 1.1rem !important;
+  left: 0.2rem !important;
+  width: 94% !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow-y: auto !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  gap: 0.28rem;
+}
+.im_task_num {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.im_task_desc {
+  font-size: 0.2rem;
+}
+.btn_im_task {
+  width: 1.5rem;
+}
+body.is-mobile .im_task_list::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* 頁尾調整 */
+.footer {
+  display: block !important;
+  width: 7.5rem !important;
+  margin: 0 auto !important;
+  padding: 0.5rem 0.3rem !important;
+}
+
+/* 隱藏 PC 版的飄浮星星物件 */
+.market-star {
+  display: none !important;
+}
+.market-star.star2 {
+  right: 6.2rem;
+  top: 0.2rem;
+  display: block !important;
+}
+.im_task {
+  gap: 0.2rem;
+  padding: 0.15rem 0.18rem;
+}

@@ -1,0 +1,677 @@
+@import "./popup.css";
+
+/* ==========================================
+   行動端彈窗樣式表 (Mobile Popups CSS)
+   設計寬度基準: 750px (1rem = 100px)
+   ========================================== */
+
+.popClose {
+  top: 0.2rem;
+  right: 0.6rem;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.popCont1,
+.popCont2,
+.popCont3,
+#eventAlertModal .modal-body {
+  margin: 0 auto;
+  width: 90%;
+}
+.pop_yy_tit {
+  top: 1.3rem;
+}
+.yyForm {
+  top: 2.3rem;
+}
+.regressmodal .d-flex {
+  top: 3rem;
+}
+.pop_yySuccess_tit {
+  top: 1.5rem;
+}
+.yy_platform_head {
+  top: 4.6rem;
+}
+.yy_platform {
+  top: 4.9rem;
+}
+.platform_tip {
+  top: 6.6rem;
+}
+.yySubmit {
+  top: 7.5rem;
+}
+.qaSubmit {
+  top: 4.9rem;
+}
+.yy_otherPlatform {
+  top: 5.9rem;
+}
+.privacymodal .res_poptt {
+  width: 4rem;
+  margin: 0.3rem auto;
+}
+.privacymodal .list_con {
+  height: 6.3rem;
+}
+.privacymodal .list_con ol {
+  font-size: 0.2rem;
+}
+.privacymodal .popup_close {
+  bottom: 1.5rem;
+}
+#eventAlertModal .modal-body p {
+  font-size: 0.4rem;
+}
+
+/* 彈窗 */
+.popup .pop-bg {
+  width: 7.07rem;
+  height: 6.45rem;
+}
+.popup .close {
+  top: 0.3rem;
+  right: 0.22rem;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+/* 彈窗：活動規則 */
+.pop-bg1 {
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/pop-bg1.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popRuleTit {
+  width: 2.84rem;
+  height: 1rem;
+  /* height: auto; */
+  margin: 0.35rem auto 0;
+}
+.rule-scroll {
+  width: 6.82rem;
+  height: 3.7rem;
+  margin: 0.15rem 0 0 0.04rem;
+  /* margin: 0.65rem 0 0 0.04rem; */
+}
+.rule-scroll p {
+  width: 5.84rem;
+  font-size: 0.2rem;
+  line-height: 0.32rem;
+}
+
+.popBtns {
+  height: 0.55rem;
+  margin-top: 0.45rem;
+}
+.popBtns button,
+.popBtns a {
+  width: 2.25rem;
+  height: 0.55rem;
+  margin: 0 0.16rem;
+}
+.downloadSharePicBtn {
+  display: none;
+}
+
+.notLog {
+  line-height: 0.48rem;
+  font-size: 0.28rem;
+}
+.inviteLogList {
+  width: 6.7rem;
+  padding-top: 0.1rem;
+  margin-top: 0;
+  align-items: flex-start;
+}
+.inviteLogList .thead {
+  height: 0.7rem;
+  font-size: 0.28rem;
+  line-height: 0.7rem;
+}
+.inviteLogList .tbody {
+  width: 6.7rem;
+  height: 1.38rem;
+  font-size: 0.19rem;
+  line-height: 0.2rem;
+}
+.inviteLogList .tbody .tr {
+  margin-bottom: 0.16rem;
+}
+
+.popBtnsTip {
+  font-size: 0.2rem;
+}
+
+/* 彈窗：獎勵背包 */
+.popPackageTit {
+  width: 4.4rem;
+  height: 0.69rem;
+  margin: 1.66rem auto 0;
+}
+.popPackageCont {
+  height: 1.66rem;
+}
+.notRewards {
+  line-height: 1.12rem;
+  font-size: 0.28rem;
+}
+.rewardsList {
+  width: 4.66rem;
+  height: 1.5rem;
+  margin: 0.18rem 0 0 1.38rem;
+}
+.rewardsItem {
+  width: 4.34rem;
+  height: 0.48rem;
+  margin: 0.06rem 0;
+  border-radius: 0.24rem;
+}
+.rewardsItem p {
+  margin-left: 0.1rem;
+  font-size: 0.24rem;
+}
+.rewardsItem button {
+  margin-right: 0.1rem;
+  width: 1.66rem;
+  height: 0.32rem;
+  border-radius: 0.24rem;
+  font-size: 0.2rem;
+}
+/* 中獎紀錄(新) */
+.popAwardTit {
+  width: 2.2rem;
+}
+.popAwardCont {
+  height: 2.2rem;
+  overflow-y: auto;
+  margin-top: 1%;
+}
+.state-not-login {
+  width: 5.4rem;
+}
+.popBtns .btn-popLoginBtn {
+  height: 0.75rem;
+}
+.inviteLogList_item p {
+  font-size: 0.25rem;
+  line-height: 0.45rem;
+}
+
+/* 彈窗：中獎（實物 | 測試資格）*/
+.pop-bg2 {
+  background: url(../images/pop/pop_bg_mobile.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.pop-kt-head {
+  top: 0.14rem;
+  height: 1.48rem;
+}
+.pop-kt-title {
+  height: 0.5rem;
+}
+.popLotteryCont {
+  height: 4rem;
+}
+.popLotteryCont .content {
+  width: 6.1rem;
+  height: 1.8rem;
+  margin: 2.15rem auto 0;
+}
+.popLotteryCont h3 {
+  margin-bottom: 0.1rem;
+  margin-bottom: 0.7rem;
+}
+.popLotteryCont .prizeName,
+.popPackage .prizeName {
+  color: #ff3b82;
+}
+.popLotteryCont .des {
+  line-height: 0.4rem;
+  font-weight: bold;
+  font-size: 0.22rem;
+  color: #b7b7b7;
+}
+.popLotteryWinning .des {
+  width: 65%;
+  margin: 0 auto;
+}
+
+/* 彈窗：提示訊息 */
+.popMsgCont {
+  width: 5.8rem;
+  height: 4.3rem;
+  margin: 1.2rem auto 0;
+  font-size: 0.38rem;
+  line-height: 0.52rem;
+}
+
+/* ==========================================
+   行動端彈窗通用外層容器與恭喜獲得彈窗 (#popGetAward) 適配
+   ========================================== */
+
+.popup {
+  width: 7.5rem !important;
+  aspect-ratio: auto !important;
+}
+
+#popGetAward .pop-bg-sm {
+  width: 7rem !important;
+  aspect-ratio: 1091 / 875 !important;
+  background-size: 100% 100% !important;
+}
+
+#popGetAward .close {
+  top: 0.24rem !important;
+  right: 0.24rem !important;
+  width: 0.7rem !important;
+  height: 0.7rem !important;
+}
+
+#popGetAward .popAwardTit {
+  width: 2.64rem !important;
+  height: 0.66rem !important;
+  margin: 0.265rem auto 0 !important;
+  background-size: 100% 100% !important;
+}
+
+#popGetAward .popAwardCont {
+  margin-top: 0.9rem !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+#popGetAward .popAwardCont .pop-award-item {
+  width: 1.54rem !important;
+  aspect-ratio: 228/236 !important;
+  background-size: 100% 100% !important;
+}
+
+#popGetAward .popAwardCont p {
+  margin: 0.035rem auto 0.14rem !important;
+  font-size: 0.28rem !important;
+}
+
+#popGetAward .popBtnsTip {
+  font-size: 0.23rem !important;
+  line-height: 0.28rem !important;
+}
+
+#popGetAward .popBtns {
+  margin-top: 0.5rem !important;
+}
+
+#popGetAward .btn-awardBag {
+  width: 2.54rem !important;
+  height: 0.723rem !important;
+  background-size: 100% 200% !important;
+}
+#bookedmodal .popCont1 {
+  background-size: 100% 100%;
+}
+
+/* ============================================================
+   彈窗：獎勵背包 #popAward_v1（手機版）
+   來源：urban-missions_260228/css/master_m.css（×0.77 縮放）
+   ============================================================ */
+
+/* --- 獎勵標題 --- */
+.popAwardTit_v1 {
+  height: 0.6rem;
+  width: auto;
+  aspect-ratio: 292 / 65;
+  margin: 0.35rem auto 0;
+  background: url(../images/pop/pop_gift_title.webp) no-repeat;
+  background-size: 100% 100%;
+}
+
+/* --- 獎勵內容區 --- */
+.popAwardCont_v1 {
+  height: 7.85rem; /* 3.9 × 0.77 */
+  margin-top: 0.3rem;
+  overflow: hidden;
+}
+.popAwardCont_v1 .type-empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- 獎勵列表 --- */
+#popAward_v1 .inviteLogList {
+  width: 6.5rem; /* 7.1 × 0.77 */
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 0.05rem;
+  color: #1b1b1b;
+}
+#popAward_v1 .inviteLogList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#popAward_v1 .inviteLogList .tr p {
+  width: 50%;
+  text-align: center;
+  line-height: 1.3;
+  word-break: break-all;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(1) {
+  width: 40%;
+  box-sizing: border-box;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(2) {
+  width: 20%;
+}
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) {
+  border-left: 0.01rem dotted #fff;
+  border-right: 0.01rem dotted #fff;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(3),
+#popAward_v1 .inviteLogList .tr .serial-col {
+  width: 40%;
+}
+#popAward_v1 .inviteLogList .thead {
+  height: auto;
+  font-weight: bold;
+  font-size: 0.26rem; /* 0.34 × 0.77 */
+  line-height: 0.59rem; /* 0.76 × 0.77 */
+  margin-bottom: 0.15rem;
+  margin-top: 0.15rem;
+  padding-right: 0.26rem; /* 捲軸寬 0.14 + 間距 0.12，與 tbody 對齊 */
+}
+#popAward_v1 .inviteLogList {
+  width: 6.5rem; /* 7.1 × 0.77 */
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 0.35rem;
+  color: #1b1b1b;
+}
+#popAward_v1 .inviteLogList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#popAward_v1 .inviteLogList .tr p {
+  width: 50%;
+  text-align: center;
+  line-height: 1.3;
+  word-break: break-all;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(1) {
+  width: 32%;
+  box-sizing: border-box;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(2) {
+  width: 20%;
+}
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) {
+  border-left: 0.01rem dotted #898989;
+  border-right: 0.01rem dotted #898989;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(3),
+#popAward_v1 .inviteLogList .tr .serial-col {
+  width: 48%;
+}
+#popAward_v1 .inviteLogList .thead {
+  height: auto;
+  font-weight: bold;
+  font-size: 0.26rem; /* 0.34 × 0.77 */
+  line-height: 0.59rem; /* 0.76 × 0.77 */
+  margin-bottom: 0.15rem;
+  margin-top: 0.15rem;
+  padding-right: 0.26rem; /* 捲軸寬 0.14 + 間距 0.12，與 tbody 對齊 */
+}
+#popAward_v1 .inviteLogList .tbody {
+  width: 6.5rem;
+  height: calc(100% - 0.65rem); /* 扣除 thead 高度，填滿剩餘空間 */
+  padding-right: 0.12rem;
+  font-size: 0.18rem; /* 0.23 × 0.77 */
+  line-height: 0.18rem; /* 0.24 × 0.77 */
+}
+#popAward_v1 .inviteLogList .tbody .tr {
+  border: 0.01rem solid #898989;
+  margin-bottom: 0.14rem;
+  padding: 0.06rem 0.08rem;
+  min-height: 0.85rem; /* 1.1 × 0.77 */
+  display: flex;
+  align-items: center;
+}
+/* 時間欄：年在上、月日在下 */
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) {
+  white-space: normal;
+  line-height: 1.4;
+}
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) br {
+  display: block;
+}
+
+/* --- 無獎勵提示 --- */
+#popAward_v1 .notRewards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.26rem; /* 0.34 × 0.77 */
+  color: #b7b7b7;
+}
+
+/* --- 獎勵背景（手機版專用） --- */
+#popAward_v1 .pop-bg1 {
+  background: url(../images/pop/pop-bg-award-mobile.webp) no-repeat 0 0;
+  background-size: 100% auto;
+  aspect-ratio: 927 / 1299;
+  height: 10.35rem;
+}
+
+/* --- 序號欄位 --- */
+#popAward_v1 .serial-col {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.14rem;
+  padding: 0 0.1rem;
+  box-sizing: border-box;
+}
+#popAward_v1 .serial-code {
+  font-size: 0.18rem;
+  color: #1b1b1b;
+  word-break: break-all;
+  text-align: left;
+  line-height: 1.2;
+  flex: 1;
+}
+#popAward_v1 .serial-copy-btn {
+  padding: 0.09rem 0.12rem;
+  font-size: 0.18rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #fff;
+  background: #ff53a3;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#popAward_v1 .serial-get-btn {
+  padding: 0.09rem 0.12rem;
+  font-size: 0.18rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #fff;
+  background: #ff53a3;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#popAward_v1 .serial-copy-btn:hover,
+#popAward_v1 .serial-get-btn:hover {
+  background: #7177c7;
+}
+/* 收件資訊彈窗 */
+.popInfoTit {
+  margin: 0.35rem auto 0;
+}
+.popLotteryGetCont {
+  height: 4.7rem;
+}
+.popLotteryGetCont .lotteryForm {
+  width: 6.9rem;
+}
+.lotteryForm .column {
+  justify-content: center;
+}
+.popBtns .btn-send-data {
+  width: 2.5rem;
+  height: 0.67rem;
+}
+#popLotteryGet .popBtns {
+  margin-top: 0.15rem;
+}
+#popLotteryGet .popInfoTit {
+}
+
+/* --- 獎勵平台按鈕列 --- */
+.popAwardPlatform_v1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 0.15rem;
+  margin: 0.13rem auto 0;
+  width: 6rem;
+  height: 1.2rem;
+  background: #4dd9d900;
+}
+.popAwardPlatform_v1 .btn {
+  height: 0.65rem;
+  width: auto;
+  display: block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.popAwardPlatform_v1 .btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- 獎勵列表高度鏈 --- */
+.popAwardCont_v1 .type-list {
+  height: 100%;
+}
+
+/* --- 獎勵平台標題 --- */
+.popAwardPlatform_tit_v1 {
+  width: 3.6rem;
+  height: 0.8rem;
+  margin: 0.55rem auto 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.popAwardPlatform_tit_v1.yy {
+  background-image: url(../images/pop_event/popAward/pop_popAwardPlatform_yy_tit_m.webp);
+}
+.popAwardPlatform_tit_v1.dl {
+  background-image: url(../images/pop_event/popAward/pop_popAwardPlatform_dl_tit_m.webp);
+}
+
+/* --- PC 專屬按鈕：手機板隱藏 --- */
+.popAwardPlatform_v1 .btn.pc-only {
+  display: none;
+}
+
+/* --- Demo 切換按鈕（暫時） --- */
+.popAwarddemo_btn_v1 {
+  position: absolute;
+  top: 0.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.03rem 0.15rem;
+  font-size: 0.14rem;
+  color: #fff;
+  background: #dc3545;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  z-index: 99;
+}
+.popAwarddemo_btn_v1:hover {
+  background: #c82333;
+}
+
+/* --- 移除 Bootstrap .btn 的圓角 --- */
+#popAward_v1 .popAwardPlatform_v1 .btn {
+  border-radius: 0;
+}
+
+/* --- 獎勵平台按鈕圖片 --- */
+#popAward_v1 .popAwardPlatform_v1.yy .btn.ps5 {
+  background-image: url(../images/store_ps5_yy.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.yy .btn.android {
+  background-image: url(../images/store_android_yy.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.yy .btn.ios {
+  background-image: url(../images/store_ios_yy.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.yy .btn.windows {
+  background-image: url(../images/store_windows_yy.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.yy .btn.googleplay {
+  background-image: url(../images/store_googleplay_yy.webp) !important;
+}
+
+#popAward_v1 .popAwardPlatform_v1.dl .btn.ps5 {
+  background-image: url(../images/store_ps5_dl.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.dl .btn.android {
+  background-image: url(../images/store_android_dl.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.dl .btn.ios {
+  background-image: url(../images/store_ios_dl.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.dl .btn.windows {
+  background-image: url(../images/store_windows_dl.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.dl .btn.googleplay {
+  background-image: url(../images/store_googleplay_dl.webp) !important;
+}
+
+/* --- 各按鈕 aspect-ratio --- */
+.popAwardPlatform_v1 .btn.ps5 {
+  aspect-ratio: 293 / 88;
+}
+.popAwardPlatform_v1 .btn.android {
+  aspect-ratio: 305 / 90;
+}
+.popAwardPlatform_v1 .btn.ios {
+  aspect-ratio: 244 / 90;
+}
+.popAwardPlatform_v1 .btn.windows {
+  aspect-ratio: 301 / 89;
+}
+.popAwardPlatform_v1 .btn.googleplay {
+  aspect-ratio: 301 / 89;
+}
+
+/* --- 無獎項圖片 --- */
+.popAwardNone_v1 {
+  width: 5.5rem;
+  aspect-ratio: 792 / 144;
+  background: url(../images/pop/pop_award_none.webp) no-repeat center center;
+  background-size: 100% auto;
+}
