@@ -22,3 +22,17 @@
     - RWD 手機版：點擊地點才會彈出名稱／時間（純文字彈窗）；清單區塊另有 `.map_banner`，點擊可展開／收合整個任務清單區塊。
   - `map_magnifier`（放大鏡按鈕）：點擊後會彈出當前城市照片的彈窗。
   - 進度條上每個進度皆有對應的獎勵 icon；點擊已完成過的獎勵 icon，畫面顯示的插畫會跟著回到該進度當時的（泯除）狀態，方便往前查看。
+
+## 版面規格 / RWD
+
+- **裝置判斷**：`js/reset.js` 以 `navigator.userAgent` 判斷是否為行動裝置，而非依 viewport 寬度判斷；結果決定載入哪份版面 CSS，並決定手機是否強制固定直式呈現。
+  - PC：動態將 `<link id="pageStyle">` 指向 `css/master.css`。
+  - 手機：固定指向 `css/master_m.css`，且無論裝置直橫向皆以直式版面內容顯示，避免橫向時版面跑掉。
+- **rem 等比縮放**：於 `resize` / `orientationchange` 時重新計算 `html` 的 `font-size`，所有版面數值皆以 rem 撰寫：
+  - PC 設計稿寬度 2560px，`font-size = 100 * (clientWidth / 2560)`。
+  - 手機設計稿寬度 750px，以 `min(clientWidth, clientHeight)` 作為縮放基準寬度，確保轉橫向時仍依短邊比例縮放、不會整體被放大變形。
+- **CSS Media Query 斷點**：
+  - `master.css`：`min-width: 1025px`（PC 專屬裝飾顯示）／`max-width: 1024px`（平板以下隱藏 PC 專屬裝飾）。
+  - `master_m.css`：`max-width: 450px` 且 `max-height: 670px`（小尺寸手機微調）、`min-width: 768px` 且 `max-width: 1024px`（平板尺寸微調）、`orientation: landscape` 且 `max-width: 1024px`（手機橫向特別處理）。
+  - `event_popup_m.css`：以 `media="(orientation: portrait)"` 載入，僅直向時套用彈窗版面樣式。
+- `js/off_line.js` 另以 `window.innerWidth`（< 1024 視為手機）判斷互動邏輯（非樣式切換），需與上述 CSS 斷點對應理解。
