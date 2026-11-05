@@ -1,0 +1,865 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/* *,
+a,
+span {
+  font-family:
+    "Noto Sans TC",
+    Arial,
+    Helvetica,
+    微軟正黑體,
+    Microsoft JhengHei,
+    sans-serif;
+} */
+
+a {
+  text-decoration: none !important;
+}
+
+/*====卷軸===*/
+/* 細捲軸開始 */
+::-webkit-scrollbar {
+  height: 5px;
+  overflow: visible;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d10003;
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 0px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  box-shadow:
+    inset 1px 1px 0 rgba(0, 0, 0, 0),
+    inset 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d10003;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #d10003;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #19181e;
+}
+
+/* 細捲軸結束 */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.display_none {
+  display: none;
+}
+
+.note_flex {
+  display: none;
+}
+
+/*禁止滑動*/
+.modal-open {
+  overflow: hidden !important;
+  padding-right: 0 !important;
+}
+
+.wrapper {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  /* 尺寸限制移至 kv_zone */
+}
+
+/* ========================================================================
+ * Footer
+ * ======================================================================== */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0;
+  color: #fff;
+  font-size: 0.12rem;
+  text-align: center;
+  letter-spacing: 0.02px;
+  background: #282a2c;
+  /* 更新：包含高度與內距的動效，以釋放佈局空間 */
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    max-height 0.5s ease,
+    padding 0.5s ease,
+    visibility 0.5s;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.footer.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  max-height: 5rem; /* 給予足夠的上限以容納內容 */
+  padding: 0.1rem 0;
+}
+.footer .container {
+  max-width: 100%;
+}
+.footer .copyright,
+.footer .grading {
+  vertical-align: middle;
+}
+.footer img {
+  vertical-align: baseline;
+  height: 0.4rem;
+  width: auto;
+}
+.footer .copyright,
+.footer .company,
+.footer p,
+.footer .grading,
+.footer .grading img,
+.footer ul {
+  display: inline-block;
+}
+.footer .company a,
+.footer .copyright p a,
+.footer .grading,
+.footer p,
+.footer ul {
+  margin-left: 0.1rem;
+  font-size: 0.12rem;
+}
+.footer a:hover {
+  color: #63edec;
+}
+.footer p,
+.footer ul {
+  text-align: left;
+  line-height: 1.2;
+  font-size: 0.12rem;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+.footer p a {
+  color: #fff;
+}
+/* 修復手機版特定尺寸footer頂部與底部白線 */
+.footer {
+  box-shadow:
+    0 -1px 0 #282a2c,
+    0 1px 0 #282a2c;
+  bottom: -1px !important;
+  padding-bottom: 1px;
+}
+
+/* logo */
+.logo {
+  position: absolute;
+  top: 0.39rem;
+  left: 0.67rem;
+  width: 2.09rem;
+  height: 1.88rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/logo.png)
+    no-repeat 0 0 / 100% auto;
+  z-index: 1;
+}
+
+/*--主視覺區域--*/
+.kv_zone {
+  position: relative;
+  width: 25.6rem;
+  height: 14.4rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* =========================================
+   Scratch Card Styles (Converted to REM)
+   ========================================= */
+
+/* .dd_title {
+  position: absolute;
+  width: 7.68rem;
+  height: auto;
+  top: 0.576rem;
+  left: 8.448rem;
+  z-index: 65;
+  background-color: #44338300;
+}
+
+.dd_title p {
+  font-size: 0.2813rem;
+  line-height: 144%;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 0%;
+  text-align: center;
+} */
+
+/* 會員按鈕 */
+.btn_member {
+  width: 1.2rem;
+  aspect-ratio: 127 / 136;
+  cursor: pointer;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/member_btn.webp)
+    no-repeat;
+  background-size: 100% 200%;
+  background-position: center top;
+  position: absolute;
+  top: 2.5rem;
+  left: 1.5rem;
+}
+
+.btn_member:hover {
+  background-position: center bottom;
+}
+
+/* 會員資訊區塊 */
+.member_info_block {
+  position: absolute;
+  top: 3.6rem;
+  left: 3.1rem; /* 顯示在最後一顆按鈕的右側 */
+  transform: translateY(-50%);
+  width: 4.5rem;
+  height: 2.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/member_info_bg.webp)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2%;
+}
+.member_info_block.show {
+  display: flex;
+}
+.member_uid {
+  font-size: 0.31rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02rem;
+}
+.btn_switch_account {
+  width: 2.6rem;
+  /* height: 0.6rem; */
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/switch_account_btn.webp)
+    no-repeat top center;
+  background-size: 100% 100%;
+  aspect-ratio: 262/54;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0.12rem;
+}
+
+/* 刮刮卡區 */
+
+.card_main {
+  position: absolute;
+  /* width: 17.408rem; */
+  /* height: 10.752rem; */
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 65;
+  /* overflow: hidden; */
+
+  background-image: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/card.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  background-color: rgba(255, 235, 205, 0);
+  filter: drop-shadow(0.2667rem 0.2667rem 0.4rem rgba(0, 0, 0, 0.3));
+  width: 19.8rem;
+  aspect-ratio: 2034/1425;
+}
+
+/*--卡前景--*/
+.card_mae {
+  position: absolute;
+  width: 9.2867rem;
+  height: auto;
+  top: 0.35rem;
+  right: 0.02rem;
+  z-index: 10;
+
+  pointer-events: none;
+  user-select: none;
+  /* display: none; */
+}
+
+/* 活動說明內文 */
+.tt {
+  position: absolute;
+  left: 11%;
+  top: 42.3%;
+  z-index: 50;
+  width: 27.2%;
+  font-size: 0.3rem;
+  font-weight: bold;
+  color: white;
+  /* display: none; */
+}
+.tt ol {
+  margin: 0;
+  padding-left: 1.2em; /* 讓數字有空間顯示 */
+  list-style-type: decimal;
+}
+.tt .highlight-text {
+  color: #fff799;
+}
+/* .tt li {
+  margin-bottom: 0.1rem;
+  line-height: 144%;
+} */
+
+/* 審核規範按鍵 */
+.btn_audit_rules {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* 審核規範彈出區塊 */
+.audit_rules_block {
+  position: absolute;
+  top: 50%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+  width: 13.5rem;
+  padding: 1.1rem 0.8rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/audit_rules_block.webp)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.15rem;
+}
+.audit_rules_block.show {
+  display: flex;
+}
+.audit_rules_block p {
+  color: #fff;
+  font-size: 0.28rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* 刮刮卡左側功能按鈕 (獎勵一覽、詳細內容) */
+.card_btn_group {
+  position: absolute;
+  left: 16%;
+  bottom: 17%;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 16%; /* 按鈕的寬度比例 */
+}
+
+/* 獎勵一覽按鈕 */
+.lottery_giftlist_btn {
+  width: 100%;
+  aspect-ratio: 368 / 123;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/lottery_giftlist_btn.webp)
+    no-repeat top center;
+  background-size: 100% 200%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.lottery_giftlist_btn:hover {
+  background-position: bottom center;
+}
+
+/* 詳細內容按鈕 */
+.lottery_rules_btn {
+  width: 100%;
+  aspect-ratio: 368 / 123;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/lottery_rules_btn.webp)
+    no-repeat top center;
+  background-size: 100% 200%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.lottery_rules_btn:hover {
+  background-position: bottom center;
+}
+
+/* 登入按鈕 */
+.login {
+  position: absolute;
+  width: 3.5867rem;
+  aspect-ratio: 367 / 122; /* 預設沿用確認按鈕比例，可自行微調 */
+  bottom: 5rem;
+  right: 4.7rem;
+  z-index: 66;
+
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/login_btn.webp)
+    no-repeat top center;
+  background-size: 100% 200%;
+  border: none;
+  background-color: transparent;
+
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.9));
+}
+.login:hover {
+  background-position: bottom center;
+}
+
+/* 網址輸入流程區塊 */
+.url_input_flow {
+  position: absolute;
+  width: 8rem;
+  height: auto;
+  bottom: 3.6rem;
+  right: 2.5rem;
+  z-index: 67;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.url_input_flow .url_input {
+  width: 100%;
+  height: 1.1rem;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #626262;
+  font-size: 0.4rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: text !important;
+  pointer-events: auto;
+  background-color: #1b1b1b;
+  color: #ffffff;
+}
+.is-mobile .url_input_flow .url_input {
+  border: 1px solid #626262; /* 手機版自動變為 1px，保持精緻感 */
+}
+
+.url_input_flow .url_input::placeholder {
+  text-align: center;
+  color: #ffffff;
+}
+
+.url_input_flow .submit_btn {
+  width: 3.5867rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/submit_btn.webp)
+    no-repeat 0 0;
+  aspect-ratio: 367/123;
+  background-size: 100% 200%;
+  border: none;
+  cursor: pointer !important;
+  pointer-events: auto;
+}
+
+.url_input_flow .submit_btn:hover {
+  background-position: 0 100%;
+}
+
+/* 填寫收件資訊 & 查看收件資訊按鈕 */
+.fill_info_btn,
+.check_info_btn {
+  position: absolute;
+  width: 3.5rem;
+  aspect-ratio: 367 / 123;
+  bottom: 2.9rem;
+  right: 2.5rem;
+  z-index: 66;
+
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 200%;
+  border: none;
+  background-color: transparent;
+
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.6));
+}
+.fill_info_btn {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/fill_info_btn.webp);
+}
+.check_info_btn {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/check_info_btn.webp);
+}
+.fill_info_btn:hover,
+.check_info_btn:hover {
+  background-position: bottom center;
+}
+
+/*刮刮樂_主要框*/
+.card_main .scratch_box {
+  position: absolute;
+  width: 10.1267rem;
+  /* height: 7.2933rem; */
+  top: 4.6713rem;
+  left: 8.2227rem;
+  overflow: hidden;
+  z-index: 65;
+  background-color: rgb(139, 84, 0);
+  overflow: hidden;
+  aspect-ratio: 1041/740;
+}
+
+/* 刮刮卡區滑鼠樣式 */
+.custom-cursor {
+  cursor:
+    url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/mission_gift2.webp)
+      32 32,
+    auto !important;
+}
+
+/* 刮刮卡透明擋板 (未解鎖前阻擋刮除與隱藏自訂游標) */
+.scratch_blocker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  cursor: default !important;
+}
+
+/*--蒙版--*/
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0rem;
+  left: 0rem;
+  z-index: 66;
+}
+
+.mask canvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+/*刮刮樂_結果圖框*/
+.scratch_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0rem;
+  left: 0rem;
+  z-index: 65;
+}
+
+/* 顯示一體成形的結果圖 */
+.scratch_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 確保圖片不變形 */
+}
+
+/* ========================================================================
+ * 刮刮卡掃光特效
+ * ======================================================================== */
+.card_main .scratch_box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: sweepLight 4s infinite;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* 單邊掃光 */
+@keyframes sweepLight {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: -100%;
+  }
+  80% {
+    left: 200%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* 當開始刮卡時，隱藏掃光特效 */
+.card_main .scratch_box.is-scratching::after {
+  display: none;
+  animation: none;
+}
+
+/* 刮刮卡上的文字提示 */
+.tt1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  pointer-events: none; /* 必加：讓滑鼠能穿透文字刮到底下 */
+  display: none; /* 一開始先隱藏 */
+}
+.tt1 img {
+  width: 100%;
+  height: auto;
+}
+
+/* ========================================================================
+ * 蓋板輪播頁
+ * ======================================================================== */
+
+.desk_base {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 1;
+  background-color: #27ff1300;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 0.1rem 0.25rem;
+}
+
+.desk_right_col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 72%;
+  /* height: 54%; */
+  overflow: hidden;
+  align-self: center; /* 讓右側內容區塊自己垂直置中 */
+  margin-top: -5%;
+}
+
+.desk_base .desk_content {
+  width: 78%;
+  /* width: 64%; */
+  flex: 1;
+  height: auto;
+  overflow: hidden;
+  background-color: #2cdb3500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  margin: 0 auto;
+}
+
+.content_A2 .board_top {
+  width: 100%;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/gift-overlay/board_top.webp);
+  aspect-ratio: 2103 / 239;
+  margin-bottom: -1px;
+}
+.content_A2 .board_bottom {
+  width: 100%;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/gift-overlay/a2_board_bottom_zoom.webp);
+  aspect-ratio: 2103 / 40;
+  margin-top: -1px;
+}
+.content_A2 .board {
+  width: 100%;
+  padding: 0 3%;
+  height: 0;
+  flex-grow: 1;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/gift-overlay/a2_board_zoom.webp);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+/* 獎品清單區塊 */
+.content_A2 .board .lottery_award {
+  width: max-content;
+  height: 98%;
+  margin: 4% 0 0 0; /* 取消 auto，強制靠左對齊，避免 Safari / 手機版置中溢出或留白 */
+  display: flex;
+}
+.content_A2 .board .lottery_award:hover {
+  animation-play-state: paused;
+}
+/* 獎品清單 */
+.content_A2 .board .lottery_item {
+  width: auto;
+  aspect-ratio: 465 / 585;
+  height: 100%;
+  flex-shrink: 0;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/gift-overlay/award_list.webp);
+  background-repeat: no-repeat;
+  background-size: 900% 100%;
+}
+.content_A2 .board .lottery_item.num_1 {
+  background-position-x: 0%;
+}
+.content_A2 .board .lottery_item.num_2 {
+  background-position-x: 12.5%;
+}
+.content_A2 .board .lottery_item.num_3 {
+  background-position-x: 25%;
+}
+.content_A2 .board .lottery_item.num_4 {
+  background-position-x: 37.5%;
+}
+.content_A2 .board .lottery_item.num_5 {
+  background-position-x: 50%;
+}
+.content_A2 .board .lottery_item.num_6 {
+  background-position-x: 62.5%;
+}
+.content_A2 .board .lottery_item.num_7 {
+  background-position-x: 75%;
+}
+.content_A2 .board .lottery_item.num_8 {
+  background-position-x: 87.5%;
+}
+.content_A2 .board .lottery_item.num_9 {
+  background-position-x: 100%;
+}
+
+/* ========================================================================
+ * Gift Overlay
+ * ======================================================================== */
+.gift-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift-overlay.dark-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 蓋板頁關閉按鈕 */
+.gift-overlay-close {
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  width: 1rem;
+  height: auto;
+  aspect-ratio: 117 / 117;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/gift-overlay/close_btn2.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+  pointer-events: auto;
+}
+
+.gift-overlay-close:hover {
+  background-position: center bottom;
+}
+.gift-overlay .desk_base {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: row; /* 確保左右排版正常 */
+  justify-content: center;
+}
+.desk_anim_in {
+  display: flex !important;
+  animation: deskSlideIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes deskSlideIn {
+  0% {
+    transform: translate(50%, 50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(50%, -50%);
+    opacity: 1;
+  }
+}
