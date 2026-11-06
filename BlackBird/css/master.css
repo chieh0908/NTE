@@ -1,0 +1,833 @@
+body {
+  background-color: #212121;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  /* 舊版瀏覽器備用 */
+  min-height: 100dvh;
+  /* 解決手機版 Chrome 網址列造成的上下黑邊 */
+  touch-action: none;
+}
+
+.wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  /* 尺寸限制移至 kv_zone */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.wrap p,
+.wrap ul,
+.wrap li {
+  margin-bottom: 0;
+}
+.wrap a {
+  font-size: initial;
+  line-height: 0;
+}
+
+.display_none {
+  display: none;
+}
+
+.note_flex {
+  display: none;
+}
+
+/* ========================================================================
+ * Footer
+ * ======================================================================== */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0;
+  color: #fff;
+  font-size: 0.12rem;
+  text-align: center;
+  letter-spacing: 0.02px;
+  background: #282a2c;
+  /* 更新：包含高度與內距的動效，以釋放佈局空間 */
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    max-height 0.5s ease,
+    padding 0.5s ease,
+    visibility 0.5s;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  right: 0;
+  margin: 0 auto;
+  width: 25.6rem;
+}
+
+.footer.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  max-height: 5rem; /* 給予足夠的上限以容納內容 */
+  padding: 0.1rem 0;
+}
+.footer .container {
+  max-width: 100%;
+}
+.footer .copyright,
+.footer .grading {
+  vertical-align: middle;
+}
+.footer img {
+  vertical-align: baseline;
+  height: 0.4rem;
+  width: auto;
+}
+.footer .copyright,
+.footer .company,
+.footer p,
+.footer .grading,
+.footer .grading img,
+.footer ul {
+  display: inline-block;
+}
+.footer .company a,
+.footer .copyright p a,
+.footer .grading,
+.footer p,
+.footer ul {
+  margin-left: 0.1rem;
+  font-size: 0.12rem;
+}
+.footer a:hover {
+  color: #63edec;
+}
+.footer p,
+.footer ul {
+  text-align: left;
+  line-height: 1.2;
+  font-size: 0.12rem;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+.footer p a {
+  color: #fff;
+}
+
+/* ========================================================================
+ * 首頁 (home_page) 
+ * ======================================================================== */
+
+.event {
+  position: relative;
+  width: 25.6rem;
+  height: 14.4rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.event_home {
+  background: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/home_page/kv_bg.webp)
+    no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.home_content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 左上角 Logo */
+.home_logo {
+  position: absolute;
+  top: 2%;
+  left: 17%;
+  width: 1.8rem;
+  z-index: 10;
+}
+.home_logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 右上方按鈕群組 */
+.top_right_btns {
+  position: absolute;
+  top: 5%;
+  right: 15.5%;
+  display: flex;
+  gap: 0.2rem;
+  z-index: 10;
+}
+
+.home_icon_btn {
+  width: 1.01rem;
+  height: 1.01rem;
+  cursor: pointer;
+  background-size: 100% 200%;
+  background-position: center top;
+  transition: transform 0.2s;
+}
+.home_icon_btn:hover {
+  background-position: center bottom;
+}
+
+.btn_rule {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/BlackBird/image/home_page/rule.webp");
+}
+.btn_download {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/BlackBird/image/home_page/download.webp");
+}
+.btn_member {
+  background-image: url("https://rests-nte.iwplay.com.tw/events/BlackBird/image/home_page/member.webp");
+}
+
+/* 會員資訊區塊 */
+.member_wrapper {
+  position: relative;
+}
+.member_info_block {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5rem;
+  height: auto;
+  background: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/home_page/member_info_bg.webp)
+    no-repeat center;
+  background-size: 100% 100%;
+  aspect-ratio: 383/233;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+}
+.member_uid {
+  font-size: 0.31rem;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.02rem;
+}
+.btn_switch_account {
+  width: 2.6rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/home_page/switch_account_btn.webp)
+    no-repeat top center;
+  background-size: 100% 100%;
+  aspect-ratio: 259/54;
+  border: none;
+  cursor: pointer;
+}
+
+/* 正中間內容 */
+.center_content {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  width: 11.9rem;
+}
+.kv_slogan {
+  /* width: 12.35rem; */
+  width: 100%;
+  height: auto;
+  /* margin-bottom: 0.5rem; */
+}
+.kv_go_btn {
+  width: 4.41rem;
+  aspect-ratio: 457/150;
+  background: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/home_page/kv_go_btn.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+  cursor: pointer;
+  position: absolute;
+  top: 84%;
+}
+.kv_go_btn:hover {
+  background-position: center bottom;
+}
+
+/* 右側兌換碼提示 */
+.code_tt_box {
+  position: absolute;
+  right: 16%;
+  bottom: 19.3%;
+  width: 4.4rem;
+  z-index: 10;
+}
+.code_tt_box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 底部底紋 */
+.home_bottom {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+}
+.shading_img {
+  width: 100%;
+  height: auto;
+}
+
+/* ========================================================================
+ * demo回流玩家&新玩家狀態切換 
+ * ======================================================================== */
+.demo_btn_group {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.demo_switch_btn {
+  width: 1.5rem;
+  height: 1rem;
+  background-color: #ff4747;
+  color: white;
+  border-radius: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  font-size: 0.3rem;
+}
+.demo_switch_btn:hover {
+  transform: scale(1.1);
+}
+
+/* ========================================================================
+ * 任務與抽獎頁面 (event_main)
+ * ======================================================================== */
+.event_main {
+  background: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/lottery_bg.webp)
+    no-repeat center center;
+  background-size: cover;
+}
+
+.lottery_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter_wrapper {
+  position: relative;
+  width: 88%;
+  aspect-ratio: 2256/1031;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/letter_bg.webp)
+    no-repeat center center;
+  background-size: 100% 100%;
+  margin-bottom: 0.4rem;
+}
+
+.letter_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.letter_inner {
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  height: 89%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1%;
+}
+
+.letter_left {
+  width: 87%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/letter_main_bg.webp)
+    no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.letter_main_bg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.letter_right {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 右側上方四顆按鈕 */
+.lottery_sidebar_btns {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.1rem;
+  width: 100%;
+  margin-top: -0.05rem;
+}
+
+.lottery_icon_btn {
+  width: 1.16rem;
+  aspect-ratio: 1/1;
+  background-size: 100% 200%;
+  background-position: center top;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.lottery_icon_btn:hover {
+  background-position: center bottom;
+}
+
+.btn_return {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/return.webp);
+}
+.btn_rule {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/rule.webp);
+}
+.btn_time {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/time.webp);
+}
+.btn_download {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/download.webp);
+}
+
+/* 右側下方動作區塊 (裝飾物、抽獎鈕、次數、分享) */
+.lottery_action_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.2rem;
+  position: relative;
+  top: 0;
+  right: -0.2rem;
+}
+
+.obj1_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.5rem;
+  z-index: 3;
+}
+.lottery_obj1 {
+  width: 60%;
+  height: auto;
+}
+
+.lottery_btn {
+  width: 100%;
+  aspect-ratio: 350/132;
+  background: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/lottery_btn.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+  cursor: pointer;
+  z-index: 2;
+}
+.lottery_btn:hover {
+  background-position: center bottom;
+}
+
+.lottery_status {
+  color: #fff;
+  font-size: 0.24rem;
+  font-weight: bold;
+  /* 預設給所有舊設備、舊版 iOS 使用最安全的 text-shadow 寫法 */
+  text-shadow:
+    -0.1em -0.1em 0 #000000,
+    0.1em -0.1em 0 #000000,
+    -0.1em 0.1em 0 #000000,
+    0.1em 0.1em 0 #000000,
+    0em -0.1em 0 #000000,
+    0em 0.1em 0 #000000,
+    -0.1em 0em 0 #000000,
+    0.1em 0em 0 #000000;
+  align-self: flex-end;
+  margin-right: 0.1rem;
+}
+
+/* 現代瀏覽器偵測：如果支援 paint-order，就把 text-shadow 關掉，改用更漂亮平滑的描邊寫法 */
+@supports (paint-order: stroke fill) {
+  .lottery_status {
+    text-shadow: none;
+    -webkit-text-stroke: 0.27em #000000;
+    paint-order: stroke fill;
+  }
+}
+.lottery_status span {
+  color: #ffea87;
+  padding: 0 0.1rem;
+}
+
+.share_code_btn {
+  width: 100%;
+  aspect-ratio: 350/111;
+  background: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/share_code_btn.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+  cursor: pointer;
+}
+.share_code_btn:hover {
+  background-position: center bottom;
+}
+
+/* ========================================================================
+ * 任務列表外觀設定 (.letter_left 內部)
+ * ======================================================================== */
+.task_content_wrap {
+  width: 83%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 上半部任務列表 */
+.task_top_area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.2rem;
+}
+
+.task_list_tt {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.15rem;
+}
+
+/* 任務列表上方的注意事項 */
+.task_tt_note {
+  width: 50%;
+  height: auto;
+  align-self: flex-end;
+  margin-bottom: 0.06rem;
+}
+
+/* 底部區域 (分為左右) */
+.task_bottom_area {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.task_bottom_left {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+}
+
+.task_bottom_right {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 任務列表標題 */
+.sub_list_tt {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.1rem;
+}
+
+/* 任務列表描述 */
+.sub_tt_desc {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.1rem;
+}
+
+/* 每一個任務列 */
+.task_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 0.1rem;
+}
+
+/* 任務列底圖 */
+.task_row_top {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1267 / 73;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/task_tt_bg.webp);
+  padding: 0 0.2rem;
+}
+
+.task_row_top .task_text {
+  font-size: 0.28rem;
+  color: #3c5987;
+  font-weight: 900;
+  margin-bottom: 0;
+  flex: 1;
+  white-space: nowrap; /* 避免縮小時文字折行撐開高度 */
+  min-width: 0; /* 允許文字區塊縮小，不會卡住父容器的寬度縮放 */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 當文字真的太長時顯示... */
+  /* 預設給所有舊設備、舊版 iOS 使用最安全的 text-shadow 寫法 */
+  text-shadow:
+    -0.08em -0.08em 0 #ede8e6,
+    0.08em -0.08em 0 #ede8e6,
+    -0.08em 0.08em 0 #ede8e6,
+    0.08em 0.08em 0 #ede8e6,
+    0em -0.08em 0 #ede8e6,
+    0em 0.08em 0 #ede8e6,
+    -0.08em 0em 0 #ede8e6,
+    0.08em 0em 0 #ede8e6;
+  padding-left: 0.25rem;
+}
+
+/* 現代瀏覽器偵測：如果支援 paint-order，就把 text-shadow 關掉，改用更漂亮平滑的描邊寫法 */
+@supports (paint-order: stroke fill) {
+  .task_row_top .task_text {
+    text-shadow: none;
+    -webkit-text-stroke: 0.21em #ede8e6;
+    paint-order: stroke fill;
+  }
+}
+
+.highlight_num {
+  color: #b88633;
+}
+
+.task_item {
+  width: 24.2%;
+  height: auto;
+  margin-right: 1.2rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.task_row_top:nth-of-type(2) .task_item {
+  width: 9.8%;
+}
+
+.task_row_top:nth-of-type(2) .task_text {
+  flex: none;
+}
+
+.task_sub_text {
+  font-size: 0.22rem;
+  flex: 1;
+  margin-left: 0.3rem;
+  color: #3b3b3b;
+  font-weight: bold;
+  margin-top: 0.1rem;
+}
+
+/* .task_row_top:nth-of-type(1) .task_item {
+  width: 5.2%;
+}
+.task_row_top:nth-of-type(2) .task_item {
+  width: 6%;
+} */
+
+.task_share_btn {
+  width: 13.8%;
+  height: auto;
+  aspect-ratio: 150/59;
+  background-size: 100% 200%;
+  cursor: pointer;
+  margin-right: 0.4rem;
+  flex-shrink: 0; /* 防止按鈕被壓扁 */
+}
+
+.share_btn_1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/share_btn.webp);
+}
+.share_btn_2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/share_btn2.webp);
+}
+
+/* 任務列底圖 */
+.task_row_back {
+  width: 100%;
+  aspect-ratio: 619 / 73;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/backinvite_tt_bg.webp);
+  padding-left: 0.3rem;
+  padding-right: 0;
+}
+
+.task_row_back .task_text {
+  font-size: 0.28rem;
+  color: #343b46;
+  font-weight: 900;
+  margin-bottom: 0;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 預設給所有舊設備、舊版 iOS 使用最安全的 text-shadow 寫法 */
+  text-shadow:
+    -0.08em -0.08em 0 #ede8e6,
+    0.08em -0.08em 0 #ede8e6,
+    -0.08em 0.08em 0 #ede8e6,
+    0.08em 0.08em 0 #ede8e6,
+    0em -0.08em 0 #ede8e6,
+    0em 0.08em 0 #ede8e6,
+    -0.08em 0em 0 #ede8e6,
+    0.08em 0em 0 #ede8e6;
+  padding-left: 0.2rem;
+}
+
+/* 現代瀏覽器偵測：如果支援 paint-order，就把 text-shadow 關掉，改用更漂亮平滑的描邊寫法 */
+@supports (paint-order: stroke fill) {
+  .task_row_back .task_text {
+    text-shadow: none;
+    -webkit-text-stroke: 0.21em #ede8e6;
+    paint-order: stroke fill;
+  }
+}
+.task_row_back .task_text span {
+  color: #b88633;
+}
+
+.task_status_btn {
+  width: 34.3%;
+  height: auto;
+  aspect-ratio: 194 / 61;
+  background-size: 100% 300%;
+  cursor: pointer;
+  margin-right: 0.2rem;
+  flex-shrink: 0;
+}
+
+.task_btn_type1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/task_btn.webp);
+}
+.task_btn_type2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/task_btn2.webp);
+}
+
+/* 回流邀請&新人邀請進度3種狀態 */
+.task_status_btn[data-status="0"] {
+  background-position: center top;
+  cursor: default;
+}
+.task_status_btn[data-status="1"] {
+  background-position: center center;
+}
+.task_status_btn[data-status="2"] {
+  background-position: center bottom;
+  cursor: default;
+}
+
+/* 總覽框 */
+.totals_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.27rem;
+}
+
+.total_box {
+  width: 48%;
+  aspect-ratio: 303 / 142;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.1rem;
+}
+.sub_tt_desc:nth-child(3) {
+  /* margin-bottom: 0.26rem;
+  margin-top: 0.15rem; */
+  width: 90%;
+}
+.stone_total {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/stone_total_bg.webp);
+}
+.hat_total {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/BlackBird/image/lottery_page/hat_total_bg.webp);
+}
+
+/* 累計區塊 */
+.total_text_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 0.2rem;
+}
+
+.total_lbl {
+  font-size: 0.2rem;
+  color: #666;
+  font-weight: 900;
+  margin-bottom: 0;
+  /* margin-top: -0.1rem; */
+  -webkit-text-stroke: 0.14em #ffffff;
+  paint-order: stroke fill;
+}
+
+.total_val {
+  font-size: 0.38rem;
+  color: #2b334a;
+  font-weight: 900;
+  margin-bottom: 0;
+  line-height: 1;
+  -webkit-text-stroke: 0.14em #ffffff;
+  paint-order: stroke fill;
+}
+
+.total_item {
+  height: 51%;
+  width: auto;
+}
