@@ -1,0 +1,460 @@
+body {
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  font-size: 0.16rem;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+span,
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  border: 0;
+  object-fit: cover;
+}
+video {
+  object-fit: cover;
+}
+table {
+  border-collapse: collapse;
+}
+area {
+  outline: none;
+}
+input,
+textarea,
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  resize: none;
+  border-radius: 0;
+}
+input::-ms-clear {
+  display: none;
+}
+input[type="text"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+h1.wm-public {
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+.cf:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.auto {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #282828;
+  overflow: hidden;
+}
+#wrapper {
+  display: none;
+  height: 100%;
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/bg.jpg) repeat-y
+    center bottom;
+  background-size: 7.5rem 16.26rem;
+}
+.viewPc {
+  display: none !important;
+}
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 7.5rem;
+  height: 1.02rem;
+  background: #1d1d1d;
+  z-index: 4;
+}
+.logo {
+  top: 50%;
+  left: 0.3rem;
+  transform: translate(0, -50%);
+  height: 0.86rem;
+}
+.headerRight {
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.headerYYBtn, .downloadSSBtn {
+  width: 2.17rem;
+  height: 0.45rem;
+  background: url(https://rests-nte.iwplay.com.tw/260427/m/images/header_yyBtn.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.bgMusic {
+  margin-left: 0.2rem;
+  width: 0.69rem;
+  height: 0.69rem;
+  background: url(https://rests-nte.iwplay.com.tw/m/images/bgMusicSwitch.png)
+    no-repeat 0 0;
+  background-size: 200% auto;
+}
+.bgMusic.off {
+  background-position: 100% 0;
+}
+.header_menu {
+  margin: 0 0.2rem;
+  margin-left: .1rem;
+  width: 0.69rem;
+  height: 0.69rem;
+  background: url(https://rests-nte.iwplay.com.tw/m/images/header_menu.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.header_menu.off {
+  background-position: 0 -0.69rem;
+}
+
+/* 菜单页 */
+.page_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: rgba(29, 29, 29, 0.97)
+    url(https://rests-nte.iwplay.com.tw/m/images/menu_bottom.png) no-repeat
+    center bottom;
+  background-size: 100% auto;
+  display: none;
+}
+.headerNav {
+  top: 1rem;
+  width: 3.59rem;
+}
+.headerNav button, .headerNav a {
+  position: relative;
+  display: block;
+  width: inherit;
+  height: 1.1rem;
+  border-bottom: 0.01rem solid #777474;
+}
+.headerNav button:nth-child(1)::after {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/nav/menuN1.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(2)::after {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/nav/menuN2.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(3)::after {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/nav/menuN3.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(4)::after {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/nav/menuN4.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(5)::after {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/nav/menuN5.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(6)::after {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/nav/menuN6.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.top_up::after {
+  background: url(https://rests-nte.iwplay.com.tw/260429/m/images/nav/menuN7.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button::after,
+.headerNav a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.53rem;
+  height: 0.26rem;
+}
+.headerNav button.active::after,
+.headerNav a.active::after {
+  background-position: 0 100% !important;
+}
+.menu_otherPlatform {
+  bottom: 2.4rem;
+}
+
+/* 社区 */
+.otherPlatform {
+  display: flex;
+}
+.otherPlatform a {
+  position: relative;
+  margin: 0 0.09rem;
+  width: 0.66rem;
+  height: 0.66rem;
+  background: url(https://rests-nte.iwplay.com.tw/m/images/otherPlatform.png)
+    no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+  text-indent: -999rem;
+}
+.otherPlatform .platform_twitter {
+  background-position-x: 0;
+}
+.otherPlatform .platform_facebook {
+  background-position-x: -0.84rem;
+}
+.otherPlatform .platform_youtube {
+  background-position-x: -1.68rem;
+}
+.otherPlatform .platform_discord {
+  background-position-x: -2.52rem;
+}
+.otherPlatform .platform_reddit {
+  background-position-x: -3.37rem;
+}
+.otherPlatform .platform_ins {
+  background-position-x: -4.2rem;
+}
+.otherPlatform .platform_tiktok {
+  background-position-x: -5.04rem;
+}
+.otherPlatform .platform_line {
+  background-position-x: -5.88rem;
+}
+.otherPlatform .platform_naver {
+  background-position-x: -6.72rem;
+}
+.otherPlatform .platform_talk {
+  background-position-x: -7.56rem;
+}
+.otherPlatform .platform_ps {
+  background-position-x: -5.04rem;
+}
+.otherPlatform a:hover {
+  background-position-y: -0.66rem;
+}
+.otherPlatform .code {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+.otherPlatform a:hover .code {
+  display: block;
+}
+.otherPlatform .code div {
+  margin-bottom: 0.1rem;
+  border-radius: 0.05rem;
+  padding: 0.1rem;
+  background: #fff;
+}
+.otherPlatform .code img {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* 弹出框 */
+.pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
+}
+.popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.close {
+  position: absolute;
+  top: 0.22rem;
+  right: 0.26rem;
+  width: 0.37rem;
+  height: 0.36rem;
+  background: url(https://rests-nte.iwplay.com.tw/m/images/popClose.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 弹出框：预约成功 */
+.popYYCont {
+  width: 6.83rem;
+  height: 6.67rem;
+}
+.yySuccess_otherPlatform {
+  bottom: 0.7rem;
+}
+.yySuccess_otherPlatform a {
+  transform: scale(0.9);
+  margin: 0 0.05rem;
+}
+
+/* 通掉底 */
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+/* footer */
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 0.2rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+  line-height: normal;
+  background: #000;
+  z-index: 2;
+}
+
+footer p,
+footer ul {
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+.footer .container {
+  width: 100%;
+  max-width: 100%;
+}
+footer p a {
+  color: inherit;
+}
+
+footer p a:hover {
+  color: #e51737;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+footer .copyright {
+  margin-right: 10px;
+}
+
+footer img {
+  margin: 0 6px;
+}
+
+footer ul {
+  font-size: 0.19rem;
+  list-style: none;
+  margin-left: 5px;
+}
+
+footer .copyright,
+footer .company,
+footer p,
+footer .grading {
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+}
+
+footer .grading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .copyright {
+  margin-bottom: 20px;
+}
+
+footer ul {
+  text-align: left;
+}

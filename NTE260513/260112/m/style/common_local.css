@@ -1,0 +1,71 @@
+/* ============================================
+   台灣站手機版 - common CSS (本地版本)
+   原始來源: https://rests-nte.iwplay.com.tw/m/style/common_KTZRZRJB.css
+   本地化日期: 2026-01-11
+   說明: 此檔案需上傳至台灣 CDN 取代原有的 m/style/common_KTZRZRJB.css
+   ============================================ */
+
+/* header - 預約按鈕 */
+.headerYYBtn {
+    width: 2.17rem;
+    height: 0.45rem;
+    background: url(https://rests-nte.iwplay.com.tw/m/images/header_yyBtn.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+
+/* ============================================
+   【菜單頁】- 導航按鈕
+   
+   2026-01-11 更新說明：
+   原 CSS 只有 5 個按鈕，這裡需要調整為 6 個按鈕的新順序：
+   button:nth-child(1) = 首頁
+   button:nth-child(2) = 里程碑（新增）
+   button:nth-child(3) = 角色介紹
+   button:nth-child(4) = 情報速遞
+   button:nth-child(5) = 世界全景
+   button:nth-child(6) = 都市映像（新增）
+   
+   TODO: 上傳新的導航圖片到台灣 CDN 後替換路徑
+   ============================================ */
+
+/* button 1 - 首頁 */
+.headerNav button:nth-child(1)::after {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/menuN1.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* button 2 - 里程碑（新增） */
+/* 2026-01-12: 已下載到本地 */
+.headerNav button:nth-child(2)::after {
+    background: url(../images/cover250513/menuN2.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* button 3 - 情報速遞 */
+/* 原本的 menuN3 (情報) */
+.headerNav button:nth-child(3)::after {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/menuN3.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* button 4 - 角色介紹 */
+/* 原本的 menuN2 (角色) */
+.headerNav button:nth-child(4)::after {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/menuN2.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* button 5 - 世界全景 */
+/* 原本的 menuN4 改為 menuN5 */
+.headerNav button:nth-child(5)::after {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/menuN4.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* button 6 - 都市映像（新增） */
+/* 原本的 menuN5 改為 menuN6 */
+.headerNav button:nth-child(6)::after {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/menuN5.png) no-repeat 0 0;
+    background-size: 100% auto;
+}

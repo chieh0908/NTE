@@ -1,0 +1,410 @@
+/* ============================================
+   台灣站 - 里程碑頁面專屬樣式
+   新增日期: 2026-01-11
+   說明: 此檔案需上傳至台灣 CDN
+   ============================================ */
+
+
+/* ============================================
+   【導航按鈕】- 台灣站缺少的樣式
+   n0~n4 已在 common_KTZRZRJB.css 中定義
+   這裡只添加 n5 和 active="6"
+   ============================================ */
+
+/* 導航按鈕 - n5 (都市映像) */
+/* 2026-01-12: 已下載到本地 */
+.headerNav .n5 {
+  background: url(../images/cover250513/headerNav6/nav.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 導航動畫 - active="6" (都市映像頁面) */
+/* 2026-01-12: 已下載到本地 */
+.headerNavCity[active="6"] .city_shadow_box2 .city_shadow1 {
+  background: url(../images/cover250513/headerNav6/shadow1.png) no-repeat;
+  background-size: 100% 100%;
+  height: 1.15rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3.02rem;
+}
+
+.headerNavCity[active="6"] .city_shadow_box2 .city_shadow2 {
+  background: url(../images/cover250513/headerNav6/shadow2.png) no-repeat;
+  background-size: 100% 100%;
+  height: 1.15rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3.02rem;
+}
+
+.headerNavCity[active="6"] .city_shadow_box2 .city_shadow3 {
+  background: url(../images/cover250513/headerNav6/shadow3.png) no-repeat;
+  background-size: 100% 100%;
+  height: 1.15rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3.02rem;
+}
+
+.headerNavCity[active="6"] .city_shadow_box2 .city_shadow4 {
+  background: url(../images/cover250513/headerNav6/shadow4.png) no-repeat;
+  background-size: 100% 100%;
+  height: 1.15rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3.02rem;
+}
+
+
+/* ============================================
+   【里程碑頁面】- pageMilestone
+   TODO: 上傳圖片到台灣 CDN 後，將相對路徑替換為絕對路徑
+   ============================================ */
+
+/* 里程碑 - 頁面背景 */
+/* 注意：背景圖放在 .milestoneCont，與大陸版保持一致 */
+
+/* 里程碑 - 側邊欄 */
+.milestoneLeftSide {
+  background: url(../images/main260109/pageMilestone/leftSide.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.milestoneSideYYBtn {
+  background: url(../images/main260109/pageMilestone/sideYYBtn.png) no-repeat 0 0;
+  background-size: 300% auto;
+}
+
+/* 里程碑 - 內容區塊（包含背景圖） */
+.milestoneCont {
+  top: 2.37rem;
+  width: 25.6rem;
+  height: 12.01rem;
+  background: url(../images/main260109/pageMilestone/milestoneCont.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 里程碑 - 預約人數顯示 */
+.yyNum {
+  top: 1.22rem;
+  left: 50%;
+  margin-left: -6.71rem;
+  width: 10.21rem;
+  height: 1.5rem;
+  background: url(../images/main260109/pageMilestone/yyNum.png) no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
+.numBox {
+  display: flex;
+  margin-left: 1.98rem;
+}
+
+.numBox span {
+  min-width: .84rem;
+  height: 1.3rem;
+}
+
+/* 里程碑 - 數字 0~9 */
+.n-0 {
+  background: url(../images/main260109/pageMilestone/n-0.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-1 {
+  background: url(../images/main260109/pageMilestone/n-1.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-2 {
+  background: url(../images/main260109/pageMilestone/n-2.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-3 {
+  background: url(../images/main260109/pageMilestone/n-3.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-4 {
+  background: url(../images/main260109/pageMilestone/n-4.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-5 {
+  background: url(../images/main260109/pageMilestone/n-5.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-6 {
+  background: url(../images/main260109/pageMilestone/n-6.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-7 {
+  background: url(../images/main260109/pageMilestone/n-7.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-8 {
+  background: url(../images/main260109/pageMilestone/n-8.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-9 {
+  background: url(../images/main260109/pageMilestone/n-9.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.comma {
+  background: url(../images/main260109/pageMilestone/comma.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 里程碑 - 進度條 */
+.progressBar {
+  top: 6.13rem;
+  margin-left: -1.8rem;
+  width: 9.79rem;
+  height: .13rem;
+  background: #979797;
+}
+
+.progressBar .curr {
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #8f59f2;
+  transition: width 1s;
+  z-index: 1;
+}
+
+.progressBar .curr[step="0"] {
+  width: .3rem;
+}
+
+.progressBar .curr[step="1"] {
+  width: .96rem;
+}
+
+.progressBar .curr[step="2"] {
+  width: 2.92rem;
+}
+
+.progressBar .curr[step="3"] {
+  width: 4.9rem;
+}
+
+.progressBar .curr[step="4"] {
+  width: 6.86rem;
+}
+
+.progressBar .curr[step="5"] {
+  width: 100%;
+}
+
+.progressBar .curr::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: .33rem;
+  height: .37rem;
+  background: url(../images/main260109/pageMilestone/progressBarCurr.png) no-repeat 0 0 / 100% auto;
+}
+
+/* 里程碑 - 節點容器 */
+.nodeBox {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.node {
+  position: relative;
+  width: 2rem;
+  height: .79rem;
+  margin-top: 0.4rem;
+}
+
+.node div {
+  left: 50%;
+}
+
+.node::after {
+  content: "";
+  position: absolute;
+  top: -0.86rem;
+  left: 50%;
+  margin-left: -0.97rem;
+  width: 1.94rem;
+  height: .31rem;
+  background: url(../images/main260109/pageMilestone/yyNumStatus.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.node.active::after {
+  background-position-y: bottom;
+}
+
+/* 里程碑 - 節點 1~5 */
+.node1 {
+  background: url(../images/main260109/pageMilestone/node1.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.node2 {
+  background: url(../images/main260109/pageMilestone/node2.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.node3 {
+  background: url(../images/main260109/pageMilestone/node3.png) no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
+.node4 {
+  background: url(../images/main260109/pageMilestone/node4.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.node5 {
+  background: url(../images/main260109/pageMilestone/node5.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 里程碑 - 獎勵圖示 1~5 */
+.yyprize1 {
+  top: -2.87rem;
+  margin-left: -.65rem;
+  width: 1.35rem;
+  height: 1.77rem;
+  background: url(../images/main260109/pageMilestone/yy_prize1.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.yyprize2 {
+  top: -2.87rem;
+  margin-left: -.65rem;
+  width: 1.35rem;
+  height: 1.77rem;
+  background: url(../images/main260109/pageMilestone/yy_prize2.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.yyprize3 {
+  top: -2.87rem;
+  margin-left: -.67rem;
+  width: 1.35rem;
+  height: 1.77rem;
+  background: url(../images/main260109/pageMilestone/yy_prize3.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.yyprize4 {
+  top: -4.22rem;
+  margin-left: -1.7rem;
+  width: 3.52rem;
+  height: 4.55rem;
+  background: url(../images/main260109/pageMilestone/yy_prize4.png) no-repeat center bottom;
+  background-size: 100% auto;
+}
+
+.yyprize5 {
+  top: -3.21rem;
+  margin-left: -.85rem;
+  width: 1.7rem;
+  height: 2.16rem;
+  background: url(../images/main260109/pageMilestone/yy_prize5.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 里程碑 - 節點動畫 */
+.node1.active div {
+  animation: bgActive 0s 0.2s forwards;
+}
+
+.node2.active div {
+  animation: bgActive 0s 0.4s forwards;
+}
+
+.node3.active div {
+  animation: bgActive 0s 0.6s forwards;
+}
+
+.node4.active div {
+  animation: bgActive 0s 0.8s forwards;
+}
+
+.node5.active div {
+  animation: bgActive 0s 1.0s forwards;
+}
+
+@keyframes bgActive {
+
+  0%,
+  99% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* 里程碑 - 社群媒體區塊 */
+.socialMedia {
+  top: 1.65rem;
+  left: 50%;
+  margin-left: 3.62rem;
+  width: 4.2rem;
+  height: 5.61rem;
+  background: url(../images/main260109/pageMilestone/socialMedia.png) no-repeat 0 0 / 100% auto;
+}
+
+.socialMedia .pic {
+  top: .1rem;
+  left: .2rem;
+  width: 2.9rem;
+  height: 2.9rem;
+  background: url(../images/main260109/pageMilestone/pic.png) no-repeat 0 0 / 100% auto;
+  animation: smBg 2s steps(58) infinite;
+}
+
+@keyframes smBg {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 -168.2rem;
+  }
+}
+
+.socialMedia::after {
+  content: "";
+  position: absolute;
+  bottom: 1.02rem;
+  left: .48rem;
+  width: 1.93rem;
+  height: .3rem;
+  background: url(../images/main260109/pageMilestone/socialMediaStatus.png) no-repeat 0 0 / 100% auto;
+}
+
+.socialMedia.active::after {
+  background-position-y: bottom;
+}
+
+/* 手機版樣式已移至 m/style/main_local.css */

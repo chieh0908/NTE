@@ -1,0 +1,817 @@
+.pageArrow {
+  left: 50%;
+  bottom: 0.5rem;
+  margin-left: -0.25rem;
+  width: 0.5rem;
+  height: 0.28rem;
+  background: url(https://rests-nte.iwplay.com.tw/m/images/pageArrow.png) no-repeat 0 0;
+  background-size: 100% auto;
+  animation: arrowDown 1s infinite alternate;
+}
+
+@keyframes arrowDown {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(0.2rem);
+  }
+}
+
+/* 主体 */
+.wrapSwiper {
+  height: 100%;
+}
+
+/* 首页 */
+.pageIndex {
+  background: url(https://rests-nte.iwplay.com.tw/m/images/pageIndex/pageIndex.png) no-repeat center center;
+  background-size: cover;
+}
+
+.page_video {
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 105%;
+}
+
+.pageIndex .slogan {
+  width: 6.5rem;
+  height: auto;
+  bottom: 6rem;
+  left: 50%;
+}
+
+.pageIndex .sloganImg {
+  width: 100%;
+  height: 100%;
+}
+
+.indexVideoBtn {
+  bottom: 5.2rem;
+  left: 42%;
+  width: 1.13rem;
+  height: 1.13rem;
+  background: url(https://rests-nte.iwplay.com.tw/m/images/pageIndex/indexVideoBtn.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.indexBtns {
+  bottom: 2.64rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.indexYYBtn.active, .downloadBtn.active {
+  background-position: 0 100%;
+}
+
+.indexAside {
+  top: 1.24rem;
+  right: 0.23rem;
+  flex-wrap: wrap;
+  width: 0.66rem;
+}
+
+.pageIndex .indexAside a {
+  margin: 0 0 0.2rem 0;
+  background-image: url(https://rests-nte.iwplay.com.tw/m/images/otherPlatform2.png);
+}
+
+.pageIndex .slogan {
+  width: 5.8rem;
+  height: auto;
+  bottom: 3rem;
+  left: 50%;
+}
+
+.pageIndex .sloganImg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 情報速遞 */
+.pageNewsTit {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageNews/pageNewsTit.png) no-repeat 0 0 / 100% auto;
+  height: 2rem;
+  left: .7rem;
+  top: 1.65rem;
+  width: 2.4rem;
+  z-index: 1;
+}
+.newsSwiper {
+  top: 2.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.newsSwiper .banner {
+  display: flex;
+  flex-direction: column;
+}
+.newsSwiper .carousel-inner {
+  border: .06rem solid #363636;
+  border-radius: .12rem;
+  width: 6.03rem;
+  height: 3.05rem;
+  background: #363636;
+  order: 1;
+  box-sizing: initial;
+}
+.newsSwiper .carousel-item {
+  border-radius: 0.1rem;
+  overflow: hidden;
+}
+.newsSwiper .carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-indicators {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 0.13rem;
+  margin: 0 auto;
+  margin-top: 0.23rem;
+  width: 100%;
+  list-style: none;
+  order: 2;
+}
+.carousel-indicators li {
+  opacity: 1;
+  margin: 0 auto;
+  width: 100%;
+  height: 0.13rem;
+  box-sizing: border-box;
+  background: #313131;
+  border: 0.02rem solid #696969;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-indicators li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--progress, 0%);
+  background: #7ce3f2;
+  transition: width var(--progress-duration, 3s) ease;
+}
+.newsItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.18rem;
+}
+.news_info .newsdetails-badge p {
+  width: 0.65rem;
+  height: 0.25rem;
+  line-height: 0.25rem;
+  text-align: center;
+  transform: skew(-15deg);
+  border-radius: 0.05rem;
+}
+.news_info .newsdetails-actbadge {
+  background-color: #7958cb;
+  color: #fff;
+}
+.news_info .newsdetails-socialbadge {
+  background-color: #bababa;
+  color: #313131;
+}
+.news_info .newsdetails-newsbadge {
+  background-color: #7ce3f2;
+  color: #313131;
+}
+.news_info .newsdetails-sysbadge {
+  background-color: #fe5a95;
+  color: #fff;
+}
+.newsItem .type span {
+  display: inline-block;
+  transform: skew(15deg);
+}
+.newsItem .title {
+  margin-left: 0.33rem;
+  width: 3.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #dfdfdf;
+}
+.newsItem .date {
+  margin-left: auto;
+  color: #dfdfdf;
+}
+.newsList {
+  top: 6.9rem;
+  left: 50%;
+  width: 6.14rem;
+  transform: translate(-50%, 0);
+}
+.newsHead {
+  width: 6.14rem;
+  height: 0.49rem;
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageNews/newsHead.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.newsNav {
+  top: 0.04rem;
+  left: 0;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: .12rem;
+}
+.newsNav .news_nav_tab {
+  margin-right: -0.12rem;
+  width: 1.3rem;
+  height: 0.4rem;
+}
+.newsNav .news_nav_tab div {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.newsNav .news_nav_tab:hover,
+.newsNav .active {
+  background: #1d1d1d;
+  transform: skew(-15deg);
+  border-radius: 0.1rem;
+}
+.newsNav .news_nav_tab div:hover,
+.newsNav .active div {
+  background-position: 0 100%;
+  transform: skew(15deg);
+}
+.newsMore {
+  right: .25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+}
+.newsMore a {
+  width: 0.35rem;
+  height: 0.34rem;
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageNews/newsMore.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.newsCont {
+  top: 0.75rem;
+  left: 0;
+  width: 6.14rem;
+}
+.newsCont .newsItem {
+  padding: 0.17rem 0;
+  border-bottom: 0.02rem solid #313131;
+}
+
+.news_info .news_right_box .news_r_con_box {
+  display: none;
+}
+
+.news_info .news_right_box .news_r_con_box.active {
+  display: block;
+}
+
+/*-------一環_新---------*/
+.system-single {
+  display: flex;
+  font-size: 0.19rem;
+  width: 97%;
+  height: auto;
+  z-index: 5;
+  transition: 0.3s;
+  filter: brightness(0.9);
+  transition: 0.5s ease-in-out;
+  padding: 0.17rem 0px;
+  border-bottom: 0.03rem solid #313131;
+}
+.system-single:hover {
+  filter: brightness(1.05);
+  transition: 0.5s ease-in-out;
+}
+.intelSlides {
+  display: none;
+}
+.intelSwiperInfo {
+  width: 100%;
+}
+.news_con_big_main .systemurl.intelSlideTit {
+  width: 3.9rem;
+  height: auto;
+  margin-left: 0.25rem;
+  padding-bottom: 0%;
+  cursor: pointer;
+  color: #dfdfdf;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.system-single:hover .systemurl.intelSlideTit {
+  color: #7ce3f2;
+}
+.news_con_big_main .systemurl.intelSlideDes {
+  display: none !important;
+}
+.intelDate {
+  width: 1.2rem;
+  height: auto;
+  right: -0.2rem;
+  z-index: 3;
+  color: #dfdfdf;
+}
+
+/* 角色介绍 */
+.factionsWrap {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.pageRoleTit {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-title.png) no-repeat 0 0 / 100% auto;
+  height: 0.44rem;
+  right: 0;
+  top: 2.2rem;
+  width: 2.4rem;
+}
+.roleNav {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageRole/roleNav.png) no-repeat 0 0/100% auto;
+  height: 1.26rem;
+  top: 9.98rem;
+  width: 6.92rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.factions_nav {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 4.7rem;
+}
+.factions_nav .swiper-wrapper {
+  align-items: center;
+}
+.factions_nav .swiper-slide {
+  height: 1.04rem;
+  margin: 0 .07rem;
+  width: 1.05rem;
+}
+.factions_nav p {
+  height: 100%;
+  width: 100%;
+}
+.role-tab-zero-male p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-zero-male.png) no-repeat 0 0/100% auto;
+}
+.role-tab-zero-female p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-zero-female.png) no-repeat 0 0/100% auto;
+}
+.role-tab-mint p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-mint.png) no-repeat 0 0/100% auto;
+}
+.role-tab-nanally p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-nanally.png) no-repeat 0 0/100% auto;
+}
+.role-tab-xiaozhi p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-xiaozhi.png) no-repeat 0 0/100% auto;
+}
+.role-tab-jiuyuan p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-jiuyuan.png) no-repeat 0 0/100% auto;
+}
+.role-tab-hasuoer p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-hasuoer.png) no-repeat 0 0/100% auto;
+}
+.role-tab-baicang p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-baicang.png) no-repeat 0 0/100% auto;
+}
+.role-tab-fadiya p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-fadiya.png) no-repeat 0 0/100% auto;
+}
+.role-tab-dfde p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-dfde.png) no-repeat 0 0/100% auto;
+}
+.role-tab-zaowu p {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageRole/role-tab-zaowu.png) no-repeat 0 0/100% auto;
+}
+.roleNav .swiper-slide-active {
+  border-color: #b3b3b3;
+}
+.roleNav .swiper-slide-active p {
+  background-position: 0 100%;
+}
+.factionsPrev,.factionsNext {
+  height: .6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: .6rem;
+}
+.factionsPrev {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageRole/factionsPrev.png) no-repeat 0 0/100% auto;
+  left: .4rem;
+}
+.factionsNext {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageRole/factionsNext.png) no-repeat 0 0/100% auto;
+  right: .4rem;
+}
+.roleSwiper {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.roleBg {
+  height: 8.36rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.role_cont {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageRole/roleInfoCont.png) no-repeat top/7.5rem 3.52rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 8.36rem;
+}
+.role_name {
+  height: .71rem;
+  left: .3rem;
+  top: .5rem;
+}
+.roleMoreDes {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageRole/roleMoreDes.png) no-repeat 0 0/100% auto;
+  height: .47rem;
+  right: .3rem;
+  top: .65rem;
+  width: .47rem;
+}
+.roleMoreDes.on {
+  background-position-y: bottom;
+}
+.roleDesText {
+  position: absolute;
+  background: #111;
+  display: none;
+  height: 1.94rem;
+  left: 0;
+  top: 1.53rem;
+  width: 100%;
+}
+.roleDesText .cont {
+  box-sizing: border-box;
+  height: 1.6rem;
+  left: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: .7rem;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 6.8rem;
+}
+.roleDesText .cont::-webkit-scrollbar {
+  background: #080808;
+  border-radius: .06rem;
+  width: .12rem;
+}
+.roleDesText .cont::-webkit-scrollbar-thumb {
+  background: #4fe5fb;
+  border-radius: .06rem;
+}
+.roleDesText .cont dl {
+  color: #e8e8e8;
+  font-size: .2rem;
+  line-height: .3rem;
+}
+.roleDesText .cont dt {
+  border-bottom: .03rem dashed #504f4f;
+  margin-bottom: .15rem;
+  padding-bottom: .15rem;
+}
+
+/* 世界全景 */
+.pageViewTit {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageView/pageViewTit.png) no-repeat 0 0/100% auto;
+  height: 3.28rem;
+  left: .3rem;
+  top: 1.7rem;
+  width: 3.3rem;
+}
+.plateChangeBtns {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6.65rem !important;
+  top: 10.24rem;
+  z-index: 1;
+}
+.plateChangeBtns button {
+  height: 1.04rem;
+  width: .63rem;
+}
+.plateLeft {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageView/plateLeft.png) no-repeat 0 0/100% auto;
+}
+.plateRight {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/pageView/plateRight.png) no-repeat 0 0/100% auto;
+}
+.plateChangeBtns button:hover {
+  background-position: 0 100%;
+}
+.plateinfo {
+  padding-top: 1.4rem;
+  bottom: .3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  width: 6.2rem;
+  height: 2rem;
+  z-index: 3;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+}
+.plateinfo.open {
+  padding-top: 0;
+}
+.plateinfo2 {
+  bottom: -0.8rem;
+  z-index: 3;
+}
+.plateTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.plateMore {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageView/plateMore.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: .32rem;
+  height: .32rem;
+  order: 2;
+}
+.plateinfo.open .plateMore {
+  background-position: 0 100%;
+}
+.plateinfo .plateTit {
+  height: .52rem;
+  order: 1;
+}
+.plateinfo2 .plateTit {
+  height: .5rem;
+}
+.plateDes {
+  box-sizing: border-box;
+  color: #c3c3c3;
+  font-size: .2rem;
+  height: 1.2rem;
+  line-height: .3rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+.plateinfo.open .plateDes {
+  opacity: 1;
+}
+/* .plateDes::-webkit-scrollbar {
+  background: #080808;
+  border-radius: .06rem;
+  width: .12rem;
+}
+.plateDes::-webkit-scrollbar-thumb {
+  background: #4fe5fb;
+  border-radius: .06rem;
+} */
+.brand {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageView/brand.png) no-repeat 0 0/100% auto;
+  height: 8.43rem;
+  top: 3.05rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6.9rem;
+}
+.brandSwiper {
+  display: none;
+  height: 6.95rem;
+  left: 50%;
+  transform: translateX(-50%);
+  top: .03rem;
+  width: 6.84rem;
+  z-index: 2;
+}
+.brandSwiper::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.brandSwiper .swiper {
+  height: 100%;
+}
+.brandSwiper .swiper-slide > img {
+  height: 100%;
+  width: 100%;
+}
+.brandSwiper .location {
+  top: -0.5rem;
+  display: flex;
+  right: 0;
+}
+.brandSwiper .location img {
+  display: none;
+  height: .29rem;
+}
+.brandSwiper .location img:first-child {
+  display: block;
+}
+.brandPagination {
+  bottom: -.1rem!important;
+  display: flex;
+  font-size: 0;
+  line-height: 0;
+  z-index: 2;
+}
+.brandPagination .swiper-pagination-bullet {
+  background: #313131;
+  border: .01rem solid #a0a0a0;
+  border-radius: 0;
+  flex: 1;
+  height: .1rem;
+  margin: 0 .14rem 0 0!important;
+  opacity: 1;
+  position: relative;
+}
+.brandPagination .swiper-pagination-bullet:last-child {
+  margin-right: 0!important;
+}
+.brandPagination .swiper-pagination-bullet:after {
+  background: #7ce3f2;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+.brandPagination .swiper-pagination-bullet-active:after {
+  transition: all 3s ease;
+  width: 100%;
+}
+.brandCounter {
+  border-radius: .25rem;;
+  bottom: -1.28rem;
+  padding: .08rem .4rem;
+  color: #b2b2b2;
+  font-size: .21rem;
+  font-weight: 500;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: .2rem;
+  background: #1b1b1b;
+  z-index: 1;
+}
+
+/* 都市映像 */
+.citySwiper {
+  background: #767676;
+  border: .02rem solid #161616;
+  height: 9.4rem;
+  top: 1.5rem;
+  width: 5.29rem;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: initial;
+}
+.citySwiper .swiper-slide {
+  box-sizing: border-box;
+  padding: .07rem;
+}
+.citySwiper .swiper-slide img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.citySlidePrev,.citySlideNext {
+  height: 1.89rem;
+  top: 5rem;
+  width: .47rem;
+  z-index: 1;
+}
+.citySlidePrev {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageCity/citySlidePrev.png) no-repeat 0 0/100% auto;
+  left: .35rem;
+}
+.citySlideNext {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageCity/citySlideNext.png) no-repeat 0 0/100% auto;
+  right: .35rem;
+}
+.cityPagination {
+  bottom: auto!important;
+  display: flex;
+  left: 50%!important;
+  top: 11.25rem;
+  transform: translateX(-50%);
+  width: 5.29rem!important;
+}
+.cityPagination .swiper-pagination-bullet {
+  background: #313131;
+  border: .01rem solid #a0a0a0;
+  border-radius: 0;
+  flex: 1;
+  height: .12rem;
+  margin: 0 .04rem!important;
+  opacity: 1;
+  position: relative;
+}
+.cityPagination .swiper-pagination-bullet:last-child {
+  margin-right: 0!important;
+}
+.cityPagination .swiper-pagination-bullet:after {
+  background: #7ce3f2;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+.cityPagination .swiper-pagination-bullet-active:after {
+  transition: all 3s ease;
+  width: 100%;
+}
+/* .pageCity .cityPagination {
+  left: 0;
+  text-align: center;
+  top: 11.25rem;
+  width: 100%;
+}
+.cityPagination .swiper-pagination-bullet {
+  background: #616161;
+  border: .08rem solid #373737;
+  height: .16rem;
+  margin: 0 .08rem!important;
+  opacity: 1;
+  width: .16rem;
+  box-sizing: initial;
+}
+.cityPagination .swiper-pagination-bullet-active {
+  background: #50e5fb;
+  border-color: #b8b8b8;
+} */
+
+/* 通掉底 */
+.footer {
+  display: none;
+}
+
+.pageLeftSide {
+  display: none;
+}
+
+.sideInvite {
+  background: url(https://rests-nte.iwplay.com.tw/images/pageIndex/sideInvite_new.png) no-repeat 0 0/100% auto;
+  height: 2.5rem;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.8rem;
+  margin-top: 15%;
+}
+
+.go_event_btn {
+  position: absolute;
+  top: 63%;
+  right: 1.5%;
+  width: 1.5rem;
+  animation: go_event 0.8s infinite alternate-reverse cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.go_event_btn img {
+  width: 100%;
+}
+
+@keyframes go_event {
+  0% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

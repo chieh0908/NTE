@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>艾玩天地互動娛樂 IWPLAY WORLD</title>
+<meta name="viewport" content="user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://common.iwplay.com.tw/main/images/favicon.ico">
+<style type="text/css">
+
+.cpr  {
+	background-color: #FFF;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;	
+}
+img {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+#wp {
+	margin: 0px;
+	padding: 0px;
+	background-image: url(https://www.iwplay.com.tw/images/404/bg.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	background-image: url(https://www.iwplay.com.tw/images/404/bg.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+#wp .ct {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	height: 100%;
+}
+#wp .bt {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+#wp .logo {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 2%;
+	height: 50px;
+}
+#wp .bt p {
+	color: #000000;
+	font-size: 13px;
+	line-height: 15px;
+}
+ @media only screen and (max-width: 750px) {
+	 
+.pp01{
+width: 100%;
+	
+}
+.pp03{
+width: 100%;
+	
+}
+
+logo_01 {
+	float: left;	
+}
+.bt01{
+width: 85%;
+	
+}
+.logo_01 {
+width: 60%;
+	
+}
+.yt {
+	width: 12%;
+}
+.fb {
+	width: 12%;
+}
+.cpr  {
+	position: fixed;
+	bottom: 0px;	
+}
+}
+.yt {
+	float: right;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+.fb {
+	float: right;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="wp">
+<div class="logo"> <a href="http://www.iwplay.com.tw/"><img src="https://www.iwplay.com.tw/images/404/logo.png" width="332" class="logo_01"></a>
+  <a href="https://www.youtube.com/user/iwanplaygame"><img src="https://www.iwplay.com.tw/images/404/yticon.png" width="52" class="yt"></a>
+  <a href="https://www.facebook.com/iwplay/"><img src="https://www.iwplay.com.tw/images/404/fbicon.png" width="51" class="fb"></a></div>
+<div class="ct"><img src="https://www.iwplay.com.tw/images/404/404.png" class="pp01">
+	
+	  <p><a href="javascript:history.back();"><img src="https://www.iwplay.com.tw/images/404/back.png" width="178" class="bk_bt"></a>
+    <a href="https://www.iwplay.com.tw/"><img src="https://www.iwplay.com.tw/images/404/home.png" width="240" class="iw_bt"></a></p></div>
+<div class="bt">
+  <p></p>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+</div>
+<div class="cpr"><img src="https://www.iwplay.com.tw/images/404/cpr.png" width="575"  class="pp03"></div>
+</body>
+</html>

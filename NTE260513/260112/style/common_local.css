@@ -1,0 +1,71 @@
+/* ============================================
+   台灣站 - common CSS (本地版本)
+   原始來源: https://rests-nte.iwplay.com.tw/style/common_KTZRZRJB.css
+   本地化日期: 2026-01-11
+   更新日期: 2026-01-12 - 將大陸 CDN 圖片改為本地相對路徑
+   ============================================ */
+
+
+/* ============================================
+   【原有樣式】- 來自 CDN 原始版本
+   ============================================ */
+
+/* header - 預約按鈕 */
+.headerYYBtn {
+    background: url(https://rests-nte.iwplay.com.tw/images/nav/headerYYBtn.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+
+/* ============================================
+   【2026-01-11 更新】- 導航按鈕修正
+   新增里程碑頁面，調整按鈕順序如下：
+   n0 = 首頁
+   n1 = 里程碑（新增）
+   n2 = 角色介紹
+   n3 = 情報速遞
+   n4 = 世界全景
+   n5 = 都市映像（新增）
+   
+   2026-01-12 更新: 已將大陸 CDN 圖片下載到本地
+   ============================================ */
+
+/* n0 - 首頁 */
+.headerNav .n0 {
+    background: url(../images/cover250513/headerNav1/nav.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* n1 - 里程碑（新增） */
+.headerNav .n1 {
+    background: url(../images/cover250513/headerNav2/nav.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* n2 - 角色介紹 */
+.headerNav .n2 {
+    background: url(../images/cover250513/headerNav3/nav.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* n3 - 情報速遞 */
+.headerNav .n3 {
+    background: url(../images/cover250513/headerNav4/nav.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* n4 - 世界全景 */
+.headerNav .n4 {
+    background: url(../images/cover250513/headerNav5/nav.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* n5 - 都市映像（新增） */
+.headerNav .n5 {
+    background: url(../images/cover250513/headerNav6/nav.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+/* 2026-01-15 ��s: �j��ĤG�����s��ܬ��Ĥ@�����s�˦� (�����ϥ�) */
+.menuNav .force-n1-style {
+    background: url(https://rests-nte.iwplay.com.tw/images/nav/menuN1.png) no-repeat center center !important;
+}

@@ -1,0 +1,142 @@
+/* 首页 */
+.indexYYBtn {
+  margin-bottom: 2.8rem;
+  width: 3.62rem;
+  height: 1.64rem;
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageIndex/indexYYBtn.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.indexYYBtn:hover {
+  background-position: 0 100%;
+}
+
+.indexYZBtn {
+  margin-bottom: -0.08rem;
+  width: 3.2rem;
+  height: 2rem;
+  background: url(https://rests-nte.iwplay.com.tw/images/pageIndex/tst_QueryBtnt.png) no-repeat 0 0;
+  background-size: contain;
+  margin-left: 0.1rem;
+}
+
+.indexDownloadBtn {
+  margin-bottom: -0.08rem;
+  width: 3.2rem;
+  height: 2rem;
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageIndex/testDownBtn.png) no-repeat 0 0;
+  background-size: contain;
+  margin-left: 0.1rem;
+}
+
+.indexBtns {
+  bottom: 0.2rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* 改為垂直排列 */
+}
+
+/* 情報速遞 */
+.newsNav .news {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageNews/news.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.newsNav .gamenews {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageNews/gamenews.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.newsNav .gamebroad {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageNews/gameevent.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.newsNav .gameevent {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageNews/gamebroad.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* ============================================
+   【商店註冊區塊】- 手機版
+   ============================================ */
+
+/* 商店註冊區塊 - 手機版固定底部 */
+.storeBox {
+  position: absolute;
+  bottom: 0.8rem;
+  /* 在 pageArrow 上方 */
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+}
+
+.storeTitle {
+  width: 100%;
+  height: 2rem;
+  /* 857x175 比例 */
+  background: url(https://nte.iwplay.com.tw/m/images/pageIndex/bg_m_registration_actions.png) no-repeat center top;
+  background-size: 100% auto;
+}
+
+.storePlatforms {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.25rem 0;
+  margin-top: -1.5rem;
+  /* 往上拉，貼近標題 */
+}
+
+.platformBtn {
+  display: block;
+  height: 0.8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease;
+
+}
+
+.platformBtn:hover {
+  transform: scale(1.05);
+}
+
+.ps5Btn {
+  width: 1.97rem;
+  /* 204/83 * 0.8 */
+  background-image: url(https://nte.iwplay.com.tw/m/images/pageIndex/btn_m_ps5_prereg.png);
+}
+
+.appStoreBtn {
+  width: 1.79rem;
+  /* 181/81 * 0.8 */
+  background-image: url(https://nte.iwplay.com.tw/m/images/pageIndex/btn_m_ios_prereg.png);
+}
+
+.googlePlayBtn {
+  width: 2.24rem;
+  /* 224/80 * 0.8 */
+  background-image: url(https://nte.iwplay.com.tw/m/images/pageIndex/btn_m_android_prereg.png);
+}
+
+.mac_support_txt {
+  position: absolute;
+  color: #ffffff;
+  bottom: -0.05rem;
+  letter-spacing: .01rem;
+  filter: drop-shadow(0 0 5px #000);
+}

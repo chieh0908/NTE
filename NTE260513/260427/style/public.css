@@ -1,0 +1,454 @@
+body {
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+span,
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  border: 0;
+  object-fit: cover;
+}
+video {
+  object-fit: cover;
+}
+table {
+  border-collapse: collapse;
+}
+area {
+  outline: none;
+}
+input,
+textarea,
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  resize: none;
+  border-radius: 0;
+}
+input::-ms-clear {
+  display: none;
+}
+input[type="text"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+h1.wm-public {
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+.cf:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.auto {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #282828;
+  overflow: hidden;
+}
+#wrapper {
+  display: none;
+  min-width: 19.2rem;
+  height: 100%;
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/bg.jpg) repeat center top;
+  background-size: cover;
+  overflow: hidden;
+  font-size: 0.16rem;
+}
+.viewM {
+  display: none !important;
+}
+
+/* 社区 */
+.otherPlatform {
+  display: flex;
+}
+.otherPlatform a {
+  position: relative;
+  margin: 0 0.09rem;
+  width: 0.66rem;
+  height: 0.66rem;
+  background: url(https://rests-nte.iwplay.com.tw/images/otherPlatform.png)
+    no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+}
+.otherPlatform .platform_twitter {
+  background-position-x: 0;
+}
+.otherPlatform .platform_facebook {
+  background-position-x: -0.84rem;
+}
+.otherPlatform .platform_youtube {
+  background-position-x: -1.68rem;
+}
+.otherPlatform .platform_discord {
+  background-position-x: -2.52rem;
+}
+.otherPlatform .platform_reddit {
+  background-position-x: -3.37rem;
+}
+.otherPlatform .platform_ins {
+  background-position-x: -4.2rem;
+}
+.otherPlatform .platform_tiktok {
+  background-position-x: -5.04rem;
+}
+.otherPlatform .platform_line {
+  background-position-x: -5.88rem;
+}
+.otherPlatform .platform_naver {
+  background-position-x: -6.72rem;
+}
+.otherPlatform .platform_talk {
+  background-position-x: -7.56rem;
+}
+.otherPlatform .platform_ps {
+  background-position-x: -5.04rem;
+}
+.otherPlatform a:hover {
+  background-position-y: -0.66rem;
+}
+.otherPlatform .code {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+.otherPlatform a:hover .code {
+  display: block;
+}
+.otherPlatform .code div {
+  margin-bottom: 0.1rem;
+  border-radius: 0.05rem;
+  padding: 0.1rem;
+  background: #fff;
+}
+.otherPlatform .code img {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 19.2rem;
+  width: 100%;
+  height: 1.18rem;
+  z-index: 5;
+}
+.logo {
+  top: .25rem;
+  left: .5rem;
+  height: .97rem;
+}
+.header_menu {
+  position: fixed;
+  width: 1.62rem;
+  height: 0.31rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/nav/menu.png) no-repeat 0 0;
+  background-size: 100% auto;
+  order: 1;
+}
+.header_menu.off {
+  background-position: 0 100%;
+}
+.headerRight {
+  top: .2rem;
+  right: .25rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.headerYYBtn, .downloadSSBtn {
+  width: 1.84rem;
+  height: 0.66rem;
+  background: url(https://rests-nte.iwplay.com.tw/260427/images/nav/headerYYBtn.png) no-repeat 0 0;
+  background-size: 100% auto;
+  order: 2;
+}
+.headerYYBtn:hover, .downloadSSBtn:hover {
+  background-position: 0 100%;
+}
+.bgMusic {
+  margin: 0 0.3rem;
+  width: 0.69rem;
+  height: 0.69rem;
+  background: url(https://rests-nte.iwplay.com.tw/images/bgMusicSwitch.png)
+    no-repeat 0 0;
+  background-size: auto 100%;
+  order: 3;
+}
+.bgMusic.off {
+  background-position: 100% 0;
+}
+
+/* page_menu */
+.page_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 29, 29, .9);
+  z-index: 1;
+  display: none;
+}
+.headerNav {
+  left: 2.5rem !important;
+  transform: initial !important;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+.headerNav button,
+.headerNav a {
+  position: relative;
+  margin-left: .45rem;
+  width: 1.64rem;
+  height: 0.32rem;
+  z-index: 3;
+}
+.headerNav button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -.45rem;
+  width: .2rem;
+  height: .2rem;
+  background: #56e4f8;
+  transition: .3s ease-in-out;
+}
+.headerNav button:hover::before, .headerNav button.active::before {
+  background: #fb5692;
+  transform: translateY(-50%) rotate(45deg);
+}
+.headerNav button:nth-child(1) {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/nav/headerNav1.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(2) {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/nav/headerNav2.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(3) {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/nav/headerNav3.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(4) {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/nav/headerNav4.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(5) {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/nav/headerNav5.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:nth-child(6) {
+  background: url(https://rests-nte.iwplay.com.tw/260403/images/nav/headerNav6.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.headerNav button:hover,
+.headerNav a:hover {
+  background-position: 0 100%;
+}
+.headerNav button.active {
+  background-position: 0 100%;
+}
+.adsBanner {
+  top: 1.9rem;
+  right: 1.2rem;
+}
+.adsBannerImg {
+  display: block;
+  border-radius: .15rem;
+  border: .06rem solid #363636;
+  margin-bottom: .08rem;
+  width: 6.85rem;
+  overflow: hidden;
+}
+.adsBannerImg img {
+  width: 100%;
+}
+.adsBanner p {
+  color: #dcdcdc;
+  font-size: .24rem;
+  text-align: right;
+}
+.menu_otherPlatform {
+  left: initial !important;
+  transform: initial !important;
+  top: 6.6rem;
+  right: 1.12rem;
+  z-index: 4;
+}
+
+/* 弹出框 */
+.pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
+}
+.popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+
+/* 通掉底 */
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.2px;
+  line-height: normal;
+  background: #000;
+  z-index: 2;
+}
+.footer .container {
+  width: 100%;
+  max-width: 100%;
+}
+footer p,
+footer ul {
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+footer p a {
+  color: inherit;
+}
+
+footer p a:hover {
+  color: #e51737;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+footer .copyright,
+footer .company,
+footer p,
+footer .grading,
+footer ul {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+
+footer .copyright {
+  font-size: 0.145rem;
+  margin-right: 10px;
+  line-height: 0.23rem;
+}
+footer .company {
+  margin-right: 5px;
+}
+footer img {
+  margin: 0 6px;
+}
+
+footer ul {
+  font-size: 0.13rem;
+  list-style: none;
+}

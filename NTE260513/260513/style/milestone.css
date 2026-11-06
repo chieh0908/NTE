@@ -1,0 +1,354 @@
+/* ============================================
+   【里程碑頁面】- pageMilestone
+   TODO: 上傳圖片到台灣 CDN 後，將相對路徑替換為絕對路徑
+   ============================================ */
+
+/* 里程碑 - 頁面背景 */
+/* 注意：背景圖放在 .milestoneCont，與大陸版保持一致 */
+
+.pageMilestone::before,
+.pageMilestone::after {
+  background: url(../images/pageMilestone/pageViewLineRight.png) no-repeat 0
+    0/100% auto;
+  content: "";
+  height: 0.05rem;
+  position: absolute;
+  margin-top: 1.05rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22.46rem;
+}
+
+.pageMilestone::before {
+  margin-right: 10rem;
+  right: 50%;
+}
+
+.pageMilestone::after {
+  left: 50%;
+  margin-left: 10rem;
+}
+
+/* 里程碑 - 內容區塊（包含背景圖） */
+.milestoneCont {
+  height: 100%;
+  top: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 里程碑 - 預約人數顯示 */
+.yyNum {
+  background: url(../images/pageMilestone/yyNum.png) no-repeat 0 0/100% auto;
+  height: 2.16rem;
+  left: 50%;
+  margin-left: -8.58rem;
+  top: 2.49rem;
+  width: 12.79rem;
+  z-index: 1;
+}
+
+.numBox {
+  display: flex;
+  margin-left: 1.98rem;
+}
+
+.numBox span {
+  height: 1.3rem;
+  min-width: 0.84rem;
+}
+
+/* 里程碑 - 數字 0~9 */
+.n-0 {
+  background: url(../images/pageMilestone/n-0.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-1 {
+  background: url(../images/pageMilestone/n-1.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-2 {
+  background: url(../images/pageMilestone/n-2.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-3 {
+  background: url(../images/pageMilestone/n-3.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-4 {
+  background: url(../images/pageMilestone/n-4.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-5 {
+  background: url(../images/pageMilestone/n-5.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-6 {
+  background: url(../images/pageMilestone/n-6.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-7 {
+  background: url(../images/pageMilestone/n-7.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-8 {
+  background: url(../images/pageMilestone/n-8.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-9 {
+  background: url(../images/pageMilestone/n-9.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.comma {
+  background: url(../images/pageMilestone/comma.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 里程碑 - 進度條 */
+.progressBar {
+  background: #ccc;
+  height: 0.17rem;
+  left: 50%;
+  margin-left: -8.58rem;
+  top: 9.6rem;
+  width: 12.7rem;
+}
+
+.progressBar .curr {
+  background: #6ee4f5;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: width 1s;
+  z-index: 1;
+}
+
+.progressBar .curr[step="0"] {
+  width: 0.3rem;
+}
+
+.progressBar .curr[step="1"] {
+  width: 1.3rem;
+}
+
+.progressBar .curr[step="2"] {
+  width: 3.72rem;
+}
+
+.progressBar .curr[step="3"] {
+  width: 6.3rem;
+}
+
+.progressBar .curr[step="4"] {
+  width: 8.86rem;
+}
+
+.progressBar .curr[step="5"] {
+  width: 100%;
+}
+
+.progressBar .curr::after {
+  background: url(../images/pageMilestone/progressBarCurr.png) no-repeat 0
+    0/100% auto;
+  content: "";
+  height: 0.45rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 0.41rem;
+}
+
+/* 里程碑 - 節點容器 */
+.nodeBox {
+  align-items: flex-start;
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.node {
+  height: 1.02rem;
+  margin-top: 0.4rem;
+  position: relative;
+  width: 2.02rem;
+}
+
+.node div {
+  left: 50%;
+}
+
+.node::after {
+  background: url(../images/pageMilestone/yyNumStatus.png) no-repeat 0 0;
+  background-size: 100% auto;
+  content: "";
+  height: 0.4rem;
+  left: 50%;
+  position: absolute;
+  top: -1rem;
+  transform: translateX(-50%);
+  width: 2.5rem;
+}
+
+.node.active::after {
+  background-position-y: bottom;
+}
+
+/* 里程碑 - 節點 1~5 */
+.node1 {
+  background: url(../images/pageMilestone/node1.png) no-repeat 0 0/100% auto;
+}
+
+.node2 {
+  background: url(../images/pageMilestone/node2.png) no-repeat 0 0/100% auto;
+}
+
+.node3 {
+  background: url(../images/pageMilestone/node3.png) no-repeat 0 0/100% auto;
+  z-index: 1;
+}
+
+.node4 {
+  background: url(../images/pageMilestone/node4.png) no-repeat 0 0/100% auto;
+}
+
+.node5 {
+  background: url(../images/pageMilestone/node5.png) no-repeat 0 0/100% auto;
+}
+
+/* 里程碑 - 獎勵圖示 1~5 */
+.yyprize1 {
+  background: url(../images/pageMilestone/yy_prize1.png) no-repeat 0 0;
+  background-size: 100% auto;
+  height: 2.28rem;
+  top: -3.6rem;
+  transform: translateX(-50%);
+  width: 1.73rem;
+}
+
+.yyprize2 {
+  background: url(../images/pageMilestone/yy_prize2.png) no-repeat 0 0;
+  background-size: 100% auto;
+  height: 2.28rem;
+  top: -3.6rem;
+  transform: translateX(-50%);
+  width: 1.68rem;
+}
+
+.yyprize3 {
+  background: url(../images/pageMilestone/yy_prize3.png) no-repeat 0 0;
+  background-size: 100% auto;
+  height: 2.28rem;
+  top: -3.6rem;
+  transform: translateX(-50%);
+  width: 1.69rem;
+}
+
+.yyprize4 {
+  background: url(../images/pageMilestone/yy_prize4.png) no-repeat bottom;
+  background-size: 100% auto;
+  height: 7.47rem;
+  margin-left: -2.7rem;
+  top: -6.4rem;
+  width: 5.8rem;
+}
+
+.yyprize5 {
+  background: url(../images/pageMilestone/yy_prize5.png) no-repeat 0 0;
+  background-size: 100% auto;
+  height: 3.61rem;
+  top: -4.8rem;
+  transform: translateX(-50%);
+  width: 3.46rem;
+}
+
+/* 里程碑 - 節點動畫 */
+.node1.active div {
+  animation: bgActive 0s 0.2s forwards;
+}
+
+.node2.active div {
+  animation: bgActive 0s 0.4s forwards;
+}
+
+.node3.active div {
+  animation: bgActive 0s 0.6s forwards;
+}
+
+.node4.active div {
+  animation: bgActive 0s 0.8s forwards;
+}
+
+.node5.active div {
+  animation: bgActive 0s 1s forwards;
+}
+
+@keyframes bgActive {
+  0%,
+  99% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* 里程碑 - 社群媒體區塊 */
+.socialMedia {
+  background: url(../images/pageMilestone/socialMedia.png) no-repeat 0 0/100%
+    auto;
+  height: 7.25rem;
+  left: 50%;
+  margin-left: 4.8rem;
+  top: 3.8rem;
+  width: 5.43rem;
+}
+
+.socialMedia .pic {
+  animation: smBg 2s steps(58) infinite;
+  background: url(../images/pageMilestone/pic.png) no-repeat 0 0/100% auto;
+  height: 2.9rem;
+  left: 0.6rem;
+  top: 0.5rem;
+  width: 2.9rem;
+}
+
+@keyframes smBg {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 -168.2rem;
+  }
+}
+
+.socialMedia::after {
+  background: url(../images/pageMilestone/socialMediaStatus.png) no-repeat 0
+    0/100% auto;
+  bottom: 1.3rem;
+  content: "";
+  height: 0.39rem;
+  left: 0.65rem;
+  position: absolute;
+  width: 2.49rem;
+}
+
+.socialMedia.active::after {
+  background-position-y: bottom;
+}

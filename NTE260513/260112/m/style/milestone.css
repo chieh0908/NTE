@@ -1,0 +1,502 @@
+/* ============================================
+   台灣站手機版 - main CSS (本地版本)
+   原始來源: https://rests-nte.iwplay.com.tw/m/style/main_KTZRZRJB.css
+   本地化日期: 2026-01-11
+   說明: 此檔案需上傳至台灣 CDN 取代原有的 m/style/main_KTZRZRJB.css
+   ============================================ */
+
+/* 首页 */
+.indexYYBtn {
+    margin-bottom: 5.4rem;
+    width: 3.2rem;
+    height: 2rem;
+    background: url(https://rests-nte.iwplay.com.tw/images/pageIndex/indexYYBtn.png) no-repeat 0 0;
+    background-size: contain;
+    margin-right: 0.1rem;
+}
+
+
+.indexYZBtn {
+    margin-bottom: -0.08rem;
+    width: 3.2rem;
+    height: 2rem;
+    background: url(https://res1-nte.iwplay.com.tw/images/pageIndex/tst_QueryBtnt.png) no-repeat 0 0;
+    background-size: contain;
+    margin-left: 0.1rem;
+}
+
+.indexBtns {
+    bottom: 0.2rem;
+    width: 100%;
+    height: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* 角色介绍 */
+.factionsBtn1 {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/pageRole/factionsBtn1.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.factionsBtn2 {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/pageRole/factionsBtn2.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* 情报速递 */
+.newsSwiper {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/pageNews/newsSwiper.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.newsNav .news {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/pageNews/news.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.newsNav .gamenews {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/pageNews/gamenews.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.newsNav .gamebroad {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/pageNews/gameevent.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.newsNav .gameevent {
+    background: url(https://rests-nte.iwplay.com.tw/m/images/pageNews/gamebroad.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.newsItem .type {
+    width: 1.25rem;
+}
+
+.newsItem .title {
+    width: 2.9rem;
+}
+
+/* 世界全景 */
+.pageViewTit {
+    height: 0.89rem;
+}
+
+/* 都市映像 */
+
+/* 彩蛋页 */
+.pageEggshellYY {
+    width: 5.81rem;
+    height: 1.27rem;
+    background: url(https://rests-nte.iwplay.com.tw/m/images/pageEggshell/pageEggshellYY.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+
+
+/* ============================================
+   【里程碑頁面】- 手機版專屬樣式
+   提取自大陸版 main260109.css
+   ============================================ */
+
+/* 頁面背景 */
+.milestoneCont {
+    top: 1.34rem;
+    width: 7.5rem;
+    height: 11.34rem;
+    background: url(../images/main260109/pageMilestone/milestoneCont.png) no-repeat .28rem 0;
+    background-size: 6.94rem 1.59rem;
+}
+
+/* 預約人數顯示 */
+.yyNum {
+    top: .82rem;
+    left: .3rem;
+    width: auto;
+    height: .9rem;
+    background: url(../images/main260109/pageMilestone/yyNum.png) no-repeat 0 0;
+    background-size: 1.26rem .9rem;
+    z-index: 1;
+}
+
+.numBox {
+    display: flex;
+    margin-left: 1.13rem;
+}
+
+.numBox span {
+    min-width: .6rem;
+    height: .91rem;
+}
+
+/* 數字 0~9 */
+.n-0 {
+    background: url(../images/main260109/pageMilestone/n-0.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.n-1 {
+    background: url(../images/main260109/pageMilestone/n-1.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.n-2 {
+    background: url(../images/main260109/pageMilestone/n-2.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.n-3 {
+    background: url(../images/main260109/pageMilestone/n-3.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.n-4 {
+    background: url(../images/main260109/pageMilestone/n-4.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.n-5 {
+    background: url(../images/main260109/pageMilestone/n-5.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.n-6 {
+    background: url(../images/main260109/pageMilestone/n-6.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.n-7 {
+    background: url(../images/main260109/pageMilestone/n-7.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.n-8 {
+    background: url(../images/main260109/pageMilestone/n-8.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.n-9 {
+    background: url(../images/main260109/pageMilestone/n-9.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.comma {
+    background: url(../images/main260109/pageMilestone/comma.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+/* 進度條 */
+.progressBar {
+    top: 2.16rem;
+    left: 50%;
+    margin-left: -1.97rem;
+    width: .11rem;
+    height: 5.93rem;
+    background: #979797;
+    /* 手機版 HTML 沒有 .bar 容器，直接在 progressBar 設定 */
+}
+
+
+.progressBar .curr {
+    top: auto !important;
+    /* 關鍵修復：重置 PC 版的 top: 0，避免固定在頂部 */
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    /* 確保覆蓋 PC 版寬度 */
+    background: #fb5692;
+    transition: height 1s !important;
+    /* 確保覆蓋 PC 版 transition */
+    z-index: 1;
+}
+
+.progressBar .curr[step="0"] {
+    height: .15rem !important;
+    width: 100% !important;
+    /* 重置 PC 版 width */
+}
+
+.progressBar .curr[step="1"] {
+    height: .36rem !important;
+    width: 100% !important;
+}
+
+.progressBar .curr[step="2"] {
+    height: 1.3rem !important;
+    width: 100% !important;
+}
+
+.progressBar .curr[step="3"] {
+    height: 2.4rem !important;
+    width: 100% !important;
+}
+
+.progressBar .curr[step="4"] {
+    height: 3.7rem !important;
+    width: 100% !important;
+}
+
+.progressBar .curr[step="5"] {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+
+.progressBar .curr::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: .329rem;
+    height: .32rem;
+    background: url(../images/main260109/pageMilestone/progressBarCurr.png) no-repeat 0 0 / 100% auto;
+}
+
+/* 節點容器 */
+.nodeBox {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.node {
+    position: absolute;
+    left: -1.14rem;
+    width: auto !important;
+    height: auto !important;
+    /* PC HTML 結構節點順序與手機版不同，但使用 absolute 定位可以忽略 DOM 順序 */
+    display: block;
+    /* 確保重置 PC 樣式 */
+    float: none;
+    margin: 0 !important;
+
+    /* 關鍵修復：強制移除 PC 版在 .node 上設置的背景圖，避免與 ::before 重疊 */
+    background: none !important;
+}
+
+
+/* 確保節點位置正確，對應縱向進度條 */
+/* PC 版 node1 是最左邊（開始），手機版 node1 是最底端（開始） */
+/* 這裡需要注意：大陸 PC 版 node1 是第一個，手機版 node1 是第一個（但位置在底部） */
+/* 大陸手機 CSS: node1 top:5.3rem (底部), node5 top:0.4rem (頂部) */
+
+.node5 {
+    top: .4rem;
+    left: -1.14rem;
+    margin-left: 0;
+}
+
+.node4 {
+    top: 2rem;
+    left: -1.14rem;
+    margin-left: 0;
+}
+
+.node3 {
+    top: 3.3rem;
+    left: -1.14rem;
+    margin-left: 0;
+}
+
+.node2 {
+    top: 4.3rem;
+    left: -1.14rem;
+    margin-left: 0;
+}
+
+.node1 {
+    top: 5.3rem;
+    left: -1.14rem;
+    margin-left: 0;
+}
+
+.node::before {
+    content: "";
+    display: block;
+    width: .89rem !important;
+    height: .27rem !important;
+}
+
+.node5::before {
+    background: url(../images/main260109/pageMilestone/node5.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.node4::before {
+    background: url(../images/main260109/pageMilestone/node4.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.node3::before {
+    background: url(../images/main260109/pageMilestone/node3.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.node2::before {
+    background: url(../images/main260109/pageMilestone/node2.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.node1::before {
+    background: url(../images/main260109/pageMilestone/node1.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.node::after {
+    content: "";
+    display: block;
+    width: 1.03rem !important;
+    height: .23rem !important;
+    margin-top: .07rem;
+    background: url(../images/main260109/pageMilestone/yyNumStatus.png) no-repeat 0 0;
+    background-size: 100% auto;
+    position: static;
+    /* 重置 PC 版樣式 */
+    top: auto !important;
+    left: auto !important;
+    margin-left: 0 !important;
+}
+
+.node.active::after {
+    background-position-y: bottom;
+}
+
+.node div {
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+    /* 重置 PC 版樣式 */
+}
+
+/* 獎勵圖示 */
+.yyprize5 {
+    width: 4.72rem !important;
+    height: 1.48rem !important;
+    background: url(../images/main260109/pageMilestone/yyprize5.png) no-repeat 0 0;
+    background-size: 100% auto;
+    top: auto !important;
+    /* 重置 PC 版樣式 */
+    margin-left: 0 !important;
+}
+
+.yyprize4 {
+    width: 4.72rem !important;
+    height: 1.49rem !important;
+    background: url(../images/main260109/pageMilestone/yyprize4.png) no-repeat 0 0;
+    background-size: 100% auto;
+    top: auto !important;
+    margin-left: 0 !important;
+}
+
+.yyprize3 {
+    width: 4.71rem !important;
+    height: .9rem !important;
+    background: url(../images/main260109/pageMilestone/yyprize3.png) no-repeat 0 0;
+    background-size: 100% auto;
+    top: auto !important;
+    margin-left: 0 !important;
+}
+
+.yyprize2 {
+    width: 4.71rem !important;
+    height: .9rem !important;
+    background: url(../images/main260109/pageMilestone/yyprize2.png) no-repeat 0 0;
+    background-size: 100% auto;
+    top: auto !important;
+    margin-left: 0 !important;
+}
+
+.yyprize1 {
+    width: 4.71rem !important;
+    height: .9rem !important;
+    background: url(../images/main260109/pageMilestone/yyprize1.png) no-repeat 0 0;
+    background-size: 100% auto;
+    top: auto !important;
+    margin-left: 0 !important;
+}
+
+/* 節點動畫 */
+.node1.active div {
+    animation: bgActive 0s .2s forwards;
+}
+
+.node2.active div {
+    animation: bgActive 0s .4s forwards;
+}
+
+.node3.active div {
+    animation: bgActive 0s .6s forwards;
+}
+
+.node4.active div {
+    animation: bgActive 0s .8s forwards;
+}
+
+.node5.active div {
+    animation: bgActive 0s 1s forwards;
+}
+
+@keyframes bgActive {
+
+    0%,
+    99% {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 100%;
+    }
+}
+
+/* 社群媒體 */
+.socialMedia {
+    top: 7.94rem;
+    left: .2rem;
+    width: 6.75rem;
+    height: 3.13rem;
+    margin-left: 0;
+    /* 重置 PC 版樣式 */
+    background: url(../images/main260109/pageMilestone/socialMedia.png) no-repeat 0 0 / 100% auto;
+}
+
+.socialMedia .pic {
+    top: .4rem;
+    right: 0;
+    left: auto;
+    /* 重置 PC 版樣式 */
+    width: 1.9rem;
+    height: 1.9rem;
+    background: url(../images/main260109/pageMilestone/pic.png) no-repeat 0 0 / 100% auto;
+    animation: smBg 2s steps(58) infinite;
+}
+
+@keyframes smBg {
+    0% {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 -110.2rem;
+    }
+}
+
+.socialMedia::after {
+    content: "";
+    position: absolute;
+    bottom: .9rem;
+    left: 2.8rem;
+    width: 1.52rem;
+    height: .24rem;
+    background: url(../images/main260109/pageMilestone/socialMediaStatus.png) no-repeat 0 0 / 100% auto;
+}
+
+.socialMedia.active::after {
+    background-position-y: bottom;
+}

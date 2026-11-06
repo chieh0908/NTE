@@ -1,0 +1,343 @@
+/* ============================================
+   【里程碑頁面】- 手機版專屬樣式
+   提取自大陸版 main260109.css
+   ============================================ */
+
+/* 頁面背景 */
+.milestoneCont {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/milestoneCont.png) no-repeat .28rem 0;
+  background-size: 6.88rem 1.33rem;
+  height: 100%;
+  top: 1.62rem;
+  width: 7.5rem;
+}
+
+/* 預約人數顯示 */
+.yyNum {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/yyNum.png) no-repeat 0;
+  background-size: 1.26rem .9rem;
+  height: .9rem;
+  left: .3rem;
+  top: .82rem;
+}
+
+.numBox {
+  display: flex;
+  margin-left: 1.13rem;
+}
+
+.numBox span {
+  min-width: .6rem;
+  height: .91rem;
+}
+
+/* 數字 0~9 */
+.n-0 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-0.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-1 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-1.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-2 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-2.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-3 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-3.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-4 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-4.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-5 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-5.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-6 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-6.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-7 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-7.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-8 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-8.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.n-9 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/n-9.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.comma {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/comma.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 進度條 */
+.progressBar {
+  background: #ccc;
+  height: 5.93rem;
+  margin-left: -1.97rem;
+  top: 2.16rem;
+  width: .11rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.progressBar .curr {
+  background: #6ee4f5;
+  bottom: 0;
+  left: 0;
+  transition: height 1s;
+  width: 100%;
+}
+
+.progressBar .curr[step="0"] {
+  height: .15rem !important;
+  width: 100% !important;
+  /* 重置 PC 版 width */
+}
+
+.progressBar .curr[step="1"] {
+  height: .36rem !important;
+  width: 100% !important;
+}
+
+.progressBar .curr[step="2"] {
+  height: 1.3rem !important;
+  width: 100% !important;
+}
+
+.progressBar .curr[step="3"] {
+  height: 2.4rem !important;
+  width: 100% !important;
+}
+
+.progressBar .curr[step="4"] {
+  height: 3.7rem !important;
+  width: 100% !important;
+}
+
+.progressBar .curr[step="5"] {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.progressBar .curr::after {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/progressBarCurr.png) no-repeat 0 0/100% auto;
+  content: "";
+  height: .32rem;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%,-50%);
+  width: .329rem;
+}
+
+/* 節點容器 */
+.nodeBox {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.node {
+  left: -1.14rem;
+  position: absolute;
+}
+
+.node5 {
+  top: .4rem;
+}
+
+.node4 {
+  top: 2rem;
+}
+
+.node3 {
+  top: 3.3rem;
+}
+
+.node2 {
+  top: 4.3rem;
+}
+
+.node1 {
+  top: 5.3rem;
+}
+
+.node::before, .node::after {
+  content: "";
+  display: block;
+}
+
+.node::before {
+  height: .27rem;
+  width: .89rem;
+}
+
+.node5::before {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/node5.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.node4::before {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/node4.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.node3::before {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/node3.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.node2::before {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/node2.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.node1::before {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/node1.png) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.node::after {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/yyNumStatus.png) no-repeat 0 0;
+  background-size: 100% auto;
+  height: .23rem;
+  margin-top: .07rem;
+  width: 1.03rem;
+}
+
+.node.active {
+  background-position: 0 100%;
+}
+
+.node.active::after {
+  background-position-y: bottom;
+}
+
+.node div {
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 獎勵圖示 */
+.yyprize5 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/yyprize5.png) no-repeat 0 0/100% auto;
+  height: 1.71rem;
+  margin-top: -.1rem;
+  width: 4.79rem;
+}
+
+.yyprize4 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/yyprize4.png) no-repeat 0 0/100% auto;
+  height: 1.49rem;
+  width: 4.72rem;
+}
+
+.yyprize3 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/yyprize3.png) no-repeat 0 0/100% auto;
+  height: .9rem;
+  width: 4.71rem;
+}
+
+.yyprize2 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/yyprize2.png) no-repeat 0 0/100% auto;
+  height: .9rem;
+  width: 4.71rem;
+}
+
+.yyprize1 {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/yyprize1.png) no-repeat 0 0/100% auto;
+  height: .9rem;
+  width: 4.71rem;
+}
+
+/* 節點動畫 */
+.node1.active div {
+  animation: bgActive 0s .2s forwards;
+}
+
+.node2.active div {
+  animation: bgActive 0s .4s forwards;
+}
+
+.node3.active div {
+  animation: bgActive 0s .6s forwards;
+}
+
+.node4.active div {
+  animation: bgActive 0s .8s forwards;
+}
+
+.node5.active div {
+  animation: bgActive 0s 1s forwards;
+}
+
+@keyframes bgActive {
+  0%, 99% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* 社群媒體 */
+.socialMedia {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/socialMedia.png) no-repeat 0 0/100% auto;
+  height: 3.13rem;
+  left: .2rem;
+  top: 7.94rem;
+  width: 6.75rem;
+}
+
+.socialMedia .pic {
+  animation: smBg 2s steps(58) infinite;
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/pic.png) no-repeat 0 0/100% auto;
+  height: 1.9rem;
+  right: 0;
+  top: .4rem;
+  width: 1.9rem;
+}
+
+@keyframes smBg {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 -110.2rem;
+  }
+}
+
+.socialMedia::after {
+  background: url(https://rests-nte.iwplay.com.tw/260403/m/images/pageMilestone/socialMediaStatus.png) no-repeat 0 0/100% auto;
+  bottom: .9rem;
+  content: "";
+  height: .24rem;
+  left: 2.8rem;
+  position: absolute;
+  width: 1.52rem;
+}
+
+.socialMedia.active::after {
+  background-position-y: bottom;
+}
