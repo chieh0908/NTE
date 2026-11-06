@@ -1,0 +1,1849 @@
+@charset "UTF-8";
+/*---- common ----*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap");
+@import url("https://ids.iwplay.com.tw/includ/footer/footer.css");
+
+/* ============================================================
+   主題色變數（一處修改，全站同步）
+   ============================================================ */
+:root {
+  --theme-primary: #9146ff;
+}
+*,
+a,
+span {
+  font-family: "Noto Sans TC", Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+a:hover {
+  transform: scale(1.05) rotate(-6deg);
+}
+
+/*====卷軸===*/
+/* 細捲軸開始 */
+::-webkit-scrollbar {
+  height: 5px;
+  overflow: visible;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--theme-primary);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 0px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  border-radius: 50px;
+  box-shadow:
+    inset 1px 1px 0 rgba(0, 0, 0, 0),
+    inset 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--theme-primary);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--theme-primary);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(34, 34, 36, 0.1);
+  border-radius: 50px;
+}
+
+/* 細捲軸結束 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: #140a18;
+}
+/* 永遠保留捲軸空間，避免彈窗開/關時頁面寬度變化抖動 */
+html {
+  scrollbar-gutter: stable;
+}
+/* 因 scrollbar-gutter 已保留空間，取消 BS5 modal 自動加的 padding-right，
+   避免 fade 彈窗（#bookedmodal / #privacymodal）開啟時內容被推移 */
+body.modal-open {
+  padding-right: 0 !important;
+}
+
+.display_none {
+  display: none;
+}
+
+.fullpage {
+  padding-top: 0;
+  width: 100%;
+  position: relative;
+}
+.fullpage .section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.fullpage .section .title_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fullpage .section .title_box img {
+  width: 36.71vw;
+}
+.fullpage .section.header {
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/header/header_bg.webp)
+    center;
+  background-size: 100% 100%;
+  position: relative;
+  aspect-ratio: 1920/997;
+  animation: kv_ani 1s;
+}
+.fullpage .section.header .logo {
+  position: absolute;
+  top: 1vw;
+  left: 1.5vw;
+  width: 7vw;
+  z-index: 1;
+}
+.fullpage .section.header .logo img {
+  width: 100%;
+}
+.fullpage .section.header .home {
+  position: absolute;
+  top: 1.5vw;
+  right: 2vw;
+  height: 3vw;
+  aspect-ratio: 1/1;
+  z-index: 1;
+  display: block;
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/home.webp)
+    no-repeat;
+  background-size: 100% 200%;
+  background-position: 0 0;
+  transition: none;
+}
+.fullpage .section.header .home:hover {
+  background-position: 0 100%;
+  transform: none;
+}
+.fullpage .section.header .title_box {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.fullpage .section.header .title_box .header_title {
+  width: 31vw;
+  align-self: center;
+}
+.fullpage .section.header .title_box .btn_box {
+  width: 31vw;
+  margin: 1vw 0 7vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  align-self: center;
+}
+.fullpage .section.header .title_box .btn_box a {
+  height: 3.5vw;
+  aspect-ratio: 369/100;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: none;
+}
+.fullpage .section.header .title_box .btn_box a:hover {
+  background-position: 0 100%;
+  transform: none;
+}
+.fullpage .section.header .title_box .btn_box a.btn_mission {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/header/header_btn_mission.webp);
+}
+.fullpage .section.header .title_box .btn_box a.btn_streams {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/header/header_btn_watch.webp);
+}
+/* 區塊一：完成任務獲得獎勵 ---------------------------------------------------- */
+.fullpage .section.mission {
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/mission_bg.webp)
+    center top no-repeat;
+  background-size: cover;
+  margin-top: -2px;
+  padding: 5vw 0 8vw;
+  position: relative;
+}
+.fullpage .section.mission .deco_m_left,
+.fullpage .section.mission .deco_m_right {
+  position: absolute;
+  top: 1vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.fullpage .section.mission .deco_m_left {
+  left: 0.85vw;
+  height: 2.5vw;
+  aspect-ratio: 238/72;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/deco_left.webp);
+}
+.fullpage .section.mission .deco_m_right {
+  right: 0.85vw;
+  height: 2.5vw;
+  aspect-ratio: 578/82;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/deco_right.webp);
+}
+.fullpage .section.mission .deco_chara {
+  position: absolute;
+  bottom: 1px;
+  left: 6%;
+  height: 17vw;
+  aspect-ratio: 759/417;
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/deco_chara.webp)
+    no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+.fullpage .section.mission .title_box {
+  position: relative;
+  z-index: 1;
+}
+.fullpage .section.mission .title_box img {
+  margin-bottom: 3vw;
+  width: 50vw;
+}
+
+.fullpage .section.mission .content_box {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7vw;
+  position: relative;
+  z-index: 1;
+}
+.fullpage .section.mission .content_box .action_btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
+.fullpage .section.mission .content_box .action_btns a {
+  height: 9vw;
+  aspect-ratio: 286/220;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: none;
+}
+.fullpage .section.mission .content_box .action_btns a:hover {
+  background-position: 0 100%;
+  transform: none;
+}
+.fullpage .section.mission .content_box .action_btns .btn_rule {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/rule.webp);
+}
+.fullpage .section.mission .content_box .action_btns .btn_login {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/login.webp);
+}
+.fullpage .section.mission .content_box .action_btns .btn_logout {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/logout.webp);
+}
+.fullpage .section.mission .content_box .mission_cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2vw;
+}
+.fullpage .section.mission .content_box .mission_cards .card_item {
+  width: 25vw;
+  aspect-ratio: 667/873;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.fullpage .section.mission .content_box .mission_cards .card_day1 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/mission_day1.webp);
+}
+.fullpage .section.mission .content_box .mission_cards .card_day2 {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/mission_day2.webp);
+}
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .watch_progress {
+  position: absolute;
+  top: 4.7vw;
+  left: 0;
+  width: 100%;
+  height: 2vw;
+  background-color: #2cdb6f00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .watch_progress
+  p {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.5vw, 1.7rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.1vw;
+}
+
+/* 首日按鈕 */
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .mission_btn2 {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  aspect-ratio: 462/100;
+  display: block;
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/mission_btn2.webp)
+    no-repeat;
+  background-size: 100% 300%;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: none;
+}
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .mission_btn2:hover {
+  transform: translateX(-50%);
+}
+/* 領取 - 不可領取 */
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .mission_btn2.disabled {
+  background-position: 0 50%;
+  pointer-events: none;
+}
+/* 已領取 */
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .mission_btn2.claimed {
+  background-position: 0 100%;
+  pointer-events: none;
+}
+
+/* 次日按鈕 */
+.fullpage .section.mission .content_box .mission_cards .card_item .mission_btn {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  aspect-ratio: 462/100;
+  display: block;
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/mission_btn.webp)
+    no-repeat;
+  background-size: 100% 400%;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: none;
+}
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .mission_btn:hover {
+  transform: translateX(-50%);
+}
+/* 領取 - 不可領取 */
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .mission_btn.disabled {
+  background-position: 0 33.33%;
+  pointer-events: none;
+}
+/* 次日開啟 */
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .mission_btn.next_day {
+  background-position: 0 66.67%;
+  pointer-events: none;
+}
+/* 已領取 */
+.fullpage
+  .section.mission
+  .content_box
+  .mission_cards
+  .card_item
+  .mission_btn.claimed {
+  background-position: 0 100%;
+  pointer-events: none;
+}
+
+/* 區塊二：TWITCH 直播列表 ---------------------------------------------------- */
+.fullpage .section.streams {
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/streams/streams_bg.webp)
+    center top repeat;
+  background-size: 100% auto;
+  margin-top: -2px;
+  padding: 7vw 0 5vw 0;
+  position: relative;
+}
+.fullpage .section.streams .deco_left,
+.fullpage .section.streams .deco_right {
+  position: absolute;
+  top: 2.6vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.fullpage .section.streams .deco_left {
+  left: 0.25vw;
+  height: 1.5vw;
+  aspect-ratio: 221/48;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/streams/deco_left.webp);
+}
+.fullpage .section.streams .deco_right {
+  right: 0.25vw;
+  height: 1.5vw;
+  aspect-ratio: 662/48;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/streams/deco_right.webp);
+}
+.fullpage .section.streams .deco_bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 2560/68;
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/streams/deco_bottom.webp)
+    center bottom no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.fullpage .section.streams::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.6vw;
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/streams/deco_line.webp)
+    center top repeat-x;
+  background-size: auto 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+/* 已無使用 streams_bg_bottom.webp，暫時停用
+.fullpage .section.streams::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vw * 503 / 2560);
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/streams/streams_bg_bottom.webp) center bottom no-repeat;
+  background-size: 100% auto;
+  pointer-events: none;
+}
+*/
+.fullpage .section.streams .title_box img {
+  margin-bottom: 3vw;
+  width: 50vw;
+}
+.fullpage .section.streams .content_box {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+/* PC: tab 隱藏，兩區塊都顯示 */
+.fullpage .section.streams .lang_tabs {
+  display: none;
+}
+.fullpage .section.streams .stream_section {
+  margin-bottom: 2vw;
+}
+.fullpage .section.streams .section_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8vw;
+  padding-bottom: 0.5vw;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.623);
+}
+.fullpage .section.streams .section_label {
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+  padding-left: 0.2vw;
+}
+.fullpage .section.streams .section_more {
+  font-size: clamp(0.7rem, 0.85vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.fullpage .section.streams .section_more:hover {
+  color: #fff;
+  transform: none;
+}
+.fullpage .section.streams .stream_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1.2vw;
+}
+.fullpage .section.streams .stream_card {
+  width: calc((100% - 4.8vw) / 5);
+  transition: background-color 0.3s;
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* 手機版顯示前 10 張，PC 寬度才解除限制 */
+.fullpage .section.streams .stream_list .stream_card:nth-child(n + 11) {
+  display: none;
+}
+@media only screen and (min-width: 769px) {
+  .fullpage .section.streams .stream_list .stream_card:nth-child(n + 6) {
+    display: block;
+  }
+}
+.fullpage .section.streams .stream_card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.fullpage .section.streams .stream_card a {
+  text-decoration: none;
+  color: inherit;
+}
+.fullpage .section.streams .stream_card a:hover {
+  transform: none;
+}
+.fullpage .section.streams .stream_card .card_cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #1f1f1f;
+}
+.fullpage .section.streams .stream_card .card_cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fullpage .section.streams .stream_card .viewer_count {
+  position: absolute;
+  bottom: 6%;
+  left: 4%;
+  display: flex;
+  align-items: center;
+  gap: 0.3vw;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 50px;
+  padding: 0.2vw 0.6vw;
+}
+.fullpage .section.streams .stream_card .viewer_count img {
+  width: 0.9vw;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+.fullpage .section.streams .stream_card .viewer_count span {
+  font-size: clamp(0.6rem, 0.7vw, 1rem);
+  color: #fff;
+  font-weight: 400;
+}
+.fullpage .section.streams .stream_card .card_title {
+  padding: 0.5vw 0.4vw 0;
+}
+.fullpage .section.streams .stream_card .card_title p {
+  margin: 0;
+  font-size: clamp(0.7rem, 0.8vw, 1.1rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.fullpage .section.streams .stream_card .card_user {
+  padding: 0.3vw 0.4vw;
+}
+.fullpage .section.streams .stream_card .card_user p {
+  margin: 0;
+  font-size: clamp(0.6rem, 0.7vw, 1rem);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fullpage .section.streams > .content_box > .more_btn {
+  display: none;
+  margin: 2vw auto 0;
+  padding: 0.5vw 3vw;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.8rem, 0.9vw, 1.2rem);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  width: fit-content;
+}
+.fullpage .section.streams .more_btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: none;
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+/* Scroll Top ---------------------------------------------------- */
+.scroll_top {
+  position: fixed;
+  bottom: 3vw;
+  right: 2vw;
+  width: 3.5vw;
+  height: 3.5vw;
+  min-width: 50px;
+  min-height: 50px;
+  background: #5cfffe;
+  border-radius: 25px;
+  border: 5px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  color: #140a18;
+  font-weight: 800;
+  font-size: clamp(0.6rem, 0.7vw, 0.9rem);
+  line-height: 1.1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.scroll_top span {
+  font-size: clamp(0.7rem, 0.8vw, 1rem);
+  line-height: 1;
+}
+.scroll_top.show {
+  opacity: 0.85;
+  visibility: visible;
+}
+.scroll_top:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+/* DEMO 彈窗測試按鈕 ---------------------------------------------------- */
+.demo_btns {
+  position: fixed;
+  bottom: 3vw;
+  left: 1vw;
+  z-index: 100;
+}
+.demo_toggle {
+  width: 50px;
+  height: 50px;
+  background: #ff5995;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 11px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+.demo_toggle:hover {
+  transform: scale(1.1);
+}
+.demo_list {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+.demo_list.show {
+  display: flex;
+}
+.demo_list button {
+  background: rgba(20, 10, 24, 0.85);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.demo_list button:hover {
+  background: #ff5995;
+  border-color: #ff5995;
+}
+/* footer：常駐顯示(無收合)。內容(.container/.company/.copyright/.grading)樣式
+   交給共用 footer.css 的 footer{} 標籤選擇器處理（與 cover.html 一致），此處僅覆蓋背景色與頁面融合。 */
+.fullpage .footer_box {
+  width: 100%;
+  position: relative;
+}
+.fullpage .footer_box .footer {
+  width: 100%;
+  background: #140a18;
+}
+
+/* 跳窗---------------------------------------------------- */
+.modal-dialog {
+  width: 96%;
+  max-width: 800px;
+}
+.modal-dialog .modal-content {
+  height: 700px;
+  border-radius: 20px;
+}
+.modal-dialog .modal-content .modal-header {
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-header .modal-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-header .modal-title img {
+  width: 214px;
+}
+.modal-dialog .modal-content .modal-header .btn-close {
+  width: 45px;
+  height: 45px;
+  aspect-ratio: 204/202;
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/popup/popup_close.webp)
+    no-repeat;
+  background-size: 100%;
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s;
+}
+.modal-dialog .modal-content .modal-header .btn-close:hover {
+  transform: rotate(180deg);
+}
+.modal-dialog .modal-content .modal-body {
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/popup/bg_line.webp)
+    center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+.modal-dialog .modal-content .modal-body::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.modal-dialog .modal-content .modal-body .error_box {
+  width: 100%;
+  min-height: 0.875rem;
+  margin: 3px;
+}
+.modal-dialog .modal-content .modal-body .error_box p {
+  color: #ee3d70;
+  font-size: 0.875rem;
+}
+.modal-dialog .modal-content .modal-body .topbox {
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+.modal-dialog .modal-content .modal-body .topbox::after {
+  position: absolute;
+  pointer-events: none;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  aspect-ratio: 1425/27;
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/popup/popup_line.webp);
+  background-size: 100%;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .realFileInput {
+  display: none;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .upload-label {
+  border: 2px solid #140a18;
+  padding: 0.2rem 30px;
+  border-radius: 50px;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+.modal-dialog
+  .modal-content
+  .modal-body
+  .topbox
+  .top_left
+  .upload-label::after {
+  content: "";
+  display: block;
+  width: 14px;
+  aspect-ratio: 25/24;
+  background: none;
+  background-size: 100%;
+  margin-left: 10px;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .upload-label:hover {
+  background-color: #ffd052;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .imgbox {
+  width: 182px;
+  height: 96px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_left .imgbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-color: #f4efea;
+  border: 2px dotted #c5c2bf;
+  border-radius: 10px;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right {
+  margin-left: 15px;
+  flex: 2 0 auto;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right .linkbox {
+  background: #282828;
+  border-radius: 50px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right .linkbox label {
+  color: #e7e2dd;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog
+  .modal-content
+  .modal-body
+  .topbox
+  .top_right
+  .linkbox
+  label::after {
+  content: "|";
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+.modal-dialog .modal-content .modal-body .topbox .top_right .linkbox input {
+  color: #e7e2dd;
+  background: transparent;
+  border: 0;
+}
+.modal-dialog
+  .modal-content
+  .modal-body
+  .topbox
+  .top_right
+  .linkbox
+  input:focus {
+  outline: 0;
+}
+.modal-dialog .modal-content .modal-body .botbox {
+  width: 96%;
+  margin: 0 auto;
+}
+.modal-dialog .modal-content .modal-body .botbox .error_box {
+  padding-left: 92px;
+}
+.modal-dialog .modal-content .modal-body .botbox input,
+.modal-dialog .modal-content .modal-body .botbox textarea {
+  background: #c5c2bf;
+  border: 0;
+  outline: 0;
+  border-radius: 25px;
+  padding: 5px 15px;
+  margin-left: 5px;
+}
+.modal-dialog .modal-content .modal-body .botbox label {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+.modal-dialog .modal-content .modal-body .botbox label span {
+  font-size: 0.8rem;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_1 > div {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_1 > div .error_box {
+  width: 100%;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_1 > div input {
+  width: 260px;
+  height: 44px;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.modal-dialog .modal-content .modal-body .botbox .bot_2 textarea {
+  width: 630px;
+  height: 85px;
+}
+.modal-dialog .modal-content .modal-body .botbox .txtbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog
+  .modal-content
+  .modal-body
+  .botbox
+  .txtbox
+  input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #242426;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin-right: 0.3rem;
+  border-radius: 0;
+  background-color: white;
+}
+.modal-dialog
+  .modal-content
+  .modal-body
+  .botbox
+  .txtbox
+  input[type="checkbox"]:checked {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/popup/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.modal-dialog .modal-content .modal-body .botbox .txtbox label {
+  font-size: 1rem;
+}
+.modal-dialog .modal-content .modal-body .botbox .txtbox label a {
+  color: #1b7edb;
+}
+.modal-dialog .modal-content .modal-body .popup_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 25px;
+}
+.modal-dialog .modal-content .modal-body .popup_btn a {
+  display: block;
+  width: 260px;
+  aspect-ratio: 650/210;
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/popup/btn.webp)
+    center no-repeat;
+  background-size: 100%;
+  color: #242426;
+  font-weight: 700;
+  font-size: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-dialog .modal-content .modal-body .popup_btn a::after {
+  content: "";
+  display: block;
+  width: 1.3vw;
+  aspect-ratio: 25/24;
+  background: none;
+  background-size: 100%;
+  margin-left: 0.9vw;
+}
+
+/* 活動規則 */
+#notice_modal .modal-dialog .modal-content {
+  background: var(--theme-primary);
+  border: 5px solid var(--theme-primary);
+}
+#notice_modal .modal-dialog .modal-content .modal-header {
+  background: var(--theme-primary)
+    url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/popup/tt_bg_notice.webp);
+  background-size: cover;
+}
+#notice_modal .modal-dialog .modal-content .modal-body::before {
+  background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/popup/txt_bg_notice.webp)
+    center bottom no-repeat;
+  background-size: 100%;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con {
+  width: 98%;
+  height: 550px;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box {
+  padding-right: 15px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box h3 {
+  width: 99%;
+  background: var(--theme-primary);
+  color: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div {
+  margin-bottom: 20px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h4 {
+  /* color: #f65886; */
+  color: #9c59ff;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+#notice_modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  .rule_con
+  .box
+  > div
+  h4
+  span {
+  font-size: 1rem;
+  margin-left: 5px;
+}
+#notice_modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  .rule_con
+  .box
+  > div
+  h4::before {
+  content: "";
+  margin: 0 16px;
+  display: block;
+  width: 6px;
+  height: 1.5rem;
+  /* background: #16c5c4; */
+  background: #2ce0e7;
+}
+#notice_modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  .rule_con
+  .box
+  > div
+  span {
+  color: #f65886;
+}
+#notice_modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  .rule_con
+  .box
+  > div
+  span.color_blue {
+  color: var(--theme-primary);
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div p,
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 {
+  padding: 0 10px 0 38px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h6 {
+  margin: 11px 0;
+}
+#notice_modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  .rule_con
+  .box
+  > div
+  h6
+  span {
+  border: 1px solid #282a2c;
+  color: #282a2c;
+  margin-right: 8px;
+  padding: 0ch 8px;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div h5 {
+  color: #29b8c4;
+  padding-left: 38px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+#notice_modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  .rule_con
+  .box
+  > div
+  h5::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #29b8c4;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#notice_modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  .rule_con
+  .box
+  > div
+  h5
+  span {
+  color: #29b8c4;
+  font-size: 1rem;
+}
+#notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div ul {
+  padding: 0 10px 0 55px;
+}
+#notice_modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  .rule_con
+  .box
+  > div
+  ul
+  li {
+  list-style: decimal;
+}
+
+/* 通用 */
+#eventAlertModal .modal-dialog {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#eventAlertModal .modal-dialog .modal-content {
+  width: 300px;
+  height: 200px;
+  background: var(--theme-primary);
+  border: 5px solid var(--theme-primary);
+}
+#eventAlertModal .modal-dialog .modal-content .modal-header {
+  justify-content: flex-end;
+  background: var(--theme-primary)
+    url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/popup/tt_bg_notice.webp);
+  background-size: cover;
+}
+#eventAlertModal .modal-dialog .modal-content .modal-body .txt_con {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .fullpage {
+    padding-top: 0;
+  }
+  .fullpage .section {
+    /* header---------------------------------------------------- */
+    /* 活動時間---------------------------------------------------- */
+    /* 活動獎勵---------------------------------------------------- */
+    /* 參與方式---------------------------------------------------- */
+    /* 鑒定師投票---------------------------------------------------- */
+  }
+  .fullpage .section .title_box img {
+    width: 44.06vw;
+  }
+  .fullpage .section.header {
+    background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/header/header_bg.webp)
+      center;
+    background-size: 120% auto;
+    height: 55vw;
+  }
+  .fullpage .section.header .title_box {
+    top: 0;
+  }
+  .fullpage .section.header .title_box .header_title {
+    width: 36vw;
+  }
+  .fullpage .section.header .title_box .btn_box {
+    width: 36vw;
+    margin: 1vw 0 7vw 0;
+  }
+  .fullpage .section.header .title_box a {
+    margin-top: 1vw;
+    height: 5.5vw;
+  }
+}
+@media only screen and (max-width: 820px) {
+  /* 跳窗---------------------------------------------------- */
+  .modal-dialog .modal-content .modal-header .modal-title img {
+    width: 30vw;
+  }
+  .modal-dialog .modal-content .modal-body::before {
+    display: none;
+  }
+  .modal-dialog .modal-content .modal-body .error_box {
+    width: 100%;
+    min-height: 0.875rem;
+    margin: 3px;
+  }
+  .modal-dialog .modal-content .modal-body .topbox {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left {
+    width: 100%;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left .error_box {
+    padding-left: 0;
+    text-align: center;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left .error_box p {
+    margin-bottom: 0;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left .realFileInput {
+    display: none;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_left .upload-label {
+    order: 2;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right {
+    width: 100%;
+    margin-left: 0;
+    flex: 2 0 auto;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right .error_box {
+    padding-left: 0;
+    text-align: right;
+    padding-right: 5vw;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right .error_box p {
+    margin-bottom: 0;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right .linkbox {
+    border-radius: 50px;
+    padding: 0.5rem;
+  }
+  .modal-dialog .modal-content .modal-body .topbox .top_right .linkbox label {
+    font-size: 3.5vw;
+    padding: 0 1.5vw;
+  }
+  .modal-dialog .modal-content .modal-body .botbox {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .error_box {
+    padding-left: 0;
+    text-align: right;
+    position: absolute;
+    right: 5vw;
+    top: 3vw;
+  }
+  .modal-dialog .modal-content .modal-body .botbox input,
+  .modal-dialog .modal-content .modal-body .botbox textarea {
+    border: 0;
+    outline: 0;
+    border-radius: 25px;
+    padding: 5px 15px;
+    margin-left: 5px;
+  }
+  .modal-dialog .modal-content .modal-body .botbox label {
+    margin: 3vw 2vw 1vw;
+  }
+  .modal-dialog .modal-content .modal-body .botbox label span {
+    display: inline-block;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_1 {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_1 > div {
+    position: relative;
+    width: 100%;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_1 > div .error_box {
+    width: 100%;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_1 > div input {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_2 {
+    justify-content: flex-start;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: -2vw;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .bot_2 textarea {
+    width: 100%;
+  }
+  .modal-dialog
+    .modal-content
+    .modal-body
+    .botbox
+    .txtbox
+    input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    margin-right: 0.3rem;
+    border-radius: 0;
+    background-color: white;
+  }
+  .modal-dialog
+    .modal-content
+    .modal-body
+    .botbox
+    .txtbox
+    input[type="checkbox"]:checked {
+    background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/popup/check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .modal-dialog .modal-content .modal-body .botbox .txtbox label {
+    margin: 0;
+    font-size: 3.5vw;
+  }
+  .modal-dialog .modal-content .modal-body .popup_btn {
+    margin-top: 3vw;
+  }
+  .modal-dialog .modal-content .modal-body .popup_btn a {
+    width: 43vw;
+    font-size: 4.5vw;
+    margin-bottom: 3vw;
+  }
+  .modal-dialog .modal-content .modal-body .popup_btn a::after {
+    width: 2.6vw;
+    margin-left: 2.5vw;
+  }
+  /* 活動規則 */
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box h3 {
+    padding: 8px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div {
+    margin-bottom: 4vw;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h4 {
+    font-size: clamp(1rem, 6vw, 1.5rem);
+    flex-wrap: wrap;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h4
+    span {
+    width: 100%;
+    margin: 1vw;
+    margin-left: 4vw;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h4::before {
+    margin: 0 2vw 0 0;
+    width: 1.2vw;
+    height: 4.8vw;
+  }
+  #notice_modal .modal-dialog .modal-content .modal-body .rule_con .box > div p,
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h6 {
+    padding: 0 0 0 3vw;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h6 {
+    margin: 5px 0;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h6
+    span {
+    border: 0;
+    margin-right: 0;
+    padding: 2px;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h6
+    span::before {
+    content: "【";
+    margin-left: -4vw;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h6
+    span::after {
+    content: "】";
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h5 {
+    padding-left: 0px;
+    flex-wrap: wrap;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h5::before {
+    width: 15px;
+    height: 15px;
+    background: #29b8c4;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    h5
+    span {
+    width: 100%;
+    display: block;
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    ul {
+    padding: 0 0 0 3.5vw;
+  }
+  #notice_modal
+    .modal-dialog
+    .modal-content
+    .modal-body
+    .rule_con
+    .box
+    > div
+    ul
+    li {
+    list-style: decimal;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .fullpage {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .fullpage .section {
+    /* header---------------------------------------------------- */
+    /* 活動時間---------------------------------------------------- */
+    /* 活動獎勵---------------------------------------------------- */
+    /* 參與方式---------------------------------------------------- */
+    /* 鑒定師投票---------------------------------------------------- */
+  }
+  .fullpage .section.mission,
+  .fullpage .section.streams {
+    padding: 10vw 0;
+  }
+  .fullpage .section.mission .title_box img,
+  .fullpage .section.streams .title_box img {
+    margin-bottom: 3vw;
+    width: 90vw;
+  }
+  .fullpage .section.header .logo {
+    width: 22vw;
+    top: 2vw;
+    left: 2.5vw;
+  }
+  .fullpage .section.header .home {
+    height: 10vw;
+    top: 5.1vw;
+    right: 2.5vw;
+  }
+  .fullpage .section .title_box img {
+    width: 78.51vw;
+  }
+  .fullpage .section.header {
+    background: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/header/header_bg_m.webp)
+      center;
+    background-size: 100% 100%;
+    aspect-ratio: 1080/1920;
+    height: auto;
+  }
+  .fullpage .section.header .title_box {
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-right: 0;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .fullpage .section.header .title_box .header_title {
+    width: 84vw;
+    align-self: center;
+  }
+  .fullpage .section.header .title_box .btn_box {
+    width: 94vw;
+    align-self: center;
+    gap: 2.5vw;
+    margin: 2vw 0 28vw 0;
+  }
+  .fullpage .section.header .title_box .btn_box a {
+    height: 14vw;
+  }
+  /* mission 手機版 */
+  .fullpage .section.mission {
+    background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/mission/mission_bg_m.webp);
+    padding-bottom: 45vw;
+  }
+  .fullpage .section.mission .deco_chara {
+    right: auto;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: auto;
+    aspect-ratio: 759/417;
+    z-index: 20;
+  }
+  .fullpage .section.streams {
+    background-image: url(https://rests-nte.iwplay.com.tw/events/twitch-party/261111/images/streams/streams_bg_m.webp);
+  }
+  .fullpage .section.mission .deco_m_left,
+  .fullpage .section.mission .deco_m_right {
+    display: none;
+  }
+  .fullpage .section.streams .deco_left,
+  .fullpage .section.streams .deco_right {
+    display: none;
+  }
+  .fullpage .section.streams::before {
+    height: 4vw;
+  }
+  /* 對應已停用的 .fullpage .section.streams::after
+  .fullpage .section.streams::after {
+    height: calc(100vw * 503 / 2560 * 2.5);
+    background-size: 250% auto;
+    background-position: 0% bottom;
+  }
+  */
+  .fullpage .section.mission .title_box,
+  .fullpage .section.streams .title_box {
+    margin: 5vw 0;
+  }
+  .fullpage .section.mission .content_box {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+  }
+  .fullpage .section.mission .content_box .action_btns {
+    flex-direction: row;
+    justify-content: center;
+    gap: 6vw;
+    margin-bottom: 3vw;
+  }
+  .fullpage .section.mission .content_box .action_btns a {
+    height: 20vw;
+  }
+  .fullpage .section.mission .content_box .mission_cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 4vw;
+  }
+  .fullpage
+    .section.mission
+    .content_box
+    .mission_cards
+    .card_item
+    .watch_progress {
+    top: 15vw;
+    height: 6.5vw;
+  }
+  .fullpage
+    .section.mission
+    .content_box
+    .mission_cards
+    .card_item
+    .watch_progress
+    p {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+  .fullpage .section.mission .content_box .mission_cards .card_item {
+    width: 80vw;
+  }
+  /* streams 手機版 */
+  .fullpage .section.streams .content_box {
+    width: 90%;
+  }
+  /* 手機版顯示 tab，隱藏 section_label */
+  .fullpage .section.streams .lang_tabs {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    margin-bottom: 4vw;
+  }
+  .fullpage .section.streams .lang_tab {
+    padding: 1vw 4vw;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: clamp(0.8rem, 3.5vw, 1.2rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .fullpage .section.streams .lang_tab.active {
+    background: #ff5995;
+    border-color: #ff5995;
+    color: #fff;
+  }
+  .fullpage .section.streams .section_header {
+    display: none;
+  }
+  /* 手機版 tab 切換：非 active 的 section 隱藏 */
+  .fullpage .section.streams .stream_section {
+    display: none;
+  }
+  .fullpage .section.streams .stream_section.active {
+    display: block;
+  }
+  .fullpage .section.streams .stream_list {
+    flex-direction: column;
+    align-items: center;
+    gap: 4vw;
+  }
+  .fullpage .section.streams .stream_card {
+    width: 100%;
+  }
+  .fullpage .section.streams .stream_card .viewer_count {
+    padding: 1vw 2.5vw;
+    gap: 1.5vw;
+  }
+  .fullpage .section.streams .stream_card .viewer_count img {
+    width: 3.5vw;
+  }
+  .fullpage .section.streams .stream_card .viewer_count span {
+    font-size: clamp(0.7rem, 3vw, 1rem);
+  }
+  .fullpage .section.streams .stream_card .card_title {
+    padding: 2vw 1vw 0;
+  }
+  .fullpage .section.streams .stream_card .card_title p {
+    font-size: clamp(0.8rem, 3.5vw, 1.2rem);
+  }
+  .fullpage .section.streams .stream_card .card_user {
+    padding: 1vw 1vw;
+  }
+  .fullpage .section.streams .stream_card .card_user p {
+    font-size: clamp(0.7rem, 3vw, 1rem);
+  }
+  .fullpage .section.streams > .content_box > .more_btn {
+    display: block;
+    margin-top: 5vw;
+    padding: 2vw 8vw;
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+  }
+}
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .fullpage .section.header .title_box {
+    top: 100vw;
+  }
+}
+/*# sourceMappingURL=main_ZR.css.map */

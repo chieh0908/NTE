@@ -1,0 +1,181 @@
+{
+  "zh": [
+    {
+      "url": "https://www.twitch.tv/demo1",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "1,234",
+      "title": "實況標題文字最多顯示兩行超過會自動截斷",
+      "user": "實況主名稱"
+    },
+    {
+      "url": "https://www.twitch.tv/demo2",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "567",
+      "title": "異環公測直播中！一起來探索海特洛市",
+      "user": "StreamerTW"
+    },
+    {
+      "url": "https://www.twitch.tv/demo3",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "890",
+      "title": "掉寶台 異環公測實況觀賞派對掛台掉寶中",
+      "user": "遊戲實況主"
+    },
+    {
+      "url": "https://www.twitch.tv/demo4",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "2,345",
+      "title": "異環新手攻略 角色推薦與戰鬥技巧分享",
+      "user": "攻略達人"
+    },
+    {
+      "url": "https://www.twitch.tv/demo5",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "456",
+      "title": "深夜異環 輕鬆聊天台 一起掛寶",
+      "user": "NightOwl"
+    },
+    {
+      "url": "https://www.twitch.tv/demo6",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "3,210",
+      "title": "異環掉寶直播 邊看邊拿獎勵超划算",
+      "user": "GamerTW"
+    },
+    {
+      "url": "https://www.twitch.tv/demo7",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "789",
+      "title": "公測首日全職業體驗 薄荷超可愛",
+      "user": "MintLover"
+    },
+    {
+      "url": "https://www.twitch.tv/demo8",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "1,567",
+      "title": "海特洛市探索直播 都市開放世界RPG",
+      "user": "CityExplorer"
+    },
+    {
+      "url": "https://www.twitch.tv/demo9",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "234",
+      "title": "異環賽車模式挑戰 超自然都市飆速",
+      "user": "SpeedRunner"
+    },
+    {
+      "url": "https://www.twitch.tv/demo10",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "4,567",
+      "title": "異環角色養成攻略 新手必看懶人包",
+      "user": "ProGamer"
+    },
+    {
+      "url": "https://www.twitch.tv/demo11",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "678",
+      "title": "掛台掉寶 異環實況觀賞派對進行中",
+      "user": "DropHunter"
+    },
+    {
+      "url": "https://www.twitch.tv/demo12",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "345",
+      "title": "異環深夜雜談 聊聊公測心得與感想",
+      "user": "NightTalker"
+    },
+    {
+      "url": "https://www.twitch.tv/demo13",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "1,890",
+      "title": "異環PVP對戰直播 超自然能力全開",
+      "user": "BattleMaster"
+    },
+    {
+      "url": "https://www.twitch.tv/demo14",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "567",
+      "title": "和觀眾一起玩異環 邊玩邊聊",
+      "user": "FunStreamer"
+    },
+    {
+      "url": "https://www.twitch.tv/demo15",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "2,100",
+      "title": "異環全劇情攻略 主線解說直播",
+      "user": "StoryTeller"
+    }
+  ],
+  "other": [
+    {
+      "url": "https://www.twitch.tv/global1",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "12,345",
+      "title": "NTE Open Beta - Exploring Hetro City!",
+      "user": "GlobalGamer"
+    },
+    {
+      "url": "https://www.twitch.tv/global2",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "8,901",
+      "title": "Neverness to Everness First Look Gameplay",
+      "user": "RPGMaster"
+    },
+    {
+      "url": "https://www.twitch.tv/global3",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "5,678",
+      "title": "NTE Drop Event - Watch and Earn Rewards",
+      "user": "DropFarmer"
+    },
+    {
+      "url": "https://www.twitch.tv/global4",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "3,456",
+      "title": "NTE PVP Arena Ranked Climbing",
+      "user": "PVPKing"
+    },
+    {
+      "url": "https://www.twitch.tv/global5",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "2,345",
+      "title": "Chill NTE Stream - Open World Exploration",
+      "user": "ChillVibes"
+    },
+    {
+      "url": "https://www.twitch.tv/global6",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "1,876",
+      "title": "NTE Beta Gameplay - Character Build Guide",
+      "user": "BuildMaster"
+    },
+    {
+      "url": "https://www.twitch.tv/global7",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "3,102",
+      "title": "Neverness to Everness - Boss Fight Highlights",
+      "user": "BossHunter"
+    },
+    {
+      "url": "https://www.twitch.tv/global8",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "987",
+      "title": "NTE Open World Free Roam Stream",
+      "user": "ExplorerGG"
+    },
+    {
+      "url": "https://www.twitch.tv/global9",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "4,210",
+      "title": "NTE Drop Farming - Watch & Earn Rewards",
+      "user": "RewardHunter"
+    },
+    {
+      "url": "https://www.twitch.tv/global10",
+      "cover": "260819/images/streams/live_demo.webp",
+      "viewers": "1,543",
+      "title": "Late Night NTE Stream - Relaxed Gameplay",
+      "user": "NightGamer"
+    }
+  ]
+}
