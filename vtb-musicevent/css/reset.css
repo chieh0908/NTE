@@ -1,0 +1,23 @@
+body{ position: relative; -webkit-text-size-adjust: 100%; font-family: "Microsoft YaHei", Arial, sans-serif; font-size: .16rem; overflow-x: hidden;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, span, a { margin: 0; padding: 0; vertical-align: baseline;}
+ul, ol { list-style: none;}
+a { text-decoration: none; color: inherit; cursor: pointer; outline: none;}
+a:hover{ text-decoration:none;}
+img { border: 0; object-fit: cover;}
+video{ object-fit: cover; }
+table { border-collapse: collapse;}
+area{ outline:none; }
+input, textarea, select{appearance: none; -webkit-appearance: none; outline: none; resize: none; border-radius: 0;}
+input::-ms-clear{ display:none;}
+input[type="text"], input[type="password"] { -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+button { border: none; background: none; cursor: pointer; font-size: inherit;}
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0;}
+h1.wm-public{height:0; line-height:0; font-size:0;}
+.cf:after {content:"";display:block;height:0;clear:both;} 
+.cf {zoom:1;}
+.fl{ float: left; }
+.fr{ float: right; }
+.rel{ position: relative;}
+.abs{ position: absolute;}
+.auto{left: 50%; transform:translate(-50%,0);}
+.scrollY{ overflow-x: hidden; overflow-y: auto;}

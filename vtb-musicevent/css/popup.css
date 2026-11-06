@@ -1,0 +1,2228 @@
+.modal {
+  font-size: initial;
+}
+
+#eventAlertModal .modal-body {
+  margin: 0 auto;
+  width: 6rem;
+  height: 5.34rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont_alert.png)
+    no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-radius: 0.28rem;
+}
+#eventAlertModal .modal-body p {
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
+}
+
+/* otherPlatform */
+.otherPlatform {
+  display: flex;
+}
+.otherPlatform a {
+  position: relative;
+  margin: 0 0.09rem;
+  width: 0.66rem;
+  height: 0.66rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/otherPlatform.png)
+    no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+}
+.otherPlatform .platform_twitter {
+  background-position-x: 0;
+}
+.otherPlatform .platform_facebook {
+  background-position-x: -0.84rem;
+}
+.otherPlatform .platform_youtube {
+  background-position-x: -1.68rem;
+}
+.otherPlatform .platform_discord {
+  background-position-x: -2.52rem;
+}
+.otherPlatform .platform_reddit {
+  background-position-x: -3.37rem;
+}
+.otherPlatform .platform_ins {
+  background-position-x: -4.2rem;
+}
+.otherPlatform .platform_tiktok {
+  background-position-x: -5.04rem;
+}
+.otherPlatform .platform_line {
+  background-position-x: -5.88rem;
+}
+.otherPlatform .platform_naver {
+  background-position-x: -6.72rem;
+}
+.otherPlatform .platform_talk {
+  background-position-x: -7.56rem;
+}
+.otherPlatform .platform_ps {
+  background-position-x: -5.04rem;
+}
+.otherPlatform a:hover {
+  background-position-y: -0.66rem;
+}
+.otherPlatform .code {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+.otherPlatform a:hover .code {
+  display: block;
+}
+.otherPlatform .code div {
+  margin-bottom: 0.1rem;
+  border-radius: 0.05rem;
+  padding: 0.1rem;
+  background: #fff;
+}
+.otherPlatform .code img {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* 彈窗 */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.regressmodal .pop {
+  display: block;
+}
+.popup .popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+.popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 9.19rem;
+  height: 8.24rem; */
+  width: 15rem;
+  aspect-ratio: 1730 / 871;
+}
+#popRule .pop-bg,
+#popLotteryGet .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 9.19rem;
+  height: 8.24rem; */
+  width: 15rem;
+  aspect-ratio: 1730 / 871;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_bg.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popup .close {
+  top: 0.3rem;
+  right: 0.3rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  aspect-ratio: 82 / 166;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_close_btn.webp)
+    no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+}
+.popup .close:hover {
+  background-position: bottom;
+}
+.popup .close:not(:disabled):not(.disabled):focus,
+.popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+.popup p {
+  margin-bottom: 0;
+}
+.popup_outer {
+  min-height: auto;
+}
+.popBtns {
+  display: flex;
+  width: 100%;
+  height: 0.69rem;
+  margin-top: 0.38rem;
+  justify-content: center;
+}
+.popBtns button,
+.popBtns a {
+  width: 2.78rem;
+  height: 0.69rem;
+  margin: 0 0.2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+.popBtns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+button.btn-msg-confirm {
+  margin-top: 1rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(../images/pop/btn_confirm_job2.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+button.btn-msg-confirm:hover {
+  background-position: center bottom;
+}
+button.btn_popup_linkaccount {
+  margin-top: 1rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(../images/pop/btn_popup_linkaccount.webp) no-repeat center top;
+  background-size: 100% 200%;
+}
+button.btn_popup_linkaccount:hover {
+  background-position: center bottom;
+}
+
+.popBtns .shareInviteLinkBtn,
+.popBtns .btn-pop-invite {
+  margin-top: 0.15rem;
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: 0.89rem;
+  background: url(../images/pop/btn_share.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.downloadSharePicBtn {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/download_share_pic_btn.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-send-data {
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: 0.89rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/btn_submit.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .btn-LotteryGet,
+.inviteLogList .btn-LotteryGet {
+  margin-top: 0.15rem;
+  aspect-ratio: 384/105;
+  width: 3.25rem;
+  height: 0.89rem;
+  background: url(../images/pop/btn_getreward.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.inviteLogList .btn-LotteryGet {
+  width: 2.8rem;
+  height: 0.77rem;
+}
+.popBtns .btn-popLoginBtn {
+  margin-top: 0.15rem;
+  height: 0.95rem;
+  background: url(../images/pop/btn_login.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns .shareInviteLinkBtn:hover,
+.popBtns .btn-pop-invite:hover,
+.popBtns .btn-send-data:hover,
+.popBtns .btn-LotteryGet:hover,
+.popBtns .btn-popLoginBtn:hover {
+  background-position: center bottom;
+}
+
+/* 彈窗：活動規則 */
+.pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_bg_sm.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  aspect-ratio: 1091/875;
+}
+.popRuleTit {
+  display: block;
+  width: 2.8rem;
+  height: 1rem;
+  margin: 0.35rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_rules_title.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  aspect-ratio: 291/64;
+}
+.rule-scroll {
+  width: 13.7rem;
+  height: 4.78rem;
+  margin: 0.15rem auto 0;
+  padding: 0 0.65rem;
+}
+.cus-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.cus-scroll::-webkit-scrollbar {
+  width: 0.14rem;
+  background-color: #202020;
+  border-radius: 0.07rem;
+}
+.cus-scroll::-webkit-scrollbar-thumb {
+  width: 0.14rem;
+  background-color: #797979;
+  border-radius: 0.07rem;
+}
+.rule-scroll p,
+.rule-scroll p a {
+  margin-bottom: 0.2rem;
+  font-size: 0.23rem;
+  line-height: 0.4rem;
+  color: #000000;
+}
+
+.notLog {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  line-height: 0.6rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.inviteLogList {
+  width: 13.8rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  padding-top: 0.15rem;
+  color: #d5d5d5;
+}
+.inviteLogList_item {
+  height: 2.5rem;
+}
+.inviteLogList_item p {
+  margin-bottom: 0;
+  line-height: 0.6rem;
+  color: white;
+  font-weight: bold;
+  font-size: 0.35rem;
+}
+.inviteLogList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inviteLogList .tr p {
+  width: 50%;
+  text-align: center;
+  line-height: 1.3;
+  word-break: break-all;
+}
+
+.inviteLogList .thead {
+  height: 0.76rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  line-height: 0.76rem;
+}
+.inviteLogList .tbody {
+  width: 7.26rem;
+  height: 1.74rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+}
+.inviteLogList .tbody .tr {
+  margin-bottom: 0.1rem;
+  padding: 0.05rem 0.1rem;
+  height: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.AwardNoneList {
+  width: 7.1rem;
+  margin: 0 auto;
+  padding-top: 0.15rem;
+  color: #d5d5d5;
+}
+.AwardNoneList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AwardNoneList .tr p {
+  width: 50%;
+  text-align: center;
+}
+.AwardNoneList .thead {
+  height: 0.76rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  line-height: 0.76rem;
+}
+.AwardNoneList .tbody {
+  width: 7.26rem;
+  height: 1.74rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+}
+.AwardNoneList .tbody .tr {
+  margin-bottom: 0.18rem;
+}
+
+.popBtnsTip {
+  width: 100%;
+  text-align: center;
+  font-size: 0.26rem;
+  line-height: 0.4rem;
+  color: #ff63b0;
+  margin-bottom: 0 !important;
+}
+/* 通用彈窗  */
+#popMsg .pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/pop/pop_bg_sm.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  aspect-ratio: 742/498;
+  width: 10rem;
+}
+#popMsg .close {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/pop/pop_close_btn.webp)
+    no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 40 / 39;
+  width: 0.6rem;
+  height: 0.6rem;
+  top: 0.1rem;
+  right: 0.1rem;
+}
+#popMsg .close:hover {
+  filter: brightness(1.2);
+}
+#popMsg .popMsgCont {
+  display: flex;
+  width: 8rem;
+  height: 4.9rem;
+  margin: 1.1rem auto 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 0.72rem;
+  color: #1b1b1b;
+}
+#popMsg .popMsgCont p {
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word; /* 確保過長字串會自動斷行 */
+  margin: 0;
+  color: #ff5a90;
+  font-size: 0.4rem;
+}
+#popMsg .popBtnsTip {
+  color: #404040;
+  margin-top: 0.1rem;
+  font-size: 0.3rem;
+}
+
+/* 彈窗：獎勵(無中獎紀錄) */
+.popAwardNoneTit {
+  width: 5.44rem;
+  height: 0.85rem;
+  margin: 1.88rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop_package_tit.png)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popAwardNoneCont {
+  height: 2.66rem;
+}
+#popAwardNone .popBtns {
+  margin-top: 0;
+}
+
+/* 彈窗：獎勵背包 */
+.popAwardTit {
+  width: 3.2rem;
+  height: 0.8rem;
+  margin: 0.45rem auto 0;
+  background: url(../images/pop/pop_award_title.webp) no-repeat;
+  background-size: 100% auto;
+}
+.popAwardCont {
+  height: 3.2rem;
+  /* height: auto; */
+}
+
+.notRewards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+}
+.state-not-login {
+  margin: 0 auto;
+  align-self: center;
+  width: 7rem;
+  height: 0.6rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_not_login_text.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+.state-no-reward {
+  margin: 0 auto;
+  align-self: center;
+  width: 7rem;
+  height: 0.6rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_not_reward_text.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+.state-submit-success {
+  margin: 0 auto;
+  align-self: center;
+  width: 4rem;
+  height: 0.8rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_submit_success.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+.state-receive {
+  margin: 0 auto;
+  align-self: center;
+  width: 7rem;
+  height: 1.2rem;
+  background: url(../images/pop/pop_yy_linkaccount_tt.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-bag-limit {
+  margin: 0 auto;
+  align-self: center;
+  width: 7.2rem;
+  height: 1.25rem;
+  background: url(../images/pop/pop_yy_backpack_tt.webp) no-repeat;
+  background-size: 100% auto;
+}
+.state-receive2 {
+  margin: 0 auto;
+  align-self: center;
+  width: 6rem;
+  height: 2.3rem;
+  background: url(../images/pop/pop_yy_linkaccount_tt.webp) no-repeat;
+  background-size: 100% auto;
+}
+.popBtns_receive2 {
+  display: flex;
+  width: 100%;
+  height: 0.69rem;
+  margin-top: 0;
+  justify-content: center;
+}
+.rewardsList {
+  width: 5.9rem;
+  height: 1.9rem;
+  margin: 0.15rem 0 0 1.88rem;
+}
+.rewardsItem {
+  display: flex;
+  width: 5.38rem;
+  height: 0.62rem;
+  margin: 0.08rem 0;
+  justify-content: space-between;
+  align-items: center;
+  background: #ededed;
+  border: 0.03rem solid #585858;
+  border-radius: 0.31rem;
+}
+.rewardsItem p {
+  margin-left: 0.15rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  color: #3f3f3f;
+}
+.rewardsItem button {
+  margin-right: 0.1rem;
+  width: 2.04rem;
+  height: 0.44rem;
+  border-radius: 0.31rem;
+  background: #70e0f0;
+  font-weight: bold;
+  font-size: 0.24rem;
+  color: #262626;
+}
+.rewardsItem button.void {
+  background: #868686;
+  cursor: default;
+}
+
+/* 彈窗：中獎（實物 | 測試資格） */
+.pop-bg3 {
+  background: url(https://rests-nte.iwplay.com.tw/events/urban-missions/images/pop/pop-bg2.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.pop-kt-head {
+  top: 0.19rem;
+  height: 1.97rem;
+}
+.pop-kt-title {
+  height: 0.5rem;
+}
+.popLotteryCont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 5.3rem;
+}
+.popLotteryCont .content {
+  display: flex;
+  width: 7.9rem;
+  height: 2.66rem;
+  margin: 2.65rem auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.popLotteryCont h3 {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+.popLotteryCont .des {
+  line-height: 0.52rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  color: #b7b7b7;
+}
+.popLotteryCont .prizeName,
+.popAward .prizeName,
+.popLotteryWinning h3 {
+  color: #ff3b82;
+}
+.popLotteryWinning .des {
+  width: 65%;
+  margin: 0 auto;
+}
+
+#popLottery .popBtns {
+  margin-top: 0;
+}
+
+/* 彈窗：恭喜獲得 */
+#popGetAward .pop-bg-sm {
+  width: 10rem;
+  aspect-ratio: 1091 / 875;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/lottery/pop_bg_sm.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popGetAward .popAwardTit {
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/lottery/pop_award_title2.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+#popGetAward .popAwardCont {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 雪碧圖樣式 */
+#popGetAward .popAwardCont .pop-award-item {
+  width: 2.2rem;
+  aspect-ratio: 228/236;
+  background-size: 100% 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+#popGetAward .popAwardCont p {
+  margin: 0.05rem auto 0.2rem;
+  color: #1b1b1b;
+  font-size: 0.26rem;
+  font-weight: bold;
+}
+#popGetAward .btn-awardBag {
+  width: 3.2rem;
+  height: 0.89rem;
+  aspect-ratio: 384/106;
+  border: none;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/btn_lottery_gift.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+  color: transparent;
+  cursor: pointer;
+}
+#popGetAward .btn-awardBag:hover {
+  background-position: center bottom;
+}
+
+/* 彈窗：中獎（填寫資料） */
+#popLoytterGet .lotteryForm {
+  background-color: #33ffff00;
+}
+.popInfoTit {
+  width: 2.8rem;
+  height: 1rem;
+  margin: 0.35rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_address_title.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popLotteryGetCont h3 {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+.popLotteryGetCont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5.8rem;
+}
+.popLotteryGetCont .lotteryForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.15rem;
+  width: 8rem;
+  margin-bottom: 0.1rem;
+}
+#popLotteryGet .lotteryForm .form-bg {
+  background-color: #ffffff;
+  width: 100%;
+  height: 0.65rem;
+  margin-bottom: 0.15rem;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 0.05rem #646464;
+}
+#popLotteryGet .form-select {
+  padding: 0 0.2rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0% auto;
+  height: auto;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+#popLotteryGet #lottery_address_number {
+  width: 1.485rem;
+  flex: 0 0 auto;
+  padding: 0 0.1rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0;
+  height: auto;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+/* #popLotteryGet .form-select option {
+  background-color: #1d1d1d;
+} */
+#popLotteryGet .form-control {
+  padding: 0;
+  width: 100%;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 0% auto;
+  height: auto;
+  transition: 0.5s;
+  vertical-align: middle;
+  text-align: left;
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 6%;
+}
+#popLotteryGet #lottery_address {
+  flex: 1;
+}
+
+.lotteryForm .column {
+  display: flex;
+  align-items: center; /* 垂直置中 */
+  width: 100%;
+}
+
+/* 標題 */
+.lotteryForm .column > span {
+  color: #7177c7;
+  font-size: 0.25rem;
+  flex: 0 0 16%;
+  max-width: 20%;
+  margin-bottom: 0.15rem;
+}
+
+/* 表單區 */
+.lotteryForm .column .form-bg {
+  flex: 0 0 80%;
+  max-width: 80%;
+
+  display: flex; /* 讓裡面的 select + input 可以並排 */
+  gap: 8px; /* 視覺間距（可調） */
+}
+
+#lottery_name {
+  background-color: #63edec;
+  width: 100%;
+  height: 0.55rem;
+}
+#lottery_phone_code {
+  padding: 0 0.2rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0% auto;
+  height: auto;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+/* #lottery_phone_code option {
+  background-color: #1d1d1d;
+} */
+#lottery_phone_number {
+  padding: 0;
+  width: auto;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 0% auto;
+  height: auto;
+  transition: 0.5s;
+  vertical-align: middle;
+  /* text-align: left !important; */
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 4%;
+}
+
+/* 彈窗：提示訊息 */
+.popMsgCont {
+  display: flex;
+  width: 8rem;
+  height: 4.9rem;
+  margin: 1.8rem auto 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 0.72rem;
+  color: #1b1b1b;
+}
+.popLotteryAnimationCont {
+  display: flex;
+  width: 8rem;
+  height: 4.9rem;
+  margin: 1.8rem auto 0;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 0.72rem;
+  color: #eae9e9;
+  flex-direction: column;
+}
+
+/* 彈窗：抽獎動畫內容 */
+.popLotteryAnimationCont .loading_ani {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.popLotteryAnimationCont .loading_ani .character {
+  width: 3rem;
+}
+.popLotteryAnimationCont .loading_ani .loading {
+  width: 1.5rem;
+  filter: hue-rotate(318deg) brightness(3) blur(0.5px);
+}
+
+/* --- 自定義彈窗 (職業選擇) --- */
+/* --- 職業選擇彈窗 (共用彈窗樣式) --- */
+.pop-bg1 {
+  background: url(../images/pop/pop-bg1.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+/* 彈窗：提示訊息 */
+.popContent {
+  margin: 0 auto;
+}
+
+.popContent p {
+  margin: 3.5rem auto 1rem;
+  text-align: center;
+}
+
+.popContent p img {
+  width: 50%;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.auto {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* 彈出?*/
+.modal {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+
+.modal-dialog {
+  background: transparent;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
+}
+
+.popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+
+.popCont1 {
+  height: 9.8rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont1_ZRRPZRBDRPTJKTTJ.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.popCont2 {
+  height: 8rem;
+  background: url(/images/pop/popCont2_v2.png) no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+.popCont3 {
+  height: 11rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont3.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+}
+
+.popClose {
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popClose.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
+.formRow {
+  width: 5.86rem;
+  height: 0.55rem;
+  margin-bottom: 0.2rem;
+  border-radius: 0.275rem;
+  background: #1d1d1d;
+  box-sizing: border-box;
+  padding: 0 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formRow input,
+.formRow select {
+  height: inherit;
+  font-size: 0.24rem;
+  color: #828282;
+  border: none;
+  background: none;
+}
+
+.bkSubmit {
+  top: 6.2rem;
+  width: 3.5rem;
+  height: 0.62rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/bookedSubmit.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 2;
+}
+
+.bkSubmit:hover {
+  background-position: 0 -0.62rem;
+}
+
+.booked_button_bg {
+  top: 4.95rem;
+  width: 98%;
+  height: 1.7rem;
+  /* background-color: rgba(0, 255, 255, 0.39); */
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/building.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
+.Change_acc_hint {
+  top: 7.15rem;
+  color: #fff;
+  font-size: 0.25rem;
+  text-align: justify;
+}
+
+.Change_acc_box {
+  top: 7.5rem;
+  width: 5.8rem;
+  /* height: 1.2rem; */
+  background-color: rgba(0, 255, 255, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Change_acc_box .Change_acc_btn {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-size: 100% auto;
+  background-position: 0 -0.75rem;
+}
+
+.Change_acc_box .Change_acc_btn:hover {
+  /* background-position: 0 -0.75rem; */
+  cursor: pointer;
+}
+
+.google {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/google.svg)
+    no-repeat 0 0;
+}
+
+.ios {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/ios.svg) no-repeat 0
+    0;
+}
+
+.facebook {
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/facebook.svg)
+    no-repeat 0 0;
+}
+
+.qaSubmit {
+  top: 5.4rem;
+  width: 4rem;
+  height: 0.72rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/qaSubmit.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.qaSubmit:hover {
+  background-position: 0 -0.72rem;
+}
+
+/* ???? */
+.pop_yySuccess_tit {
+  top: 1.8rem;
+  width: 6.1rem;
+  height: 2rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/pop_yy_qa_success_tt.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.yy_otherPlatformTip {
+  top: 5.8rem;
+  width: 5.5rem;
+  height: 0.5rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/focus_head_tt.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+.yy_otherPlatform {
+  top: 6.5rem;
+}
+
+/* 隱私權 */
+
+.privacymodal .res_poptt {
+  width: 5rem;
+  margin: 0.6rem auto 0.3rem auto;
+}
+
+.privacymodal .res_poptt img {
+  width: 100%;
+}
+
+.privacymodal .list_con {
+  width: 116%;
+  margin-left: -8%;
+  height: 7rem;
+  overflow-y: auto;
+  padding-right: 0.05rem;
+
+  /* Webkit 滾�?條樣�?*/
+  &::-webkit-scrollbar {
+    width: 0.1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #d5d5d5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Firefox 滾�?條樣�?*/
+  scrollbar-width: thin;
+  scrollbar-color: #888 #d5d5d5;
+}
+
+.privacymodal .list_con ol {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  font-size: 0.18rem;
+  font-weight: 400;
+  padding-left: 0.24rem;
+  list-style: decimal;
+}
+
+.privacymodal .popup_close {
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
+  padding: 0.1rem 0.6rem;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+  width: auto;
+  font-size: 0.26rem;
+}
+
+/* ?�示彈�? */
+#eventAlert {
+  background-color: #00000075;
+}
+
+#eventAlert .modal-body {
+  height: 5.34rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont_alert.png)
+    no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-radius: 0.28rem;
+}
+
+#eventAlert .modal-body p {
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
+}
+
+/* ============================================================
+   #bookedmodal 新版 SDK 登入（px + aspect-ratio，源自 login_pop.css）
+   ============================================================ */
+
+/* --- Pass 0: foundation 修正 reset.css 的 body{font-size:.16rem} 塌陷 --- */
+html {
+  font-size: 16px;
+}
+.nte-pop.modal {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- 共用容器 & 工具 --- */
+.nte-pop .rel {
+  position: relative;
+}
+.nte-pop .abs {
+  position: absolute;
+}
+.nte-pop .auto {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --- 大容器 --- */
+.nte-pop .pop {
+  display: block;
+  position: relative;
+}
+.nte-pop .popCont {
+  width: 96%;
+  max-width: 570px;
+  margin: 0 auto;
+  position: relative;
+}
+.nte-pop .popCont1 {
+  width: 100%;
+  height: 735px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.nte-pop .popClose {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 25px;
+  height: 25px;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popClose.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+}
+.nte-pop.modal .modal-dialog {
+  width: 96%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nte-pop.modal .modal-content {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.nte-pop.modal .modal-body {
+  padding: 0;
+}
+.nte-pop.bookedmodal.modal .modal-dialog {
+  max-width: 500px;
+}
+
+/* 修正：.popCont 在 modal-body 內強制 relative 流 */
+.nte-pop.modal .modal-body .popCont {
+  position: relative !important;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+
+/* --- #bookedmodal（新版 SDK 登入） --- */
+#bookedmodal .popCont1 {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 760 / 1000;
+  background: url(https://res1-nte.iwplay.com.tw/images/sdk/popCont1_booked_sdk.webp)
+    no-repeat 0 0;
+  background-size: 100% 100%;
+  position: relative;
+}
+.nte-pop.bookedmodal .popClose {
+  top: 11px;
+  right: 11px;
+  width: 31px;
+  height: 31px;
+}
+#bookedmodal .demo-state-btns {
+  position: absolute;
+  top: 1.8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 99;
+}
+#bookedmodal .demo-state-btns .btn {
+  padding: 3px 8px;
+  font-size: 9px;
+  line-height: 1;
+  min-width: 0;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+#bookedmodal .pop_booked_tit {
+  position: absolute;
+  top: 13.9%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 7%;
+  aspect-ratio: 430 / 65;
+  background: url(https://res1-nte.iwplay.com.tw/images/sdk/pop_sdk_login_tt.png)
+    no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#bookedmodal .bookedForm {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 86%;
+  max-width: 451px;
+  height: 33%;
+  z-index: 50;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+#bookedmodal .form-bg {
+  width: 100%;
+  max-width: 387px;
+  height: 37px;
+  margin-bottom: 0;
+  border-radius: 19px;
+  background: #1d1d1d;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+}
+#bookedmodal .graphic_verification_code,
+#bookedmodal .phone_verification_code,
+#bookedmodal .phone_password {
+  width: 100%;
+  max-width: 387px;
+  height: 32px;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#bookedmodal .graphic_verification_code .captcha,
+#bookedmodal .phone_verification_code .smsCode {
+  width: 230px;
+  height: 37px;
+  font-size: 10px;
+  padding: 3px 11px;
+  border-radius: 32px;
+  border: 2px solid #141414;
+  background: #fff;
+}
+#bookedmodal .graphic_verification_code .img_code {
+  width: 146px;
+  height: 37px;
+}
+#bookedmodal .graphic_verification_code .img_code .img_code_pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  border: 2px solid #141414;
+}
+#bookedmodal .phone_verification_code .btn_get_code {
+  width: 146px;
+  height: auto;
+  aspect-ratio: 400 / 100;
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/btn_get_code.png);
+  background-size: 100% 200%;
+  background-position: 0 0;
+}
+#bookedmodal .phone_verification_code .btn_get_code:hover {
+  background-position: 0 100%;
+}
+#bookedmodal .phone_password .phone_password_input {
+  width: 100%;
+  height: 37px;
+  background: #fff;
+  font-size: 10px;
+  padding: 3px 11px;
+  border-radius: 32px;
+  border: 2px solid #141414;
+  box-sizing: border-box;
+}
+#bookedmodal .form-select {
+  padding: 0 11px;
+  width: 131px;
+  font-size: 12px;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 2px solid #c7c7c7;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  background-color: transparent;
+  background-image: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+#bookedmodal .form-select:focus {
+  color: #fff;
+  border-right: 2px solid #c7c7c7;
+  outline: none;
+  box-shadow: none;
+}
+#bookedmodal .form-select option {
+  background-color: #1d1d1d;
+  text-align: center;
+}
+#bookedmodal .form-control {
+  padding: 0 0 0 4%;
+  width: 60%;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+#bookedmodal .form-control::placeholder {
+  color: #828282;
+}
+#bookedmodal .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  color: #fff;
+  background-color: transparent;
+}
+#bookedmodal .privacy-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+#bookedmodal .form-check-input {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid #000;
+  appearance: none;
+  -webkit-appearance: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#bookedmodal .form-check-input:checked {
+  background-color: #fff;
+  border-color: #000;
+}
+#bookedmodal .form-check-input:checked[type="checkbox"] {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/check.svg);
+}
+#bookedmodal .form-check-input[type="checkbox"] {
+  border-radius: 0;
+}
+#bookedmodal .form-check-label {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 3cqw;
+  line-height: 17px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+#bookedmodal .button_box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 61%;
+  width: 86%;
+  max-width: 451px;
+  height: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+}
+#bookedmodal .button_box .row {
+  display: contents;
+}
+#bookedmodal .button_box .row .btn {
+  width: 66%;
+  max-width: 226px;
+  height: auto;
+  aspect-ratio: 504 / 77;
+  flex: none;
+  margin: 0;
+}
+#bookedmodal .button_box .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 200%;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+}
+#bookedmodal .button_box .btn:hover {
+  background-position: 0 100%;
+}
+#booked_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/booked_button.png);
+}
+#back_sms_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/back_sms_button.png);
+}
+#phoneNextBtn {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/phoneNextBtn.png);
+}
+#back_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/back_button.png);
+}
+#select_role_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/booked_button.png);
+}
+#back_role_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/back_button.png);
+}
+#bookedmodal .Change_acc_box {
+  position: absolute;
+  top: 82.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 381px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+}
+#bookedmodal .Change_acc_hint {
+  position: static;
+  color: #fff;
+  font-size: 17px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+}
+#bookedmodal #other_login > .Change_acc_box {
+  position: static;
+  width: 100%;
+  height: auto;
+  transform: none;
+  left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5%;
+}
+#bookedmodal .Change_acc_box .Change_acc_btn {
+  width: 20%;
+  max-width: 49px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-size: 100% auto;
+  background-position: 0 -49px;
+  cursor: pointer;
+}
+#bookedmodal .google {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/google.svg);
+}
+#bookedmodal .ios {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/ios.svg);
+}
+#bookedmodal .facebook {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/facebook.svg);
+}
+#bookedmodal .ps {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/ps5.png);
+}
+#bookedmodal #select_role {
+  position: absolute;
+  top: 24.6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 451px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+#bookedmodal #select_role > div:first-child {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #000;
+  font-size: 0.23rem;
+}
+#bookedmodal #select_role .bookedForm {
+  position: static;
+  transform: none;
+  left: auto;
+  margin: 0 auto;
+  height: auto;
+}
+#bookedmodal #select_role .form-bg {
+  padding: 0;
+}
+#bookedmodal #role_select {
+  width: 100%;
+  padding: 0 11px;
+  border-right: 0;
+  text-align: center;
+}
+
+/* 強制完美置中 (覆寫 Bootstrap 行為，PC 也置中) */
+#bookedmodal.modal {
+  overflow-y: hidden !important;
+}
+#bookedmodal .modal-dialog {
+  margin: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  transform-origin: center center !important;
+}
+#bookedmodal .modal-dialog::before,
+#bookedmodal .modal-dialog::after {
+  display: none !important;
+}
+
+/* 桌機版放大比例：針對 2K 螢幕 (螢幕寬度 >= 2560px) */
+@media screen and (min-width: 2560px) {
+  #bookedmodal .modal-dialog {
+    transform: translate(-50%, -50%) scale(1.4) !important;
+  }
+  @supports (zoom: 1.3) {
+    #bookedmodal .modal-dialog {
+      transform: translate(-50%, -50%) scale(1) !important;
+      zoom: 1.4 !important;
+    }
+  }
+}
+
+/* 桌機版放大比例：針對 4K 螢幕 (螢幕寬度 >= 3840px) */
+@media screen and (min-width: 3840px) {
+  #bookedmodal .modal-dialog {
+    transform: translate(-50%, -50%) scale(1.8) !important;
+  }
+  @supports (zoom: 1.8) {
+    #bookedmodal .modal-dialog {
+      transform: translate(-50%, -50%) scale(1) !important;
+      zoom: 1.8 !important;
+    }
+  }
+}
+
+/* ============================================================
+   彈窗：獎勵背包 #popAward_v1（PC 版）
+   ============================================================ */
+
+/* --- 獎勵標題 --- */
+.popAwardTit_v1 {
+  height: 0.6rem;
+  width: auto;
+  aspect-ratio: 292 / 65;
+  margin: 0.35rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_gift_title.webp)
+    no-repeat;
+  background-size: 100% 100%;
+}
+
+/* --- 獎勵內容區 --- */
+.popAwardCont_v1 {
+  height: 5.2rem;
+  overflow: hidden;
+}
+.popAwardCont_v1 .type-empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- 獎勵列表 --- */
+#popAward_v1 .inviteLogList {
+  width: 14rem;
+  margin: 0 auto;
+  padding-top: 0.65rem;
+  color: #1b1b1b;
+  background-color: #2ce06200;
+  display: block;
+}
+#popAward_v1 .inviteLogList .thead {
+  color: #7177c7;
+}
+#popAward_v1 .inviteLogList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#popAward_v1 .inviteLogList .tr p {
+  width: 50%;
+  text-align: center;
+  line-height: 3;
+  word-break: break-all;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(1) {
+  width: 43%;
+  box-sizing: border-box;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(2) {
+  width: 14%;
+}
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) {
+  border-left: 0.01rem dotted #898989;
+  border-right: 0.01rem dotted #898989;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(3),
+#popAward_v1 .inviteLogList .tr .serial-col {
+  width: 43%;
+}
+#popAward_v1 .inviteLogList .thead {
+  height: 0.7rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  line-height: 0.76rem;
+  padding-right: 0.29rem; /* 捲軸寬 0.14 + 間距 0.15，與 tbody 對齊 */
+}
+/* #popAward_v1 .inviteLogList .thead p:nth-child(3) {
+  padding-right: 1.5rem;
+} */
+#popAward_v1 .inviteLogList .tbody {
+  width: 14rem;
+  height: 3.7rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+  padding-right: 0.15rem;
+}
+#popAward_v1 .inviteLogList .tbody .tr {
+  border: 0.01rem solid #898989;
+  margin-bottom: 0.18rem;
+  padding: 0.08rem 0.1rem;
+  min-height: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+/* 時間欄：PC 版一行顯示 YYYY/MM/DD，隱藏 <br> */
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) {
+  white-space: nowrap;
+}
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) br {
+  display: none;
+}
+
+/* --- 無獎品提示 --- */
+#popAward_v1 .notRewards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+}
+
+/* --- 序號欄位 --- */
+#popAward_v1 .serial-col {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.1rem;
+  padding: 0 0.15rem;
+  box-sizing: border-box;
+}
+#popAward_v1 .serial-code {
+  font-size: 0.23rem;
+  color: #1b1b1b;
+  word-break: break-all;
+  text-align: left;
+  line-height: 1.2;
+  flex: 1;
+  margin-left: 3%;
+}
+#popAward_v1 .serial-copy-btn {
+  position: relative;
+  padding: 0.1rem 0.2rem;
+  font-size: 0.21rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ff53a3;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* 按鈕分隔線 */
+/* #popAward_v1 .serial-copy-btn::before {
+  content: "";
+  position: absolute;
+  left: -0.2rem;
+  top: -20%;
+  height: 150%; 
+  border-left: 0.01rem dotted #898989;
+} */
+#popAward_v1 .serial-get-btn {
+  position: relative;
+  padding: 0.1rem 0.2rem;
+  font-size: 0.21rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ff53a3;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* 按鈕分隔線 */
+/* #popAward_v1 .serial-get-btn::before {
+  content: "";
+  position: absolute;
+  left: -0.2rem; 
+  top: -20%;
+  height: 150%;
+  border-left: 0.01rem dotted #898989;
+} */
+#popAward_v1 .serial-copy-btn:hover,
+#popAward_v1 .serial-get-btn:hover {
+  background: #7177c7;
+}
+
+/* --- 獎勵平台按鈕列 --- */
+.popAwardPlatform_v1 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  margin: 0.15rem auto 0;
+  width: 74%;
+}
+.popAwardPlatform_v1 .btn {
+  height: 0.65rem;
+  width: auto;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.popAwardPlatform_v1 .btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- 獎勵列表高度鏈 --- */
+.popAwardCont_v1 .type-list {
+  height: 100%;
+}
+
+/* --- 獎勵平台標題 --- */
+.popAwardPlatform_tit_v1 {
+  width: 5.5rem;
+  height: 0.35rem;
+  margin: 0.35rem auto 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.popAwardPlatform_tit_v1.yy {
+  background-image: url(../images/pop_event/popAward/pop_popAwardPlatform_yy_tit.webp);
+}
+.popAwardPlatform_tit_v1.dl {
+  background-image: url(../images/pop_event/popAward/pop_popAwardPlatform_dl_tit.webp);
+}
+
+/* --- Demo 切換按鈕（暫時） --- */
+.popAwarddemo_btn_v1 {
+  position: absolute;
+  top: 0.15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.04rem 0.2rem;
+  font-size: 0.16rem;
+  color: #fff;
+  background: #dc3545;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  z-index: 99;
+}
+.popAwarddemo_btn_v1:hover {
+  background: #c82333;
+}
+
+/* --- 獎勵背景（PC 版專用） --- */
+#popAward_v1 .pop-bg1 {
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_bg.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  aspect-ratio: 1730 / 871;
+}
+
+/* --- 移除 Bootstrap .btn 的圓角 --- */
+#popAward_v1 .popAwardPlatform_v1 .btn {
+  border-radius: 0;
+}
+
+/* --- 獎勵平台按鈕圖片（用 #popAward_v1 提高 specificity 防止全域 .ios 等干擾） --- */
+#popAward_v1 .popAwardPlatform_v1.yy .btn.ps5 {
+  background-image: url(../images/store_ps5_yy.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.yy .btn.android {
+  background-image: url(../images/store_android_yy.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.yy .btn.ios {
+  background-image: url(../images/store_ios_yy.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.yy .btn.windows {
+  background-image: url(../images/store_windows_yy.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.yy .btn.googleplay {
+  background-image: url(../images/store_googleplay_yy.webp) !important;
+}
+
+#popAward_v1 .popAwardPlatform_v1.dl .btn.ps5 {
+  background-image: url(../images/store_ps5_dl.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.dl .btn.android {
+  background-image: url(../images/store_android_dl.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.dl .btn.ios {
+  background-image: url(../images/store_ios_dl.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.dl .btn.windows {
+  background-image: url(../images/store_windows_dl.webp) !important;
+}
+#popAward_v1 .popAwardPlatform_v1.dl .btn.googleplay {
+  background-image: url(../images/store_googleplay_dl.webp) !important;
+}
+
+/* --- 各按鈕 aspect-ratio --- */
+.popAwardPlatform_v1 .btn.ps5 {
+  aspect-ratio: 293 / 88;
+}
+.popAwardPlatform_v1 .btn.android {
+  aspect-ratio: 305 / 90;
+}
+.popAwardPlatform_v1 .btn.ios {
+  aspect-ratio: 244 / 90;
+}
+.popAwardPlatform_v1 .btn.windows {
+  aspect-ratio: 301 / 89;
+}
+.popAwardPlatform_v1 .btn.googleplay {
+  aspect-ratio: 301 / 89;
+}
+
+/* --- 無獎項圖片 --- */
+.popAwardNone_v1 {
+  width: 8rem;
+  aspect-ratio: 792 / 144;
+  background: url(https://rests-nte.iwplay.com.tw/events/dreamwalk/images/pop/pop_award_none.webp)
+    no-repeat center center;
+  background-size: 100% auto;
+}
+
+/* ============================================================
+   彈窗：確認投票 #popConfirmVote
+   ============================================================ */
+#popConfirmVote .pop-bg-sm {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/pop/pop_bg_sm.webp)
+    no-repeat center top;
+  background-size: 100% auto;
+  aspect-ratio: 742/498;
+  width: 10rem;
+}
+#popConfirmVote .close {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/pop/pop_close_btn.webp)
+    no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 40/39;
+  width: 0.6rem;
+  height: 0.6rem;
+  top: 0.1rem;
+  right: 0.1rem;
+}
+#popConfirmVote .close:hover {
+  filter: brightness(1.2);
+}
+#popConfirmVote .popMsgCont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+  margin: 0;
+}
+#popConfirmVote .popMsgCont p {
+  font-size: 0.38rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+  text-align: center;
+  font-weight: bold;
+  /* margin-bottom: 0.5rem; */
+}
+#popConfirmVote .popConfirmBtns {
+  margin-top: 0.9rem;
+}
+#popConfirmVote .btn_submit_confirm {
+  width: 3.5rem;
+  height: auto;
+  aspect-ratio: 245 / 61;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/pop/submit_btn.webp)
+    no-repeat center top;
+  background-size: 100% 100%; /* 預設為有 hover 兩態的雪碧圖 */
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+#popConfirmVote .btn_submit_confirm:hover {
+  filter: brightness(1.2);
+}
+
+/* ============================================================
+   修正：解決�??�端滾�??��??�覽?�工?��??��?導致彈�?定�??�移?��??��?滿�??��?題�?   ============================================================ */
+.modal .popCont {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: auto !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.modal .popup {
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  pointer-events: none !important;
+}
+
+.modal .popup .pop-bg {
+  pointer-events: auto !important;
+}
+
+.modal.fade .modal-dialog {
+  transform: none !important;
+  -webkit-transform: none !important;
+}
+
+/* ============================================================
+   ?��??�隱私�?彈�??��?跑�?修正：強?�恢復�?始�?絕�?定�?，抵�?.modal .popCont
+   ============================================================ */
+.privacymodal .popCont {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 7.6rem !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.privacymodal.fade .modal-dialog {
+  transform: none !important;
+  -webkit-transform: none !important;
+}
+
+/* ============================================================
+   修復：�?機瀏覽?�工?��?縮放?��??��?窗�?度�??�景不滿?��?�?   說�?：Bootstrap ?�設使用 100% ??100vh，在工具?�縮?��??��??��??��??�正?�可視�?度�?         ?�裡強制使用 100dvh (Dynamic Viewport Height) 讓�??��?填滿??   ============================================================ */
+.modal,
+.modal-backdrop {
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 100vh !important;
+  height: -webkit-fill-available !important;
+  height: 100dvh !important;
+}
+
+/* ============================================================
+   終極修復：覆蓋 Bootstrap 預設的 modal-open 背景鎖死。
+   ============================================================ */
+body,
+body.modal-open {
+  overflow: visible !important;
+  padding-right: 0 !important;
+}
+
+/* ============================================================
+   注意事項彈窗專屬覆蓋 (避免與其他彈窗樣式衝突)
+   ============================================================ */
+#popRule .pop-rule-bg {
+  background-size: 100% auto;
+  aspect-ratio: 1095 / 649;
+  width: 11rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/pop/pop_bg_lg.webp)
+    no-repeat center top;
+  background-size: 100% auto;
+}
+
+#popRule .popRuleTit {
+  display: block;
+  width: 3.5rem;
+  height: auto;
+  margin: 0.6rem auto 0;
+  background: none; /* 移除原本綁定的背景圖 */
+}
+
+#popRule .popRuleTit img {
+  width: 100%;
+  display: block;
+}
+
+#popRule .rule-scroll {
+  width: 9rem;
+  height: 4rem;
+  margin: 0.3rem auto 0;
+  padding: 0 0.4rem 0 0;
+}
+
+#popRule .rule-scroll ol {
+  padding-left: 0.4rem;
+  margin: 0;
+}
+
+#popRule .rule-scroll li {
+  color: #000;
+  font-size: 0.26rem;
+  line-height: 1.8;
+  margin-bottom: 0.1rem;
+  list-style: decimal;
+}
+#popRule .close {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/pop/pop_close_btn.webp)
+    no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 40 / 39;
+  width: 0.6rem;
+  height: 0.6rem;
+  top: 0.6rem;
+  right: 0.4rem;
+}

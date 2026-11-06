@@ -1,0 +1,979 @@
+body {
+  background-color: #212121;
+}
+
+/* 人氣投票區tt切換 */
+/* 當 body 被判定為手機時，隱藏桌機圖 */
+body.is-mobile .img-pc {
+  display: none !important;
+}
+/* 當 body 被判定為桌機時，隱藏手機圖 */
+body.is-pc .img-m {
+  display: none !important;
+}
+
+.wrap {
+  display: none;
+  width: 100%;
+  max-width: 25.6rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.wrap p,
+.wrap ul,
+.wrap li {
+  margin-bottom: 0;
+}
+.wrap a {
+  font-size: initial;
+  line-height: 0;
+}
+
+/* ========================================================================
+ * kv區塊
+ * ======================================================================== */
+.header {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/kv_bg.webp)
+    no-repeat center top;
+  background-size: 100% 100%;
+  aspect-ratio: 2560/1274;
+  width: 100%;
+}
+.header .header_tt {
+  position: absolute;
+  top: 65.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 47%;
+  /* animation: fadeIn 2s ease-in-out; */
+}
+.header .header_tt img {
+  width: 100%;
+  animation: bounceIn 1s ease-in-out;
+}
+
+.logo {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.6rem;
+  width: 2.19rem;
+  aspect-ratio: 260/183;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/logo.png)
+    no-repeat 0 0;
+  background-size: contain;
+  display: block;
+  z-index: 10;
+}
+
+.arrow {
+  bottom: 0.5rem;
+  left: 50%;
+  margin-left: -0.22rem;
+  width: 0.44rem;
+  height: 0.27rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/arrow.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  animation: arrowUpDown 0.5s ease-in-out infinite alternate;
+  filter: brightness(0) invert(1);
+}
+@keyframes arrowUpDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.kv_btns {
+  bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  width: 100%;
+  /* animation: fadeInUpCentered 1.2s ease-in-out; */
+}
+.btn_kv {
+  width: 3.68rem;
+  height: auto;
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  aspect-ratio: 342/106;
+}
+.btn_kv.go_rules {
+  background-position: top;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/go_rule_btn.webp);
+  animation: bounceInUp 1s ease-in-out both;
+}
+.btn_kv.go_rules:hover {
+  background-position: bottom;
+}
+.btn_kv.go_vote {
+  background-position: top;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/go_vote_btn.webp);
+  animation: bounceInUp 1s ease-in-out both;
+  animation-delay: 0.3s;
+}
+.btn_kv.go_vote:hover {
+  background-position: bottom;
+}
+
+/* ========================================================================
+ * 官方影片&曲目表 區塊
+ * ======================================================================== */
+.event_schedule {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/schedule/schedule_bg.webp)
+    no-repeat center top;
+  background-size: 100% 100%;
+  aspect-ratio: 2560/1541;
+  padding-top: 2rem;
+  width: 100%;
+}
+.schedule_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 22.8rem;
+  margin: 0 auto;
+  margin-right: 1.1rem;
+}
+.schedule_left {
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* margin-left: 0.5rem; */
+}
+.schedule_time_titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.schedule_time_titles .title_img {
+  width: 29%;
+  max-width: 100%;
+  display: block;
+}
+.schedule_time_titles .time_img {
+  width: 77%;
+  max-width: 100%;
+}
+.schedule_video_banner img {
+  width: 100%;
+  display: block;
+}
+.schedule_right {
+  width: 37%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  /* animation: bounceInRight 1s ease-in-out; */
+}
+.tracklist_title img {
+  width: 52%;
+  max-width: 100%;
+  display: block;
+}
+.tracklist_list {
+  max-height: 9.7rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.17rem;
+  padding-right: 0.3rem;
+}
+.tracklist_list img {
+  width: 100%;
+}
+/* --- 節目表狀態切換邏輯 --- */
+
+/* 預設狀態：沒有 .soon 時，隱藏 soon-state，顯示 normal-state */
+.event_schedule .soon-state {
+  display: none;
+}
+.event_schedule .normal-state {
+  display: flex;
+}
+
+/* 當外層 .event_schedule 加上 .soon 之後：顯示 soon-state，隱藏 normal-state */
+.event_schedule.soon .soon-state {
+  display: flex;
+}
+.event_schedule.soon .normal-state {
+  display: none;
+}
+
+/* ========================================================================
+ * 活動辦法 & 獎品一覽 區塊
+ * ======================================================================== */
+.event_rules {
+  padding-top: 2.4rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/rule/rule_bg.webp)
+    no-repeat center top;
+  background-size: cover;
+  aspect-ratio: 2560 / 1095;
+  margin-top: -1rem;
+  width: 100%;
+  padding-left: 0.4rem;
+}
+.rule_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1.8rem;
+  width: 22.8rem;
+  margin: 0 auto;
+}
+.rule_left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.rule_tt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rule_tt > img {
+  width: 43%;
+  max-width: 100%;
+  display: block;
+}
+.rule_tt button {
+  width: 25%; /* 注意事項按鈕寬度 */
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+.rule_tt button img {
+  width: 100%;
+  display: block;
+}
+.rule_tt button:hover img {
+  filter: brightness(1.2);
+}
+.rule_desc {
+  font-size: 0.38rem;
+  font-weight: bold;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+  margin-left: 1rem;
+}
+.rule_info_box {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.3rem; */
+  margin-left: 1rem;
+}
+.info_row {
+  display: flex;
+  flex-direction: column;
+}
+.info_title {
+  background-color: #ff5a90;
+  color: #fff;
+  text-align: center;
+  padding: 0.05rem 0;
+  font-size: 0.33rem;
+  font-weight: bold;
+}
+.info_content {
+  background-color: #313131;
+  color: #fff;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.33rem;
+  line-height: 1.2;
+}
+.info_decoration {
+  height: 4px;
+  background-color: #18d7de;
+  width: 100%;
+}
+.rule_right {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.rule_time_box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.rule_time_tt img {
+  width: 37%;
+  max-width: 100%;
+  display: block;
+}
+.rule_time_desc {
+  font-size: 0.36rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.6;
+}
+.rule_award_box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem; /* 控制獎品標題與列表的間距 */
+}
+.award_tt img {
+  width: 37%;
+  max-width: 100%;
+  display: block;
+}
+.award_list {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 0.4rem;
+}
+.award_item {
+  width: 26%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================================================
+ * 人氣投票 區塊
+ * ======================================================================== */
+.event_vote {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vote_bg.webp)
+    no-repeat center top;
+  background-size: 100% 100%;
+  padding-top: 1.1rem;
+  aspect-ratio: 2560/2001;
+  width: 100%;
+}
+.event_vote.soon {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/coming_soon.webp)
+    no-repeat center top;
+  background-size: 100% 100%;
+}
+.event_vote.soon .vote_container {
+  display: none;
+}
+.vote_container {
+  width: 21.8rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+.vote_tt {
+  width: 7.5rem; /* 控制最大寬度 */
+  max-width: 100%;
+}
+.vote_tt img {
+  width: 100%;
+  display: block;
+}
+.vote_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 0.4rem;
+  width: 100%;
+}
+.vote_item {
+  /* 算式：(100% - 4個gap的總寬度) / 5，確保一排最多塞5個 */
+  width: calc(18% - 0.24rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05rem;
+  cursor: pointer; /* 讓整個區塊都有手指游標 */
+}
+.vt_box {
+  width: 100%;
+}
+/* 第 1 個項目預設 */
+.vt_frame {
+  width: 100%;
+  aspect-ratio: 537 / 672;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vt_block_1.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+  position: relative;
+}
+
+/* 第 2 個項目 */
+.vote_item:nth-child(2) .vt_frame {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vt_block_2.webp);
+}
+/* 第 3 個項目 */
+.vote_item:nth-child(3) .vt_frame {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vt_block_3.webp);
+}
+/* 第 4 個項目 */
+.vote_item:nth-child(4) .vt_frame {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vt_block_4.webp);
+}
+/* 第 5 個項目 */
+.vote_item:nth-child(5) .vt_frame {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vt_block_5.webp);
+}
+/* 第 6 個項目 */
+.vote_item:nth-child(6) .vt_frame {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vt_block_6.webp);
+}
+/* 第 7 個項目 */
+.vote_item:nth-child(7) .vt_frame {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vt_block_7.webp);
+}
+/* 第 8 個項目 */
+.vote_item:nth-child(8) .vt_frame {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vt_block_8.webp);
+}
+/* 第 9 個項目 */
+.vote_item:nth-child(9) .vt_frame {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vt_block_9.webp);
+}
+
+/* 整個區塊 Hover 時，上方的框變色 */
+/* 只有在支援指標懸停(Hover)的裝置(如電腦滑鼠)上，才會有 hover 效果 */
+@media (hover: hover) {
+  .vote_item:hover .vt_frame {
+    background-position: center bottom;
+  }
+}
+/* 已選擇狀態 (例如點擊後加上 active class) */
+.vt_frame.active {
+  background-position: center bottom;
+}
+.vt_votes {
+  position: absolute;
+  right: 8%;
+  bottom: 0.5%;
+  font-size: 0.24rem;
+  color: #fff;
+  font-weight: bold;
+}
+.btn_choose {
+  width: 100%;
+  aspect-ratio: 537 / 105;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/choose_btn.webp)
+    no-repeat center top;
+  background-size: 100% 300%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  pointer-events: none; /* 防止干擾，讓外層 vote_item 統一觸發 */
+}
+/* 整個區塊 Hover 時，下方的按鈕變色 */
+/* 只有在支援指標懸停(Hover)的裝置(如電腦滑鼠)上，才會有 hover 效果 */
+@media (hover: hover) {
+  .vote_item:hover .btn_choose {
+    background-position: center center;
+  }
+}
+.btn_choose.active,
+.vote_item:hover .btn_choose.active {
+  background-position: center bottom;
+}
+.vote_submit_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn_submit_vote {
+  width: 3.5rem;
+  aspect-ratio: 352 / 114;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/vote_btn.webp)
+    no-repeat center top;
+  background-size: 100% 300%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.btn_submit_vote:hover {
+  background-position: center center;
+}
+.btn_submit_vote.active {
+  background-position: center bottom;
+  pointer-events: none;
+}
+.btn_logout {
+  width: 3.5rem;
+  aspect-ratio: 351 / 115;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/vote/logout_btn.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.btn_logout:hover {
+  background-position: center bottom;
+}
+
+/* ========================================================================
+ * 演出名單 區塊
+ * ======================================================================== */
+.event_cast {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/cast_list/cast_list_bg.webp)
+    no-repeat center top;
+  background-size: cover;
+  padding-top: 1.2rem;
+  width: 100%;
+  aspect-ratio: 2560 / 1171;
+  margin-top: -1.62rem;
+}
+.cast_container {
+  width: 20.1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cast_tt {
+  align-self: flex-start;
+  margin-left: -1rem;
+  width: auto;
+  max-width: 100%;
+}
+.cast_tt img {
+  width: 4.1rem;
+  /* max-width: 4.1rem; */
+  display: block;
+}
+.cast_list_wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.cast_list_track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+  min-width: min-content;
+}
+.cast_item {
+  width: 4.55rem;
+  flex-shrink: 0;
+  position: relative;
+}
+.cast_vt_img {
+  width: 100%;
+  display: block;
+}
+.cast_social_btns {
+  display: flex;
+  gap: 0.15rem;
+  left: 0%;
+  bottom: 5.5%;
+  width: 40%;
+}
+.btn_social {
+  display: block;
+  width: 40%;
+  aspect-ratio: 69 / 71;
+  background-size: 100% 200%;
+  cursor: pointer;
+}
+.btn_social:hover {
+  background-position: center bottom;
+}
+.btn_x {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/cast_list/x_btn.webp);
+}
+.btn_yt {
+  background-image: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/cast_list/yt_btn.webp);
+}
+.cast_store_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  margin-top: 0.6rem;
+}
+.cast_store_links a {
+  display: block;
+  /* 5 顆按鈕並排，預設抓 15%，可微調 */
+  width: 15%;
+}
+.cast_store_links a:nth-of-type(1) {
+  width: 13%;
+}
+.cast_store_links a:nth-of-type(5) {
+  width: 21%;
+}
+.cast_store_links img {
+  width: 100%;
+  display: block;
+}
+.cast_store_links a:hover img {
+  filter: brightness(1.15);
+}
+
+/* ========================================================================
+ * 裝飾物件 (Decorative Objects)
+ * ======================================================================== */
+.dec_obj {
+  z-index: 5;
+  pointer-events: none;
+}
+.obj1 {
+  width: 5.2rem;
+  top: -0.8rem;
+  right: 1.5rem;
+}
+.obj2 {
+  width: 4.6rem;
+  top: -2.4rem;
+  left: 2rem;
+}
+.obj3 {
+  width: 4.8rem;
+  top: -2.9rem;
+  right: 1.7rem;
+}
+
+.floating_loop {
+  width: 100%;
+  display: block;
+  animation: floatUpDown 3s ease-in-out infinite alternate;
+}
+
+.obj1 .floating_loop {
+  animation-delay: 0s;
+}
+.obj2 .floating_loop {
+  animation-delay: -1s;
+}
+.obj3 .floating_loop {
+  animation-delay: -2s;
+}
+
+/* 製作上下浮動的 @keyframes */
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-0.4rem); /* 往上浮動的幅度，可自行微調 */
+  }
+}
+
+@keyframes floatStar1 {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+    filter: brightness(0.9);
+  }
+  40% {
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+  75% {
+    opacity: 0.9;
+    filter: brightness(0.9);
+  }
+  100% {
+    transform: translateY(-0.55rem);
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+}
+@keyframes floatStar2 {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+    filter: brightness(1.1);
+  }
+  50% {
+    opacity: 0.9;
+    filter: brightness(0.9);
+  }
+  100% {
+    transform: translateY(-0.22rem);
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+}
+@keyframes floatStar3 {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+    filter: brightness(1);
+  }
+  30% {
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+  70% {
+    opacity: 0.9;
+    filter: brightness(0.9);
+  }
+  100% {
+    transform: translateY(-0.25rem);
+    opacity: 0.9;
+    filter: brightness(1.1);
+  }
+}
+
+/* ======================================================
+   動畫及彈窗關鍵影格 (Keyframe Animations)
+   ====================================================== */
+@keyframes star-loop {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes btn-scale-loop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+@keyframes lottery-loop {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+  }
+  72% {
+    transform: translateY(0);
+  }
+  81% {
+    transform: translateY(-28px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes bounce-bottom {
+  0% {
+    transform: translateY(45px);
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(24px);
+  }
+  65% {
+    transform: translateY(12px);
+  }
+  82% {
+    transform: translateY(6px);
+  }
+  93% {
+    transform: translateY(4px);
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes jello-vertical {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-loop {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  6% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  8% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  10% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  13% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  15% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  20% {
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  padding: 25px 0;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.02px;
+  background: #282a2c;
+}
+.footer .container {
+  max-width: 100%;
+}
+.footer .copyright,
+.footer .grading {
+  vertical-align: middle;
+}
+.footer img {
+  vertical-align: baseline;
+}
+.footer .copyright,
+.footer .company,
+.footer p,
+.footer .grading,
+.footer .grading img,
+.footer ul {
+  display: inline-block;
+}
+.footer .company a,
+.footer .grading,
+.footer p,
+.footer ul {
+  margin-left: 10px;
+}
+.footer a:hover {
+  color: #63edec;
+}
+.footer p,
+.footer ul {
+  text-align: left;
+  line-height: 1.5;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+.footer p a {
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding: 35px 0;
+  }
+  .footer .copyright,
+  .footer .company {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .footer p {
+    text-align: center;
+  }
+  .footer p,
+  .footer .grading {
+    margin: 0 auto;
+  }
+}
+
+/* 彈窗：分享 */
+.downloadSharePicTip {
+  display: none;
+}
+
+/* Demo 測試按鈕：切換 soon 狀態 (PC版) */
+#demo_toggle_soon {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+#demo_toggle_soon:hover {
+  background: #ff3344;
+}

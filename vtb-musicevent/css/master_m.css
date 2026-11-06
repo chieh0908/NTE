@@ -1,0 +1,364 @@
+@import "./master.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
+}
+
+/* 顯示整體包裝並限制為 7.5rem (100% 寬度) */
+.wrap {
+  display: block !important;
+  width: 7.5rem !important;
+  margin: 0 auto !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  background-color: #212121 !important;
+}
+
+.wrap p,
+.wrap ul,
+.wrap li {
+  margin-bottom: 0;
+}
+.wrap a {
+  font-size: initial;
+  line-height: 0;
+}
+
+/* ==========================================
+   行動端直式佈局樣式表 (Mobile Portrait CSS)
+   設計寬度基準: 750px (1rem = 100px)
+   ========================================== */
+
+/* ========================================================================
+ * 隱藏桌機版裝飾物件 (手機版不需要顯示)
+ * ======================================================================== */
+.dec_obj {
+  display: none !important;
+}
+
+/* ========================================================================
+ * kv區塊
+ * ======================================================================== */
+
+/* header */
+.header {
+  height: 13.75rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/invite/images/m/header.jpg)
+    no-repeat center top;
+  background-size: 100% auto;
+}
+
+.logo {
+  width: 1.5rem;
+  aspect-ratio: 260 / 183; /* 比例：請填入圖片原始 寬度 / 高度 */
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/logo.png)
+    no-repeat 0 0;
+  background-size: contain;
+  top: 0.2rem;
+  left: 0.4rem;
+}
+
+.arrow {
+  bottom: 0.1rem;
+  left: 50%;
+  margin-left: -0.22rem;
+  width: 0.47rem;
+  height: 0.29rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/arrow.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  animation: arrowUpDown 0.5s ease-in-out infinite alternate;
+  filter: none;
+}
+@keyframes arrowUpDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* 行動端頭部佈局，使用直式背景圖片 */
+.header {
+  width: 100%;
+  height: auto;
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/m/kv_bg_m.webp)
+    no-repeat center top;
+  background-size: cover;
+  aspect-ratio: 1080 / 1700;
+}
+.header .header_tt {
+  width: 93%;
+  top: 73%;
+}
+
+.kv_btns {
+  gap: 0.4rem;
+  bottom: 0.95rem;
+  width: 100%;
+}
+
+.btn_kv {
+  width: 2.98rem;
+}
+
+/* ========================================================================
+ * 官方影片&曲目表
+ * ======================================================================== */
+.event_schedule {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/m/schedule_bg_m.webp)
+    no-repeat center top;
+  background-size: 100% 100%;
+  aspect-ratio: 1080 / 2525;
+  padding-top: 1.4rem;
+}
+.schedule_container {
+  flex-direction: column;
+  width: 85%;
+  gap: 0.6rem;
+  margin: 0 auto;
+}
+.schedule_left {
+  width: 100%;
+  gap: 0.3rem;
+}
+.schedule_time_titles {
+  gap: 0.3rem;
+}
+.schedule_time_titles .title_img {
+  /* width: 46%; */
+  width: auto;
+  height: 0.66rem;
+}
+.schedule_time_titles .time_img {
+  width: 100%;
+}
+.schedule_right {
+  width: 100%;
+}
+.tracklist_title img {
+  /* width: 55%; */
+  width: auto;
+  height: 0.66rem;
+}
+.tracklist_list {
+  max-height: 7.55rem;
+  gap: 0.1rem;
+  padding-right: 0.25rem;
+  margin-right: -0.3rem;
+}
+
+/* ========================================================================
+ * 活動辦法 & 獎品一覽
+ * ======================================================================== */
+.event_rules {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/m/rule_bg_m.webp)
+    no-repeat center top;
+  background-size: cover;
+  aspect-ratio: 1080 / 1881;
+  margin-top: -0.68rem;
+  padding-top: 1.4rem;
+  padding-left: 0;
+}
+.rule_container {
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 85%;
+}
+.rule_left {
+  gap: 0.4rem;
+  width: 100%;
+}
+.rule_tt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rule_tt > img {
+  /* width: 43%; */
+  width: auto;
+  height: 0.66rem;
+}
+.rule_tt button {
+  width: auto;
+  height: 0.4rem;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+.rule_tt button img {
+  width: auto;
+  height: 100%;
+  display: block;
+}
+.rule_desc {
+  font-size: 0.33rem;
+  margin-left: 0;
+  line-height: 1.7;
+}
+.rule_right {
+  gap: 0.5rem;
+  width: 100%;
+}
+.rule_time_box {
+  gap: 0.4rem;
+}
+.rule_time_tt img {
+  /* width: 44%; */
+  width: auto;
+  height: 0.66rem;
+}
+.rule_time_desc {
+  font-size: 0.33rem;
+}
+.rule_award_box {
+  gap: 0.35rem;
+}
+.award_tt img {
+  /* width: 44%; */
+  width: auto;
+  height: 0.66rem;
+}
+.award_item {
+  width: 29%;
+}
+
+/* ========================================================================
+ * 人氣投票 區塊
+ * ======================================================================== */
+.event_vote {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/m/vote_bg_m.webp)
+    no-repeat center top;
+  background-size: 100% 100%;
+  padding-top: 0.95rem;
+  aspect-ratio: 1080 / 4319;
+}
+.event_vote.soon {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/m/coming_soon_m.webp)
+    no-repeat center top;
+  background-size: 100% 100%;
+}
+.vote_container {
+  /* width: 6.4rem; */
+  width: 85%;
+  gap: 0.6rem;
+}
+.vote_tt {
+  width: 6.15rem;
+}
+.vote_list {
+  gap: 0.3rem 0.4rem;
+}
+.vote_item {
+  width: calc(50% - 0.2rem);
+}
+
+.vt_votes {
+  bottom: 0;
+  font-size: 0.2rem;
+}
+.vote_submit_box {
+  gap: 0.4rem;
+  width: 100%;
+}
+.btn_submit_vote {
+  width: calc(50% - 0.2rem);
+}
+.btn_logout {
+  width: calc(50% - 0.2rem);
+}
+
+/* ========================================================================
+ * 演出名單 區塊
+ * ======================================================================== */
+.event_cast {
+  background: url(https://rests-nte.iwplay.com.tw/events/vtb-musicevent/images/m/cast_list_bg_m.webp)
+    no-repeat center top;
+  background-size: cover;
+  aspect-ratio: 1080 / 1572;
+  margin-top: -0.95rem;
+  padding-top: 0.75rem;
+}
+.cast_container {
+  width: 100%;
+}
+.cast_tt {
+  margin-left: 0;
+  width: 85%;
+  align-self: center;
+}
+.cast_tt img {
+  width: auto;
+  height: 0.66rem;
+}
+.cast_item {
+  width: 4.35rem;
+}
+.cast_store_links {
+  width: 85%;
+  flex-wrap: wrap;
+  margin-top: 0.3rem;
+  gap: 0.2rem;
+}
+/* 隱藏 Windows(3)與Google Play(5) */
+.cast_store_links a:nth-of-type(3),
+.cast_store_links a:nth-of-type(5) {
+  display: none !important;
+}
+/* App Store (1) */
+.cast_store_links a:nth-of-type(1) {
+  width: calc(46% - 0.1rem);
+  order: 0;
+}
+/* Android (2) */
+.cast_store_links a:nth-of-type(2) {
+  width: calc(54% - 0.1rem);
+  order: 1;
+}
+/* PS5 (4) */
+.cast_store_links a:nth-of-type(4) {
+  width: 52.7%;
+  order: 2;
+}
+/* ========================================================================
+ * Footer
+ * ======================================================================== */
+.footer {
+  position: relative;
+  display: block !important;
+  width: 100% !important; /* 原本是 7.5rem，順便幫您優化成 100% */
+  margin: 0 auto !important;
+  padding: 0.5rem 0.3rem !important; /* 蓋掉原本的 25px 0 */
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.02px;
+  background: #282a2c;
+}
+.footer .copyright,
+.footer .grading {
+  vertical-align: middle;
+}
+
+/* Demo 測試按鈕：切換 soon 狀態 (手機版) */
+#demo_toggle_soon {
+  position: fixed;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  z-index: 9999;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.4rem;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0.08rem 0.12rem rgba(0, 0, 0, 0.3);
+}
