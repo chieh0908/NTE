@@ -1,0 +1,1277 @@
+@charset "utf-8";
+/* @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css); */
+
+*,
+a,
+span {
+  font-family:
+    "Noto Sans TC",
+    Arial,
+    Helvetica,
+    微軟正黑體,
+    Microsoft JhengHei,
+    sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/*====卷軸===*/
+/* 細捲軸開始 */
+::-webkit-scrollbar {
+  height: 5px;
+  overflow: visible;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d10003;
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 0px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  box-shadow:
+    inset 1px 1px 0 rgba(0, 0, 0, 0),
+    inset 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d10003;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #d10003;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #19181e;
+}
+
+/* 細捲軸結束 */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  touch-action: none;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.display_none {
+  display: none;
+}
+
+.note_flex {
+  display: none;
+}
+
+/*禁止滑動*/
+.modal-open {
+  overflow: hidden !important;
+  padding-right: 0 !important;
+}
+
+.wrapper {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  /* 尺寸限制移至 kv_zone */
+}
+
+/* ========================================================================
+ * Footer
+ * ======================================================================== */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0;
+  color: #fff;
+  font-size: 0.12rem;
+  text-align: center;
+  letter-spacing: 0.02px;
+  background: #282a2c;
+  /* 更新：包含高度與內距的動效，以釋放佈局空間 */
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    max-height 0.5s ease,
+    padding 0.5s ease,
+    visibility 0.5s;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.footer.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  max-height: 5rem; /* 給予足夠的上限以容納內容 */
+  padding: 0.1rem 0;
+}
+.footer .container {
+  max-width: 100%;
+}
+.footer .copyright,
+.footer .grading {
+  vertical-align: middle;
+}
+.footer img {
+  vertical-align: baseline;
+  height: 0.4rem;
+  width: auto;
+}
+.footer .copyright,
+.footer .company,
+.footer p,
+.footer .grading,
+.footer .grading img,
+.footer ul {
+  display: inline-block;
+}
+.footer .company a,
+.footer .copyright p a,
+.footer .grading,
+.footer p,
+.footer ul {
+  margin-left: 0.1rem;
+  font-size: 0.12rem;
+}
+.footer a:hover {
+  color: #63edec;
+}
+.footer p,
+.footer ul {
+  text-align: left;
+  line-height: 1.2;
+  font-size: 0.12rem;
+  opacity: 0.6;
+  margin-bottom: 0;
+  padding: 0;
+}
+.footer p a {
+  color: #fff;
+}
+/* 修復手機版特定尺寸footer頂部與底部白線 */
+.footer {
+  box-shadow:
+    0 -1px 0 #282a2c,
+    0 1px 0 #282a2c;
+  bottom: -1px !important;
+  padding-bottom: 1px;
+}
+
+/* logo */
+.logo {
+  position: absolute;
+  top: 0.39rem;
+  left: 0.67rem;
+  width: 2.09rem;
+  height: 1.88rem;
+  background: url(../image/logo.png) no-repeat 0 0 / 100% auto;
+  z-index: 20;
+}
+
+/*--主視覺區域--*/
+.kv_zone {
+  position: relative;
+  width: 25.6rem;
+  height: 14.4rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* =========================================
+   Scratch Card Styles (Converted to REM)
+   ========================================= */
+
+/* .dd_title {
+  position: absolute;
+  width: 7.68rem;
+  height: auto;
+  top: 0.576rem;
+  left: 8.448rem;
+  z-index: 65;
+  background-color: #44338300;
+}
+
+.dd_title p {
+  font-size: 0.2813rem;
+  line-height: 144%;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 0%;
+  text-align: center;
+} */
+
+/* 會員按鈕 */
+.btn_member {
+  width: 1.2rem;
+  aspect-ratio: 133 / 133;
+  cursor: pointer;
+  background: url(../image/member.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: center top;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  margin-top: 0.6rem;
+  z-index: 15;
+}
+
+.btn_member:hover {
+  background-position: center bottom;
+}
+
+/* 會員資訊區塊 */
+.member_info_block {
+  position: absolute;
+  top: 11.2rem;
+  left: 2.9rem;
+  transform: translateY(-50%);
+  width: 4.5rem;
+  /* height: 2.5rem; */
+  height: auto;
+  background: url(../image/member_info_bg.webp) no-repeat center;
+  background-size: 100% 100%;
+  aspect-ratio: 373/223;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2%;
+}
+.member_info_block.show {
+  display: flex;
+}
+.member_uid {
+  font-size: 0.31rem;
+  font-weight: 900;
+  color: #1b1b1b;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02rem;
+}
+.btn_switch_account {
+  width: 2.6rem;
+  /* height: 0.6rem; */
+  background: url(../image/switch_account_btn.webp) no-repeat top center;
+  background-size: 100% 100%;
+  aspect-ratio: 262/54;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0.12rem;
+}
+
+/* ========================================================================
+ * 蓋板輪播頁
+ * ======================================================================== */
+
+.desk_base {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 1;
+  background-color: #27ff1300;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 0.1rem 0.25rem;
+}
+
+.desk_right_col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 72%;
+  /* height: 54%; */
+  overflow: hidden;
+  align-self: center; /* 讓右側內容區塊自己垂直置中 */
+  margin-top: -5%;
+}
+
+.desk_base .desk_content {
+  width: 72%;
+  /* width: 64%; */
+  flex: 1;
+  height: auto;
+  overflow: hidden;
+  background-color: #2cdb3500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  margin: 0 auto;
+}
+
+.content_A2 .board_top {
+  width: 100%;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../image/gift-overlay/board_top.webp);
+  aspect-ratio: 2103 / 239;
+  margin-bottom: -1px;
+}
+/* .content_A2 .board_bottom {
+  width: 100%;
+  height: auto;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/gift-overlay/a2_board_bottom_zoom.webp);
+  aspect-ratio: 2103 / 40;
+  margin-top: -1px;
+} */
+.content_A2 .board {
+  width: 100%;
+  padding: 0 3%;
+  height: 0;
+  flex-grow: 1;
+  background-color: #2a1da000;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../image/gift-overlay/board_body.webp);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+/* 獎品清單區塊 */
+.content_A2 .board .lottery_award {
+  width: max-content;
+  height: 98%;
+  margin: 6% 0 0 0; /* 取消 auto，強制靠左對齊，避免 Safari / 手機版置中溢出或留白 */
+  display: flex;
+}
+.content_A2 .board .lottery_award:hover {
+  animation-play-state: paused;
+}
+/* 獎品清單 */
+.content_A2 .board .lottery_item {
+  width: auto;
+  aspect-ratio: 398 / 510;
+  height: 80%;
+  flex-shrink: 0;
+  background-image: url(../image/gift-overlay/award_list.webp);
+  background-repeat: no-repeat;
+  background-size: 700% 100%;
+}
+.content_A2 .board .lottery_item.num_1 {
+  background-position-x: 0%;
+}
+.content_A2 .board .lottery_item.num_2 {
+  background-position-x: 16.66%;
+}
+.content_A2 .board .lottery_item.num_3 {
+  background-position-x: 33.33%;
+}
+.content_A2 .board .lottery_item.num_4 {
+  background-position-x: 50%;
+}
+.content_A2 .board .lottery_item.num_5 {
+  background-position-x: 66.66%;
+}
+.content_A2 .board .lottery_item.num_6 {
+  background-position-x: 83.33%;
+}
+.content_A2 .board .lottery_item.num_7 {
+  background-position-x: 100%;
+}
+
+/* ========================================================================
+ * 垂直分頁 (Swiper) 與左側導覽按鈕 (tap_panel) 樣式
+ * ======================================================================== */
+
+/* Swiper 容器樣式 */
+.swiper.mySwiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* 如果要在分頁內置中內容可打開下面三行 */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+/* 左側導覽按鈕面板 */
+.tap_panel {
+  position: absolute;
+  top: 2.5rem;
+  left: 1.1rem;
+  z-index: 100; /* 高於 swiper */
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem; /* 按鈕間距 */
+}
+
+.tap_panel .nav_btn {
+  width: 1.2rem;
+  height: auto;
+  aspect-ratio: 133 / 133;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 200%;
+  border: none;
+  cursor: pointer;
+  /* 雪碧圖不再需要 transform scale */
+}
+
+/* 統一設定 hover 與 active 的雪碧圖位移 */
+.tap_panel .nav_btn:hover,
+.tap_panel .nav_btn.active {
+  background-position: bottom center;
+}
+
+/* 各別按鈕底圖 */
+.tap_panel .nav_btn.home {
+  background-image: url(../image/home.webp);
+}
+.tap_panel .nav_btn.task {
+  background-image: url(../image/task.webp);
+}
+.tap_panel .nav_btn.lottery {
+  background-image: url(../image/lottery.webp);
+}
+.tap_panel .nav_btn.gift {
+  background-image: url(../image/gift.webp);
+}
+.tap_panel .nav_btn.rules {
+  background-image: url(../image/rules.webp);
+}
+
+/* ========================================================================
+ * Gift Overlay
+ * ======================================================================== */
+.gift-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift-overlay.dark-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 蓋板頁關閉按鈕 */
+.gift-overlay-close {
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  width: 1rem;
+  height: auto;
+  aspect-ratio: 117 / 118;
+  background: url(../image/pop/close_btn.webp) no-repeat center top;
+  background-size: 100% 200%;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+  pointer-events: auto;
+}
+
+.gift-overlay-close:hover {
+  background-position: center bottom;
+}
+.gift-overlay .desk_base {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: row; /* 確保左右排版正常 */
+  justify-content: center;
+}
+.desk_anim_in {
+  display: flex !important;
+  animation: deskSlideIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes deskSlideIn {
+  0% {
+    transform: translate(50%, 50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(50%, -50%);
+    opacity: 1;
+  }
+}
+/* ========================================= 首頁 ========================================= */
+/* 首頁前往任務按鈕 */
+.home_page .btn_kv_go {
+  position: absolute;
+  right: 16%;
+  bottom: 19%;
+  width: 4.2rem;
+  aspect-ratio: 420 / 93;
+  background: url(../image/home_page/kv_go_btn.webp) no-repeat top center;
+  background-size: 100% 200%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 50;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.home_page .btn_kv_go:hover {
+  background-position: bottom center;
+}
+
+.kv_slogan {
+  position: absolute;
+  top: 6.2rem;
+  right: 0.8rem;
+  width: 10.3rem;
+}
+
+/* ========================================= 幸運抽取 ========================================= */
+.lucky_draw_wrapper {
+  position: relative;
+  z-index: 65;
+  width: 100%;
+  max-width: 177.78vh;
+  aspect-ratio: 1042 / 587;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lucky_draw_container {
+  flex: 0 0 95%;
+  height: auto;
+  background: url("../image/lottery_page/lottery_bg.webp") no-repeat center
+    center;
+  background-size: 100% 100%; /* 填滿右側框框 */
+  aspect-ratio: 2348/1250;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13% 10% 12% 12%;
+  box-sizing: border-box;
+  margin-top: -0.49%;
+  margin-left: 7%;
+}
+/* 抽獎區注意事項 */
+.lottery_tt {
+  position: absolute;
+  top: 1.82rem;
+  right: 6.6rem;
+  width: 7.3rem;
+  height: auto;
+  z-index: 5;
+}
+
+/* 按鈕區塊 */
+.lucky_draw_header {
+  width: 94%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 2.5%;
+  gap: 2%;
+}
+/* 獎勵查詢按鈕 */
+.reward_Inquiry_btn {
+  width: 15%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  height: auto;
+}
+.reward_Inquiry_btn:hover {
+  /* transform: scale(1.05); */
+  filter: brightness(1.1);
+}
+/* 獎勵一覽按鈕 */
+.lottery_giftlist_btn {
+  width: 15%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  height: auto;
+}
+.lottery_giftlist_btn:hover {
+  /* transform: scale(1.05); */
+  filter: brightness(1.1);
+}
+
+/* 抽獎頁裝飾物件區 */
+.lottery_page .obj6 {
+  bottom: -0.1rem;
+  left: 0.5rem;
+  width: 6.1rem;
+  z-index: 0;
+}
+.lottery_page .obj7 {
+  bottom: 1.2rem;
+  right: 1rem;
+  width: 5.5rem;
+  animation-delay: 0.2s;
+}
+.lottery_page .obj8 {
+  top: 1.2rem;
+  right: 1.4rem;
+  width: 3rem;
+  animation-delay: 0.2s;
+}
+
+/* 抽獎卡片區 (3D 動畫結構) */
+.lucky_draw_cards {
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+  margin-bottom: 2%;
+  perspective: 1000px;
+  position: relative;
+}
+
+.card {
+  width: 15%; /* 調整為容納 6 張卡片 */
+  aspect-ratio: 280 / 380; /* 卡片比例 */
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  /* 洗牌平移動畫 */
+  transition:
+    transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    z-index 0s;
+  border: 0;
+}
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* 翻轉動畫 */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+/* 抽獎頁底部操作區覆寫 */
+.lottery_action_group.lottery_page_mode {
+  top: 65%;
+  left: 54%;
+}
+.lottery_page_mode .lottery_status {
+  color: #292929;
+}
+
+.lottery_btn {
+  width: 4.7rem; /* 可視圖片實際尺寸微調 */
+  aspect-ratio: 456 / 117;
+  background-image: url("../image/lottery_page/lottery_btn.webp");
+  background-size: 100% 300%;
+  background-position: 0 50%; /* 預設：可抽取 (中間) */
+  background-repeat: no-repeat;
+  cursor: pointer;
+  filter: drop-shadow(0.05rem 0.08rem 0.05rem rgba(0, 0, 0, 0.5));
+}
+
+.lottery_btn:hover {
+  background-position: 0 100%; /* Hover：可抽取 (底部) */
+}
+
+.lottery_btn.disabled {
+  background-position: 0 0; /* 鎖定：不可抽取 (頂部) */
+  cursor: default;
+  pointer-events: none;
+}
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px; /* 模擬卡片圓角 */
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.card-front {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 抽獎次數 */
+.draw_count {
+  /* color: #ff0000; */
+  font-weight: bold;
+  font-size: 0.32rem;
+}
+.txt_red {
+  color: #ff0000;
+}
+
+/* ========================================== 任務頁 ========================================== */
+/* 切換頁籤區塊 */
+.task_header {
+  display: flex;
+  position: absolute;
+  top: 7.6%;
+  left: 14.6%;
+  width: 61%;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.partner_tabs {
+  display: flex;
+  width: 67%;
+  justify-content: flex-start;
+  gap: 2%;
+  margin-left: 5%;
+}
+
+.partner_tab {
+  width: 32%;
+  height: auto;
+  cursor: pointer;
+  filter: grayscale(1); /* 預設灰階 */
+  transition: filter 0.2s;
+}
+
+.partner_tab.active {
+  filter: grayscale(0); /* active 時取消灰階 */
+}
+
+/* 任務區塊 */
+.tab_content {
+  width: 100%;
+  height: 100%;
+}
+.task_content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 177.78vh;
+  /* aspect-ratio: 1920 / 1080; */
+  aspect-ratio: 1042 / 587;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task_body {
+  flex: 0 0 95%;
+  height: auto;
+  background: url(../image/task_page/task_bg.webp) no-repeat center center;
+  background-size: 100% 100%;
+  aspect-ratio: 2348 / 1168;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 3%;
+  margin-left: 7%;
+  pointer-events: none;
+}
+.task_container {
+  position: absolute;
+  top: 20.5%;
+  /* left: 15.5%; */
+  left: 16.5%;
+  /* width: 71%; */
+  width: 72%;
+  height: 39%;
+}
+.swiper-slide-active .task_container {
+  pointer-events: auto;
+}
+
+/* 回歸邀請區任務背景裝飾圖 */
+.task_obj {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  height: auto;
+}
+.task_obj.obj1 {
+  top: -1rem;
+  right: 1.3rem;
+  width: 3.2rem;
+}
+.task_obj.obj2 {
+  bottom: 0.2rem;
+  right: 3rem;
+  width: 5.1rem;
+  animation-delay: 0.2s;
+}
+.task_obj.obj3 {
+  bottom: -1.1rem;
+  left: 1.1rem;
+  width: 7.7rem;
+}
+
+/* 抽獎按鈕區塊 */
+.lottery_action_group {
+  position: absolute;
+  top: 66%;
+  left: 53%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+.swiper-slide-active .lottery_action_group {
+  pointer-events: auto;
+}
+
+.lottery_status {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 0.28rem;
+  font-weight: bold;
+  margin-bottom: 0.15rem;
+  letter-spacing: 0.02rem;
+}
+
+.lottery_status img {
+  width: 0.7rem;
+  height: auto;
+  margin-right: 0.15rem;
+}
+
+.txt_yellow {
+  color: #fff799;
+}
+
+.go_lottery_btn {
+  width: 4.7rem;
+  aspect-ratio: 456 / 117;
+  background-image: url("../image/task_page/go_lottery_btn.webp");
+  background-size: 100% 200%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.go_lottery_btn:hover {
+  background-position: center bottom;
+}
+.task_tt {
+  position: absolute;
+  top: 0.32rem;
+  left: 4.7rem;
+  width: 7.7rem;
+  height: auto;
+  z-index: 5;
+}
+.task_tt img {
+  width: 100%;
+  height: auto;
+}
+.task_tt.active_tt {
+  width: 9.9rem;
+  left: 4.5rem;
+}
+/* 任務列表 */
+.im_task_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1% 2%;
+  /* scrollbar-width: none; */
+  scrollbar-gutter: stable;
+  /* 允許原生的上下滑動 */
+  touch-action: pan-y;
+}
+
+/* 任務列表滾動條 */
+.im_task_list::-webkit-scrollbar {
+  width: 0.35rem;
+}
+.im_task_list::-webkit-scrollbar-track {
+  background: #616161;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 0.05rem #999999;
+}
+.im_task_list::-webkit-scrollbar-thumb {
+  /* background: #aaa; */
+  background:
+    linear-gradient(to bottom, #f6ed80, #f5ea72) content-box,
+    transparent;
+  border-radius: 999px;
+  border: 0.11rem solid transparent;
+  box-shadow:
+    inset 0 0 0.08rem rgba(255, 255, 255, 0.7),
+    inset 0 0 0.05rem rgba(0, 0, 0, 0.25);
+}
+
+.im_task {
+  background: url("../image/task_page/task_tt_bg.webp") no-repeat center center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  padding: 1% 3%;
+  /* padding: 1% 7% 1% 8%; */
+}
+
+.im_task_num {
+  width: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.im_task_num img {
+  width: 100%;
+  height: auto;
+}
+
+.im_task_desc {
+  flex: 1;
+  font-size: 0.35rem;
+  font-weight: bold;
+  color: #fff;
+  padding-left: 3%;
+  display: flex;
+  align-items: center;
+  padding-right: 15%;
+}
+.im_task_count {
+  color: #fff799;
+  letter-spacing: 0.05rem;
+  margin-left: auto;
+}
+.im_task_text_hl {
+  color: #fff799;
+}
+
+.task_reward {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding-right: 4%;
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.task_reward img {
+  width: 0.6rem;
+  height: auto;
+}
+
+/* 任務按鈕 */
+.btn_im_task {
+  width: 15%;
+  aspect-ratio: 215 / 77;
+  background-image: url("../image/task_page/task_done_btn.webp");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 200%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* 任務按鈕(已完成)狀態 */
+.btn_im_task.task_done_btn {
+  background-position: center bottom;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ========================================= */
+/* 活躍邀請專屬樣式 */
+/* ========================================= */
+/* .active_only {
+  display: none;
+} */
+
+.task_tt3 {
+  position: absolute;
+  top: 16%; /* 可微調 */
+  left: 53.1%;
+  transform: translateX(-50%);
+  width: 73.3%; /* 可微調 */
+  height: auto;
+  z-index: 6;
+}
+
+/* 活躍區裝飾 */
+.task_obj.obj4 {
+  top: -1.6rem;
+  right: 2.8rem;
+  width: 7.2rem;
+}
+.task_obj.obj5 {
+  top: -0.5rem;
+  right: 1.4rem;
+  width: 3.1rem;
+  z-index: 50;
+  animation-delay: 0.2s;
+}
+
+.active_task_list {
+  margin-top: 0.6rem;
+  height: 4.4rem;
+  padding: 1% 2%;
+}
+
+/* 活躍邀請的列表項目底圖更換 */
+.active_task_list .im_task {
+  background-image: url("../image/task_page/task_tt_bg2.webp");
+}
+
+.active_task_col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff799;
+  font-weight: bold;
+  font-size: 0.4rem;
+}
+.active_task_col span {
+  letter-spacing: 0.02rem;
+}
+.active_task_col:first-child {
+  justify-content: flex-start;
+  padding-left: 0.9rem;
+  /* gap: 0.2rem; */
+}
+
+/* 針對第二、三個欄位 (即第一、二個獎勵) 個別微調位置 */
+.active_task_col:nth-child(2) {
+  padding-left: 0.7rem;
+}
+.active_task_col:nth-child(3) {
+  padding-right: 0.8rem;
+}
+/* .active_task_col:nth-child(4) {
+  padding-left: 0.2rem;
+} */
+
+.head_icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+}
+
+/* 活躍任務獎勵按鈕 (雪碧圖) */
+.active_reward_btn {
+  width: 1.5rem;
+  height: auto;
+  aspect-ratio: 133/77;
+  background-size: 100% 300%;
+  background-repeat: no-repeat;
+}
+.btn_item1 {
+  background-image: url("../image/task_page/task_item1.webp");
+}
+.btn_item2 {
+  background-image: url("../image/task_page/task_item2.webp");
+}
+/* .btn_item3 {
+  background-image: url("../image/task_page/task_item3.webp");
+} */
+
+/* 按鈕的三種狀態 */
+.state_locked {
+  background-position: top;
+  pointer-events: none;
+}
+.state_claimable {
+  background-position: center;
+  cursor: pointer;
+}
+/* 可領取狀態hover */
+.state_claimable:hover {
+  filter: brightness(1.2);
+}
+.state_claimed {
+  background-position: bottom;
+  pointer-events: none;
+}
+
+.empty_task .active_task_col {
+  color: #fff799;
+}
+
+/* 底部操作區 */
+.active_bottom_action {
+  position: absolute;
+  bottom: 2.1rem;
+  left: 0.75rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  z-index: 10;
+}
+.swiper-slide-active .active_bottom_action {
+  pointer-events: auto;
+}
+
+.invite_action_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block_tt {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.28rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.02rem;
+}
+
+.invite_box {
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  height: 1.2rem;
+  border-radius: 0.1rem;
+  padding: 0 0.2rem 0 0.2rem;
+  justify-content: space-between;
+}
+.yellow_box {
+  background-color: #fff799;
+  border: 0.04rem solid #afafaf;
+}
+.white_box {
+  background-color: #fff;
+  border: 0.04rem solid #313131;
+}
+
+.invite_code_txt {
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* 活躍邀請區邀請碼輸入框 */
+.invite_input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-weight: bold;
+  color: #000;
+  width: 3.5rem;
+  transition: font-size 0.1s ease;
+}
+
+/* 當有輸入文字時，字體大小為 0.5rem */
+.invite_input:not(:placeholder-shown) {
+  font-size: 0.5rem;
+}
+
+/* 當只顯示提示字 (無文字) 時，將 input 本身的字體縮小為 0.4rem */
+.invite_input:placeholder-shown {
+  font-size: 0.4rem;
+}
+
+/* 不需要特別設定 font-size，它會自動跟隨上面 :placeholder-shown 的 0.4rem */
+.invite_input::placeholder {
+  color: #ccc;
+}
+
+.btn_copy,
+.btn_ok {
+  height: 0.8rem;
+  width: auto;
+  cursor: pointer;
+}
+.btn_copy:hover,
+.btn_ok:hover {
+  filter: brightness(1.2);
+}
+
+/* 覆寫抽獎按鈕群組在活躍狀態下的排版 */
+.lottery_action_group.active_mode {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+}

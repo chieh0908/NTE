@@ -1,0 +1,1889 @@
+@charset "utf-8";
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+}
+
+.modal-open {
+  padding-right: 0px !important;
+  overflow: hidden;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+     彈窗 自訂意拉霸顏色
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.table_box::-webkit-scrollbar {
+  border-radius: 0rem;
+  width: 5px;
+  height: 5px;
+  background: #1b2024;
+}
+
+.table_box::-webkit-scrollbar-track {
+  border-radius: 0rem;
+  -webkit-box-shadow: inset 0 0 0.1333rem rgba(0, 0, 0, 0.1);
+  background: #1b2024;
+}
+
+.table_box::-webkit-scrollbar-thumb {
+  border-radius: 0rem;
+  -webkit-box-shadow: inset 0 0 0.1333rem rgba(0, 0, 0, 0.1);
+  background: #db73be;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+       彈窗通用基礎樣式
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+/* 彈窗黑色半透明遮罩 */
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+/* 彈窗 */
+.popup .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 9.19rem;
+  height: 8.24rem; */
+  width: 15rem;
+  /* aspect-ratio: 1734/995; */
+}
+/* 關閉按鈕 */
+.popup .close {
+  top: 0.25rem;
+  right: 0.3rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  aspect-ratio: 82 / 82;
+  background: url(../image/pop/close_btn2.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+  border: none;
+}
+.popup .close:hover {
+  background-position: bottom;
+}
+.popup .close:not(:disabled):not(.disabled):focus,
+.popup .close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+.popup p {
+  margin-bottom: 0;
+}
+.popup_outer {
+  min-height: auto;
+}
+/* 通用彈窗背景小 */
+.popup .pop-bg-sm {
+  width: 10rem;
+  aspect-ratio: 1091 / 807;
+  background: url(../image/pop/pop_bg_sm.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popBtns {
+  display: flex;
+  width: 100%;
+  /* height: 0.69rem; */
+  height: auto;
+  margin-top: 0.38rem;
+  justify-content: center;
+}
+.popBtns button,
+.popBtns a {
+  width: 2.78rem;
+  height: 0.69rem;
+  margin: 0 0.2rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+.popBtns button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+button.btn-msg-confirm {
+  margin-top: 1rem;
+  width: 3.2rem;
+  height: 0.88rem;
+  aspect-ratio: 384/105;
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/btn_confirm_job2.webp)
+    no-repeat center top;
+  background-size: 100% 200%;
+}
+
+button.btn-msg-confirm:hover {
+  background-position: center bottom;
+}
+
+/* 通用彈窗關閉按鈕 */
+#popMsg .popup .close {
+  top: 0.45rem;
+  right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 117 / 118;
+  background: url(../image/pop/close_btn.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+  border: none;
+}
+#popMsg .popup .close:hover {
+  background-position: bottom;
+}
+
+/* 彈窗：回流/活躍邀請獲得抽獎次數提示關閉按鈕 */
+#popReturnReward .popup .close {
+  top: 0.45rem;
+  right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 117 / 118;
+  background: url(../image/pop/close_btn.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+  border: none;
+}
+#popReturnReward .popup .close:hover {
+  background-position: bottom;
+}
+#popReturnReward .popBtnsTip {
+  font-size: 0.32rem;
+  margin-top: 0.5rem;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+       活動規則彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+/* 彈窗：活動規則 */
+.pop-bg2 {
+  background: url(https://rests-nte.iwplay.com.tw/events/EibonPartner/images/pop/pop-bg2.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+.popRule .pop-rule-bg {
+  background-image: url(../image/pop/pop_bg.webp);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  aspect-ratio: 1730/872;
+  width: 15rem;
+}
+.popRuleTit {
+  display: block;
+  /* margin-left: 0.8rem; */
+  background: url(../image/pop/pop_rules_title.webp) no-repeat 0 0;
+  background-size: 100% 100%;
+  /* width: 2.8rem;
+  height: 1rem;
+  margin: 0.3rem auto 0; */
+  aspect-ratio: 610/78;
+  width: auto;
+  height: 0.6rem;
+  margin: 0.3rem 0 0.3rem 0.5rem;
+}
+.rule-scroll {
+  width: 14.2rem;
+  height: 5.38rem;
+  margin: 0.75rem auto 0;
+  padding: 0 0.75rem 0 1.1rem;
+}
+.cus-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  /* 允許原生的上下滑動 */
+  touch-action: pan-y;
+}
+/* 滾動條 */
+.cus-scroll::-webkit-scrollbar {
+  width: 0.35rem;
+}
+.cus-scroll::-webkit-scrollbar-track {
+  background: #b8b8b8;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 0.04rem #919191;
+}
+.cus-scroll::-webkit-scrollbar-thumb {
+  /* background: #aaa; */
+  background:
+    linear-gradient(to bottom, #ffffff, #dfdfdf) content-box,
+    transparent;
+  border-radius: 999px;
+  border: 0.1rem solid transparent;
+  box-shadow:
+    inset 0 0 0.08rem rgba(255, 255, 255, 0.7),
+    inset 0 0 0.05rem rgba(0, 0, 0, 0.25);
+}
+.rule-scroll p,
+.rule-scroll p a {
+  margin-bottom: 0.2rem;
+  font-size: 0.23rem;
+  line-height: 0.4rem;
+  color: #000000;
+}
+.rule-scroll .rule-subtitle {
+  font-size: 0.3rem;
+  font-weight: bold;
+  color: #29c5ff;
+  display: inline-block;
+  margin-top: 0.1rem;
+}
+
+.notRewards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+}
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+       恭喜獲得彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+
+#popGetAward .pop-bg-sm {
+  width: 10rem;
+  aspect-ratio: 1091 / 807;
+  background: url(../image/pop/pop_bg_sm.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popGetAward .popAwardTit {
+  width: 3.5rem;
+  margin: 0.85rem auto 0;
+  background: url(../image/pop/pop_award_tt.webp) no-repeat;
+  background-size: 100% auto;
+  aspect-ratio: 440/104;
+}
+#popGetAward .popAwardCont {
+  /* margin-top: 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 雪碧圖樣式 */
+#popGetAward .popAwardCont .pop-award-item {
+  width: 3.2rem;
+  aspect-ratio: 362 / 510;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  margin: 3% 0 6%;
+  filter: drop-shadow(0.1rem 0.1rem 1px rgba(0, 0, 0, 0.3));
+}
+#popGetAward .popAwardCont p {
+  margin: 0.05rem auto 0.2rem;
+  color: #ffffff;
+  font-size: 0.26rem;
+  font-weight: bold;
+}
+.popBtnsTip {
+  width: 100%;
+  text-align: center;
+  font-size: 0.29rem;
+  line-height: 0.4rem;
+  color: #ff2424;
+  margin-bottom: 0 !important;
+  font-weight: bold;
+}
+#popGetAward .popup .close {
+  top: 0.45rem;
+  right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 117 / 118;
+  background: url(../image/pop/close_btn.webp) no-repeat;
+  background-size: 100% 200%;
+  background-position: top;
+  z-index: 1;
+  opacity: 1;
+  border: none;
+}
+#popGetAward .popup .close:hover {
+  background-position: bottom;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+       中獎（填寫資料）彈窗 & 聯絡資料彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+#popLotteryGet .pop-bg,
+#popContactData .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1730 / 870;
+  background: url(../image/pop/pop_bg.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+/* 填寫資料彈窗title */
+.popInfoTit {
+  /* width: 2.8rem;
+  height: 1rem;
+  margin: 0.3rem auto 0; */
+  background: url(../image/pop/pop_address_title.webp) no-repeat;
+  background-size: 100% auto;
+  aspect-ratio: 610 / 78;
+  margin: 0.3rem 0 0.3rem 0.5rem;
+  width: auto;
+  height: 0.6rem;
+}
+/* 聯絡資料彈窗title */
+.popContactTit {
+  width: 2.8rem;
+  height: 1rem;
+  margin: 0.3rem auto 0;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/pop/pop_contact_title.webp)
+    no-repeat;
+  background-size: 100% auto;
+}
+.popLotteryGetCont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6.2rem;
+}
+.popLotteryGetCont .lotteryForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.15rem;
+  width: 8rem;
+  margin-bottom: 0.1rem;
+}
+#popLotteryGet .lotteryForm .form-bg,
+#popContactData .lotteryForm .form-bg {
+  background-color: #ffffff;
+  width: 100%;
+  height: 0.65rem;
+  margin-bottom: 0.15rem;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 0.05rem #88dfff;
+}
+#popLotteryGet .form-select,
+#popContactData .form-select {
+  padding: 0 0.2rem;
+  font-size: 0.25rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #88dfff;
+  margin: 0% auto;
+  height: auto;
+  width: auto;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+#popLotteryGet #lottery_address_number,
+#popContactData #contact_address_number {
+  width: 1.485rem;
+  flex: 0 0 auto;
+  padding: 0 0.1rem;
+  font-size: 0.25rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #88dfff;
+  margin: 0;
+  height: auto;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+#popLotteryGet .form-control,
+#popContactData .form-control {
+  padding: 0;
+  width: 100%;
+  font-size: 0.25rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 0% auto;
+  height: auto;
+  transition: 0.5s;
+  vertical-align: middle;
+  text-align: left;
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 6%;
+  padding-right: 6%;
+}
+#popLotteryGet .form-select:focus,
+#popContactData .form-select:focus,
+#popLotteryGet .form-control:focus,
+#popContactData .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+#popLotteryGet .form-select:focus,
+#popContactData .form-select:focus,
+#popLotteryGet #lottery_address_number:focus,
+#popContactData #contact_address_number:focus,
+#lottery_phone_code:focus,
+#contact_phone_code:focus {
+  border-right-color: #88dfff; /* 防止 Bootstrap focus 時把邊框變藍色或透明 */
+}
+#popLotteryGet #lottery_address,
+#popContactData #contact_address {
+  flex: 1;
+}
+
+.lotteryForm .column {
+  display: flex;
+  align-items: center; /* 垂直置中 */
+  width: 100%;
+}
+
+/* 標題 */
+.lotteryForm .column > span {
+  color: #1b1b1b;
+  font-size: 0.27rem;
+  flex: 0 0 16%;
+  max-width: 20%;
+  margin-bottom: 0.15rem;
+  font-weight: bold;
+}
+
+/* 表單區 */
+.lotteryForm .column .form-bg {
+  flex: 0 0 80%;
+  max-width: 80%;
+  display: flex;
+}
+
+#lottery_name {
+  background-color: #63edec;
+  width: 100%;
+  height: 0.55rem;
+}
+#lottery_phone_code {
+  padding: 0 0.2rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 0% auto;
+  height: auto;
+  width: auto;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsla(0, 80%, 36%, 0);
+  background-image: none;
+}
+
+.popBtns .btn-send-data {
+  aspect-ratio: 367/114;
+  width: 3.5867rem;
+  /* height: 0.89rem; */
+  height: auto;
+  background: url(../image/pop/submit_btn.webp) no-repeat 0 0;
+  background-size: 100% 200%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.popBtns .btn-send-data:hover {
+  background-position: center bottom;
+}
+
+/* 隱藏唯讀 (disabled) 狀態下的輸入框與下拉選單邊框 */
+#popLotteryGet input:disabled,
+#popContactData input:disabled,
+#popLotteryGet select:disabled,
+#popContactData select:disabled {
+  border: none !important;
+  background-color: transparent !important; /* 拔掉反灰背景 */
+  color: #000000 !important; /* 確保文字顏色 */
+  opacity: 1 !important; /* 避免瀏覽器預設把 disabled 變半透明 */
+  -webkit-text-fill-color: #000000 !important; /* 修復 iOS Safari 預設將 disabled 文字強制變灰的問題 */
+}
+/* 隱藏唯讀狀態下拉選單的右側箭頭 */
+#popLotteryGet select:disabled,
+#popContactData select:disabled {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+/* 當 form-bg 裡面有 disabled 元素時，隱藏外框與白底 */
+#popLotteryGet .lotteryForm .form-bg:has(input:disabled),
+#popContactData .lotteryForm .form-bg:has(input:disabled),
+#popLotteryGet .lotteryForm .form-bg:has(select:disabled),
+#popContactData .lotteryForm .form-bg:has(select:disabled) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+       確認提交彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+#popConfirmSubmit .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1730 / 872;
+  background: url(../image/pop/pop_bg.webp) no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+#popConfirmSubmit .popConfirmTitle {
+  font-size: 0.45rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin-top: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+#popConfirmSubmit .popBtnsTip {
+  color: #ea2027; /* 紅色字 */
+  font-size: 0.28rem;
+  margin-bottom: 0.4rem;
+}
+#popConfirmSubmit .popBtns-double {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.08rem;
+}
+#popConfirmSubmit .btn-yes {
+  width: 3.5rem;
+  aspect-ratio: 368/114;
+  background: url(../image/pop/yes_btn.webp) no-repeat top center;
+  background-size: 100% 200%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#popConfirmSubmit .btn-yes:hover {
+  background-position: center bottom;
+}
+#popConfirmSubmit .btn-no {
+  width: 3.5rem;
+  aspect-ratio: 368/114;
+  background: url(../image/pop/no_btn.webp) no-repeat top center;
+  background-size: 100% 200%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#popConfirmSubmit .btn-no:hover {
+  background-position: center bottom;
+}
+#popConfirmSubmit .popLotteryGetCont {
+  height: 100%;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+       不符合資格彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+#popNotEligible .pop-bg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  aspect-ratio: 1730 / 872;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/pop/pop_bg.webp)
+    no-repeat 0 0;
+  background-size: 100% auto;
+}
+#popNotEligible .popLotteryGetCont {
+  height: 100%;
+}
+#popNotEligible .popObj1 {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: url(https://rests-nte.iwplay.com.tw/events/FF47lottery/image/pop/obj1.webp)
+    no-repeat center center;
+  background-size: contain;
+  margin-bottom: 0.3rem;
+}
+#popNotEligible .popNotEligibleText {
+  font-size: 0.45rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin-left: 0.4rem;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+       通用提示訊息彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+/* 彈窗：提示訊息 */
+.popMsgCont {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+  line-height: 1.5;
+  color: #000000;
+  padding: 0 10%;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+.popMsgCont p {
+  margin: 0;
+}
+/* 讓通用彈窗永遠蓋在其他彈窗之上 */
+#popMsg {
+  z-index: 1070 !important;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+       sdk彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+
+.nte-pop.modal {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- 共用容器 & 工具 --- */
+.nte-pop .rel {
+  position: relative;
+}
+.nte-pop .abs {
+  position: absolute;
+}
+.nte-pop .auto {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --- 大容器 --- */
+.nte-pop .pop {
+  display: block;
+  position: relative;
+}
+.nte-pop .popCont {
+  width: 96%;
+  max-width: 570px;
+  margin: 0 auto;
+  position: relative;
+}
+.nte-pop .popCont1 {
+  width: 100%;
+  height: 735px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.nte-pop .popClose {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 25px;
+  height: 25px;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popClose.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+}
+
+.nte-pop.modal .modal-dialog {
+  width: 96%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nte-pop.modal .modal-content {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.nte-pop.modal .modal-body {
+  padding: 0;
+}
+.nte-pop.regressmodal.modal .modal-dialog,
+.nte-pop.bookedmodal_old.modal .modal-dialog,
+.nte-pop.bookedmodal.modal .modal-dialog,
+.nte-pop.successmodal.modal .modal-dialog,
+.nte-pop.loginMsg.modal .modal-dialog {
+  max-width: 500px;
+}
+.nte-pop.bookedmodal.modal .modal-dialog {
+  max-width: 500px;
+}
+
+.nte-pop.modal .modal-body .popCont {
+  position: relative !important;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+
+/* --- #bookedmodal（新版 SDK 登入） --- */
+
+#bookedmodal .popCont {
+  max-width: none; /* 解除全域 570px 限制，讓彈窗能真正展開到 8.09rem */
+}
+
+#bookedmodal .popCont1 {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 760 / 1000;
+  background: url(https://res1-nte.iwplay.com.tw/images/sdk/popCont1_booked_sdk.webp)
+    no-repeat 0 0;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+#bookedmodal .modal-dialog {
+  max-width: 8.09rem;
+  width: 8.09rem;
+  margin: 1.55rem auto;
+}
+.nte-pop.bookedmodal .popClose {
+  top: 0.15rem;
+  right: 0.15rem;
+  width: 0.47rem;
+  height: 0.47rem;
+}
+
+/* 針對高度過低的 PC 螢幕，使用等比縮放 (Scale) 以維持排版 */
+.nte-pop.bookedmodal .popClose {
+  top: 0.15rem;
+  right: 0.15rem;
+  width: 0.47rem;
+  height: 0.47rem;
+}
+
+#bookedmodal .demo-state-btns {
+  position: absolute;
+  top: 1.8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.1rem;
+  z-index: 99;
+}
+#bookedmodal .demo-state-btns .btn {
+  padding: 0.05rem 0.13rem;
+  font-size: 0.14rem;
+  line-height: 1;
+  min-width: 0;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+#bookedmodal .pop_booked_tit {
+  position: absolute;
+  top: 13.9%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 7%;
+  aspect-ratio: 430 / 65;
+  background: url(https://res1-nte.iwplay.com.tw/images/sdk/pop_sdk_login_tt.png)
+    no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#bookedmodal .bookedForm {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 86%;
+  max-width: 6.86rem;
+  height: 33%;
+  z-index: 50;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.13rem;
+}
+#bookedmodal .form-bg {
+  width: 100%;
+  max-width: 6.29rem;
+  height: 0.56rem;
+  margin-bottom: 0;
+  border-radius: 0.3rem;
+  background: #1d1d1d;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 0.19rem;
+}
+#bookedmodal .graphic_verification_code,
+#bookedmodal .phone_verification_code,
+#bookedmodal .phone_password {
+  width: 100%;
+  max-width: 6.29rem; /* 與 form-bg 同寬 */
+  height: 0.56rem; /* 讓它和內部的 captcha / img_code 一樣高 */
+  margin-top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#bookedmodal .graphic_verification_code .captcha,
+#bookedmodal .phone_verification_code .smsCode {
+  width: 3.73rem;
+  height: 0.56rem;
+  font-size: 0.22rem;
+  padding: 0.05rem 0.2rem;
+  border-radius: 0.43rem;
+  border: 0.03rem solid #141414;
+  background: #fff;
+}
+
+/* ============================ */
+/* 強制完美置中 (覆寫 Bootstrap 行為，不分 PC/Mobile) */
+#bookedmodal.modal {
+  overflow-y: hidden !important;
+}
+#bookedmodal .modal-dialog {
+  margin: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  transform-origin: center center !important;
+}
+#bookedmodal .modal-dialog::before,
+#bookedmodal .modal-dialog::after {
+  display: none !important;
+}
+
+/* 手機版強制放大比例 */
+.is-mobile #bookedmodal .modal-dialog {
+  /* 預設給不支援 zoom 的瀏覽器 (例如 Firefox) 備用的放大方式，同時用 !important 蓋掉下方 PC 版的 scale 縮小 */
+  scale: 1.25 !important;
+}
+@supports (zoom: 1.25) {
+  .is-mobile #bookedmodal .modal-dialog {
+    /* 如果瀏覽器支援 zoom (Chrome, Safari 等主流)，就取消 scale 造成的毛邊，改用原生的 zoom 放大 */
+    scale: 1 !important;
+    zoom: 1.25 !important;
+  }
+}
+
+/* 針對高度過低的 PC 螢幕，使用等比縮放 (Scale) 以維持排版 */
+@media (max-height: 750px) and (orientation: landscape) {
+  #bookedmodal.modal {
+    overflow-y: hidden !important;
+  }
+  #bookedmodal .modal-dialog {
+    scale: 0.55;
+  }
+}
+@media (max-height: 450px) and (orientation: landscape) {
+  #bookedmodal .modal-dialog {
+    scale: 0.58;
+  }
+}
+@media (max-height: 400px) and (orientation: landscape) {
+  #bookedmodal .modal-dialog {
+    scale: 0.53;
+  }
+}
+/* 專為 (高度 320px) 準備 */
+@media (max-height: 350px) and (orientation: landscape) {
+  #bookedmodal .modal-dialog {
+    scale: 0.43;
+  }
+}
+
+#bookedmodal .graphic_verification_code .img_code {
+  width: 2.37rem;
+  height: 0.56rem;
+}
+#bookedmodal .graphic_verification_code .img_code .img_code_pic {
+  display: block; /* 移除 img 預設的底部基線間隙 */
+  width: 100%;
+  height: 100%;
+  border-radius: 0.24rem;
+  border: 0.03rem solid #141414;
+}
+#bookedmodal .phone_verification_code .btn_get_code {
+  width: 2.37rem;
+  height: auto;
+  aspect-ratio: 400 / 100;
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/btn_get_code.png);
+  background-size: 100% 200%;
+  background-position: 0 0;
+}
+#bookedmodal .phone_verification_code .btn_get_code:hover {
+  background-position: 0 100%;
+}
+#bookedmodal .phone_password .phone_password_input {
+  width: 100%;
+  height: 0.56rem;
+  background: #fff;
+  font-size: 0.17rem;
+  padding: 0.05rem 0.2rem;
+  border-radius: 0.43rem;
+  border: 0.03rem solid #141414;
+  box-sizing: border-box;
+}
+#bookedmodal .form-select {
+  padding: 0 0.17rem;
+  width: 2.13rem;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.03rem solid #c7c7c7;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  background-color: transparent;
+  background-image: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+#bookedmodal .form-select:focus {
+  color: #fff;
+  border-right: 0.03rem solid #c7c7c7;
+  outline: none;
+  box-shadow: none;
+}
+#bookedmodal .form-select option {
+  background-color: #1d1d1d;
+  text-align: center;
+}
+#bookedmodal .form-control {
+  padding: 0 0 0 4%;
+  width: 60%;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+#bookedmodal .form-control::placeholder {
+  color: #828282;
+}
+#bookedmodal .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  color: #fff;
+  background-color: transparent;
+}
+#bookedmodal .privacy-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.09rem;
+}
+#bookedmodal .form-check-input {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0;
+  width: 0.26rem;
+  height: 0.26rem;
+  background-color: transparent;
+  border: 0.03rem solid #000;
+  appearance: none;
+  -webkit-appearance: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#bookedmodal .form-check-input:checked {
+  background-color: #fff;
+  border-color: #000;
+}
+#bookedmodal .form-check-input:checked[type="checkbox"] {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/check.svg);
+}
+#bookedmodal .form-check-input[type="checkbox"] {
+  border-radius: 0;
+}
+#bookedmodal .form-check-label {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 3cqw;
+  line-height: 0.26rem;
+  cursor: pointer;
+  vertical-align: middle;
+}
+#bookedmodal .button_box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60%;
+  width: 86%;
+  max-width: 6.86rem;
+  height: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.15rem;
+  background-color: transparent;
+}
+#bookedmodal .button_box .row {
+  display: contents;
+}
+
+#bookedmodal .button_box .row .btn {
+  width: 90%;
+  max-width: 3.91rem;
+  height: auto;
+  aspect-ratio: 504 / 77;
+  flex: none;
+  margin: 0;
+}
+#bookedmodal .button_box .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 200%;
+  border: none;
+  padding: 0;
+  font-size: 0.22rem;
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+}
+#bookedmodal .button_box .btn:hover {
+  background-position: 0 100%;
+}
+#booked_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/booked_button.png);
+}
+#back_sms_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/back_sms_button.png);
+}
+#phoneNextBtn {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/phoneNextBtn.png);
+}
+#back_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/back_button.png);
+}
+#select_role_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/booked_button.png);
+}
+#back_role_button {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/back_button.png);
+}
+#bookedmodal .Change_acc_box {
+  position: absolute;
+  top: 82.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: auto;
+  max-width: 6.08rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+}
+#bookedmodal .Change_acc_hint {
+  position: static;
+  color: #fff;
+  font-size: 0.26rem;
+  line-height: 0.6rem;
+  text-align: center;
+  margin: 0;
+}
+#bookedmodal #other_login > .Change_acc_box {
+  position: static;
+  width: 100%;
+  height: auto;
+  transform: none;
+  left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5%;
+}
+#bookedmodal .Change_acc_box .Change_acc_btn {
+  width: 20%;
+  max-width: 0.9rem;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-size: 100% auto;
+  background-position: 0 -0.9rem;
+  cursor: pointer;
+}
+#bookedmodal .google {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/google.svg);
+}
+#bookedmodal .ios {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/ios.svg);
+}
+#bookedmodal .facebook {
+  background-image: url(https://res1-nte.iwplay.com.tw/events/pre-gacha/images/pop/sdk/facebook.svg);
+}
+#bookedmodal .ps {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/sdk/ps5.png);
+}
+
+/* 角色選擇區 */
+#bookedmodal #select_role {
+  position: absolute;
+  top: 24.6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 6.86rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.15rem;
+  text-align: center;
+}
+#bookedmodal #select_role > div:first-child {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #000;
+  font-size: 0.23rem;
+}
+#bookedmodal #select_role .bookedForm {
+  position: static;
+  transform: none;
+  left: auto;
+  margin: 0 auto;
+  height: auto;
+}
+#bookedmodal #select_role .form-bg {
+  padding: 0;
+}
+#bookedmodal #role_select {
+  width: 100%;
+  padding: 0 0.17rem;
+  border-right: 0;
+  text-align: center;
+}
+
+.privacymodal .list_con {
+  height: 6.7rem;
+}
+@media (max-height: 550px) and (orientation: landscape) {
+  .privacymodal .list_con {
+    height: 6.5rem;
+  }
+}
+/* --- .otherPlatform 社群圖示 --- */
+.nte-pop .otherPlatform {
+  display: flex;
+  justify-content: center;
+}
+.nte-pop .otherPlatform a {
+  position: relative;
+  margin: 0 5px;
+  width: 34px;
+  height: 34px;
+  background: url(../../images/otherPlatform.png) no-repeat;
+  background-position-y: 0;
+  background-size: auto 200%;
+}
+.nte-pop .otherPlatform a:hover {
+  background-position-y: -34px;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+       隱私權彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.popCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.6rem;
+}
+
+.popCont3 {
+  height: 11rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont3.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  width: 7.6rem;
+  overflow-x: hidden;
+}
+
+.popClose {
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popClose.png)
+    no-repeat 0 0;
+  background-size: 100% auto;
+  z-index: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 隱私權彈窗 */
+.privacymodal {
+  font-size: 14px;
+}
+.privacymodal .res_poptt {
+  width: 5rem;
+  margin: 0.6rem auto 0.3rem auto;
+}
+
+.privacymodal .res_poptt img {
+  width: 100%;
+}
+
+.privacymodal .list_con {
+  width: 116%;
+  margin-left: -8%;
+  height: 6.7rem;
+  overflow-y: auto;
+  padding-right: 0.05rem;
+
+  /* Webkit 滾動條樣式 */
+  &::-webkit-scrollbar {
+    width: 0.1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #d5d5d5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Firefox 滾動條樣式 */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #d5d5d5;
+}
+
+.privacymodal .list_con ol {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  font-size: 0.18rem;
+  font-weight: 400;
+  padding-left: 0.24rem;
+  list-style: decimal;
+}
+
+.privacymodal .popup_close {
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
+  padding: 0.1rem 0.6rem;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+  width: auto;
+  border: none;
+  outline: none;
+}
+
+/* === 鋆? yy_ZRRPZRBDRPTJKTTJ.css ?箸??見撘?=== */
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.auto {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* 彈出框 */
+.modal {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+
+.modal-dialog {
+  background: transparent;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+/* bookedmodal copied styles */
+.bookedmodal .form-bg {
+  width: 5.86rem;
+  height: 0.55rem;
+  margin-bottom: 0.15rem;
+  border-radius: 0.2749rem;
+  background: #1d1d1d;
+  box-sizing: border-box;
+}
+
+.bookedmodal .graphic_verification_code {
+  height: 0.6rem;
+  margin-top: 0.7rem;
+  background-color: #c21b1b00;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bookedmodal .phone_verification_code {
+  height: 0.6rem;
+  margin-top: 0.2rem;
+  background-color: #c21b1b00;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bookedmodal .graphic_verification_code .captcha {
+  width: 3.5rem;
+  height: 0.55rem;
+  background-color: #ffffff;
+  font-size: 0.18rem;
+  padding: 0.06rem 0.2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #141414;
+}
+
+.bookedmodal .phone_verification_code .smsCode {
+  width: 3.5rem;
+  height: 0.55rem;
+  background-color: #ffffff;
+  font-size: 0.18rem;
+  padding: 0.06rem 0.2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #141414;
+}
+
+.bookedmodal .graphic_verification_code .img_code {
+  width: 2.2rem;
+  height: 0.55rem;
+}
+
+.bookedmodal .graphic_verification_code .img_code .img_code_pic {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #141414;
+  border-radius: 0.5rem;
+}
+
+.bookedmodal .phone_verification_code .btn_get_code {
+  width: 2.2rem;
+  height: 0.55rem;
+  background-image: url(https://res1-nte.iwplay.com.tw/images/pop/btn_get_code.png);
+  background-size: 100% auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.bookedmodal .phone_verification_code .btn_get_code:hover {
+  background-position: 0 -0.55rem;
+}
+
+.bookedmodal .form-bg .yyFormRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bookedmodal .form-select {
+  padding: 0;
+  width: 30%;
+  font-size: 0.22rem;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  border-right: 0.15em solid #c7c7c7;
+  margin: 2% auto;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+  background-color: hsl(0deg 0% 0% / 0%);
+  background-image: none;
+}
+
+.bookedmodal .form-select:focus {
+  color: #fff;
+  border-right: 0.15em solid #c7c7c7;
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.bookedmodal .form-select option {
+  background-color: #1d1d1d;
+}
+
+.bookedmodal .form-control {
+  padding: 0;
+  width: 60%;
+  font-size: 0.22rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  margin: 2% auto;
+  height: auto;
+  color: #fff;
+  transition: 0.5s;
+  vertical-align: middle;
+  outline: none;
+  box-shadow: none;
+  letter-spacing: 0;
+  opacity: 1;
+  background-color: hsl(0deg 0% 0% / 0%);
+  padding-left: 4%;
+}
+
+.bookedmodal .form-control::placeholder {
+  color: #828282;
+  letter-spacing: 0;
+  background-color: hsl(0deg 0% 0% / 0%);
+}
+
+.bookedmodal .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+  border: 0;
+  color: #fff;
+  background-color: hsl(0deg 0% 0% / 0%);
+}
+
+.bookedmodal .form-check-input:checked {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.bookedmodal .form-check-input:focus {
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.bookedmodal .form-check-input[type="checkbox"] {
+  border-radius: 0;
+}
+
+.bookedmodal .form-check-label {
+  color: #000;
+  font-size: 0.18rem;
+  text-align: justify;
+  cursor: pointer;
+}
+
+.bookedmodal form {
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.bookedmodal .d-flex {
+  position: absolute;
+  top: 3.45rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bookedmodal .form-check-input {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0);
+  margin-right: 0.4em;
+  border-width: 0.08em;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-image: initial;
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+.bookedmodal .form-check-input {
+  vertical-align: middle;
+  background-color: hsl(0deg 0% 0% / 0%);
+  border: 0.08em solid #000000;
+  margin-right: 0.4em;
+}
+
+.bookedmodal .form-check-input:checked[type="checkbox"] {
+  background-image: url(https://res1-nte.iwplay.com.tw/images/pop/check.svg);
+}
+
+@media (max-height: 550px) and (orientation: landscape) {
+  .privacymodal .list_con {
+    height: 6.5rem;
+  }
+}
+
+#eventAlertModal .modal-body {
+  margin: 0 auto;
+  width: 6rem;
+  height: 5.34rem;
+  background: url(https://res1-nte.iwplay.com.tw/images/pop/popCont_alert.png)
+    no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.6rem;
+  border-radius: 0.28rem;
+}
+#eventAlertModal .modal-body p {
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
+}
+#eventAlertModal .btn-close {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+  pointer-events: none;
+}
+
+/* ========================================================================
+ * #Modal Wrapper 彈窗轉向容器樣式
+ * ======================================================================== */
+#modal_wrapper {
+  pointer-events: none; /* 讓滑鼠點擊直接穿透外框 */
+  z-index: 1055;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#modal_wrapper .modal.show {
+  pointer-events: auto; /* 當彈窗打開時，恢復彈窗本身的點擊功能 */
+}
+
+/* 確保移入 modal_wrapper 的 backdrop 能完全覆蓋容器 */
+#modal_wrapper .modal-backdrop {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+}
+
+/* ============================================================
+   彈窗：獎勵查詢 #popAward_v1
+   ============================================================ */
+
+/* --- 獎勵標題 --- */
+.popAwardTit_v1 {
+  height: 0.6rem;
+  width: auto;
+  /* aspect-ratio: 292 / 65;
+  margin: 0.35rem auto 0; */
+  background: url(../image/pop/pop_gift_title.webp) no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 610 / 78;
+  margin: 0.3rem 0 0 0.5rem;
+}
+
+/* --- 獎勵內容區 --- */
+.popAwardCont_v1 {
+  /* height: 5.2rem; */
+  /* overflow: hidden; */
+  height: auto;
+}
+.popAwardCont_v1 .type-empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- 獎勵列表 --- */
+#popAward_v1 .inviteLogList {
+  width: 14rem;
+  margin: 0 auto;
+  padding-top: 0.65rem;
+  color: #1b1b1b;
+  background-color: #2ce06200;
+  display: block;
+}
+#popAward_v1 .inviteLogList .thead {
+  color: #29c5ff;
+}
+#popAward_v1 .inviteLogList .tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#popAward_v1 .inviteLogList .tr p {
+  width: 50%;
+  text-align: center;
+  line-height: 3;
+  word-break: break-all;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(1) {
+  width: 40%;
+  box-sizing: border-box;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(2) {
+  width: 20%;
+}
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) {
+  border-left: 0.01rem dotted #898989;
+  border-right: 0.01rem dotted #898989;
+}
+#popAward_v1 .inviteLogList .tr p:nth-child(3),
+#popAward_v1 .inviteLogList .tr .serial-col {
+  width: 40%;
+}
+#popAward_v1 .inviteLogList .thead {
+  height: 0.7rem;
+  font-weight: bold;
+  font-size: 0.34rem;
+  line-height: 0.76rem;
+  padding-right: 0.5rem; /* 捲軸寬 0.14 + 間距 0.15，與 tbody 對齊 */
+}
+/* #popAward_v1 .inviteLogList .thead p:nth-child(3) {
+  padding-right: 1.5rem;
+} */
+
+/* 針對行動裝置 (沒有實體滾動軸，採用隱形懸浮捲軸)，取消對齊補償，避免表頭往左偏 */
+.is-mobile #popAward_v1 .inviteLogList .thead {
+  padding-right: 0;
+}
+
+#popAward_v1 .inviteLogList .tbody {
+  width: 14rem;
+  /* height: 5.2rem; */
+  height: 3.35rem;
+  font-size: 0.23rem;
+  line-height: 0.24rem;
+  padding-right: 0.15rem;
+}
+#popAward_v1 .inviteLogList .tbody .tr {
+  /* border: 0.01rem solid #898989;
+  margin-bottom: 0.18rem; */
+  border-top: 0.01rem solid #898989;
+  padding: 0.08rem 0.1rem;
+  min-height: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+#popAward_v1 .inviteLogList .tbody .tr:nth-child(1) {
+  border-top: 0.04rem solid #29c5ff;
+}
+/* 時間欄：PC 版一行顯示 YYYY/MM/DD，隱藏 <br> */
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) {
+  white-space: nowrap;
+}
+#popAward_v1 .inviteLogList .tbody .tr p:nth-child(2) br {
+  display: none;
+}
+
+/* --- 無獎品提示 --- */
+#popAward_v1 .notRewards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.34rem;
+  color: #b7b7b7;
+}
+
+/* --- 序號欄位 --- */
+#popAward_v1 .serial-col {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.1rem;
+  padding: 0 0.15rem;
+  box-sizing: border-box;
+}
+#popAward_v1 .serial-code {
+  font-size: 0.23rem;
+  color: #1b1b1b;
+  word-break: break-all;
+  text-align: left;
+  line-height: 1.2;
+  flex: 1;
+  margin-left: 3%;
+  text-align: center;
+}
+#popAward_v1 .serial-copy-btn {
+  position: relative;
+  padding: 0.1rem 0.2rem;
+  font-size: 0.21rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ff53a3;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* 按鈕分隔線 */
+/* #popAward_v1 .serial-copy-btn::before {
+  content: "";
+  position: absolute;
+  left: -0.2rem;
+  top: -20%;
+  height: 150%; 
+  border-left: 0.01rem dotted #898989;
+} */
+#popAward_v1 .serial-get-btn {
+  position: relative;
+  padding: 0.1rem 0.2rem;
+  font-size: 0.21rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ff53a3;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* 按鈕分隔線 */
+/* #popAward_v1 .serial-get-btn::before {
+  content: "";
+  position: absolute;
+  left: -0.2rem; 
+  top: -20%;
+  height: 150%;
+  border-left: 0.01rem dotted #898989;
+} */
+#popAward_v1 .serial-copy-btn:hover,
+#popAward_v1 .serial-get-btn:hover {
+  background: #7177c7;
+}
+
+/* --- 獎勵列表高度鏈 --- */
+.popAwardCont_v1 .type-list {
+  height: 100%;
+}
+
+/* 收件資訊按鈕群組 (置中排列) */
+.award_info_btn_group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.45rem;
+}
+
+.award_info_btn_group .fill_info_btn,
+.award_info_btn_group .check_info_btn {
+  width: 3.5rem;
+  aspect-ratio: 456 / 117;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 200%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  filter: drop-shadow(0.05rem 0.08rem 0.05rem rgba(0, 0, 0, 0.5));
+}
+.award_info_btn_group .fill_info_btn {
+  background-image: url(../image/pop/fill_info_btn.webp);
+}
+.award_info_btn_group .check_info_btn {
+  background-image: url(../image/pop/check_info_btn.webp);
+}
+.award_info_btn_group .fill_info_btn:hover,
+.award_info_btn_group .check_info_btn:hover {
+  background-position: bottom center;
+}
+
+/* --- Demo 切換按鈕（暫時） --- */
+.popAwarddemo_btn_v1 {
+  position: absolute;
+  top: 0.15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.04rem 0.2rem;
+  font-size: 0.16rem;
+  color: #fff;
+  background: #dc3545;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  z-index: 99;
+}
+.popAwarddemo_btn_v1:hover {
+  background: #c82333;
+}
+
+/* --- 獎勵背景 --- */
+#popAward_v1 .pop-bg1 {
+  background: url(../image/pop/pop_bg.webp) no-repeat 0 0;
+  background-size: 100% auto;
+  aspect-ratio: 1730 / 871;
+}
+
+/* --- 無獎項圖片 --- */
+.popAwardNone_v1 {
+  width: 8rem;
+  aspect-ratio: 792 / 144;
+  background: url(../image/pop/pop_award_none.webp) no-repeat center center;
+  background-size: 100% auto;
+  margin-top: 2.3rem;
+}
