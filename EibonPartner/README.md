@@ -1,6 +1,6 @@
 # 《異環》伊波恩合夥人行動活動網頁 (EibonPartner)
 
-《異環》(Neverness to Everness, NTE) 1.2 版本「九百九十九夜」回流活動網頁。活躍鑒定師可生成專屬邀請碼邀請回歸鑒定師重返遊戲，雙方透過完成合夥人任務與幸運抽取獲取環石等獎勵。
+《異環》(Neverness to Everness, NTE) 1.2 版本回流活動網頁。活躍鑒定師可生成專屬邀請碼邀請回歸鑒定師重返遊戲，雙方透過完成合夥人任務與幸運抽取獲取環石等獎勵。
 
 - 正式網址：https://nte.iwplay.com.tw/event/EibonPartner.html
 - 活動時間：1.2 版本更新後 ～ 2026/08/18 03:59:59（UTC+8）
